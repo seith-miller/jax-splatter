@@ -2,28 +2,32 @@
 
 Public website for **DJ Seith** — promo + booking. This repo is the website only; the audio/visuals pipeline lives in [seith-miller/djseith](https://github.com/seith-miller/djseith).
 
-## Brief (seeded from the GTD drain session, 2026-06-11)
+## What this is
 
-### Purpose
+The public face of DJ Seith: who, what it costs, how to book, and proof (mixes, sets, visuals). Blade Runner aesthetic — night, city, motion; black+blue when moody, black+red when frenetic.
 
-Give DJ Seith a public face: who, what it costs, how to book, and proof (mixes, sets, visuals).
+This repo is a **product of the sakuma process** — it was built by the sakuma pipeline, but it is not an ecosystem member. It has users, not consumers; a brief, not a substrate role.
 
-### Visual identity (already defined — "DJ SEITH meetings notes", Aug 2025)
+## Provenance
 
-- Blade Runner universe: night, city, motion
-- Black + **blue** = slow / moody / mournful; black + **red** = energetic / frenetic
-- Glitch and VHS artifacts welcome; no recognizable AI artifacts
-- People present but never important — no faces, waist-down crowds, silhouettes in windows
+| Input | Where |
+|---|---|
+| Brief / design doc | [docs/brief.md](docs/brief.md) (seeded from the GTD drain session, 2026-06-11) |
+| Wave plan | n/a — built interactively so far |
+| Driving loop | n/a |
 
-### Content sources
+## v0 scope
 
-- Pricing: $150–250 per event (per the "DJ Seith" gdoc)
-- Original tracks + set lists: Drive folder "Music: DJ Seith"
-- Event branding: INTERZONE assets; `stream_holding.html` and `interzone_badge.html` one-offs (Drive, Apr 2026) are prior web pieces this site replaces
-- Visuals: shot catalog + R2 renders in the djseith pipeline repo
+Not yet ratified — see [open decisions in the brief](docs/brief.md#open-decisions-not-yet-ratified) (booking funnel vs portfolio, domain, stack). Competitive research on top-DJ sites is in [research/](research/).
 
-### Open decisions (not yet ratified)
+## Deployment
 
-- Primary job: booking funnel vs portfolio — drives the v0 page set
-- Domain: none chosen; `*.github.io` acceptable for v0 (repo is private — flip to public when enabling Pages)
-- Stack: undecided; static-first preferred (nothing here needs a server)
+Not yet deployed. `*.github.io` is acceptable for v0; repo flips public when Pages is enabled. No domain chosen.
+
+## Branch Strategy
+
+This project follows the agent-lab GitFlow conventions. See [gitflow.md](gitflow.md) for the branch model and merge policy.
+
+## Built with
+
+This product was built by the **sakuma ecosystem** — see [smartsquared/atlas](https://github.com/smartsquared/atlas) for the system that produced it. Process learnings from building this product flow back to [smartsquared/sakuma](https://github.com/smartsquared/sakuma); they do not live here.
