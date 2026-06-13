@@ -1,0 +1,80 @@
+---
+import MixEmbed from './MixEmbed.astro';
+
+interface Props {
+  date: Date;
+  venue: string;
+  city?: string;
+  event?: string;
+  durationMins?: number;
+  mixUrl?: string;
+  tracklist?: string[];
+  image?: string;
+  note?: string;
+}
+
+const { date, venue, city, event, durationMins, mixUrl, tracklist, image, note } = Astro.props;
+
+const dateStr = date.toLocaleDateString('en-US', {
+  year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC',
+});
+---
+
+<article class="show">
+  <div class="meta">
+    <time datetime={date.toISOString().slice(0, 10)}>{dateStr}</time>
+    {durationMins && <span class="dur">{durationMins} min</span>}
+  </div>
+  <h3>{venue}</h3>
+  <p class="where muted">
+    {event && <span class="event">{event}</span>}
+    {event && (city || '') && <span class="dot">·</span>}
+    {city}
+  </p>
+
+  {image && (
+    <div class="imgslot card-img"><img src={image} alt={`${venue} — ${event ?? 'set'}`} /></div>
+  )}
+
+  {note && <p class="note">{note}</p>}
+
+  {tracklist && tracklist.length > 0 && (
+    <details class="tracklist">
+      <summary>Tracklist ({tracklist.length})</summary>
+      <ol>{tracklist.map((t) => <li>{t}</li>)}</ol>
+    </details>
+  )}
+
+  {mixUrl && <div class="embed"><MixEmbed url={mixUrl} /></div>}
+</article>
+
+<style>
+  .show {
+    border: 1px solid var(--line); background: var(--bg-2);
+    padding: 1.4rem; border-radius: 3px;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+  }
+  .show:hover { border-color: color-mix(in srgb, var(--accent) 55%, var(--line)); transform: translateY(-2px); }
+  .meta {
+    display: flex; align-items: baseline; justify-content: space-between;
+    font-family: var(--font-display); letter-spacing: 0.12em;
+    text-transform: uppercase; font-size: 0.78rem; color: var(--accent);
+    margin-bottom: 0.6rem;
+  }
+  .dur { color: var(--fg-faint); }
+  h3 { margin: 0 0 0.2rem; }
+  .where { font-size: 0.9rem; margin: 0 0 0.5rem; }
+  .event { color: var(--fg-dim); }
+  .dot { margin-inline: 0.4rem; color: var(--fg-faint); }
+  .card-img { margin: 0.75rem 0; aspect-ratio: 16 / 9; }
+  .note { font-size: 0.95rem; color: var(--fg-dim); margin: 0.5rem 0 0; }
+  .tracklist { margin-top: 0.85rem; }
+  .tracklist summary {
+    cursor: pointer; font-family: var(--font-display);
+    text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.78rem;
+    color: var(--fg-dim);
+  }
+  .tracklist summary:hover { color: var(--accent); }
+  .tracklist ol { margin: 0.6rem 0 0; padding-left: 1.3rem; color: var(--fg-dim); font-size: 0.9rem; }
+  .embed { margin-top: 0.9rem; }
+</style>

@@ -1,0 +1,131 @@
+---
+import { site, priceRange, formspreeAction } from '../data/site';
+
+const action = formspreeAction(); // null until a Formspree ID is set
+const mailto = `mailto:${site.booking.email}?subject=${encodeURIComponent('Booking inquiry — DJ Seith')}`;
+---
+
+<section id="book" data-mood="red" aria-label="Booking">
+  <div class="wrap grid cols-2 book">
+    <div class="pitch">
+      <p class="section-label">Booking</p>
+      <h2>Book a date</h2>
+
+      <div class="price">
+        <span class="range">{priceRange()}</span>
+        <span class="per">per {site.price.unit}</span>
+      </div>
+      <p class="muted note">{site.price.note}</p>
+
+      <ul class="services">
+        {site.services.map((s) => (
+          <li><strong>{s.label}.</strong> <span class="muted">{s.blurb}</span></li>
+        ))}
+      </ul>
+    </div>
+
+    <div class="formwrap">
+      <form
+        class="inquiry"
+        method="POST"
+        action={action ?? undefined}
+        data-mailto={action ? undefined : site.booking.email}
+      >
+        <label>Name
+          <input type="text" name="name" autocomplete="name" required />
+        </label>
+        <label>Email
+          <input type="email" name="email" autocomplete="email" required />
+        </label>
+        <div class="row">
+          <label>Event date
+            <input type="date" name="event_date" required />
+          </label>
+          <label>Location
+            <input type="text" name="location" placeholder="City / venue" required />
+          </label>
+        </div>
+        <label>Event type
+          <select name="event_type">
+            <option value="">—</option>
+            {site.services.map((s) => <option value={s.key}>{s.label}</option>)}
+            <option value="other">Other</option>
+          </select>
+        </label>
+        <label>Anything else
+          <textarea name="message" rows="3" placeholder="Vibe, hours, special requests…"></textarea>
+        </label>
+        <button class="btn" type="submit">Send inquiry</button>
+        <p class="fallback faint">
+          Or email <a href={mailto}>{site.booking.email}</a> directly.
+        </p>
+        <noscript>
+          <p class="faint">Email <a href={mailto}>{site.booking.email}</a> to book.</p>
+        </noscript>
+      </form>
+    </div>
+  </div>
+</section>
+
+<script is:inline>
+  // Progressive fallback: if the form has no server action (Formspree not yet
+  // configured), compose a mailto: from the fields so it still works on a
+  // static host. Once a Formspree action is set, this handler is a no-op.
+  (function () {
+    var form = document.querySelector('form.inquiry');
+    if (!form || form.getAttribute('action')) return;
+    var email = form.getAttribute('data-mailto');
+    if (!email) return;
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var f = new FormData(form);
+      var lines = [
+        'Name: ' + (f.get('name') || ''),
+        'Email: ' + (f.get('email') || ''),
+        'Date: ' + (f.get('event_date') || ''),
+        'Location: ' + (f.get('location') || ''),
+        'Type: ' + (f.get('event_type') || ''),
+        '',
+        (f.get('message') || ''),
+      ];
+      var href =
+        'mailto:' + email +
+        '?subject=' + encodeURIComponent('Booking inquiry — ' + (f.get('name') || 'DJ Seith')) +
+        '&body=' + encodeURIComponent(lines.join('\n'));
+      window.location.href = href;
+    });
+  })();
+</script>
+
+<style>
+  .book { align-items: start; gap: clamp(1.5rem, 4vw, 3.5rem); }
+  .price { display: flex; align-items: baseline; gap: 0.6rem; margin: 0.5rem 0 0.4rem; }
+  .range {
+    font-family: var(--font-display); font-weight: 700; font-size: clamp(2.4rem, 6vw, 3.6rem);
+    color: var(--fg); text-shadow: 0 0 28px var(--accent-glow);
+  }
+  .per { font-family: var(--font-display); text-transform: uppercase; letter-spacing: 0.16em; color: var(--accent); font-size: 0.9rem; }
+  .note { max-width: 36ch; }
+  .services { list-style: none; padding: 0; margin: 1.75rem 0 0; }
+  .services li { padding: 0.65rem 0; border-top: 1px solid var(--line); font-size: 0.95rem; }
+
+  .inquiry { display: flex; flex-direction: column; gap: 0.9rem; }
+  .inquiry .row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.9rem; }
+  @media (max-width: 520px) { .inquiry .row { grid-template-columns: 1fr; } }
+  label {
+    display: flex; flex-direction: column; gap: 0.35rem;
+    font-family: var(--font-display); text-transform: uppercase;
+    letter-spacing: 0.12em; font-size: 0.72rem; color: var(--fg-dim);
+  }
+  input, select, textarea {
+    font-family: var(--font-body); font-size: 1rem; color: var(--fg);
+    background: var(--bg-2); border: 1px solid var(--line); border-radius: 2px;
+    padding: 0.7rem 0.8rem; text-transform: none; letter-spacing: normal;
+  }
+  input:focus, select:focus, textarea:focus {
+    outline: none; border-color: var(--accent);
+    box-shadow: 0 0 0 1px var(--accent), 0 0 18px -4px var(--accent-glow);
+  }
+  .inquiry .btn { align-self: flex-start; margin-top: 0.3rem; }
+  .fallback { margin: 0.25rem 0 0; font-size: 0.82rem; }
+</style>

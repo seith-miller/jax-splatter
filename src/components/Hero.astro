@@ -1,0 +1,59 @@
+---
+import { site, priceRange } from '../data/site';
+---
+
+<section id="top" class="hero scanlines" aria-label="Intro">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="wrap hero-inner">
+    <p class="kicker">{site.tagline}</p>
+    <h1>{site.name}</h1>
+    <p class="statement">{site.heroStatement}</p>
+    <div class="cta">
+      <a class="btn" href="#book">Book a date</a>
+      <a class="btn btn--ghost" href="#mixes">Hear a set</a>
+    </div>
+    <p class="from faint">Booking from {priceRange()} / {site.price.unit}</p>
+  </div>
+  <a class="scrollcue" href="#shows" aria-label="Scroll to shows">↓</a>
+</section>
+
+<style>
+  .hero { min-height: 92vh; display: grid; align-items: center; overflow: hidden; }
+  /* full-bleed dark gradient field — stands in for the hero film/photo until
+     real footage from the djseith pipeline is dropped in (decisions.md D7). */
+  .hero-bg {
+    position: absolute; inset: 0; z-index: 0;
+    background:
+      radial-gradient(80% 60% at 75% 15%, rgba(70,179,255,0.20), transparent 55%),
+      radial-gradient(70% 50% at 15% 95%, rgba(255,45,85,0.14), transparent 55%),
+      linear-gradient(180deg, #06080e 0%, #05060a 60%, #04050a 100%);
+  }
+  .hero-bg::after {
+    content: ""; position: absolute; inset: 0;
+    background-image:
+      linear-gradient(transparent 0 2px, rgba(70,179,255,0.04) 2px 3px);
+    background-size: 100% 3px; opacity: 0.6;
+  }
+  .hero-inner { position: relative; z-index: 1; }
+  .kicker {
+    font-family: var(--font-display); text-transform: uppercase;
+    letter-spacing: 0.34em; font-size: 0.85rem; color: var(--blue);
+    margin: 0 0 0.75rem;
+  }
+  h1 {
+    margin: 0; text-shadow: 0 0 38px rgba(70,179,255,0.28);
+  }
+  .statement {
+    max-width: 34ch; font-size: clamp(1.1rem, 1rem + 0.8vw, 1.6rem);
+    color: var(--fg-dim); margin: 1.25rem 0 2rem;
+  }
+  .cta { display: flex; flex-wrap: wrap; gap: 0.9rem; }
+  .from { margin-top: 1.5rem; letter-spacing: 0.1em; font-size: 0.85rem; }
+  .scrollcue {
+    position: absolute; left: 50%; bottom: 1.5rem; transform: translateX(-50%);
+    color: var(--fg-faint); font-size: 1.4rem; z-index: 1;
+    animation: bob 2.2s ease-in-out infinite;
+  }
+  .scrollcue:hover { color: var(--accent); }
+  @keyframes bob { 0%,100% { transform: translate(-50%, 0); } 50% { transform: translate(-50%, 6px); } }
+</style>

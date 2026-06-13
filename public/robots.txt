@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://seith-miller.github.io/djseith-site/sitemap-index.xml

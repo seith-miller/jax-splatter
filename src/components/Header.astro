@@ -1,0 +1,47 @@
+---
+import { site } from '../data/site';
+
+const nav = [
+  { href: '#shows', label: 'Shows' },
+  { href: '#mixes', label: 'Mixes' },
+  { href: '#about', label: 'About' },
+  { href: '#book', label: 'Book' },
+];
+---
+
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="wordmark" href="#top">{site.name}</a>
+    <nav aria-label="Primary">
+      {nav.map((n) => <a href={n.href}>{n.label}</a>)}
+    </nav>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: sticky; top: 0; z-index: 50;
+    background: color-mix(in srgb, var(--bg) 82%, transparent);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  .bar {
+    display: flex; align-items: center; justify-content: space-between;
+    padding-block: 0.9rem;
+  }
+  .wordmark {
+    font-family: var(--font-display); font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.18em;
+    color: var(--fg); font-size: 1.1rem;
+  }
+  .wordmark:hover { color: var(--accent); }
+  nav { display: flex; gap: clamp(0.9rem, 2.5vw, 1.75rem); }
+  nav a {
+    font-family: var(--font-display); text-transform: uppercase;
+    letter-spacing: 0.14em; font-size: 0.8rem; color: var(--fg-dim);
+  }
+  nav a:hover { color: var(--accent); }
+  @media (max-width: 480px) {
+    nav a:nth-child(3) { display: none; } /* drop "About" first on tiny screens */
+  }
+</style>

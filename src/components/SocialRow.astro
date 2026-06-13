@@ -1,0 +1,33 @@
+---
+import { site } from '../data/site';
+
+// Header trait #6 from the top-10 scan: a row of social/listening icons.
+// Only renders links that have a value in site.links.
+const items = [
+  { key: 'mixcloud', label: 'Mixcloud', href: site.links.mixcloud },
+  { key: 'instagram', label: 'Instagram', href: site.links.instagram },
+  { key: 'youtube', label: 'YouTube', href: site.links.youtube },
+  { key: 'github', label: 'GitHub', href: site.links.github },
+].filter((i) => i.href);
+---
+
+{
+  items.length > 0 && (
+    <ul class="social">
+      {items.map((i) => (
+        <li>
+          <a href={i.href} target="_blank" rel="noopener noreferrer">{i.label}</a>
+        </li>
+      ))}
+    </ul>
+  )
+}
+
+<style>
+  .social { list-style: none; display: flex; flex-wrap: wrap; gap: 1.25rem; margin: 0; padding: 0; }
+  .social a {
+    font-family: var(--font-display); text-transform: uppercase;
+    letter-spacing: 0.16em; font-size: 0.78rem; color: var(--fg-dim);
+  }
+  .social a:hover { color: var(--accent); }
+</style>

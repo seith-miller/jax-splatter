@@ -1,0 +1,29 @@
+---
+import { site } from '../data/site';
+import SocialRow from './SocialRow.astro';
+const year = new Date().getUTCFullYear();
+---
+
+<footer class="site-footer">
+  <hr class="rule" />
+  <div class="wrap inner">
+    <div>
+      <p class="mark">{site.name}</p>
+      <p class="faint small">{site.tagline}</p>
+    </div>
+    <div class="right">
+      <p class="small"><a href={`mailto:${site.booking.email}`}>{site.booking.email}</a></p>
+      <SocialRow />
+    </div>
+  </div>
+  <p class="wrap copy faint">© {year} {site.name}. Built in the dark.</p>
+</footer>
+
+<style>
+  .site-footer { padding-top: 2.5rem; padding-bottom: 3rem; }
+  .inner { display: flex; flex-wrap: wrap; gap: 1.5rem 2rem; justify-content: space-between; align-items: flex-start; padding-top: 2rem; }
+  .mark { font-family: var(--font-display); text-transform: uppercase; letter-spacing: 0.18em; margin: 0; }
+  .small { font-size: 0.85rem; }
+  .right { display: flex; flex-direction: column; gap: 0.75rem; align-items: flex-start; }
+  .copy { margin-top: 2rem; font-size: 0.78rem; letter-spacing: 0.08em; }
+</style>

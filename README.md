@@ -18,11 +18,36 @@ This repo is a **product of the sakuma process** — it was built by the sakuma 
 
 ## v0 scope
 
-Not yet ratified — see [open decisions in the brief](docs/brief.md#open-decisions-not-yet-ratified) (booking funnel vs portfolio, domain, stack). Competitive research on top-DJ sites is in [research/](research/).
+A static, booking-first one-pager built with **Astro**: hero → recent shows (the proof layer) → recorded sets (Mixcloud) → about → booking (with the $150–250 price and a minimal inquiry form). The brief's "booking funnel vs portfolio" question is resolved as *booking funnel whose proof layer is the show log + mixes* — rationale and evidence in [docs/decisions.md](docs/decisions.md), backed by [research/booking-site-strategy.md](research/booking-site-strategy.md) and [research/dj-site-traits.md](research/dj-site-traits.md).
+
+Content lives in two places: site-wide config (name, price, links, booking email) in [src/data/site.ts](src/data/site.ts), and shows-as-data in [src/content/shows/](src/content/shows/) (one markdown file per show; seeded with Al's Bar, Sep 2025).
+
+## Develop
+
+```bash
+npm install
+npm run dev      # local dev server
+npm run build    # static build → dist/
+npm run preview  # serve the build at /djseith-site/
+```
 
 ## Deployment
 
-Not yet deployed. `*.github.io` is acceptable for v0; repo flips public when Pages is enabled. No domain chosen.
+Not deployed yet. The site is wired for **GitHub Pages** via [.github/workflows/deploy.yml](.github/workflows/deploy.yml) (the official `withastro/action`). To go live:
+
+1. Make the repo **public** (or use a plan that allows private Pages).
+2. **Settings → Pages → Source: GitHub Actions.**
+3. Merge to `main` — the workflow builds and deploys to `https://seith-miller.github.io/djseith-site/`.
+4. For a custom domain serving from root, set `base: '/'` in [astro.config.mjs](astro.config.mjs) and add the domain in Pages settings.
+
+### Before launch (placeholders to replace)
+
+- **Booking email + Formspree ID** in [src/data/site.ts](src/data/site.ts) (until set, the form composes a `mailto:` instead of posting).
+- **Social links** (Mixcloud, Instagram, …) in the same file — empty ones are hidden.
+- **Real photos/video** from the [djseith pipeline](https://github.com/seith-miller/djseith) into the image slots (no faces, per the brief).
+- **City/region** in `site.locality` for local SEO + schema.
+
+See [docs/decisions.md](docs/decisions.md) for the full list and the reasoning behind each choice.
 
 ## Branch Strategy
 

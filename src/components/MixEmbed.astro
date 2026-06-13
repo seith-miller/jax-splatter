@@ -1,0 +1,39 @@
+---
+interface Props {
+  url: string; // a mixcloud show URL, e.g. https://www.mixcloud.com/djseith/some-set/
+}
+const { url } = Astro.props;
+
+// Mixcloud dark-mode embed (research D5: safer licensing + dark player fits the
+// aesthetic). Build the widget feed param from the show path.
+let feed = '';
+try {
+  feed = new URL(url).pathname; // e.g. /djseith/some-set/
+} catch {
+  feed = '';
+}
+const src = feed
+  ? `https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&light=0&feed=${encodeURIComponent(feed)}`
+  : '';
+---
+
+{
+  src ? (
+    <iframe
+      class="mix"
+      title="Mixcloud player"
+      src={src}
+      width="100%"
+      height="120"
+      frameborder="0"
+      loading="lazy"
+      allow="autoplay; encrypted-media; fullscreen"
+    />
+  ) : (
+    <p class="faint">Invalid mix URL.</p>
+  )
+}
+
+<style>
+  .mix { border: 1px solid var(--line); border-radius: 3px; display: block; }
+</style>
