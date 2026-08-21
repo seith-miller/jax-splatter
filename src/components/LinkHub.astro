@@ -22,8 +22,10 @@ const pad = (n: number) => String(n + 1).padStart(2, '0');
 
 <section id="links" class="hub scanlines" aria-label="Find DJ Seith">
   <div class="wrap">
-    <p class="section-label">Follow</p>
-    <h2 class="sr-h2">Everywhere else</h2>
+    {/* Until a single account is claimed the hub holds only the booking row,
+        and a "Follow" heading over it reads wrong. Label appears with the rows. */}
+    <p class="section-label">{links.length > 0 ? 'Follow' : 'Contact'}</p>
+    <h2 class="sr-h2">{links.length > 0 ? 'Everywhere else' : 'Get in touch'}</h2>
 
     {links.length > 0 && (
       <ul class="rows">
