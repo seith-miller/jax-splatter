@@ -1,5 +1,5 @@
 ---
-import { site, priceRange } from '../data/site';
+import { site } from '../data/site';
 ---
 
 <section id="top" class="hero scanlines" aria-label="Intro">
@@ -8,19 +8,13 @@ import { site, priceRange } from '../data/site';
     <p class="kicker">{site.tagline}</p>
     <h1>{site.name}</h1>
     <p class="statement">{site.heroStatement}</p>
-    <div class="cta">
-      <a class="btn" href="#book">Book a date</a>
-      <a class="btn btn--ghost" href="#mixes">Hear a set</a>
-    </div>
-    <p class="from faint">Booking from {priceRange()} / {site.price.unit}</p>
   </div>
-  <a class="scrollcue" href="#shows" aria-label="Scroll to shows">↓</a>
 </section>
 
 <style>
-  .hero { min-height: 92vh; display: grid; align-items: center; overflow: hidden; }
-  /* full-bleed dark gradient field — stands in for the hero film/photo until
-     real footage from the djseith pipeline is dropped in (decisions.md D7). */
+  /* Shorter than a full viewport on purpose: the link hub sits immediately
+     below and must be visible without a scroll on a phone (decisions.md D9). */
+  .hero { min-height: min(46vh, 24rem); display: grid; align-items: center; overflow: hidden; }
   .hero-bg {
     position: absolute; inset: 0; z-index: 0;
     background:
@@ -34,26 +28,15 @@ import { site, priceRange } from '../data/site';
       linear-gradient(transparent 0 2px, rgba(70,179,255,0.04) 2px 3px);
     background-size: 100% 3px; opacity: 0.6;
   }
-  .hero-inner { position: relative; z-index: 1; }
+  .hero-inner { position: relative; z-index: 1; padding-block: clamp(2rem, 5vw, 3.25rem); }
   .kicker {
     font-family: var(--font-display); text-transform: uppercase;
     letter-spacing: 0.34em; font-size: 0.85rem; color: var(--blue);
     margin: 0 0 0.75rem;
   }
-  h1 {
-    margin: 0; text-shadow: 0 0 38px rgba(70,179,255,0.28);
-  }
+  h1 { margin: 0; text-shadow: 0 0 38px rgba(70,179,255,0.28); }
   .statement {
-    max-width: 34ch; font-size: clamp(1.1rem, 1rem + 0.8vw, 1.6rem);
-    color: var(--fg-dim); margin: 1.25rem 0 2rem;
+    max-width: 34ch; font-size: clamp(1.05rem, 1rem + 0.6vw, 1.4rem);
+    color: var(--fg-dim); margin: 1rem 0 0;
   }
-  .cta { display: flex; flex-wrap: wrap; gap: 0.9rem; }
-  .from { margin-top: 1.5rem; letter-spacing: 0.1em; font-size: 0.85rem; }
-  .scrollcue {
-    position: absolute; left: 50%; bottom: 1.5rem; transform: translateX(-50%);
-    color: var(--fg-faint); font-size: 1.4rem; z-index: 1;
-    animation: bob 2.2s ease-in-out infinite;
-  }
-  .scrollcue:hover { color: var(--accent); }
-  @keyframes bob { 0%,100% { transform: translate(-50%, 0); } 50% { transform: translate(-50%, 6px); } }
 </style>

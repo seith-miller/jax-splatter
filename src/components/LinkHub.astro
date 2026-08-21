@@ -1,0 +1,134 @@
+---
+import { site, liveLinks, plannedLinks, bookingMailto, hasRealBookingEmail } from '../data/site';
+
+// The spine of the page (decisions.md D9): every platform account points here,
+// and this points back out. Rows render only for claimed accounts — an empty
+// `url` in site.ts means the row does not exist, so the page is never broken
+// while the roster is still being filled in.
+const links = liveLinks();
+const pending = plannedLinks();
+
+// Build-time nudge — visible in `npm run build`, never on the page.
+if (pending.length > 0) {
+  console.warn(
+    `[link-hub] ${pending.length} platform(s) not yet claimed: ` +
+      pending.map((p) => p.label).join(', ') +
+      ' — add URLs in src/data/site.ts',
+  );
+}
+
+const pad = (n: number) => String(n + 1).padStart(2, '0');
+---
+
+<section id="links" class="hub scanlines" aria-label="Find DJ Seith">
+  <div class="wrap">
+    <p class="section-label">Follow</p>
+    <h2 class="sr-h2">Everywhere else</h2>
+
+    {links.length > 0 && (
+      <ul class="rows">
+        {links.map((l, i) => (
+          <li>
+            <a href={l.url} target="_blank" rel="me noopener noreferrer" data-key={l.key}>
+              <span class="num" aria-hidden="true">{pad(i)}</span>
+              <span class="label">{l.label}</span>
+              <span class="kind faint" aria-hidden="true">{l.kind}</span>
+              <span class="handle">{l.handle}</span>
+              <span class="arrow" aria-hidden="true">→</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    )}
+
+    <div class="booking" data-mood="red">
+      <a class="bookrow" href={bookingMailto()}>
+        <span class="num" aria-hidden="true">◆</span>
+        <span class="label">Booking</span>
+        <span class="kind faint" aria-hidden="true">Direct</span>
+        <span class="handle">{hasRealBookingEmail() ? site.booking.email : 'Get in touch'}</span>
+        <span class="arrow" aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hub { padding-block: clamp(2.5rem, 6vw, 4.5rem); }
+
+  /* The heading is for screen readers and the document outline; the
+     "Follow" label above it is the visible one. */
+  .sr-h2 {
+    position: absolute; width: 1px; height: 1px; overflow: hidden;
+    clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap;
+  }
+
+  .rows { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+  .rows li { border-bottom: 1px solid var(--line); }
+
+  .rows a, .bookrow {
+    display: grid;
+    grid-template-columns: 2.75rem 1fr auto auto 1.75rem;
+    align-items: baseline;
+    gap: 0 clamp(0.75rem, 2vw, 1.5rem);
+    padding: clamp(0.9rem, 2vw, 1.15rem) 0.5rem;
+    color: var(--fg);
+    position: relative;
+    transition: background 0.18s ease, padding-left 0.18s ease;
+  }
+
+  /* the accent edge that lights on hover — the "row is armed" cue */
+  .rows a::before, .bookrow::before {
+    content: ""; position: absolute; left: 0; top: 0; bottom: 0;
+    width: 2px; background: var(--accent);
+    transform: scaleY(0); transform-origin: center;
+    transition: transform 0.18s ease;
+    box-shadow: 0 0 10px var(--accent-glow);
+  }
+  .rows a:hover, .rows a:focus-visible,
+  .bookrow:hover, .bookrow:focus-visible {
+    background: color-mix(in srgb, var(--accent) 7%, transparent);
+    padding-left: 1rem;
+    outline: none;
+  }
+  .rows a:hover::before, .rows a:focus-visible::before,
+  .bookrow:hover::before, .bookrow:focus-visible::before { transform: scaleY(1); }
+
+  .num {
+    font-family: var(--font-display); font-size: 0.75rem;
+    letter-spacing: 0.14em; color: var(--accent); opacity: 0.75;
+  }
+  .label {
+    font-family: var(--font-display); font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.06em;
+    font-size: clamp(1.35rem, 4vw, 2.1rem); line-height: 1;
+  }
+  .kind {
+    font-family: var(--font-display); text-transform: uppercase;
+    letter-spacing: 0.28em; font-size: 0.7rem;
+  }
+  .handle {
+    font-size: 0.9rem; color: var(--fg-dim);
+    overflow-wrap: anywhere;
+  }
+  .arrow {
+    justify-self: end; color: var(--fg-faint); font-size: 1.1rem;
+    transition: transform 0.18s ease, color 0.18s ease;
+  }
+  .rows a:hover .arrow, .bookrow:hover .arrow { color: var(--accent); transform: translateX(4px); }
+  .rows a:hover .label, .bookrow:hover .label { color: var(--accent); }
+
+  /* Booking sits apart: red mood, a gap, no shared border with the stack. */
+  .booking { margin-top: clamp(1.25rem, 3vw, 2rem); }
+  .bookrow { border: 1px solid var(--line); border-radius: 2px; padding-inline: 0.5rem; }
+  .bookrow:hover { border-color: color-mix(in srgb, var(--accent) 45%, var(--line)); }
+
+  /* Narrow screens: the category column is the first thing to go, then the
+     handle drops onto its own line under the label. */
+  @media (max-width: 700px) {
+    .rows a, .bookrow { grid-template-columns: 2.25rem 1fr 1.25rem; }
+    .kind { display: none; }
+    .handle { grid-column: 2 / 3; font-size: 0.82rem; }
+    .arrow { grid-column: 3 / 4; grid-row: 1 / 3; align-self: center; }
+  }
+</style>

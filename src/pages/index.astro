@@ -2,10 +2,10 @@
 import Base from '../layouts/Base.astro';
 import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
+import LinkHub from '../components/LinkHub.astro';
 import Shows from '../components/Shows.astro';
 import Mixes from '../components/Mixes.astro';
 import About from '../components/About.astro';
-import Booking from '../components/Booking.astro';
 import Footer from '../components/Footer.astro';
 ---
 
@@ -13,14 +13,13 @@ import Footer from '../components/Footer.astro';
   <Header />
   <main>
     <Hero />
+    <LinkHub />
     <hr class="rule" />
     <Shows limit={4} />
     <hr class="rule" />
     <Mixes />
     <hr class="rule" />
     <About />
-    <hr class="rule" />
-    <Booking />
   </main>
   <Footer />
 </Base>

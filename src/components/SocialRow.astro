@@ -1,14 +1,10 @@
 ---
-import { site } from '../data/site';
+import { liveLinks } from '../data/site';
 
-// Header trait #6 from the top-10 scan: a row of social/listening icons.
-// Only renders links that have a value in site.links.
-const items = [
-  { key: 'mixcloud', label: 'Mixcloud', href: site.links.mixcloud },
-  { key: 'instagram', label: 'Instagram', href: site.links.instagram },
-  { key: 'youtube', label: 'YouTube', href: site.links.youtube },
-  { key: 'github', label: 'GitHub', href: site.links.github },
-].filter((i) => i.href);
+// Compact text row of the same roster the hub renders — used in the footer so
+// the links are reachable from the bottom of the page without scrolling back.
+// Driven by the same `site.links` array; nothing renders until URLs exist.
+const items = liveLinks();
 ---
 
 {
@@ -16,7 +12,7 @@ const items = [
     <ul class="social">
       {items.map((i) => (
         <li>
-          <a href={i.href} target="_blank" rel="noopener noreferrer">{i.label}</a>
+          <a href={i.url} target="_blank" rel="me noopener noreferrer">{i.label}</a>
         </li>
       ))}
     </ul>

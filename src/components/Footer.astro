@@ -1,5 +1,5 @@
 ---
-import { site } from '../data/site';
+import { site, bookingMailto, hasRealBookingEmail } from '../data/site';
 import SocialRow from './SocialRow.astro';
 const year = new Date().getUTCFullYear();
 ---
@@ -12,7 +12,9 @@ const year = new Date().getUTCFullYear();
       <p class="faint small">{site.tagline}</p>
     </div>
     <div class="right">
-      <p class="small"><a href={`mailto:${site.booking.email}`}>{site.booking.email}</a></p>
+      <p class="small">
+        <a href={bookingMailto()}>{hasRealBookingEmail() ? site.booking.email : 'Booking'}</a>
+      </p>
       <SocialRow />
     </div>
   </div>

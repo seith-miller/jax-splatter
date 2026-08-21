@@ -1,6 +1,5 @@
 ---
 import { site } from '../data/site';
-import SocialRow from './SocialRow.astro';
 ---
 
 <section id="about" aria-label="About">
@@ -19,7 +18,6 @@ import SocialRow from './SocialRow.astro';
           Built with {site.tools.join(' and ')}.
         </p>
       </div>
-      <div class="socials"><SocialRow /></div>
     </div>
     <div class="imgslot portrait" aria-hidden="true">
       <span>Booth / room / lights<br />— no faces —</span>
@@ -29,7 +27,6 @@ import SocialRow from './SocialRow.astro';
 
 <style>
   .about { align-items: center; }
-  .socials { margin-top: 1.75rem; }
   .portrait { min-height: 320px; aspect-ratio: 4 / 5; }
   @media (max-width: 719px) { .portrait { aspect-ratio: 16 / 10; min-height: 200px; } }
 </style>
