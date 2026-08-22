@@ -1,77 +1,110 @@
-# DJ Seith accounts inventory
+# Jax Splatter — accounts inventory & claim schedule
 
-What exists, what's wired, what's outstanding. **No secrets here** — this file
-only tracks *what exists*. Mirrors the format of
-[dildozer/docs/accounts-inventory.md](https://github.com/seith-miller/dildozer/blob/develop/docs/accounts-inventory.md).
+The roster of accounts the brand needs, in the order they should be claimed,
+with the reason for each. **No secrets here** — credentials go in the keystore
+(KeePass), same as [dildozer's](https://github.com/seith-miller/dildozer/blob/develop/docs/accounts-inventory.md).
 
-Legend: ✅ confirmed live · ⬜ not found · ❓ ownership unconfirmed
+Legend: ✅ claimed · ◐ in progress · ⬜ todo · ⏸ deferred
 
-## ⚠️ Unresolved: whose accounts are these?
+> **The name is `Jax Splatter`, handle `jaxsplatter` everywhere.** Decided
+> 2026-08-22 after finding that "DJ Seith" is an established hip-hop DJ with
+> the .com and every handle — see [the collision](#appendix-the-dj-seith-collision).
 
-Probed 2026-08-21 after the operator said *"I don't think there are any
-dj-seith accounts, I will need to make them."* **That turns out not to be
-true — every major handle is taken and active under `djseith`.**
+## Ordering principle
 
-Two readings, and they lead to opposite strategies:
+Claim by **how badly it hurts to lose**, not by convenience. A handle someone
+else takes is gone permanently and there is no appeal. A domain is safe for a
+few days. Anything that can be created later without losing the name goes last.
 
-1. **They're yours** — dormant or forgotten. Then there is nothing to claim;
-   the work is reactivating them and pointing them at one hub.
-2. **They're a different DJ Seith** — someone who already owns the name across
-   every platform *and* the .com. Then this is a naming collision, and the
-   brand question comes before the website question.
+## Wave 1 — today (2026-08-22)
 
-Evidence pointing at reading 2: the bios describe a **hip-hop / funk / soul /
-jazz vinyl DJ**, not the Blade Runner–electronic identity in
-[docs/brief.md](brief.md). See "The positioning conflict" below.
+The irreversible ones. If a squatter takes one of these, the name is
+compromised and we are back to picking a new one.
 
-**Do not fill these into `src/data/site.ts` until this is resolved.**
-Linking the hub at another artist's profiles would be worse than linking nothing.
+| # | Account | Handle | Why first | Status |
+|---|---|---|---|---|
+| 1 | **Porkbun domain** | `jaxsplatter.com` | The one address no platform owns. Everything else points here. Grab `.net` defensively if it's a few dollars. | ⬜ |
+| 2 | **Email on the domain** | `booking@jaxsplatter.com` | Every account below needs a signup address, and this one is portable and public-facing. Porkbun does free forwarding; a real mailbox is a couple dollars a month and lets you *send* as the address — worth it for replying to bookings. | ⬜ |
+| 3 | **Instagram** | `@jaxsplatter` | Scarcest handle, no recourse if squatted, and the channel the whole promo loop targets. | ⬜ |
+| 4 | **Bandcamp** | `jaxsplatter.bandcamp.com` | The store, and the only platform that pays directly. Subdomain is permanent once set. | ⬜ |
 
-## Web
+## Wave 2 — this weekend (by Sun 2026-08-23)
 
-| Thing | Status | Notes |
-|---|---|---|
-| `djseith.com` | ❓ live | WordPress + Elementor store, *"True Taxi In Gentle Rain by Ben FM & DJ Seith"*. Cassettes, CDs, stickers, zines, art prints; mailing list; events page. Registrar **Launchpad**, DNS **HostGator**, created 2022-05-16, expires 2027-05-16. |
-| `djseith.net` | ❓ live | Same site. Registrar **GoDaddy**, created 2024-12-31, expires 2027-12-31. |
-| `djseith.org` / `.live` / `.club` / `.xyz` | ⬜ available | Fallbacks if the name is not ours. |
+Park the name. These don't need content yet; they need to be *held*.
 
-## Platforms
+| # | Account | Handle | Why | Status |
+|---|---|---|---|---|
+| 5 | **YouTube** | `@jaxsplatter` | Create as a **Brand Account** under the existing Google login — separate channel identity, no second Gmail, no phone verification, and it can take additional owners later. | ⬜ |
+| 6 | **TikTok** | `@jaxsplatter` | Verified available. Short-form is where a set clip travels furthest. | ⬜ |
+| 7 | **Twitch** | `jaxsplatter` | Livestreams. Interzone Undead already streams at `twitch.tv/interzone_live`, so this is the personal channel, not the event's. | ⬜ |
+| 8 | **SoundCloud** | `jaxsplatter` | Originals and edits. | ⬜ |
+| 9 | **Mixcloud** | `jaxsplatter` | Full recorded sets — blanket licensing, no uploader strikes (decisions.md D5). | ⬜ |
+| 10 | **Bluesky** | `jaxsplatter.bsky.social` | Text mirror, least lock-in of anything on this list. Later: set the handle to `jaxsplatter.com` via DNS — free, and it verifies the domain. | ⬜ |
+| 11 | **Facebook page** | `facebook.com/jaxsplatter` | Low value on its own, but a Facebook Page is a **hard dependency** for Instagram's publishing API — the thing sakuma-promo needs to ever automate posting. | ⬜ |
 
-| Platform | Handle | Status | What the profile says |
+## Wave 3 — before Death to Summer (Fri 2026-08-28)
+
+The event is the forcing deadline: the first time the new name goes in front of
+an audience. Everything here is content, not claiming.
+
+| # | Task | Why | Status |
 |---|---|---|---|
-| Instagram | `@djseith` | ❓ live | bio: *"DJ Seith \| Hip-hop DJ and Producer"* |
-| Twitch | `djseith` | ❓ live | bio: *"An award-winning DJ, producer and vinyl collector… funky rhythms, soul fantasies, jazzy vibrations and headnodding hip-hop."* |
-| Bandcamp | `djseith.bandcamp.com` | ❓ live | 4+ albums (Action Figures, Ekphrasis Edan, The Motor Mix, True Taxi In Gentle Rain) + merch |
-| Mixcloud | `djseith` | ❓ live | titled "DJ Seith" |
-| SoundCloud | `djseith` | ❓ live | titled "DJ Seith" |
-| YouTube | `@djseith` | ❓ live | titled "DJSeith" |
-| Facebook | `facebook.com/djseith` | ❓ live | linked from djseith.com |
-| Bluesky | `djseith.bsky.social` | ❓ live | resolves to `did:plc:j7chmweyotjqm3pnhgnn3gzo` |
-| **TikTok** | `@djseith` | ⬜ **available** | the one handle nobody holds |
-| Spotify | — | ⬜ unchecked | needs a name search, not a handle probe |
+| 12 | Same avatar + bio on every account | A hub pointing at profiles that look unrelated reads as broken. One image, one sentence, everywhere. | ⬜ |
+| 13 | Bio copy written once, pasted everywhere | See [the identity question](#open-the-visual-identity-is-stale). | ⬜ |
+| 14 | URLs pasted into `src/data/site.ts` | Rows appear as they're filled; `npm run build` reports what's missing. | ⬜ |
+| 15 | Site rebranded + deployed | Wordmark, title, OG card, schema, repo README. | ⬜ |
 
-## The positioning conflict
+## Wave 4 — when there's a release
 
-Even if the accounts are ours, the existing bios and this site describe
-different artists:
+Not claimable in advance; these are created *by* distribution.
 
-| | Existing accounts | [docs/brief.md](brief.md) + this site |
+| Account | How | Status |
 |---|---|---|
-| Genre | hip-hop, funk, soul, jazz | electronic, dark |
-| Persona | award-winning DJ, producer, **vinyl collector** | Blade Runner — night, city, motion |
-| Proof | a back catalogue + physical merch | one Al's Bar set, Sep 2025 |
+| **DistroKid** | The distributor. One upload feeds Spotify, Apple, Tidal, Amazon, YouTube Music. Also handles cover mechanical licensing. | ⏸ |
+| **Spotify** artist profile | Created by DistroKid on first release. Then claim **Spotify for Artists** for stats and control — there is no handle to reserve now. | ⏸ |
+| Apple / Amazon / YT Music | Auto, via DistroKid. | ⏸ |
 
-A hub that points from one identity at profiles presenting the other reads as
-a mistake to anyone who follows the link. Resolve the identity before wiring
-the links.
+## Deferred — on purpose
 
-## Open questions
+| Account | Why not now |
+|---|---|
+| **Patreon** | Nothing to sell a subscription to yet. Bandcamp covers paid support at this stage. |
+| **Discord** | A server with no members is worse than no server. Wait for an audience that wants one. |
+| **Threads** | Comes automatically with the Instagram handle; nothing separate to claim. |
+| **X / Twitter** | Optional text mirror. Claim it only to stop someone else having it. |
+| **Gmail** | Blocked — the phone number has hit Google's verification cap, and the domain mailbox is better anyway. Only needed if something demands a Google login that a Brand Account can't cover. |
 
-- Are these accounts ours? Is the Launchpad/HostGator registrar login ours?
-- Who is **Ben FM**, and does the existing store site stay up?
-- Does this site replace `djseith.com`, or live beside it (hub vs. store)?
-- The existing site has a **mailing list** — the owned, portable audience layer.
-  Is it live, and who holds it?
-- A month-old **Porkbun domain verification** email is unactioned in the
-  smartsquared.ai inbox (seith-hq log, 2026-08-16). ICANN suspends after 15
-  days. Unrelated domain, but same registrar account.
+## Hygiene — do these as you go, not after
+
+- **2FA on the domain registrar and the email first.** Those two are the master keys; every other account resets through them.
+- **Credentials into the keystore** (KeePass), not the browser.
+- **Keep this off the smartsquared.ai account.** The [seith-hq log](https://github.com/seith-miller/seith-hq) already records that boundary — work mail is smartsquared.ai, personal is the gmail. A Porkbun verification email sat unread in the work inbox for a month; that's what happens when the line blurs.
+- **Same handle everywhere, no variants.** `jaxsplatter` or nothing. A qualified handle on one platform reads as an impersonator of yourself.
+
+## Open: the visual identity is stale
+
+[docs/brief.md](brief.md) and [CLAUDE.md](../CLAUDE.md) both record "Blade Runner —
+black+blue mournful, black+red frenetic" as the standing identity. Per the
+operator (2026-08-22) that was **specific to one fall-2025 show**, not the brand.
+
+The actual artist: **high energy, slightly juvenile, slightly slutty — neon
+glitch slut pop. Ghost in the Shell meets Aeon Flux.**
+
+That's close to the opposite of what's currently in [theme.css](../src/styles/theme.css)
+(cold electric blue on near-black, mournful default). The bio copy in Wave 3
+and the site re-skin both depend on rewriting this first.
+
+## Appendix: the DJ Seith collision
+
+Why the name changed. Probed 2026-08-21; all confirmed live and **not ours**:
+
+| Thing | What it is |
+|---|---|
+| `djseith.com` / `.net` | WordPress store, *"True Taxi In Gentle Rain by Ben FM & DJ Seith"* — cassettes, CDs, zines, mailing list. Registered 2022, expires 2027. |
+| Instagram `@djseith` | *"DJ Seith \| Hip-hop DJ and Producer"* |
+| Twitch `djseith` | *"An award-winning DJ, producer and vinyl collector… headnodding hip-hop."* |
+| Bandcamp | 4+ albums, merch |
+| Mixcloud, SoundCloud, YouTube, Facebook, Bluesky | All live under `djseith` |
+
+An established act with four years, a catalogue, physical merch, and every
+handle. Not winnable, and renaming was near-free at one archived flyer credit.
