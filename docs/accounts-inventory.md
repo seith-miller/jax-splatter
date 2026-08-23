@@ -23,9 +23,9 @@ compromised and we are back to picking a new one.
 
 | # | Account | Handle | Why first | Status |
 |---|---|---|---|---|
-| 1 | **Porkbun domain** | `jaxsplatter.com` | The one address no platform owns. Everything else points here. Grab `.net` defensively if it's a few dollars. | ⬜ |
-| 2 | **Email on the domain** | `booking@jaxsplatter.com` | Every account below needs a signup address, and this one is portable and public-facing. Porkbun does free forwarding; a real mailbox is a couple dollars a month and lets you *send* as the address — worth it for replying to bookings. | ⬜ |
-| 3 | **Instagram** | `@jaxsplatter` | Scarcest handle, no recourse if squatted, and the channel the whole promo loop targets. | ⬜ |
+| 1 | **Porkbun domain** | `jaxsplatter.com` | The one address no platform owns. Everything else points here. | ✅ 2026-08-22 — $11.08/yr, auto-renew + lock + WHOIS privacy on, 2FA on the account. |
+| 2 | **Email on the domain** | `accounts@` + `booking@` | Two free forwards, both to the personal gmail: `accounts@` for logins and resets, `booking@` public. Split so platform noise can't bury a booking, and so the public address can change without touching account recovery. | ✅ 2026-08-22 — delivery verified end-to-end. A sending mailbox ($3/mo) is still open; the free trial lapses 2026-09-06. |
+| 3 | **Instagram** | `@jaxsplatter` | Scarcest handle, no recourse if squatted, and the channel the whole promo loop targets. | ✅ 2026-08-22 — **Creator** account, category shown, signed up with `accounts@`. |
 | 4 | **Bandcamp** | `jaxsplatter.bandcamp.com` | The store, and the only platform that pays directly. Subdomain is permanent once set. | ⬜ |
 
 ## Wave 2 — this weekend (by Sun 2026-08-23)
@@ -40,7 +40,7 @@ Park the name. These don't need content yet; they need to be *held*.
 | 8 | **SoundCloud** | `jaxsplatter` | Originals and edits. | ⬜ |
 | 9 | **Mixcloud** | `jaxsplatter` | Full recorded sets — blanket licensing, no uploader strikes (decisions.md D5). | ⬜ |
 | 10 | **Bluesky** | `jaxsplatter.bsky.social` | Text mirror, least lock-in of anything on this list. Later: set the handle to `jaxsplatter.com` via DNS — free, and it verifies the domain. | ⬜ |
-| 11 | **Facebook page** | `facebook.com/jaxsplatter` | Low value on its own, but a Facebook Page is a **hard dependency** for Instagram's publishing API — the thing sakuma-promo needs to ever automate posting. | ⬜ |
+| 11 | **Facebook page** | `facebook.com/jaxsplatter` | **Promoted to Wave 1 in practice.** Low value on its own, but it is the prerequisite for Meta Business Suite — and Business Suite is the *only* way to post Stories and Reels from a desktop. The operator does not want Instagram on their phone, and the Death to Summer campaign is five Stories and a Reel. Without this, that campaign cannot run. Also the dependency for the publishing API and Postiz. | ⬜ **blocker** |
 
 ## Wave 3 — before Death to Summer (Fri 2026-08-28)
 
