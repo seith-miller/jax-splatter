@@ -1,4 +1,4 @@
-# djseith-site
+# jax-splatter
 
 The one address for **DJ Seith** that no platform owns — a link hub and brand home. This repo is the website only; the audio/visuals pipeline lives in [seith-miller/djseith](https://github.com/seith-miller/djseith).
 
@@ -34,7 +34,7 @@ Paste the URL into the matching row in `site.links` and flip `status` to `'live'
 npm install
 npm run dev      # local dev server
 npm run build    # static build → dist/
-npm run preview  # serve the build at /djseith-site/
+npm run preview  # serve the build at /jax-splatter/
 ```
 
 ## Deployment
@@ -43,7 +43,7 @@ Not deployed yet. The site is wired for **GitHub Pages** via [.github/workflows/
 
 1. Make the repo **public** (or use a plan that allows private Pages).
 2. **Settings → Pages → Source: GitHub Actions.**
-3. Merge to `main` — the workflow builds and deploys to `https://seith-miller.github.io/djseith-site/`.
+3. Merge to `main` — the workflow builds and deploys to `https://seith-miller.github.io/jax-splatter/`.
 4. For a custom domain serving from root, set `base: '/'` in [astro.config.mjs](astro.config.mjs) and add the domain in Pages settings.
 
 ### Before launch (placeholders to replace)

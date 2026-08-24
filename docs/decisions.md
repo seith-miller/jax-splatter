@@ -27,7 +27,7 @@ The research's strongest pricing finding was actually about **first replies**, n
 
 ## D3 — Stack: Astro, static, GitHub Pages
 Both Astro and Eleventy are verified for clean GH Pages deploys. Chose **Astro** for content collections (shows-as-data with a typed schema), build-time image optimization (image/video-heavy site), and component reuse. Zero client JS by default fits a fast, dark, visual one-pager. Deploys via the official `withastro/action`.
-- Repo is `seith-miller/djseith-site` (not `*.github.io`), so Pages serves under `/djseith-site/`. `astro.config.mjs` sets `site` + `base` accordingly. **If a custom domain is later chosen, set `base: '/'`** and update `site` (one-line change, noted in the config).
+- Repo is `seith-miller/jax-splatter` (not `*.github.io`), so Pages serves under `/jax-splatter/`. `astro.config.mjs` sets `site` + `base` accordingly. **If a custom domain is later chosen, set `base: '/'`** and update `site` (one-line change, noted in the config).
 
 ## D4 — Shows as data, seeded with one real show
 Shows live as markdown files in `src/content/shows/` with a typed frontmatter schema (date, venue, city, event, duration, optional tracklist, optional mixUrl, optional flyer). Seeded with the one confirmed real show: **Al's Bar, Sat Sep 20 2025, 90-min set**. The homepage shows the most recent few; the spine scales to an archive page when there are enough.

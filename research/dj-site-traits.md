@@ -41,7 +41,7 @@ Competitive scan of the personal sites of the DJ Mag Top 100 (2025) top 10. Scre
 
 **Charlotte de Witte** is the anti-pattern that proves the rule: a logo, one portrait, and a footer of booking emails. Total content of the homepage is ~12 links. At her level the site is a business card; the music lives on streaming platforms and socials.
 
-## Takeaways for djseith-site
+## Takeaways for jax-splatter
 
 - The dark, image-first, one-CTA pattern fits the Blade Runner identity (black+blue / black+red) with zero friction — the top-10 norm *is* our aesthetic.
 - For a booking-funnel site, the Charlotte de Witte model is the strongest reference: minimal page, unmistakable identity, booking contact immediately findable. Add pricing ($150–250/event) — something the top-10 never show, but our market expects.

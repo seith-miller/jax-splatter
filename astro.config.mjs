@@ -2,16 +2,18 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 
-// Repo is seith-miller/djseith-site (not a *.github.io repo), so GitHub Pages
-// serves the site under /djseith-site/. `base` reflects that.
+// Repo is seith-miller/jax-splatter (not a *.github.io repo), so GitHub Pages
+// serves the site under /jax-splatter/. `base` reflects that.
 //
-// If a custom domain is added later (serving from root), set:
-//   site: 'https://your-domain',
+// jaxsplatter.com is registered (Porkbun, 2026-08-22) but DNS is not pointed
+// here yet. When it is, this becomes:
+//   site: 'https://jaxsplatter.com',
 //   base: '/',
-// and update the CNAME / Pages settings. That's the only change needed here.
+// plus a `public/CNAME` holding `jaxsplatter.com` and the domain set in
+// Settings -> Pages. Until then the github.io path is what actually serves.
 export default defineConfig({
   site: 'https://seith-miller.github.io',
-  base: '/djseith-site',
+  base: '/jax-splatter',
   trailingSlash: 'ignore',
   integrations: [sitemap()],
 });

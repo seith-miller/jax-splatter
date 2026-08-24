@@ -1,4 +1,4 @@
-# djseith-site — project conventions for Claude Code
+# jax-splatter — project conventions for Claude Code
 
 ## What this project is
 

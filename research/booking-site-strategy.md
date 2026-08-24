@@ -34,7 +34,7 @@ For a $150–250 local/event DJ, the strategy that the evidence supports: a **bo
 - **→ Embed Mixcloud (dark) for recorded sets.**
 
 ### Stack — Astro or Eleventy, both verified for GH Pages (HIGH)
-- **Astro:** official `withastro/action` (v6, active), recommended path; under a repo path set both `site` and `base: '/djseith-site'` in config (skip `base` only for `<user>.github.io` repos or a custom domain serving from root).
+- **Astro:** official `withastro/action` (v6, active), recommended path; under a repo path set both `site` and `base: '/jax-splatter'` in config (skip `base` only for `<user>.github.io` repos or a custom domain serving from root).
 - **Eleventy:** production-ready default build to `_site`, documented Pages workflow.
 - No verified comparison of Hugo or plain HTML. **→ Chose Astro** for content collections (shows-as-data), build-time image optimization, and component reuse on an image-heavy site. See [docs/decisions.md](../docs/decisions.md).
 
