@@ -63,6 +63,16 @@ Approved by the operator (CLAUDE.md escalation trigger). Required: GitHub Pages 
 
 Flagged as publicly readable once flipped, since going public exposes the repo and not just the built site: `research/screenshots/` (20 captures of competitors' commercial sites) and this file's pricing rationale.
 
+## D12 — Art releases are gated on operator sign-off, tracked in a registry  — 2026-08-24
+Stated by the operator: "releases are never official until I sign off on them."
+All brand art lives in [brand/](../brand/): [brand/reference/](../brand/reference/)
+is the archive (the three Jack Splatter AI originals plus their Jax Splatter
+remakes — all reference material, none of it finished art), and
+[brand/releases/REGISTRY.md](../brand/releases/REGISTRY.md) is the system of
+record. Release IDs are `JAX-A###`, assigned only at sign-off; canonical
+filenames are `JAX-A###_slug_v#.ext`; sign-off (date + where given) is recorded
+in the registry row. Status flow: reference → candidate → released → retired.
+
 ## Still needs the operator (not decided here)
 - **The link roster itself** — no DJ Seith accounts exist yet (2026-08-21); handles are being claimed in a separate thread. Until URLs land in `site.links`, the hub renders only the booking row.
 - Domain (still none; `*.github.io` fine for v0).

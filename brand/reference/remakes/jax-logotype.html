@@ -1,0 +1,59 @@
+<html><head><meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nosifer&display=swap" rel="stylesheet">
+<style>
+  html,body{margin:0;padding:0}
+  .card{
+    position:relative;width:1024px;height:1024px;overflow:hidden;
+    background:#070607;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+  }
+  .stack{position:relative;transform:rotate(-2deg);text-align:center}
+  .line{
+    font-family:Nosifer,cursive;color:#ea3e86;margin:0;
+    letter-spacing:.01em;line-height:1.02;
+  }
+  .l1{font-size:195px}
+  .l2{font-size:112px;margin-top:-6px;letter-spacing:.03em}
+  /* grain over the ink only, applied via blend on the whole card */
+  .grain{position:absolute;inset:0;mix-blend-mode:multiply;opacity:.5}
+  .dot{position:absolute;border-radius:50%;background:#ea3e86}
+</style></head><body>
+<div class="card">
+  <div class="stack">
+    <p class="line l1">JAX</p>
+    <p class="line l2">SPLATTER</p>
+    <!-- drip splat bar under the mark -->
+    <svg width="580" height="178" viewBox="0 0 620 190" style="margin-top:10px">
+      <g fill="#ea3e86">
+        <path d="M40 18 Q120 0 310 8 Q520 0 585 22 Q600 30 580 40 Q470 58 310 52 Q150 58 45 38 Q22 30 40 18 Z"/>
+        <path d="M120 44 q10 0 10 14 q0 34 -10 34 q-10 0 -10 -34 q0 -14 10 -14Z"/>
+        <path d="M205 48 q11 0 11 20 q0 62 -11 62 q-11 0 -11 -62 q0 -20 11 -20Z"/>
+        <path d="M300 50 q12 0 12 26 q0 96 -12 96 q-12 0 -12 -96 q0 -26 12 -26Z"/>
+        <circle cx="300" cy="180" r="13"/>
+        <path d="M392 48 q11 0 11 18 q0 54 -11 54 q-11 0 -11 -54 q0 -18 11 -18Z"/>
+        <path d="M480 44 q10 0 10 12 q0 30 -10 30 q-10 0 -10 -30 q0 -12 10 -12Z"/>
+      </g>
+    </svg>
+  </div>
+  <!-- scattered splatter dots -->
+  <div class="dot" style="left:150px;top:190px;width:16px;height:16px"></div>
+  <div class="dot" style="left:250px;top:130px;width:9px;height:9px"></div>
+  <div class="dot" style="left:420px;top:120px;width:12px;height:12px"></div>
+  <div class="dot" style="left:610px;top:150px;width:8px;height:8px"></div>
+  <div class="dot" style="left:760px;top:210px;width:14px;height:14px"></div>
+  <div class="dot" style="left:840px;top:330px;width:9px;height:9px"></div>
+  <div class="dot" style="left:870px;top:470px;width:12px;height:12px"></div>
+  <div class="dot" style="left:120px;top:420px;width:10px;height:10px"></div>
+  <div class="dot" style="left:90px;top:610px;width:14px;height:14px"></div>
+  <div class="dot" style="left:800px;top:680px;width:10px;height:10px"></div>
+  <div class="dot" style="left:300px;top:860px;width:9px;height:9px"></div>
+  <div class="dot" style="left:660px;top:840px;width:13px;height:13px"></div>
+  <!-- film grain -->
+  <svg class="grain" width="1024" height="1024">
+    <filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0.6 0.6 0.6 0 0"/>
+    </filter>
+    <rect width="1024" height="1024" filter="url(#n)" opacity="0.35" style="mix-blend-mode:multiply"/>
+  </svg>
+</div></body></html>
