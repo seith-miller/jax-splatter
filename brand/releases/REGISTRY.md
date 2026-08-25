@@ -42,10 +42,16 @@ A release becomes official in four moves, in order:
 | JAX-A001 
 ## Candidates
 
-Proposed but **not signed off**. Files live in `../reference/remakes/exports/`.
+Proposed but **not signed off**.
 
 | slug | what it is | source of truth |
 |---|---|---|
-| logotype | drippy pink slime "JAX SPLATTER" on black, remade from the Jack Splatter AI original | `../reference/remakes/jax-logotype.html` |
-| new-song-card | "NEW SONG — PUT IT IN MY" flat promo card | `../reference/remakes/jax-new-song-put-it-in-my.html` |
-| put-it-in-my-shirt | pin-up shirt art, original raster with title inpainted and re-set | `../reference/remakes/jax-put-it-in-my-shirt.html` |
+| type | brand type spec v2 — Logotype: Pathway Gothic One (wordmark only, per JAX-A002) / Display: Bebas Neue / Body: Inter | `../reference/type/jax-type.html` |
+
+## Withdrawn
+
+Kept for the record; no longer candidates. Files remain in `../reference/` as archive.
+
+- **logotype / new-song-card / put-it-in-my-shirt** — the Jack Splatter remakes; superseded by the JAX-A002 wordmark. Reference archive only.
+- **jax-off** — custom splat TTF experiment; direction dropped 2026-08-24.
+- **type v1** — Nosifer/Oswald lineup; superseded by type v2.
