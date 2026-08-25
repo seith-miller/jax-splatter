@@ -46,7 +46,7 @@ Proposed but **not signed off**.
 
 | slug | what it is | source of truth |
 |---|---|---|
-| type | brand type spec v2 — Logotype: Pathway Gothic One (wordmark only, per JAX-A002) / Display: Bebas Neue / Body: Inter | `../reference/type/jax-type.html` |
+| — | *none* | — |
 
 ## Withdrawn
 
