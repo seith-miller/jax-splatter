@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://seith-miller.github.io/jax-splatter/sitemap-index.xml
+Sitemap: https://jaxsplatter.com/sitemap-index.xml

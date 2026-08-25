@@ -2,18 +2,12 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 
-// Repo is seith-miller/jax-splatter (not a *.github.io repo), so GitHub Pages
-// serves the site under /jax-splatter/. `base` reflects that.
-//
-// jaxsplatter.com is registered (Porkbun, 2026-08-22) but DNS is not pointed
-// here yet. When it is, this becomes:
-//   site: 'https://jaxsplatter.com',
-//   base: '/',
-// plus a `public/CNAME` holding `jaxsplatter.com` and the domain set in
-// Settings -> Pages. Until then the github.io path is what actually serves.
+// Serving at the apex domain: DNS A records at Porkbun point jaxsplatter.com
+// at GitHub Pages, `public/CNAME` claims it, and the custom domain is set in
+// Settings -> Pages. The old seith-miller.github.io/jax-splatter URL redirects.
 export default defineConfig({
-  site: 'https://seith-miller.github.io',
-  base: '/jax-splatter',
+  site: 'https://jaxsplatter.com',
+  base: '/',
   trailingSlash: 'ignore',
   integrations: [sitemap()],
 });
