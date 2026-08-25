@@ -11,7 +11,7 @@ const nav = [
 
 <header class="site-header">
   <div class="wrap bar">
-    <a class="wordmark" href="#top">{site.name}</a>
+    <a class="wordmark" href="#top">JA<span class="x">X</span><span class="wgap"></span>SPLATTER</a>
     <nav aria-label="Primary">
       {nav.map((n) => <a href={n.href}>{n.label}</a>)}
     </nav>
@@ -30,10 +30,12 @@ const nav = [
     padding-block: 0.9rem;
   }
   .wordmark {
-    font-family: var(--font-display); font-weight: 700;
-    text-transform: uppercase; letter-spacing: 0.18em;
-    color: var(--fg); font-size: 1.1rem;
+    font-family: var(--font-logo); font-weight: 400;
+    text-transform: uppercase; letter-spacing: 0.015em;
+    color: #f2efe9; font-size: 1.5rem;
   }
+  .wordmark .x { color: var(--pink, #ea3e86); }
+  .wordmark .wgap { display: inline-block; width: 0.3em; }
   .wordmark:hover { color: var(--accent); }
   nav { display: flex; gap: clamp(0.9rem, 2.5vw, 1.75rem); }
   nav a {

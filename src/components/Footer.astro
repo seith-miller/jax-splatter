@@ -8,7 +8,7 @@ const year = new Date().getUTCFullYear();
   <hr class="rule" />
   <div class="wrap inner">
     <div>
-      <p class="mark">{site.name}</p>
+      <p class="mark">JA<span class="x">X</span><span class="wgap"></span>SPLATTER</p>
       <p class="faint small">{site.tagline}</p>
     </div>
     <div class="right">
@@ -24,7 +24,9 @@ const year = new Date().getUTCFullYear();
 <style>
   .site-footer { padding-top: 2.5rem; padding-bottom: 3rem; }
   .inner { display: flex; flex-wrap: wrap; gap: 1.5rem 2rem; justify-content: space-between; align-items: flex-start; padding-top: 2rem; }
-  .mark { font-family: var(--font-display); text-transform: uppercase; letter-spacing: 0.18em; margin: 0; }
+  .mark { font-family: var(--font-logo); text-transform: uppercase; letter-spacing: 0.015em; margin: 0; color: #f2efe9; }
+  .mark :global(.x) { color: #ea3e86; }
+  .mark :global(.wgap) { display: inline-block; width: 0.3em; }
   .small { font-size: 0.85rem; }
   .right { display: flex; flex-direction: column; gap: 0.75rem; align-items: flex-start; }
   .copy { margin-top: 2rem; font-size: 0.78rem; letter-spacing: 0.08em; }

@@ -6,7 +6,7 @@ import { site } from '../data/site';
   <div class="hero-bg" aria-hidden="true"></div>
   <div class="wrap hero-inner">
     <p class="kicker">{site.tagline}</p>
-    <h1>{site.name}</h1>
+    <h1 class="wm">JA<span class="x">X</span><span class="wgap"></span>SPLATTER</h1>
     <p class="statement">{site.heroStatement}</p>
   </div>
 </section>
@@ -34,7 +34,13 @@ import { site } from '../data/site';
     letter-spacing: 0.34em; font-size: 0.85rem; color: var(--blue);
     margin: 0 0 0.75rem;
   }
-  h1 { margin: 0; text-shadow: 0 0 38px rgba(70,179,255,0.28); }
+  h1.wm {
+    margin: 0; text-shadow: 0 0 38px rgba(70,179,255,0.28);
+    font-family: var(--font-logo); font-weight: 400;
+    letter-spacing: 0.015em; color: #f2efe9;
+  }
+  h1.wm .x { color: #ea3e86; }
+  h1.wm .wgap { display: inline-block; width: 0.3em; }
   .statement {
     max-width: 34ch; font-size: clamp(1.05rem, 1rem + 0.6vw, 1.4rem);
     color: var(--fg-dim); margin: 1rem 0 0;

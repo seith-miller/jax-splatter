@@ -1,5 +1,5 @@
 /*
-  DJ SEITH — Blade Runner dark theme.
+  JAX SPLATTER — Blade Runner dark theme.
   Identity (Aug 2025 notes): night, city, motion. Black + blue = slow/moody;
   black + red = energetic/frenetic. Glitch / scanline texture welcome.
   People present but never important — no faces in imagery.
@@ -33,7 +33,8 @@
   --maxw: 1100px;
   --gutter: clamp(1.25rem, 4vw, 3rem);
 
-  --font-display: "Oswald", "Arial Narrow", system-ui, sans-serif;
+  --font-logo: "Pathway Gothic One", "Arial Narrow", sans-serif;      /* the wordmark only (JAX-A003) */
+  --font-display: "Bebas Neue", "Arial Narrow", system-ui, sans-serif;
   --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 

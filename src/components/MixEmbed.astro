@@ -1,6 +1,6 @@
 ---
 interface Props {
-  url: string; // a mixcloud show URL, e.g. https://www.mixcloud.com/djseith/some-set/
+  url: string; // a mixcloud show URL, e.g. https://www.mixcloud.com/jaxsplatter/some-set/
 }
 const { url } = Astro.props;
 
@@ -8,7 +8,7 @@ const { url } = Astro.props;
 // aesthetic). Build the widget feed param from the show path.
 let feed = '';
 try {
-  feed = new URL(url).pathname; // e.g. /djseith/some-set/
+  feed = new URL(url).pathname; // e.g. /jaxsplatter/some-set/
 } catch {
   feed = '';
 }

@@ -18,17 +18,16 @@ export interface PlatformLink {
 }
 
 export const site = {
-  name: 'DJ SEITH',
+  name: 'JAX SPLATTER',
   tagline: 'Music producer & live performer',
   // One-line positioning shown in the hero. Keep it short and uppercase-friendly.
   heroStatement: 'Late-night sets for rooms that want to feel something.',
 
-  // ── ACTION NEEDED BEFORE LAUNCH ──────────────────────────────────────────
-  // Placeholder. v0 does not publish a personal address without ratification.
   booking: {
-    email: 'bookings@djseith.example', // ← set a real booking inbox
+    // Claimed 2026-08-22 (accounts-inventory row 2); forwards to the personal
+    // gmail, split from accounts@ so platform noise can't bury a booking.
+    email: 'booking@jaxsplatter.com',
   },
-  // ─────────────────────────────────────────────────────────────────────────
 
   // ══ THE LINK HUB ═════════════════════════════════════════════════════════
   // The spine of the page (decisions.md D9). This site is the ONE address that
@@ -43,7 +42,7 @@ export const site = {
   // never render; they exist so the list of what's outstanding lives in one
   // place. Flip to 'live' when the URL goes in.
   links: [
-    { key: 'instagram',  label: 'Instagram',  handle: '', url: '', kind: 'Daily',    status: 'planned' },
+    { key: 'instagram',  label: 'Instagram',  handle: '@jaxsplatter', url: 'https://www.instagram.com/jaxsplatter/', kind: 'Daily', status: 'live' },
     { key: 'mixcloud',   label: 'Mixcloud',   handle: '', url: '', kind: 'Sets',     status: 'planned' },
     { key: 'youtube',    label: 'YouTube',    handle: '', url: '', kind: 'Video',    status: 'planned' },
     { key: 'twitch',     label: 'Twitch',     handle: '', url: '', kind: 'Live',     status: 'planned' },
@@ -76,6 +75,6 @@ export function hasRealBookingEmail(): boolean {
 }
 
 export function bookingMailto(): string {
-  const subject = encodeURIComponent('Booking — DJ Seith');
+  const subject = encodeURIComponent('Booking — Jax Splatter');
   return `mailto:${site.booking.email}?subject=${subject}`;
 }
