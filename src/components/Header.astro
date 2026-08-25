@@ -1,0 +1,49 @@
+---
+import { site } from '../data/site';
+
+const nav = [
+  { href: '#links', label: 'Follow' },
+  { href: '#shows', label: 'Shows' },
+  { href: '#mixes', label: 'Mixes' },
+  { href: '#about', label: 'About' },
+];
+---
+
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="wordmark" href="#top">JA<span class="x">X</span><span class="wgap"></span>SPLATTER</a>
+    <nav aria-label="Primary">
+      {nav.map((n) => <a href={n.href}>{n.label}</a>)}
+    </nav>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: sticky; top: 0; z-index: 50;
+    background: color-mix(in srgb, var(--bg) 82%, transparent);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  .bar {
+    display: flex; align-items: center; justify-content: space-between;
+    padding-block: 0.9rem;
+  }
+  .wordmark {
+    font-family: var(--font-logo); font-weight: 400;
+    text-transform: uppercase; letter-spacing: 0.015em;
+    color: #f2efe9; font-size: 1.5rem;
+  }
+  .wordmark .x { color: var(--pink, #ea3e86); }
+  .wordmark .wgap { display: inline-block; width: 0.3em; }
+  .wordmark:hover { color: var(--accent); }
+  nav { display: flex; gap: clamp(0.9rem, 2.5vw, 1.75rem); }
+  nav a {
+    font-family: var(--font-display); text-transform: uppercase;
+    letter-spacing: 0.14em; font-size: 0.8rem; color: var(--fg-dim);
+  }
+  nav a:hover { color: var(--accent); }
+  @media (max-width: 480px) {
+    nav a:nth-child(4) { display: none; } /* drop "About" first on tiny screens */
+  }
+</style>

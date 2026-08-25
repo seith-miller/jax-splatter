@@ -1,0 +1,25 @@
+---
+import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import LinkHub from '../components/LinkHub.astro';
+import Shows from '../components/Shows.astro';
+import Mixes from '../components/Mixes.astro';
+import About from '../components/About.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Base>
+  <Header />
+  <main>
+    <Hero />
+    <LinkHub />
+    <hr class="rule" />
+    <Shows limit={4} />
+    <hr class="rule" />
+    <Mixes />
+    <hr class="rule" />
+    <About />
+  </main>
+  <Footer />
+</Base>

@@ -1,4 +1,4 @@
-# Brief — djseith-site
+# Brief — jax-splatter
 
 Seeded from the GTD drain session, 2026-06-11.
 

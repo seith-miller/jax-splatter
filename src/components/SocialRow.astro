@@ -1,0 +1,29 @@
+---
+import { liveLinks } from '../data/site';
+
+// Compact text row of the same roster the hub renders — used in the footer so
+// the links are reachable from the bottom of the page without scrolling back.
+// Driven by the same `site.links` array; nothing renders until URLs exist.
+const items = liveLinks();
+---
+
+{
+  items.length > 0 && (
+    <ul class="social">
+      {items.map((i) => (
+        <li>
+          <a href={i.url} target="_blank" rel="me noopener noreferrer">{i.label}</a>
+        </li>
+      ))}
+    </ul>
+  )
+}
+
+<style>
+  .social { list-style: none; display: flex; flex-wrap: wrap; gap: 1.25rem; margin: 0; padding: 0; }
+  .social a {
+    font-family: var(--font-display); text-transform: uppercase;
+    letter-spacing: 0.16em; font-size: 0.78rem; color: var(--fg-dim);
+  }
+  .social a:hover { color: var(--accent); }
+</style>

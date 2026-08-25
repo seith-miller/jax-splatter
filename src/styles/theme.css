@@ -1,0 +1,155 @@
+/*
+  JAX SPLATTER — Blade Runner dark theme.
+  Identity (Aug 2025 notes): night, city, motion. Black + blue = slow/moody;
+  black + red = energetic/frenetic. Glitch / scanline texture welcome.
+  People present but never important — no faces in imagery.
+*/
+
+:root {
+  /* base — near-black, faint cool cast */
+  --bg:        #05060a;
+  --bg-2:      #0a0c14;
+  --bg-3:      #11141f;
+  --line:      #1c2030;
+
+  /* ink */
+  --fg:        #e8ecf6;
+  --fg-dim:    #9aa3b8;
+  --fg-faint:  #5b6478;
+
+  /* blue = moody / default primary (cold electric) */
+  --blue:      #46b3ff;
+  --blue-deep: #1668d6;
+  --blue-glow: rgba(70, 179, 255, 0.45);
+
+  /* red = energetic accent (neon) */
+  --red:       #ff2d55;
+  --red-deep:  #c70f38;
+  --red-glow:  rgba(255, 45, 85, 0.45);
+
+  --accent:      var(--blue);
+  --accent-glow: var(--blue-glow);
+
+  --maxw: 1100px;
+  --gutter: clamp(1.25rem, 4vw, 3rem);
+
+  --font-logo: "Pathway Gothic One", "Arial Narrow", sans-serif;      /* the wordmark only (JAX-A003) */
+  --font-display: "Bebas Neue", "Arial Narrow", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+/* energetic sections opt into red by setting data-mood="red" */
+[data-mood="red"] {
+  --accent:      var(--red);
+  --accent-glow: var(--red-glow);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 0.95rem + 0.3vw, 1.125rem);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+h1, h2, h3, .display {
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  line-height: 1.02;
+  margin: 0 0 0.5em;
+}
+
+h1 { font-size: clamp(2.75rem, 7vw, 6rem); }
+h2 { font-size: clamp(1.9rem, 4vw, 3rem); }
+h3 { font-size: clamp(1.15rem, 2vw, 1.45rem); letter-spacing: 0.08em; }
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { color: var(--fg); }
+
+p { margin: 0 0 1rem; }
+.muted { color: var(--fg-dim); }
+.faint { color: var(--fg-faint); }
+
+/* layout */
+.wrap { max-width: var(--maxw); margin-inline: auto; padding-inline: var(--gutter); }
+section { padding-block: clamp(3.5rem, 9vw, 7rem); position: relative; }
+.section-label {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.35em;
+  font-size: 0.8rem;
+  color: var(--accent);
+  margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.75rem;
+}
+.section-label::before {
+  content: ""; width: 2.5rem; height: 1px; background: var(--accent);
+  box-shadow: 0 0 8px var(--accent-glow);
+}
+
+/* buttons */
+.btn {
+  --b: var(--accent);
+  display: inline-flex; align-items: center; gap: 0.6rem;
+  font-family: var(--font-display); text-transform: uppercase;
+  letter-spacing: 0.12em; font-size: 0.95rem; font-weight: 600;
+  padding: 0.85rem 1.6rem;
+  color: var(--bg); background: var(--b);
+  border: 1px solid var(--b); border-radius: 2px;
+  box-shadow: 0 0 22px -4px var(--accent-glow);
+  cursor: pointer; transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+.btn:hover { color: var(--bg); transform: translateY(-1px); box-shadow: 0 0 34px -2px var(--accent-glow); }
+.btn--ghost {
+  background: transparent; color: var(--fg);
+  border-color: var(--line); box-shadow: none;
+}
+.btn--ghost:hover { border-color: var(--accent); color: var(--accent); }
+
+/* hairline dividers + glow rule */
+.rule { height: 1px; background: var(--line); border: 0; margin: 0; }
+
+/* scanline / glitch texture — CSS only, very subtle, no AI artifacts */
+.scanlines::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom, rgba(255,255,255,0.025) 0 1px, transparent 1px 3px
+  );
+  mix-blend-mode: overlay; opacity: 0.5;
+}
+
+/* image placeholder — sized for rooms/booth/lights, NEVER faces */
+.imgslot {
+  position: relative; overflow: hidden; border: 1px solid var(--line);
+  background:
+    radial-gradient(120% 80% at 70% 0%, color-mix(in srgb, var(--accent) 18%, transparent), transparent 60%),
+    linear-gradient(160deg, var(--bg-3), var(--bg));
+  display: grid; place-items: center; min-height: 180px;
+  color: var(--fg-faint); font-family: var(--font-display);
+  letter-spacing: 0.2em; text-transform: uppercase; font-size: 0.75rem;
+  text-align: center; padding: 1rem;
+}
+.imgslot img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.grid { display: grid; gap: clamp(1rem, 2.5vw, 1.75rem); }
+@media (min-width: 720px) { .cols-3 { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 720px) { .cols-2 { grid-template-columns: repeat(2, 1fr); } }
+
+/* utility */
+.center { text-align: center; }
+.stack > * + * { margin-top: 1rem; }

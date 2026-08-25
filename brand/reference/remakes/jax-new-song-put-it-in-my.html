@@ -1,0 +1,74 @@
+<html><head><meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Creepster&family=Permanent+Marker&family=Anton&display=swap" rel="stylesheet">
+<style>
+  html,body{margin:0;padding:0}
+  .card{
+    position:relative;width:1024px;height:1024px;overflow:hidden;
+    background:radial-gradient(120% 120% at 50% 30%, #131113 0%, #0a090a 55%, #060506 100%);
+  }
+  .mark{
+    font-family:Creepster,cursive;color:#d54f7d;font-size:132px;line-height:1;
+    position:absolute;left:70px;top:80px;width:900px;margin:0;
+    transform:rotate(-4deg);letter-spacing:.03em;
+  }
+  .newsong{
+    font-family:'Permanent Marker',cursive;color:#d54f7d;font-size:56px;line-height:1.1;
+    position:absolute;left:120px;top:270px;margin:0;transform:rotate(-4deg);
+  }
+  .title{
+    font-family:Anton,sans-serif;color:#d1cac2;font-size:110px;line-height:1;
+    position:absolute;left:0;right:0;bottom:90px;text-align:center;margin:0;
+    letter-spacing:.02em;
+  }
+  .deck{position:absolute;left:112px;bottom:240px;transform:rotate(-6deg)}
+  .grain{position:absolute;inset:0;mix-blend-mode:multiply;opacity:.5}
+</style></head><body>
+<div class="card">
+  <p class="mark">JAX SPLATTER</p>
+  <p class="newsong">NEW<br>SONG</p>
+
+  <!-- turntable + mixer, single-color mark -->
+  <svg class="deck" width="800" height="360" viewBox="0 0 800 360">
+    <g fill="none" stroke="#d1cac2" stroke-width="10" stroke-linecap="round">
+      <!-- deck plinth -->
+      <rect x="20" y="30" width="470" height="300" rx="18"/>
+      <!-- platter -->
+      <circle cx="255" cy="180" r="118"/>
+      <circle cx="255" cy="180" r="46"/>
+      <circle cx="255" cy="180" r="10" fill="#d1cac2"/>
+      <path d="M150 110 a132 132 0 0 1 30 -28" stroke-width="7"/>
+      <path d="M138 150 a132 132 0 0 1 8 -22" stroke-width="7"/>
+      <path d="M360 250 a132 132 0 0 1 -26 26" stroke-width="7"/>
+      <!-- deck buttons -->
+      <circle cx="60" cy="70" r="9" fill="#d1cac2" stroke="none"/>
+      <circle cx="60" cy="290" r="9" fill="#d1cac2" stroke="none"/>
+      <rect x="410" y="60" width="46" height="12" rx="6" fill="#d1cac2" stroke="none"/>
+      <rect x="410" y="90" width="30" height="12" rx="6" fill="#d1cac2" stroke="none"/>
+      <!-- mixer -->
+      <g>
+        <rect x="530" y="40" width="250" height="290" rx="14"/>
+        <!-- channel faders -->
+        <line x1="580" y1="90" x2="580" y2="300"/>
+        <rect x="562" y="150" width="36" height="20" rx="6" fill="#d1cac2" stroke="none"/>
+        <line x1="655" y1="90" x2="655" y2="300"/>
+        <rect x="637" y="210" width="36" height="20" rx="6" fill="#d1cac2" stroke="none"/>
+        <line x1="730" y1="90" x2="730" y2="300"/>
+        <rect x="712" y="120" width="36" height="20" rx="6" fill="#d1cac2" stroke="none"/>
+        <!-- knobs -->
+        <circle cx="580" cy="62" r="11" fill="#d1cac2" stroke="none"/>
+        <circle cx="655" cy="62" r="11" fill="#d1cac2" stroke="none"/>
+        <circle cx="730" cy="62" r="11" fill="#d1cac2" stroke="none"/>
+      </g>
+    </g>
+  </svg>
+
+  <p class="title">PUT IT IN MY</p>
+
+  <svg class="grain" width="1024" height="1024">
+    <filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0.6 0.6 0.6 0 0"/>
+    </filter>
+    <rect width="1024" height="1024" filter="url(#n)" opacity="0.35" style="mix-blend-mode:multiply"/>
+  </svg>
+</div></body></html>

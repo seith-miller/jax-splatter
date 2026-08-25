@@ -1,0 +1,32 @@
+---
+import { site } from '../data/site';
+---
+
+<section id="about" aria-label="About">
+  <div class="wrap grid cols-2 about">
+    <div>
+      <p class="section-label">About</p>
+      <h2>The sound</h2>
+      <div class="stack">
+        <p>
+          {site.name} is a {site.tagline.toLowerCase()} working in the dark end of
+          electronic music — night, city, motion. Sets move between the slow and
+          mournful and the frenetic; built live, original audio throughout, often
+          run against synced video.
+        </p>
+        <p class="muted">
+          Built with {site.tools.join(' and ')}.
+        </p>
+      </div>
+    </div>
+    <div class="imgslot portrait" aria-hidden="true">
+      <span>Booth / room / lights<br />— no faces —</span>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about { align-items: center; }
+  .portrait { min-height: 320px; aspect-ratio: 4 / 5; }
+  @media (max-width: 719px) { .portrait { aspect-ratio: 16 / 10; min-height: 200px; } }
+</style>
