@@ -1,0 +1,55 @@
+---
+import { getCollection } from 'astro:content';
+import ShowCard from './ShowCard.astro';
+
+interface Props {
+  limit?: number;
+}
+const { limit } = Astro.props;
+
+const all = (await getCollection('shows', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+
+const shows = limit ? all.slice(0, limit) : all;
+const hasMore = limit ? all.length > limit : false;
+---
+
+<section id="shows" aria-label="Recent shows">
+  <div class="wrap">
+    <p class="section-label">Recently played</p>
+    <h2>Where I've been</h2>
+    <p class="muted lead">
+      Not on tour — these are real rooms, recently. Proof the night happens.
+    </p>
+
+    {
+      shows.length > 0 ? (
+        <div class="grid cols-2 list">
+          {shows.map((s) => (
+            <ShowCard
+              date={s.data.date}
+              venue={s.data.venue}
+              city={s.data.city}
+              event={s.data.event}
+              durationMins={s.data.durationMins}
+              mixUrl={s.data.mixUrl}
+              tracklist={s.data.tracklist}
+              image={s.data.image}
+              note={s.body?.trim()}
+            />
+          ))}
+        </div>
+      ) : (
+        <p class="faint">Shows will appear here as they're logged.</p>
+      )
+    }
+
+    {hasMore && <p class="more faint">More in the archive soon.</p>}
+  </div>
+</section>
+
+<style>
+  .lead { max-width: 46ch; margin-bottom: 2.5rem; }
+  .list { align-items: start; }
+  .more { margin-top: 1.5rem; letter-spacing: 0.1em; font-size: 0.85rem; }
+</style>

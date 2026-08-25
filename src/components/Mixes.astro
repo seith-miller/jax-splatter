@@ -1,0 +1,50 @@
+---
+import { getCollection } from 'astro:content';
+import { site } from '../data/site';
+import MixEmbed from './MixEmbed.astro';
+
+// Feature any recorded sets attached to shows; newest first.
+const mixes = (await getCollection('shows', ({ data }) => !data.draft && !!data.mixUrl))
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+  .slice(0, 3);
+
+const hasMixcloud = Boolean(site.links.mixcloud);
+---
+
+<section id="mixes" data-mood="red" class="scanlines" aria-label="Mixes">
+  <div class="wrap">
+    <p class="section-label">Listen</p>
+    <h2>Recorded sets</h2>
+    <p class="muted lead">
+      Full sets will land on Mixcloud — licensed, so they stay up.
+    </p>
+
+    {
+      mixes.length > 0 ? (
+        <div class="grid stack mixlist">
+          {mixes.map((m) => (
+            <div class="mixrow">
+              <h3>{m.data.venue}{m.data.event ? ` — ${m.data.event}` : ''}</h3>
+              <MixEmbed url={m.data.mixUrl!} />
+            </div>
+          ))}
+        </div>
+      ) : (
+        <div class="imgslot empty">
+          <span>Mixes drop here<br />once a set is recorded + uploaded</span>
+        </div>
+      )
+    }
+
+    {hasMixcloud && (
+      <p class="all"><a class="btn btn--ghost" href={site.links.mixcloud} target="_blank" rel="noopener noreferrer">All mixes on Mixcloud</a></p>
+    )}
+  </div>
+</section>
+
+<style>
+  .lead { max-width: 44ch; margin-bottom: 2.5rem; }
+  .mixrow h3 { margin-bottom: 0.6rem; }
+  .empty { min-height: 160px; aspect-ratio: auto; }
+  .all { margin-top: 2rem; }
+</style>

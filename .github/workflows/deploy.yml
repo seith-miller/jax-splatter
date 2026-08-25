@@ -1,0 +1,43 @@
+name: Deploy to GitHub Pages
+
+# Builds the Astro site and deploys to GitHub Pages.
+# Prerequisites (one-time, by the operator):
+#   1. Make the repo public (or have a plan that allows private Pages).
+#   2. Settings → Pages → Source: "GitHub Actions".
+# Until then this workflow is inert (it only runs on pushes to main / manual dispatch).
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow one concurrent deployment, don't cancel in-progress production runs.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Build with Astro
+        uses: withastro/action@v3
+        # withastro/action installs deps, runs the build, and uploads the
+        # Pages artifact. It reads `site` and `base` from astro.config.mjs.
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
