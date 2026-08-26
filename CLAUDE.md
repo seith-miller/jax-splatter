@@ -2,53 +2,93 @@
 
 ## What this project is
 
-Public website for DJ Seith — promo + booking. The site's job: who, what it costs ($150–250/event), how to book, and proof (mixes, sets, visuals). The audio/visuals pipeline is a separate repo ([seith-miller/djseith](https://github.com/seith-miller/djseith)); this repo is the website only.
+The home of **JAX SPLATTER**, the act — Jax's artist project. Songs, lights,
+band, choreo, video, merch, the signed brand system, and the public website
+all live here (see the README's map). The website's job within that: who,
+what it costs ($150–250/event), how to book, and proof — live at
+[jaxsplatter.com](https://jaxsplatter.com).
 
-This repo is a **product of the sakuma process**, not an ecosystem component. The sakuma pipeline built it; its job now is to serve its users. Process and methodology concerns do not live here — see "What this repo does NOT do" below.
+This repo is a **product of the sakuma process**, not an ecosystem component.
+Process and methodology concerns do not live here — see "What this repo does
+NOT do" below.
 
-## Your first task in this repo
+Scope history: began as `djseith-site` (website only); widened to the act's
+repo with the Jax Splatter rebrand, 2026-08-25.
 
-Ratify the open decisions in [docs/brief.md](docs/brief.md) (booking funnel vs portfolio, domain, stack), then build v0. Competitive research on the top-10 DJs' sites lives in [research/](research/).
+## The brand is governed
 
-Per gitflow, do the work on a feature branch off `develop` and open a PR back to `develop` when done.
+Visual identity is a system of **signed releases** in
+[brand/releases/REGISTRY.md](brand/releases/REGISTRY.md) — colors (JAX-A001),
+wordmark (JAX-A002), type (JAX-A003), and onward. **Nothing is an official
+release until Jax signs off**; the registry records the words, the stamp
+(tools/stamp.py), and the release commit carries
+`Signed-off-by: Jax <booking@jaxsplatter.com>`. Working material lives in
+brand/reference/. When making anything user-visible, use the signed system —
+don't invent colors or faces.
 
-## Surfacing PRs to the human
-
-**Whenever you ask the human to look at, review, or merge a PR, always give them the link** — the full URL (`https://github.com/<owner>/<repo>/pull/<n>`) or a markdown link. Never reference a PR by number alone when you want them to act on it; the human works across many repos and a bare `#4` makes them hunt. One-click, not a chore.
+In the context of this repo, address the user as **Jax**.
 
 ## Project conventions
 
-- **Static-first** — nothing here needs a server; don't introduce one without a ratified decision.
-- **Blade Runner visual identity** — night, city, motion. Black+blue = slow/moody/mournful; black+red = energetic/frenetic. Glitch and VHS artifacts welcome.
-- **No recognizable AI artifacts** — and people are present but never important: no faces, waist-down crowds, silhouettes in windows.
+- **Static-first** (the site) — nothing here needs a server; don't introduce
+  one without a ratified decision.
+- **Site aesthetic**: Blade Runner dark per [docs/decisions.md](docs/decisions.md)
+  D7 — black+blue moody, black+red frenetic — with the signed brand system
+  layered on top (wordmark, type, One-Sheet letter white).
+- **No recognizable AI artifacts** on the site — people present but never
+  important: no faces.
+- **Truth over polish**: the site never claims accounts, mixes, or shows that
+  don't exist. Empty states are honest.
+
+## Surfacing PRs to the human
+
+**Whenever you ask Jax to look at, review, or merge a PR, give the full URL**
+(`https://github.com/<owner>/<repo>/pull/<n>`). Never a bare number.
 
 ## When to log (the logging protocol)
 
-This repo follows the ecosystem logging protocol at `~/Code/ledger/docs/logging-protocol.md`: **open a ledger goal-record at the first mutation toward a stated goal; close it when the goal completes or is abandoned.** Discussions get a record only when they end in a decision (`/log-that`). Never create records on a clock. The SessionStart hook surfaces open records automatically.
+This repo follows the ecosystem logging protocol at
+`~/Code/ledger/docs/logging-protocol.md`: open a ledger goal-record at the
+first mutation toward a stated goal; close it when the goal completes or is
+abandoned. Never create records on a clock.
 
 ## What this repo does NOT do
 
-- **Audio/visual asset production** — the shot catalog, renders, and music pipeline live in [seith-miller/djseith](https://github.com/seith-miller/djseith). This repo consumes finished assets.
-- **Methodology and process learnings** — if building this product teaches something about how the pipeline should work, that signal goes to [smartsquared/sakuma](https://github.com/smartsquared/sakuma), not here.
-- **Pipeline tooling fixes** — agent-lab, blueprint, compass bugs get filed on those repos, not patched around in this one.
-
-If you find yourself doing any of these here, you've crossed the product/process boundary.
+- **Audio ETL tooling** — [seith-miller/djseith](https://github.com/seith-miller/djseith)
+  is a tool the act uses (download, analyze, time-stretch, stem-separate).
+  Its bugs get fixed there.
+- **Individual events** — event production (rigs, runbooks, event promo)
+  lives in interzone (Death to Summer, MULTIPASS). The act performs at
+  events; events are not the act. Act-branded assets an event consumes (e.g.
+  the lower-third) are released here, installed there.
+- **Methodology and process learnings** — signals about how the pipeline
+  should work go to [smartsquared/sakuma](https://github.com/smartsquared/sakuma).
+- **Pipeline tooling fixes** — agent-lab, blueprint, compass bugs get filed
+  on those repos.
 
 ## Andon awareness
 
-While the pipeline is actively building here (agent-lab dispatches), honor andon: poll [STATUS.md](https://github.com/smartsquared/andon) and halt when `pulled`. Interactive sessions with the human present are exempt.
+While the pipeline is actively building here (agent-lab dispatches), honor
+andon: poll [STATUS.md](https://github.com/smartsquared/andon) and halt when
+`pulled`. Interactive sessions with Jax present are exempt.
 
 ## Useful state to know
 
-- Repo created 2026-06-11 (seed commit from the GTD drain session); retrofitted in place from template smartsquared/seedling-product on 2026-06-11.
-- Brief / design doc: [docs/brief.md](docs/brief.md)
-- Deployment target: not yet deployed — `*.github.io` acceptable for v0, no domain chosen
-- Sibling repo: [seith-miller/djseith](https://github.com/seith-miller/djseith) (audio/visuals pipeline, shot catalog, R2 renders)
+- **Live**: jaxsplatter.com (GitHub Pages, deploys on push to `main`; DNS at
+  Porkbun). Booking email booking@jaxsplatter.com and Instagram @jaxsplatter
+  are real and claimed; other platform rows render only when claimed.
+- Brief / design doc: [docs/brief.md](docs/brief.md); ratified decisions in
+  [docs/decisions.md](docs/decisions.md).
+- Canonical track library: [songs/crates.md](songs/crates.md).
+- Repo created 2026-06-11 from template smartsquared/seedling-product.
 
 ## Branch Strategy
 
-This project follows the agent-lab GitFlow conventions. See [gitflow.md](gitflow.md) for the branch model and merge policy.
+Agent-lab GitFlow conventions — see [gitflow.md](gitflow.md). Feature branches
+off `develop`; releases merge `develop` → `main` (which deploys the site).
 
 ## Escalation
 
-When in doubt, stop and ask. Trigger conditions: anything user-visible the brief doesn't ratify (page set, domain, stack, pricing display), and anything that would flip the repo public.
+When in doubt, stop and ask. Trigger conditions: anything user-visible the
+brief or a signed release doesn't ratify (page set, pricing display, brand
+changes), and anything that would flip the repo private/public.
