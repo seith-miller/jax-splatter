@@ -46,7 +46,7 @@ Proposed but **not signed off**.
 
 | slug | what it is | source of truth |
 |---|---|---|
-| — | *none* | — |
+| key-art | the act's key art: A002 wordmark over the keyed paintball splats on Night; wide (1920×1080) and square (2048×2048) crops | `../reference/key-art/key-art.html` |
 
 ## Withdrawn
 
