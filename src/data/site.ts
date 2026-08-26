@@ -19,7 +19,6 @@ export interface PlatformLink {
 
 export const site = {
   name: 'JAX SPLATTER',
-  tagline: 'Music producer & live performer',
   // One-line positioning shown in the hero. Keep it short and uppercase-friendly.
   heroStatement: 'Late-night sets for rooms that want to feel something.',
 
