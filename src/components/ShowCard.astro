@@ -11,9 +11,11 @@ interface Props {
   tracklist?: string[];
   image?: string;
   note?: string;
+  linkUrl?: string;
+  linkLabel?: string;
 }
 
-const { date, venue, city, event, durationMins, mixUrl, tracklist, image, note } = Astro.props;
+const { date, venue, city, event, durationMins, mixUrl, tracklist, image, note, linkUrl, linkLabel } = Astro.props;
 
 const dateStr = date.toLocaleDateString('en-US', {
   year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC',
@@ -37,6 +39,7 @@ const dateStr = date.toLocaleDateString('en-US', {
   )}
 
   {note && <p class="note">{note}</p>}
+  {linkUrl && <p class="note"><a href={linkUrl} target="_blank" rel="noopener noreferrer">{linkLabel ?? linkUrl}</a></p>}
 
   {tracklist && tracklist.length > 0 && (
     <details class="tracklist">
