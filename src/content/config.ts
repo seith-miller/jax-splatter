@@ -18,6 +18,9 @@ const shows = defineCollection({
     tracklist: z.array(z.string()).optional(),
     // Optional flyer/photo in the show card. Path relative to /public or remote.
     image: z.string().optional(),
+    // Optional call-to-action link on the card (e.g. a livestream).
+    linkUrl: z.string().url().optional(),
+    linkLabel: z.string().optional(),
     draft: z.boolean().default(false),
   }),
 });
