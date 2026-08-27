@@ -44,6 +44,7 @@ A release becomes official in four moves, in order:
 | JAX-A003 | type | v1 | released | 2026-08-24 in session (quote not captured; release commit `f8220fa`) | `../reference/type/jax-type.html` |
 | JAX-A004 | lower-third | v1 | released | 2026-08-25 in session (quote not captured; release commit `bc11372`) | `../reference/lower-third/` |
 | JAX-A005 | key-art | v1 | released | 2026-08-26 in session (quote not captured; release commit `7429c27`) | `../reference/key-art/key-art.html` |
+| JAX-A006 | avatar | v1 | released | 2026-08-27 in session — "I sign off on that as a release" | `../reference/key-art/jax-avatar-keyart.html` |
 
 > **Bookkeeping note (2026-08-27):** the A001 row was committed truncated and
 > A002–A005 never got rows; the table above was reconstructed from the release
