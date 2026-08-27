@@ -7,4 +7,4 @@ linkLabel: "Live on twitch"
 draft: false
 ---
 
-4–10pm · twitch.tv/interzone_live
+8–10pm · twitch.tv/interzone_live
