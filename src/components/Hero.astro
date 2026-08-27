@@ -1,11 +1,24 @@
 ---
-import { site } from '../data/site';
+import { Image } from 'astro:assets';
+// The signed key art (JAX-A005) is the hero — imported straight from the
+// release directory so the site can never drift from the registry's file.
+import keyArt from '../../brand/releases/JAX-A005_key-art_v1.png';
 ---
 
 <section id="top" class="hero scanlines" aria-label="Intro">
   <div class="hero-bg" aria-hidden="true"></div>
   <div class="wrap hero-inner">
-    <h1 class="wm">JA<span class="x">X</span><span class="wgap"></span>SPLATTER</h1>
+    <h1 class="wm-art">
+      <Image
+        src={keyArt}
+        alt="JAX SPLATTER"
+        widths={[480, 768, 1080, 1600]}
+        sizes="(max-width: 60rem) 100vw, 56rem"
+        loading="eager"
+        fetchpriority="high"
+        class="key-art"
+      />
+    </h1>
   </div>
 </section>
 
@@ -13,13 +26,10 @@ import { site } from '../data/site';
   /* Shorter than a full viewport on purpose: the link hub sits immediately
      below and must be visible without a scroll on a phone (decisions.md D9). */
   .hero { min-height: min(46vh, 24rem); display: grid; align-items: center; overflow: hidden; }
-  .hero-bg {
-    position: absolute; inset: 0; z-index: 0;
-    background:
-      radial-gradient(80% 60% at 75% 15%, rgba(70,179,255,0.20), transparent 55%),
-      radial-gradient(70% 50% at 15% 95%, rgba(255,45,85,0.14), transparent 55%),
-      linear-gradient(180deg, #06080e 0%, #05060a 60%, #04050a 100%);
-  }
+  /* Flat #05060a — the exact field color of the JAX-A005 key art, so the
+     image sits seamlessly. No gradients behind it: any glow back there
+     reveals the art's rectangle. */
+  .hero-bg { position: absolute; inset: 0; z-index: 0; background: #05060a; }
   .hero-bg::after {
     content: ""; position: absolute; inset: 0;
     background-image:
@@ -32,13 +42,13 @@ import { site } from '../data/site';
     letter-spacing: 0.34em; font-size: 0.85rem; color: var(--blue);
     margin: 0 0 0.75rem;
   }
-  h1.wm {
-    margin: 0; text-shadow: 0 0 38px rgba(70,179,255,0.28);
-    font-family: var(--font-logo); font-weight: 400;
-    letter-spacing: 0.015em; color: #f2efe9;
+  h1.wm-art { margin: 0; }
+  .key-art {
+    display: block; width: auto; height: auto; max-width: 100%;
+    /* Height-capped so the link hub still clears the fold (decisions.md D9). */
+    max-height: min(50vh, 26rem);
+    margin-inline: auto;
   }
-  h1.wm .x { color: #ea3e86; }
-  h1.wm .wgap { display: inline-block; width: 0.3em; }
   .statement {
     max-width: 34ch; font-size: clamp(1.05rem, 1rem + 0.6vw, 1.4rem);
     color: var(--fg-dim); margin: 1rem 0 0;
