@@ -56,7 +56,9 @@ an audience. Everything here is content, not claiming.
 
 ## Wave 4 — when there's a release
 
-Not claimable in advance; these are created *by* distribution.
+Not claimable in advance; these are created *by* distribution. The
+distribution plan itself is still unwritten — see
+[distribution-plan.md](distribution-plan.md).
 
 | Account | How | Status |
 |---|---|---|
