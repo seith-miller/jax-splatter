@@ -1,19 +1,24 @@
 ---
 import { Image } from 'astro:assets';
-// The signed key art (JAX-A005) is the hero — imported straight from the
-// release directory so the site can never drift from the registry's file.
-import keyArt from '../../brand/releases/JAX-A005_key-art_v1.png';
+// The key-art splatter with a transparent field and no release stamp,
+// rendered from brand/reference/key-art/key-art.html (the same composition
+// the signed JAX-A005 was pressed from). Per Jax 2026-08-27: the art's words
+// must occupy exactly the space the text wordmark did.
+import keyArt from '../../brand/reference/key-art/key-art-wide-transparent.png';
 ---
 
 <section id="top" class="hero scanlines" aria-label="Intro">
   <div class="hero-bg" aria-hidden="true"></div>
   <div class="wrap hero-inner">
     <h1 class="wm-art">
+      <!-- Invisible copy of the old text wordmark: it alone defines the h1's
+           box, so swapping the art in cannot move the page layout. -->
+      <span class="ghost" aria-hidden="true">JA<span class="x">X</span><span class="wgap"></span>SPLATTER</span>
       <Image
         src={keyArt}
         alt="JAX SPLATTER"
-        widths={[480, 768, 1080, 1600]}
-        sizes="(max-width: 60rem) 100vw, 56rem"
+        widths={[480, 880, 1320, 1760]}
+        sizes="max(402px, min(64vw, 878px))"
         loading="eager"
         fetchpriority="high"
         class="key-art"
@@ -26,10 +31,13 @@ import keyArt from '../../brand/releases/JAX-A005_key-art_v1.png';
   /* Shorter than a full viewport on purpose: the link hub sits immediately
      below and must be visible without a scroll on a phone (decisions.md D9). */
   .hero { min-height: min(46vh, 24rem); display: grid; align-items: center; overflow: hidden; }
-  /* Flat #05060a — the exact field color of the JAX-A005 key art, so the
-     image sits seamlessly. No gradients behind it: any glow back there
-     reveals the art's rectangle. */
-  .hero-bg { position: absolute; inset: 0; z-index: 0; background: #05060a; }
+  .hero-bg {
+    position: absolute; inset: 0; z-index: 0;
+    background:
+      radial-gradient(80% 60% at 75% 15%, rgba(70,179,255,0.20), transparent 55%),
+      radial-gradient(70% 50% at 15% 95%, rgba(255,45,85,0.14), transparent 55%),
+      linear-gradient(180deg, #06080e 0%, #05060a 60%, #04050a 100%);
+  }
   .hero-bg::after {
     content: ""; position: absolute; inset: 0;
     background-image:
@@ -37,20 +45,19 @@ import keyArt from '../../brand/releases/JAX-A005_key-art_v1.png';
     background-size: 100% 3px; opacity: 0.6;
   }
   .hero-inner { position: relative; z-index: 1; padding-block: clamp(2rem, 5vw, 3.25rem); }
-  .kicker {
-    font-family: var(--font-display); text-transform: uppercase;
-    letter-spacing: 0.34em; font-size: 0.85rem; color: var(--blue);
-    margin: 0 0 0.75rem;
+  h1.wm-art {
+    margin: 0; position: relative; text-align: center;
+    font-family: var(--font-logo); font-weight: 400; letter-spacing: 0.015em;
   }
-  h1.wm-art { margin: 0; }
+  .ghost { visibility: hidden; }
+  .ghost .wgap { display: inline-block; width: 0.3em; }
   .key-art {
-    display: block; width: auto; height: auto; max-width: 100%;
-    /* Height-capped so the link hub still clears the fold (decisions.md D9). */
-    max-height: min(50vh, 26rem);
-    margin-inline: auto;
-  }
-  .statement {
-    max-width: 34ch; font-size: clamp(1.05rem, 1rem + 0.6vw, 1.4rem);
-    color: var(--fg-dim); margin: 1rem 0 0;
+    /* The art's wordmark is 210px type in a 1920px frame; at width 1920/210 em
+       it renders at exactly 1em — the size the text wordmark had. The splatter
+       overflows the h1 box without occupying layout space. */
+    position: absolute; left: 50%; top: 50%;
+    width: calc(1920 / 210 * 1em); height: auto; max-width: none;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
   }
 </style>
