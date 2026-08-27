@@ -6,10 +6,13 @@ in session 2026-08-27 ("ok lets juc go with the sweat line you had it").
 ## The bio
 
 ```
-Get splattered.
-Neon Glitch Slut Pop.
-💦 booking@jaxsplatter.com
+Get Splattered!
+Neon Glitch Slut Pop 💦
+booking@jaxsplatter.com
 ```
+
+(As shipped on Instagram 2026-08-27 — Jax's final edit moved the 💦 to the
+genre line and added the exclamation. This shipped form is canonical.)
 
 ## The other profile fields
 
