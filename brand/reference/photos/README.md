@@ -1,13 +1,28 @@
 # photos — likeness/press photos of Jax
 
-Working reference, NOT releases. Pulled from Instagram (recompressed);
-chase the shooters for originals before any print/press use.
+Working reference, NOT releases. Instagram/press use only — **these do NOT
+go on jaxsplatter.com** (site rule: no faces / people never important)
+unless that rule gets a ratified revision.
 
-| file | what | source | original |
-|---|---|---|---|
-| `jax-bw-decks.jpg` | B&W: Jax on the Pioneer decks, mask + harness | @interzone-undead IG, saved 2026-08-27 | ◐ shot by **Malory** (credit her in captions). She sent a copy 2026-08-28 via chat but it arrived at 720×960 (DM-recompressed, smaller than the IG pull) — not swapped in. Re-ask for the original via email/AirDrop/Drive. |
-| `jax-neon-green-fan.jpg` | Jax + friend behind the INTERZONE fan (neon-green hair) | @interzone IG, saved 2026-08-27 | ◐ requested from photographer 2026-08-27, awaiting file + credit line |
+## Originals — shot by Malory (credit her in captions)
 
-**These do NOT go on jaxsplatter.com** — the site's standing rule is
-no faces / people never important. Instagram and press use only, unless
-that rule gets a ratified revision.
+Film scans, 2048×1358, received 2026-08-28 (Downloads). Full frame, color,
+no Instagram compression. Good for web and modest print (~6×9in @300dpi);
+ask Malory if the lab can rescan at higher res before anything bigger.
+
+| file | what |
+|---|---|
+| `malory-decks-laptop.jpg` | Mask + harness, laptop, INTERZONE banner behind |
+| `malory-decks-pioneer.jpg` | Mask + harness at the Pioneer decks — source of the B&W IG post |
+| `malory-interzone-fan.jpg` | Jax + friend behind the INTERZONE fan (neon-green hair) |
+| `malory-headphones-tongue.jpg` | Headphones on, tongue out, hand up, over the light bar |
+| `malory-kiss-sticker-laptop.jpg` | Kissy face over the sticker-covered laptop |
+| `malory-cap-harness-booth.jpg` | Leather cap + harness at the booth, low angle |
+| `malory-cigar-portrait.jpg` | Cap, tank, harness, cigar — portrait |
+
+## Instagram pulls — superseded, kept for reference
+
+| file | note |
+|---|---|
+| `jax-bw-decks.jpg` | 1242×1656, B&W crop of `malory-decks-pioneer.jpg` as posted by @interzone-undead |
+| `jax-neon-green-fan.jpg` | 2004×1328, IG copy of `malory-interzone-fan.jpg` |
