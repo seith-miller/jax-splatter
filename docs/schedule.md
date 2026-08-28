@@ -1,5 +1,8 @@
 JAX SPLATTER — UPCOMING (2026-08-27)
 
+Promo beats are tracked on the "Jax Releases" Google calendar (15 events
+loaded 8/27, per the 5-post template in promo-program.md).
+
 Aug 28  DEATH TO SUMMER (Twitch 8-10pm) — billed.
         Tomorrow: TONIGHT post ~4-6pm. Sunday: pull clips from the VOD.
 Sep 19  MULTIPASS (Al's Bar) — NOT billed. Stage managing + Urine Lux collab.
