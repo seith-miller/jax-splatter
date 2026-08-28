@@ -11,7 +11,6 @@ PER SHOW — 5 POSTS
 day of, 4-6pm ..... TONIGHT (text card: event / time / link in bio)
 1-3 days after .... aftermath (carousel: photos + best clip)
 
-OPEN LOOPS
-- photo originals from the shooters (asked 8/27)
-- dildozer venues x2 -> publish site show records
-- Facebook page -> Business Suite -> unlocks Stories
+All five posts are Jax Splatter branded material — never repost someone
+else's flyer for a show Jax is on. (Shows Jax works but isn't billed on
+can boost the promoter's material instead.)
