@@ -4,38 +4,42 @@
 <style>
 /* TONIGHT text card — the day-of promo beat (docs/promo-program.md).
    Brand: A001 colors, A002 wordmark, A003 type (Bebas display / Inter body),
-   A005 splat. Edit the four data lines in #card, re-render at 1080x1350. */
+   A005 splat. Jax gets top billing: wordmark + green splat on top, blue
+   splat field behind. Edit the data lines in #card, re-render at 1080x1350. */
 html,body{margin:0;padding:0;background:transparent}
 .card{position:relative;width:1080px;height:1350px;background:#05060a;overflow:hidden;
   font-family:'Bebas Neue';color:#f2efe9}
+/* the field: Electric Blue splat, dead center */
 .splat{position:absolute;left:-140px;top:-5px;width:1360px;transform:rotate(-152deg);opacity:.95}
-.stack{position:absolute;left:0;right:0;top:470px;bottom:0;display:flex;flex-direction:column;
+/* the act: A005 wordmark-over-splat, top billing. Wordmark size sits halfway
+   between TONIGHT (330) and the event line (118). */
+.markart{position:absolute;left:0;top:0;width:1080px;height:600px}
+.ms{position:absolute}
+.mark{position:absolute;left:0;right:0;top:300px;margin:0;text-align:center;font-family:'Pathway Gothic One';
+  font-size:224px;line-height:1;letter-spacing:.015em;color:#f2efe9;white-space:nowrap;
+  text-shadow:0 0 12px #05060a,0 0 28px #05060a,0 0 52px #05060a,0 7px 18px #05060a}
+.x{color:#ea3e86}.gap{display:inline-block;width:.30em}
+/* the show */
+.stack{position:absolute;left:0;right:0;top:560px;bottom:0;display:flex;flex-direction:column;
   align-items:center;justify-content:center;text-align:center;
   text-shadow:0 0 14px #05060a,0 0 30px #05060a,0 0 60px #05060a,0 8px 24px #05060a}
 .tonight{font-size:330px;line-height:.85;letter-spacing:.02em;color:#f2efe9}
 .event{font-size:118px;line-height:1;color:#ea3e86;margin-top:28px;letter-spacing:.03em}
 .when{font-size:88px;line-height:1;margin-top:34px;letter-spacing:.06em}
 .where{font-family:'Inter';font-weight:600;font-size:40px;letter-spacing:.12em;margin-top:44px;color:#f2efe9;text-transform:uppercase}
-.cta{font-family:'Inter';font-weight:400;font-size:34px;letter-spacing:.18em;margin-top:18px;color:#ea3e86;text-transform:uppercase}
-.markart{position:absolute;left:20px;top:0px;width:1040px;height:580px}
-.ms{position:absolute}
-.mark{position:absolute;left:0;right:0;top:236px;margin:0;text-align:center;font-family:'Pathway Gothic One';
-  font-size:114px;line-height:1;letter-spacing:.015em;color:#f2efe9;white-space:nowrap;
-  text-shadow:0 0 12px #05060a,0 0 28px #05060a,0 0 52px #05060a,0 7px 18px #05060a}
-.x{color:#ea3e86}.gap{display:inline-block;width:.30em}
 </style></head><body>
 <div class="card" id="card">
   <img class="splat" src="splat-3-blue.png">
+  <div class="markart">
+    <img class="ms" src="splat-3.png" style="left:-13px;top:45px;width:670px;transform:rotate(12deg)">
+    <img class="ms" src="splat-3.png" style="left:182px;top:30px;width:990px;height:717px;transform:rotate(-152deg);opacity:.98">
+    <p class="mark">JA<span class="x">X</span><span class="gap"></span>SPLATTER</p>
+  </div>
   <div class="stack">
     <div class="tonight">TONIGHT</div>
     <div class="event">DEATH TO SUMMER</div>
     <div class="when">8–10 PM ET</div>
     <div class="where">twitch.tv/interzone_live</div>
-  </div>
-  <div class="markart">
-    <img class="ms" src="splat-3.png" style="left:125px;top:54px;width:478px;transform:rotate(12deg)">
-    <img class="ms" src="splat-3.png" style="left:266px;top:43px;width:705px;height:511px;transform:rotate(-152deg);opacity:.98">
-    <p class="mark">JA<span class="x">X</span><span class="gap"></span>SPLATTER</p>
   </div>
 </div>
 </body></html>
