@@ -14,6 +14,25 @@ Jax Splatter activities (DJ sets, dildozer, collabs, merch, everything).
 - Stories (once Business Suite exists) become the high-frequency valve;
   hype noise moves there, grid slots go to the good stuff.
 
+## The per-show template — 5 posts per event
+
+One media type per beat; the variety is deliberate (the grid never repeats).
+"Text post" on Instagram = typographic image, big type on brand ground.
+
+| When | Beat | Media |
+|---|---|---|
+| ~3 weeks out | Announce | Still — flyer/key art |
+| ~1 week out | Reminder | Video — Reel (video flyer / set teaser) |
+| 2–3 days out | Texture | Still or video — rehearsal, rig, BTS |
+| Day of, 2–4h before doors | TONIGHT | Text post — event · time · place / link in bio |
+| 1–3 days after | Aftermath | Carousel — photos + best clip together |
+
+Rules: the TONIGHT post stacks on top of the normal budget (event-day
+exception); each beat looks different from the last; if energy only allows
+two beats, keep **day-of** and **aftermath** — announces can just echo the
+promoter's. When the promoter/venue/band posts their own announce, repost
+and add one line rather than making a parallel announce.
+
 ## Live schedule (as of 2026-08-27)
 
 ### DEATH TO SUMMER — billed. Anchor: Fri 2026-08-28, 8–10pm ET, Twitch
