@@ -26,3 +26,14 @@ ask Malory if the lab can rescan at higher res before anything bigger.
 |---|---|
 | `jax-bw-decks.jpg` | 1242×1656, B&W crop of `malory-decks-pioneer.jpg` as posted by @interzone-undead |
 | `jax-neon-green-fan.jpg` | 2004×1328, IG copy of `malory-interzone-fan.jpg` |
+
+## retouch/ — AI-assisted edits of the originals
+
+Background cleanup only; Jax's likeness is untouched (segmentation, no
+generation). Cutout: fal.ai Bria RMBG (`cigar-cutout-bria.png`; birefnet
+tried first, left a hole in the torso). Composites are square 1358×1358.
+
+| file | what |
+|---|---|
+| `cigar-night.jpg` | Cigar portrait on clean Night (#05060A) |
+| `cigar-night-splat.jpg` | Same, Electric Blue A005 splat behind |
