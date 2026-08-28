@@ -25,7 +25,7 @@ compromised and we are back to picking a new one.
 |---|---|---|---|---|
 | 1 | **Porkbun domain** | `jaxsplatter.com` | The one address no platform owns. Everything else points here. | ✅ 2026-08-22 — $11.08/yr, auto-renew + lock + WHOIS privacy on, 2FA on the account. |
 | 2 | **Email on the domain** | `accounts@` + `booking@` | Two free forwards, both to the personal gmail: `accounts@` for logins and resets, `booking@` public. Split so platform noise can't bury a booking, and so the public address can change without touching account recovery. | ✅ 2026-08-22 — delivery verified end-to-end. A sending mailbox ($3/mo) is still open; the free trial lapses 2026-09-06. |
-| 3 | **Instagram** | `@jaxsplatter` | Scarcest handle, no recourse if squatted, and the channel the whole promo loop targets. | ✅ 2026-08-22 — **Creator** account, category shown, signed up with `accounts@`. |
+| 3 | **Instagram** | `@jaxsplatter` | Scarcest handle, no recourse if squatted, and the channel the whole promo loop targets. | ✅ 2026-08-22 — **Creator** account, category shown, signed up with `accounts@`. Profile dressed 2026-08-27 (A006 avatar, bio.md, 3 posts). **Bio link can only be set from the phone app** — desktop says "editing your links is only available on mobile"; still unset as of 2026-08-28. |
 | 4 | **Bandcamp** | `jaxsplatter.bandcamp.com` | The store, and the only platform that pays directly. Subdomain is permanent once set. | ⬜ |
 
 ## Wave 2 — this weekend (by Sun 2026-08-23)
