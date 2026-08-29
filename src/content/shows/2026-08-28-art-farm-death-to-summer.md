@@ -3,7 +3,7 @@ date: 2026-08-28
 venue: "Twitch"
 event: "DEATH TO SUMMER"
 linkUrl: "https://twitch.tv/interzone_live"
-linkLabel: "Live on twitch"
+linkLabel: "Streamed on twitch"
 draft: false
 ---
 
