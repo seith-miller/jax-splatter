@@ -21,3 +21,4 @@ owned music over the picture (the manifesto's spoken audio is ours and stays).
 | `dts-20260828_manifesto.mp4` | 0:55:30 | 3:50 | Cheyenne reads the manifesto at the mic (~0:56:10–0:58:50), phone in hand, skeleton alongside, red wash. Spoken audio is the asset. |
 | `dts-20260828_hell-death-to.mp4` | 1:02:20 | 1:10 | "HELL / DEATH TO" text overlays punching over red wash. |
 | `dts-20260828_cat-vs-bat.mp4` | 1:30:22 | 1:00 | Cat masquerade mask up, white cartoon bat sprite circling, arm sweeping after it — puppet-curtain overlay, directly before the night's biggest drop. |
+| `dts-20260828_skeleton-djs.mp4` | 0:22:46 | 0:40 | Overhead deck-cam: both skeleton hands on the gear — fingers on the jog wheel, forearm working the mixer — puppeted from off-frame, no human visible; the skeleton reads as the sole DJ. "TAKE NO SHIT" / "DANCE" overlays land on the bit. |
