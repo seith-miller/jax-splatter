@@ -7,9 +7,23 @@ status tracks how gig-ready it is.
 
 Status: `solid` (performable cold) · `working` (drilling) · `learning` (new).
 
+## Vogue fem — the five elements
+
+The style backbone; personal steps slot under these.
+
 | Name | Style | Counts | What it is | Status | Ref |
 |---|---|---|---|---|---|
-| _example: the jack_ | _house_ | _1–2_ | _core torso groove, chest rolls forward on the &_ | _solid_ | _[tutorial](…)_ |
+| Hands performance | vogue fem | free | Wrist rolls, frames around the face, storytelling lines | | [counts/vouge.md](counts/vouge.md) 8#3b–4 |
+| Catwalk | vogue fem | 1/count | Hip-led runway walk, one foot in front of the other | | [counts/vouge.md](counts/vouge.md) 8#6b–8a |
+| Duckwalk | vogue fem | 1/count | Traveling squat walk on the balls of the feet | | [counts/vouge.md](counts/vouge.md) 8#2 |
+| Spins & dips | vogue fem | varies | Turns chained into the drop; the dip is the landing | | [counts/vouge.md](counts/vouge.md) 8#5, 18b–19 |
+| Floor performance | vogue fem | free | Rolls, extensions, inversions, poses on the ground | | [counts/vouge.md](counts/vouge.md) 8#9–13, 17–18 |
+
+## Personal steps
+
+| Name | Style | Counts | What it is | Status | Ref |
+|---|---|---|---|---|---|
+| | | | | | |
 
 ## Notes
 
