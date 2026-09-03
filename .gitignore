@@ -19,3 +19,6 @@ npm-debug.log*
 
 # claude code local settings
 .claude/
+
+# local-only inspiration media (symlink to ~/gather/jax-splatter/inspiration)
+public/inspiration

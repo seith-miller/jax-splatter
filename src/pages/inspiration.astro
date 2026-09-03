@@ -1,0 +1,160 @@
+---
+import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+// Working page, not part of the public site's story: the media lives OUTSIDE
+// git in ~/gather/jax-splatter/inspiration/ (public/inspiration is a local
+// symlink, gitignored). On the deployed site these videos 404 by design.
+const videos = [
+  {
+    file: 'videos/red-interiors-who-cares-about-you-1981.mp4',
+    title: 'Red Interiors — Who Cares About You',
+    note: 'Lexington KY, 1981 — hometown punk lineage',
+  },
+];
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const asset = (p: string) => `${base}/inspiration/${p}`;
+---
+
+<Base title="Jax Splatter — Inspiration" description="Private mood board.">
+  <Header />
+  <main class="inspo">
+    <h1>Inspiration</h1>
+    <p class="sub">Reference material only — nothing here is a release.</p>
+
+    <section class="viewer">
+      <video id="player" controls preload="metadata" src={asset(videos[0].file)}
+        >Your browser can't play this file.</video
+      >
+      <div class="nowbar">
+        <span id="now-title">{videos[0].title}</span>
+        <span id="now-note" class="note">{videos[0].note}</span>
+      </div>
+    </section>
+
+    <section class="picker">
+      <h2>Videos</h2>
+      <ul id="video-list">
+        {
+          videos.map((v, i) => (
+            <li>
+              <button
+                type="button"
+                class:list={['vid', { active: i === 0 }]}
+                data-src={asset(v.file)}
+                data-title={v.title}
+                data-note={v.note}
+              >
+                <span class="t">{v.title}</span>
+                <span class="note">{v.note}</span>
+              </button>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+  </main>
+  <Footer />
+</Base>
+
+<script>
+  const player = document.getElementById('player') as HTMLVideoElement;
+  const nowTitle = document.getElementById('now-title')!;
+  const nowNote = document.getElementById('now-note')!;
+  document.querySelectorAll<HTMLButtonElement>('#video-list .vid').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('#video-list .vid').forEach((b) => b.classList.remove('active'));
+      btn.classList.add('active');
+      player.src = btn.dataset.src!;
+      nowTitle.textContent = btn.dataset.title!;
+      nowNote.textContent = btn.dataset.note ?? '';
+      player.play();
+    });
+  });
+</script>
+
+<style>
+  .inspo {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 2rem var(--gutter) 4rem;
+  }
+  h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2.4rem, 6vw, 3.6rem);
+    letter-spacing: 0.04em;
+    margin: 0;
+  }
+  .sub {
+    color: var(--fg-faint);
+    margin: 0.25rem 0 1.75rem;
+  }
+  .viewer video {
+    width: 100%;
+    max-height: 62vh;
+    background: #000;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+  }
+  .nowbar {
+    display: flex;
+    gap: 0.75rem;
+    align-items: baseline;
+    padding: 0.6rem 0.25rem 0;
+  }
+  #now-title {
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    letter-spacing: 0.03em;
+  }
+  .note {
+    color: var(--fg-dim);
+    font-size: 0.9rem;
+  }
+  .picker h2 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    letter-spacing: 0.05em;
+    margin: 2rem 0 0.75rem;
+    color: var(--fg-dim);
+  }
+  #video-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.5rem;
+  }
+  .vid {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    text-align: left;
+    padding: 0.7rem 0.9rem;
+    background: var(--bg-2);
+    color: var(--fg);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    cursor: pointer;
+    font: inherit;
+  }
+  .vid:hover {
+    border-color: var(--accent);
+  }
+  .vid.active {
+    border-color: var(--red);
+    box-shadow: 0 0 12px var(--red-glow);
+  }
+  .vid .t {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    letter-spacing: 0.03em;
+  }
+  .vid:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+</style>
