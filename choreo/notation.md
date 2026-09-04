@@ -26,6 +26,21 @@ this is ours — borrowing the living conventions where they exist.
 - **`LF` / `RF`** when a specific foot matters (line-dance convention):
   `step RF, cross LF behind`.
 
+## Travel and facing (stage directions)
+
+Directions use the theater standard, always from the **performer's**
+perspective facing the audience: `US` (upstage, away), `DS` (downstage,
+toward), `SL` / `SR` (performer's left / right), corners `USL USR DSL DSR`,
+`C` center.
+
+- **`>DIR`** — travel toward: `Catwalk >US`, `Chassé >SL`, `>DSR`.
+- **`@DIR`** — facing (no travel implied): `Hands block @US`.
+- Combine with the operators: `Duckwalk >SL - cat turn @DS`.
+
+On drawn sheets and in the counts app, travel renders as an arrow in
+**audience view** (a dancer traveling `>SL` moves rightward on screen);
+the letters stay performer-perspective. Both describe the same motion.
+
 ## Structure words
 
 - **step** — atomic named movement (one card in the steps library).
