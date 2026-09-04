@@ -20,6 +20,7 @@ survive independently of it.
 | interzone livestream part 2 | 36 | [4l3aSFxasEccFR9PVz2F8A](https://open.spotify.com/playlist/4l3aSFxasEccFR9PVz2F8A) |
 | December Sinspiration | 49 | [0q7G0ielj5TnccymQ1Qq08](https://open.spotify.com/playlist/0q7G0ielj5TnccymQ1Qq08) |
 | *(djseith pipeline feed — untitled)* | — | [7KCjqcdRGNoF4Hg8IVnvAX](https://open.spotify.com/playlist/7KCjqcdRGNoF4Hg8IVnvAX) |
+| splatter inspo | 11 | [Tidal 1f336ab1](https://tidal.com/browse/playlist/1f336ab1-401a-4fad-ad9b-54da46b0a120) |
 
 ---
 
@@ -539,3 +540,20 @@ Capture starts at #4 — rows 1–3 were scrolled off.*
 | 47 | « H » Friend | Black Devil Disco Club | 5:43 |
 | 48 | Disco | Sextile | 3:30 |
 | 49 | I Don't Want To Die (Geneva Jacuzzi Remix) | Geneva Jacuzzi, Patriarchy | 5:06 |
+
+## splatter inspo
+*The act's sonic north star. Tidal playlist, pulled via gather's authed session 2026-09-03.*
+
+| # | Track | Artist | Time |
+|---|---|---|---|
+| 1 | Danza kuduro x Pepas | MattOfficiel | 5:14 |
+| 2 | Hayloft II (SMASHUP) | Mother Mother | 3:44 |
+| 3 | RAHHHH | Alt! | 1:01 |
+| 4 | Bitches | Mindless Self Indulgence | 2:46 |
+| 5 | Lights Out | Mindless Self Indulgence | 2:37 |
+| 6 | Dance with Me | Alice in Videoland | 2:29 |
+| 7 | Guillotine | Death Grips | 3:43 |
+| 8 | Wriggle | clipping. | 4:04 |
+| 9 | Pluto | Björk | 3:19 |
+| 10 | Giving Bad People Good Ideas | Death Grips | 3:07 |
+| 11 | Consuming Guilt | YOUTH CODE | 3:03 |
