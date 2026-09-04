@@ -41,6 +41,19 @@ On drawn sheets and in the counts app, travel renders as an arrow in
 **audience view** (a dancer traveling `>SL` moves rightward on screen);
 the letters stay performer-perspective. Both describe the same motion.
 
+### Per-count sequences
+
+A dash-separated direction sequence distributes over the phrase's counts,
+one token per count — turning every beat is just:
+
+    Serve turn @DS-US-US-DS        (0.5 DS, 0.6 US, 0.7 US, 0.8 DS)
+
+- Fewer tokens than counts: the last one holds (`@DS-US` over 4 counts =
+  DS, then US for the rest).
+- Facing flips don't encode rotation direction; when it matters, tag the
+  move with chirality: `Serve turn (ccw) @DS-US-US-DS`.
+- Works for travel too: `>SL-SL-SR-SR`.
+
 ## Structure words
 
 - **step** — atomic named movement (one card in the steps library).
