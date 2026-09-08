@@ -73,6 +73,13 @@ record. Release IDs are `JAX-A###`, assigned only at sign-off; canonical
 filenames are `JAX-A###_slug_v#.ext`; sign-off (date + where given) is recorded
 in the registry row. Status flow: reference → candidate → released → retired.
 
+## D13 — A money-making entertainment project; vision-first, revenue-reinvested  — 2026-09-08
+Stated by Jax: the act is intended to be financially successful. The brand
+ships complete from the start; production elements (instruments, staging)
+roll out in phases. The fully-realized stage vision is captured early in
+[stage-vision.md](stage-vision.md) as the North Star, and income is
+reinvested to realize it phase by phase.
+
 ## Still needs the operator (not decided here)
 - **The link roster itself** — no DJ Seith accounts exist yet (2026-08-21); handles are being claimed in a separate thread. Until URLs land in `site.links`, the hub renders only the booking row.
 - Domain (still none; `*.github.io` fine for v0).
