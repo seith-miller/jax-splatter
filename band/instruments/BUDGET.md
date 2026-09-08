@@ -4,6 +4,9 @@ The act's custom-instrument program. Long-horizon by design: instruments are
 part of the band from the start, realized one build at a time. Each
 instrument gets its own sheet in this directory (copy TEMPLATE.md).
 
+Builds serve the stage vision ([docs/stage-vision.md](../../docs/stage-vision.md));
+phases are funded by reinvested act revenue per D13.
+
 ## Rules
 
 - **Roster before dollars** — an instrument enters the table with a name and
