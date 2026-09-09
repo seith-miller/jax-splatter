@@ -26,8 +26,12 @@ there are dancers. The band is a **rotating cast**, every member on a
 a spot: the whole ensemble can roam, form up, and break apart like a drum
 line gone feral.
 
-**The sound.** All-wireless setups are the enabling constraint for the
-custom instruments (band/instruments/): everything playable in motion,
+**The sound.** The band is **on track**: a backing track for every song
+carries much of the instrumentation. That is what makes the rotating cast
+work — the track is the spine, live players layer on top of it, and the
+**lineup is modular night to night** with the size of the stage and the
+gig. All-wireless setups are the enabling constraint for the custom
+instruments (band/instruments/): everything playable in motion,
 strappable, battery-powered or transmitter-fed.
 
 **The visuals.** A **unique video package for every song**. The act brings
