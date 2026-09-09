@@ -14,13 +14,40 @@ Ratified operating model (Jax, 2026-09-08):
 3. **Reinvest revenue** — booking/merch income funds the next phase
    (tracked against band/instruments/BUDGET.md and siblings).
 
-## The vision
+## The vision (dictated by Jax, 2026-09-08)
 
-*To be dictated by Jax — the stage at full realization: what the audience
-sees, hears, and feels. Instruments, light, movement, video, the room.*
+**The feel.** A very high-energy, frenetic show — a cross between David
+Byrne's *American Utopia*, the Beastie Boys, and The Prodigy. The live
+experience lands somewhere between a **marching band and a pirate crew**.
+
+**The people.** Jax sings and dances. Guest vocalists rotate through, and
+there are dancers. The band is a **rotating cast**, every member on a
+**wireless rig — including the percussionists** — so nobody is tethered to
+a spot: the whole ensemble can roam, form up, and break apart like a drum
+line gone feral.
+
+**The sound.** All-wireless setups are the enabling constraint for the
+custom instruments (band/instruments/): everything playable in motion,
+strappable, battery-powered or transmitter-fed.
+
+**The visuals.** A **unique video package for every song**. The act brings
+its **own lighting and ground effects** — the rooms we play don't have to
+provide anything for the show to look like itself.
+
+## Two scale points
+
+| | Core | Full deployment |
+|---|---|---|
+| Footprint | 16 × 8 ft (+2 ft riser) — every show | **32 × 24 ft, ~18 ft air** — the North Star |
+| Design rule | the show must land complete at this size | expansion elements deploy only when the room allows |
+
+Everything built is **modular between these two scales**: the core kit is
+the show; full deployment is the same show with room to breathe. Nothing
+built for the small stage is wasted on the big one.
 
 ## Phase map
 
 | Phase | Unlocks | Funded by | Status |
 |---|---|---|---|
-| 0 | Vision captured (this doc) | — | open |
+| 0 | Vision captured (this doc) | — | **done 2026-09-08** |
+| 1 | *first instrument + per-song video pipeline candidates — to be planned* | first reinvestment | open |
