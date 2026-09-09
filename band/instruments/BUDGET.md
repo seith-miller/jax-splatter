@@ -35,6 +35,7 @@ phases are funded by reinvested act revenue per D13.
 | [Rototom chest rack](rototom-chest-rack.md) | 6/8/10 rototoms on a chest harness — the roaming tom voice | 1 | $100–500 | ~$400 (A) + ~$300 (B) | — | spec'd |
 | [Takedown guitar](takedown-guitar.md) | headless Steinberger × G-707, Jax-designed, lit body, packs in two pieces | TBD | $100–500 | ~$575 | — | concept |
 | [Takedown bass](takedown-bass.md) | same platform, short-scale bass; lit body | TBD | $100–500 | ~$590 | — | concept |
+| [Keytar plate](keytar-plate.md) | battery mini controller on a guitar-ish plate — prop design | TBD | $100–500 | ~$315 | — | spec'd |
 
 ## Shared tools
 
