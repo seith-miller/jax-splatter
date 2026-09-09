@@ -1,0 +1,197 @@
+<title>Splatter Setlist</title>
+<style id="page-style">
+  body{background:#05060a;color:#f2efe9;font-family:Inter,system-ui,sans-serif;margin:0;min-height:100vh}
+  .wrap{max-width:1060px;margin:0 auto;padding:28px 20px 80px}
+  header{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:6px}
+  .wm{font-family:'Pathway Gothic One','Arial Narrow',sans-serif;font-size:28px;letter-spacing:.015em;color:#f2efe9;white-space:nowrap}
+  .wm .x{color:#ea3e86}.wm .g{display:inline-block;width:.3em}
+  h1{font-family:'Bebas Neue','Arial Narrow',sans-serif;font-size:44px;letter-spacing:.06em;margin:0;font-weight:400}
+  .savebar{display:flex;gap:10px;align-items:center}
+  button{font-family:'Bebas Neue','Arial Narrow',sans-serif;letter-spacing:.12em;font-size:16px;
+    background:transparent;color:#9aa3b8;border:1px solid #1c2030;border-radius:6px;padding:7px 14px;cursor:pointer}
+  button:hover{color:#f2efe9;border-color:#9aa3b8}
+  button:focus-visible{outline:2px solid #ea3e86;outline-offset:2px}
+  #save{color:#05060a;background:#ea3e86;border-color:#ea3e86;font-size:18px;padding:8px 22px}
+  #save:disabled{background:#1c2030;border-color:#1c2030;color:#5b6478;cursor:default}
+  #savemsg{font-size:13px;color:#5b6478}
+  /* meter */
+  .meter{margin:22px 0 30px}
+  .meter-top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px}
+  .total{font-family:'Bebas Neue',sans-serif;font-size:56px;letter-spacing:.04em;line-height:1;color:#39ff14}
+  .total.over{color:#c70f38}
+  .tlabel{font-size:12px;letter-spacing:.18em;color:#5b6478;text-transform:uppercase}
+  .bar{position:relative;height:18px;background:#0d0f16;border:1px solid #1c2030;border-radius:9px;overflow:visible}
+  .fill{position:absolute;left:0;top:0;bottom:0;background:#39ff14;border-radius:9px 0 0 9px;max-width:100%}
+  .mark{position:absolute;top:-6px;bottom:-6px;width:2px;background:#9aa3b8}
+  .mark span{position:absolute;top:100%;left:50%;transform:translateX(-50%);font-size:11px;letter-spacing:.14em;color:#9aa3b8;padding-top:4px;white-space:nowrap}
+  /* columns */
+  .cols{display:grid;grid-template-columns:1.25fr 1fr;gap:26px}
+  @media(max-width:760px){.cols{grid-template-columns:1fr}}
+  h2{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:.22em;color:#9aa3b8;margin:0 0 12px;font-weight:400}
+  .list{display:flex;flex-direction:column;gap:8px;min-height:60px}
+  .slot{display:flex;align-items:center;gap:10px}
+  .slot[draggable="true"]{cursor:grab}
+  .slot.dragging{opacity:.4}
+  .drop-line{height:3px;background:#ea3e86;border-radius:2px;margin:-2px 0 -2px 32px;box-shadow:0 0 8px rgba(234,62,134,.8);pointer-events:none}
+  .row{flex:1;display:flex;align-items:center;gap:10px;background:#0d0f16;border:1px solid #1c2030;border-radius:8px;padding:10px 12px;min-width:0}
+  .row.bridge{background:transparent;border-style:dashed}
+  .n{font-family:'Bebas Neue',sans-serif;font-size:22px;color:#5b6478;width:22px;text-align:right;flex-shrink:0}
+  .meta{display:flex;gap:6px;align-items:center}
+  .meta input{width:44px;padding:4px 5px;font-size:12.5px;text-align:center;font-variant-numeric:tabular-nums;color:#9aa3b8}
+  .meta input.key{width:38px}
+  .meta label{font-size:9px;letter-spacing:.14em;color:#5b6478;text-transform:uppercase;display:block;text-align:center;margin-top:2px}
+  .t{flex:1;min-width:0}
+  .t b{font-family:'Bebas Neue',sans-serif;font-weight:400;font-size:21px;letter-spacing:.08em;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .t small{font-size:12px;color:#5b6478;letter-spacing:.08em;text-transform:uppercase}
+  .dur{font-variant-numeric:tabular-nums;font-size:15px;color:#9aa3b8}
+  .rowbtns{display:flex;gap:4px}
+  .rowbtns button{padding:4px 9px;font-size:14px;font-family:Inter,sans-serif;letter-spacing:0}
+  .badge{font-size:10px;letter-spacing:.14em;border:1px solid;border-radius:4px;padding:2px 6px;text-transform:uppercase}
+  .badge.cut{color:#c70f38;border-color:#c70f38}
+  .badge.idea{color:#46b3ff;border-color:#46b3ff}
+  .pool .row{opacity:.92}
+  .addform{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
+  input{background:#0d0f16;border:1px solid #1c2030;border-radius:6px;color:#f2efe9;padding:8px 10px;font-family:Inter,sans-serif;font-size:14px}
+  input:focus-visible{outline:2px solid #ea3e86;outline-offset:1px}
+  #newname{flex:1;min-width:140px}#newlen{width:64px}
+  .hint{font-size:12.5px;color:#5b6478;line-height:1.6;margin-top:26px;max-width:64ch}
+</style>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Pathway+Gothic+One&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<div id="root"></div>
+<script type="application/json" id="state">{"set": [{"n": "Piss on Me", "s": 432, "k": "song", "bpm": "117", "key": "Dm"}, {"n": "Put Your Pussy on My Face", "s": 140, "k": "song", "bpm": "108", "key": "F"}, {"n": "Bitch Boy", "s": 106, "k": "song", "bpm": "152", "key": "Em"}, {"n": "Where Is Da Club", "s": 200, "k": "song", "bpm": "129", "key": "A#m"}, {"n": "Put It in My", "s": 142, "k": "song", "bpm": "152", "key": "Fm"}], "pool": [{"n": "Daddy Likes It", "s": 248, "k": "cut"}, {"n": "DJ bridge", "s": 120, "k": "bridge"}]}</script>
+<script id="app">
+(function(){
+const TEMPLATE=`<div class="wrap">
+  <header>
+    <div>
+      <div class="wm">JA<span class="x">X</span><span class="g"></span>SPLATTER</div>
+      <h1>SETLIST</h1>
+    </div>
+    <div class="savebar"><span id="savemsg"></span><button id="save" disabled>SAVE</button></div>
+  </header>
+  <div class="meter">
+    <div class="meter-top">
+      <div><div class="tlabel">Set runs</div><div class="total" id="total">0:00</div></div>
+      <div style="text-align:right"><div class="tlabel">Targets</div><div class="dur" style="font-size:15px">20:00 slot · 45:00 prepared</div></div>
+    </div>
+    <div class="bar" id="bar"><div class="fill" id="fill"></div></div>
+  </div>
+  <div class="cols">
+    <section><h2>THE SET</h2><div class="list" id="set"></div></section>
+    <section class="pool"><h2>THE POOL</h2><div class="list" id="pool"></div>
+      <div class="addform">
+        <input id="newname" placeholder="New number / bridge name" aria-label="name">
+        <input id="newlen" placeholder="m:ss" aria-label="length">
+        <button id="addsong">+ SONG</button><button id="addbridge">+ DJ BRIDGE</button>
+      </div>
+    </section>
+  </div>
+  <p class="hint">Numbers marked <b style="color:#46b3fb">IDEA</b> are unwritten — placeholders for the five pieces the 45 needs.
+  Bridges are DJ/VJ passages; stretch or cut them to fit the slot. SAVE publishes this page as the setlist of record.</p>
+</div>
+`;
+document.getElementById('root').innerHTML=TEMPLATE;
+const $=id=>document.getElementById(id);
+let state=JSON.parse($('state').textContent);
+let dirty=false;
+let dragIdx=null;
+const MAXBAR=3300;
+function fmt(s){return Math.floor(s/60)+':'+String(s%60).padStart(2,'0')}
+function parse(t){const m=/^(\d+):([0-5]\d)$/.exec((t||'').trim());return m?(+m[1]*60+ +m[2]):null}
+function row(item,i,inSet){
+  const slot=document.createElement('div');slot.className='slot';
+  const num=document.createElement('span');num.className='n';num.textContent=inSet?(i+1):'';slot.appendChild(num);
+  const d=document.createElement('div');d.className='row'+(item.k==='bridge'?' bridge':'');
+  const kinds={song:'',bridge:'DJ / VJ bridge',cut:'',idea:''};
+  d.innerHTML='<span class="t"><b>'+item.n.replace(/</g,'&lt;')+'</b>'+(kinds[item.k]?'<small>'+kinds[item.k]+'</small>':'')+'</span>'+
+    (item.k==='cut'?'<span class="badge cut">cut</span>':'')+(item.k==='idea'?'<span class="badge idea">idea</span>':'')+
+    '<span class="dur">'+fmt(item.s)+'</span><span class="rowbtns"></span>';
+  if(item.k!=='bridge'){
+    const meta=document.createElement('span');meta.className='meta';
+    const bpm=document.createElement('span');bpm.innerHTML='<input class="bpm" inputmode="numeric" placeholder="—"><label>bpm</label>';
+    const key=document.createElement('span');key.innerHTML='<input class="key" placeholder="—"><label>key</label>';
+    meta.append(bpm,key);
+    const bi=bpm.querySelector('input'),ki=key.querySelector('input');
+    bi.value=item.bpm||'';ki.value=item.key||'';
+    bi.onchange=()=>{item.bpm=bi.value.trim();dirty=true;render()};
+    ki.onchange=()=>{item.key=ki.value.trim();dirty=true;render()};
+    d.insertBefore(meta,d.querySelector('.dur'));
+  }
+  const btns=d.querySelector('.rowbtns');
+  function mk(label,title,fn){const b=document.createElement('button');b.textContent=label;b.title=title;b.onclick=()=>{fn();dirty=true;render()};btns.appendChild(b)}
+  if(inSet){
+    slot.draggable=true;
+    slot.addEventListener('dragstart',e=>{dragIdx=i;slot.classList.add('dragging');e.dataTransfer.effectAllowed='move';try{e.dataTransfer.setData('text/plain',String(i))}catch(_){}});
+    slot.addEventListener('dragend',()=>{dragIdx=null;slot.classList.remove('dragging');document.querySelector('.drop-line')&&document.querySelector('.drop-line').remove()});
+    mk('\u2191','earlier',()=>{if(i>0)[state.set[i-1],state.set[i]]=[state.set[i],state.set[i-1]]});
+    mk('\u2193','later',()=>{if(i<state.set.length-1)[state.set[i+1],state.set[i]]=[state.set[i],state.set[i+1]]});
+    mk('\u2715','back to pool',()=>{state.pool.push(state.set.splice(i,1)[0])});
+  } else {
+    mk('\uFF0B','into the set',()=>{state.set.push(state.pool.splice(i,1)[0])});
+    if(item.k==='idea'||item.k==='bridge')mk('\u2715','delete',()=>{state.pool.splice(i,1)});
+  }
+  slot.appendChild(d);
+  return slot;
+}
+function render(){
+  $('set').replaceChildren(...state.set.map((it,i)=>row(it,i,true)));
+  $('pool').replaceChildren(...state.pool.map((it,i)=>row(it,i,false)));
+  const tot=state.set.reduce((a,b)=>a+b.s,0);
+  $('total').textContent=fmt(tot);
+  $('total').classList.toggle('over',tot>2700);
+  $('fill').style.width=Math.min(100,tot/MAXBAR*100)+'%';
+  $('save').disabled=!dirty;
+  $('savemsg').textContent=dirty?'unsaved changes':'';
+}
+const dropLine=document.createElement('div');dropLine.className='drop-line';
+function slotEls(){return [...$('set').children].filter(el=>el.classList.contains('slot'))}
+function insertIdxFromY(y){
+  const els=slotEls();
+  for(let k=0;k<els.length;k++){const r=els[k].getBoundingClientRect();if(y<r.top+r.height/2)return k}
+  return els.length;
+}
+$('set').addEventListener('dragover',e=>{
+  if(dragIdx===null)return;e.preventDefault();e.dataTransfer.dropEffect='move';
+  const k=insertIdxFromY(e.clientY);const els=slotEls();
+  if(k>=els.length)$('set').appendChild(dropLine);else $('set').insertBefore(dropLine,els[k]);
+});
+$('set').addEventListener('dragleave',e=>{
+  if(!$('set').contains(e.relatedTarget))dropLine.remove();
+});
+$('set').addEventListener('drop',e=>{
+  e.preventDefault();
+  let k=insertIdxFromY(e.clientY);dropLine.remove();
+  if(dragIdx===null)return;
+  let from=dragIdx;dragIdx=null;
+  if(from<k)k--;
+  if(k===from)return;
+  const it=state.set.splice(from,1)[0];state.set.splice(k,0,it);
+  dirty=true;render();
+});
+[[1200,'20:00'],[2700,'45:00']].forEach(([s,l])=>{
+  const m=document.createElement('div');m.className='mark';m.style.left=(s/MAXBAR*100)+'%';
+  m.innerHTML='<span>'+l+'</span>';$('bar').appendChild(m);
+});
+$('addsong').onclick=()=>add('idea');
+$('addbridge').onclick=()=>add('bridge');
+function add(kind){
+  const n=$('newname').value.trim()||(kind==='bridge'?'DJ bridge':'Untitled');
+  const s=parse($('newlen').value)??(kind==='bridge'?120:180);
+  state.pool.push({n,s,k:kind});$('newname').value='';$('newlen').value='';dirty=true;render();
+}
+$('save').onclick=async()=>{
+  $('save').disabled=true;$('savemsg').textContent='saving\u2026';
+  const artifact=await claude.use('artifact');
+  if(!artifact){$('savemsg').textContent='saving unavailable in this view';return}
+  const doc='<!doctype html>\n<title>Splatter Setlist</title>\n<style id="page-style">'+document.getElementById('page-style').textContent+'</style>\n'+
+    '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Pathway+Gothic+One&family=Inter:wght@400;500&display=swap" rel="stylesheet">\n'+
+    '<div id="root"></div>\n'+
+    '<script type="application/json" id="state">'+JSON.stringify(state)+'</scr'+'ipt>\n'+
+    '<script id="app">'+document.getElementById('app').textContent+'</scr'+'ipt>';
+  try{await artifact.publish(doc)}catch(e){ if(e&&e.code==='conflict'){return} $('savemsg').textContent='save failed';$('save').disabled=false;return }
+  dirty=false;$('savemsg').textContent='saved';render();
+};
+render();
+})();
+</script>
