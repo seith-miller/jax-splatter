@@ -37,6 +37,7 @@ phases are funded by reinvested act revenue per D13.
 | [Takedown bass](takedown-bass.md) | same platform, short-scale bass; lit body | TBD | $100–500 | ~$590 | — | concept |
 | [Keytar plate](keytar-plate.md) | battery mini controller on a guitar-ish plate — prop design | TBD | $100–500 | ~$315 | — | spec'd |
 | [The Mach](the-mach.md) | flight stick + throttle on a lit chest rig — flying the risers and lasers live | TBD | $100–500 | ~$385 | — | spec'd |
+| [Crew percussion crate](crew-percussion-crate.md) | grabbable hand percussion for the whole cast — zero build, next-gig ready | 1 | $100–500 | ~$200 | — | buy list |
 
 ## Shared tools
 
