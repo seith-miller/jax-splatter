@@ -30,7 +30,7 @@ phases are funded by reinvested act revenue per D13.
 
 | Instrument | Concept | Phase | Tier | Est. | Actual | Status |
 |---|---|---|---|---|---|---|
-| — | *roster starts empty; add rows as ideas land* | — | — | — | — | idea |
+| [Kick/snare chest rig](kick-snare-chest-rig.md) | roaming kick+snare, lit from inside, wireless-ready | 1 | $500+ | ~$670 (A) + ~$590 (B) | — | spec'd |
 
 ## Shared tools
 
