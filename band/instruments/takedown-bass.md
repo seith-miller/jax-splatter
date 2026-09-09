@@ -38,9 +38,9 @@ two halves pack carry-on, and **integrated lighting inside the body**
 
 - 2026-09-09 — concept set; awaiting Jax's design.
 
-## Bass-specific design risk
+## Scale: decided
 
-At 34" scale the neck segment alone (~24"+) breaks the carry-on rule.
-The design needs **short scale (30" or under)** — or a neck that itself
-splits — for the neck half to fit the bag. Verify segment lengths in the
-design before cutting anything.
+**Short scale (≤30"), by preference and by rule** (Jax, 2026-09-09 — "good
+thing I like short scale basses"). At 34" the neck segment alone would
+break the carry-on rule; at 30" it fits. Verify the neck segment length in
+the design before cutting.
