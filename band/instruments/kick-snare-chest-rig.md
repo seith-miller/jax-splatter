@@ -32,11 +32,12 @@ anchor for the beat.
 | 16×16 floor tom to cut down (used) | FB Marketplace | $75 | | |
 | Muffled 16" heads ×2 (Silentstroke/PS3-class) | new | $60 | | |
 | Foam batting | fabric store | $15 | | |
-| Wireless DMX receiver (rig-mounted) | new | $50 | | |
-| Small par lights ×2 (fit inside shells) | new | $70 | | |
-| DC battery pack + wiring for receiver+pars | new | $35 | | |
+| DMX pucks ×2 (house standard, see merch/dmx-puck.md) | self-built | $50 | | |
+| PD trigger cable | new | $8 | | |
+| USB-C PD brick (rides in a carrier pocket) | new | $20 | | |
+| Wireless DMX dongle | **have it** | $0 | $0 | ✓ |
 
-**Phase A subtotal:** $535 · **+25%:** ~$135 · **Phase A budget: ~$670**
+**Phase A subtotal:** $458 · **+25%:** ~$115 · **Phase A budget: ~$575**
 
 ## Bill of materials — Phase B: wireless sound (bigger rooms)
 

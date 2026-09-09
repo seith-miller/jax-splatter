@@ -30,7 +30,8 @@ phases are funded by reinvested act revenue per D13.
 
 | Instrument | Concept | Phase | Tier | Est. | Actual | Status |
 |---|---|---|---|---|---|---|
-| [Kick/snare chest rig](kick-snare-chest-rig.md) | roaming kick+snare, lit from inside, wireless-ready | 1 | $500+ | ~$670 (A) + ~$590 (B) | — | spec'd |
+| [Kick/snare chest rig](kick-snare-chest-rig.md) | roaming kick+snare, lit from inside, wireless-ready | 1 | $500+ | ~$575 (A) + ~$590 (B) | — | spec'd |
+| [Rototom chest rack](rototom-chest-rack.md) | 6/8/10 rototoms on a chest harness — the roaming tom voice | 1 | $100–500 | ~$400 (A) + ~$300 (B) | — | spec'd |
 
 ## Shared tools
 
