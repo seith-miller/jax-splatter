@@ -34,6 +34,17 @@ gig. All-wireless setups are the enabling constraint for the custom
 instruments (band/instruments/): everything playable in motion,
 strappable, battery-powered or transmitter-fed.
 
+**The role of live instrumentation.** Live instruments are responsible for
+**communicating with the audience**: they give people something visual and
+tactile to latch onto and associate with a particular sound in the music.
+Beyond that, they **reinforce transient and attack information**. A human
+percussionist roaming with a marching-band bass drum is physically
+incapable of matching the low-frequency energy of the venue's subwoofers —
+they can't compete on power — but they can **punctuate the musical moment
+with an intense transient** the audience both hears and sees land.
+Design consequence: instruments are judged on *legibility and attack*, not
+acoustic output. The subs carry the energy; the performer carries the hit.
+
 **The visuals.** A **unique video package for every song**. The act brings
 its **own lighting and ground effects** — the rooms we play don't have to
 provide anything for the show to look like itself.
