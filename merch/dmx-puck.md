@@ -26,9 +26,16 @@ micro-manufactured product.
 | 3 | Small batch for others (sell/gift at gigs, Tindie/direct) | anyone else pays |
 | 4 | Decide: product line or internal tool | — |
 
+## Power: decided (Jax, 2026-09-09)
+
+No internal battery. The puck takes **12V in**, fed by any **USB-C PD
+power bank** through a PD trigger cable (~$8). Consequences: hot-swap
+power mid-set, one charger standard across all instruments, no cells in
+the puck (cheaper, safer, shippable), parts cost ~$25 before enclosure.
+
 ## Open questions
 
 - Enclosure: printed in brand colors (Splatter Pink / Slime) with the mark.
-- Charging (USB-C), mounting (magnet? strap? drum-lug bracket?).
+- Mounting (magnet? strap? drum-lug bracket?); where the brick rides.
 - DMX physical: 3-pin in/out vs wireless module option.
 - Name TBD.
