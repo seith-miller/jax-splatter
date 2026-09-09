@@ -1,4 +1,4 @@
-# HOTAS FX rig
+# The Mach
 
 **Concept:** An off-the-shelf HOTAS flight-sim controller (stick +
 throttle) wired to a lit chest rig — a musician runs the stage flying the
@@ -7,6 +7,7 @@ throttle) wired to a lit chest rig — a musician runs the stage flying the
 electronic music is full of gestures nobody can see. This makes them
 visible — the audience watches the stick get yanked and hears the riser
 climb. Visual/tactile anchor for the most synthetic sounds in the show.
+**Named by Jax, 2026-09-09.**
 **Stage debut target:** TBD.
 **Tier:** $100–500.
 
