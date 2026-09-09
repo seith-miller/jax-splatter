@@ -4,6 +4,12 @@ The act's custom-instrument program. Long-horizon by design: instruments are
 part of the band from the start, realized one build at a time. Each
 instrument gets its own sheet in this directory (copy TEMPLATE.md).
 
+Design brief (stage-vision.md, "The role of live instrumentation"):
+instruments are communication devices — visual/tactile anchors for sounds
+in the track, and transient/attack reinforcement. Judge every build on
+legibility and attack, not acoustic power; and on the wireless rule:
+playable in motion.
+
 Builds serve the stage vision ([docs/stage-vision.md](../../docs/stage-vision.md));
 phases are funded by reinvested act revenue per D13.
 
