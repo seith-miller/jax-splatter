@@ -38,6 +38,9 @@ legibility, minimum weight.
 
 ## Build notes
 
+- **Carry-on rule:** already compliant on head size (6/8/10). Spec a rack
+  bar that splits into segments or unbolts from the carrier.
+
 - Rototoms have **no shell** — nowhere to hide a light inside. Mount pucks
   on the rack bar under the heads firing upward; rototom heads are single-
   ply and glow well. Design the bracket once, reuse per drum.

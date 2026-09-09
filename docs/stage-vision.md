@@ -49,6 +49,13 @@ acoustic output. The subs carry the energy; the performer carries the hit.
 its **own lighting and ground effects** — the rooms we play don't have to
 provide anything for the show to look like itself.
 
+## The carry-on rule (Jax, 2026-09-09)
+
+An economically-minded production from the start, built for the realities
+of **global touring**: every instrument must **break down to fit in
+carry-on luggage**. For drums this caps the largest head size at **13"**.
+Rigs, racks, and mounts are designed as segments, not welded wholes.
+
 ## Two scale points
 
 | | Core | Full deployment |
