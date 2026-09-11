@@ -37,9 +37,12 @@ is what makes it a one-minute setup.
 - **Lit like everything else:** DMX pucks in both trays (not modelled).
 
 smart-part: `components/rig-case` (open) and `rig-case-closed` (transport)
-place the same seven parts; the FLX4 is placed as an envelope body so the fit
-is proven by the assembly interference check. Internal fit-out (foam, well,
-deck plate, securing the gear) is deliberately not modelled yet.
+place the same five parts (two trays, two end walls, front insert). Only the
+case is modelled; internal gear, layout, foam and cable management are the
+fit-out, done by hand later. Construction: aluminium angle frame per tray,
+laser-cut ply skins, printed corner caps, routed drop-in walls, metal latches
+and a spring surface-mount handle. Tracker: the Rig Case Build Book (smart-part
+`components/rig-case/build.yml`).
 
 ## Draft BOM
 
