@@ -25,7 +25,10 @@ is what makes it a one-minute setup.
   hexagonal openings (280 × 120) centred on the mating line; **two identical
   inserts** span both trays and fill them (front: controller jacks; end:
   the pass-through). Open, the end bites face each other and the front bites
-  give access. Tray B is tray A's mirror.
+  give access. Tray B is tray A's mirror. Tray A's rear wall has a third
+  bite, and tray B carries a matching half-hex **tab, permanently fixed** to
+  its upstage rim, that fills it when closed: the **suitcase handle mounts on
+  that tab**.
 - **Tray A (front):** the DDJ-FLX4 deck. Two 80 × 32 × 80 mm square cut-outs
   at its X0 Z0 corners take **wheel cassettes**, a separate module built
   around the common 64 mm inline luggage wheel, so the closed case rolls on
