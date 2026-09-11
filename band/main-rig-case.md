@@ -32,10 +32,10 @@ is what makes it a one-minute setup.
 - **Tray A (front):** the DDJ-FLX4 deck. Two 80 × 32 × 80 mm square cut-outs
   at its X0 Z0 corners take **wheel cassettes**, a separate module built
   around the common 64 mm inline luggage wheel, so the closed case rolls on
-  its end like a roller bag. A **telescoping pull handle** recesses fully into
-  tray A: two floor channels carry 18 mm outer tubes, the 14 mm inner tubes
-  and T-grip slide out 350 mm through a recess low in the join-end wall,
-  flush when retracted so the trays can still butt.
+  its end like a roller bag. A **bought telescoping pull handle** recesses
+  into tray A: its tubes run pushed into the tray's bottom corners along the
+  length, and its grip sits flush in a 32 × 32 mm notch along the join-end
+  bottom edge, so the trays can still butt.
 - **Tray B (back):** the laptop stand folded, the Launchkey Mini, the small
   Yamaha mixer, the power/cable well. At the gig the stand goes up over B; the
   laptop travels separately (bag) and lands on the stand.
@@ -61,13 +61,13 @@ and a spring surface-mount handle. Tracker: the Rig Case Build Book (smart-part
 | Two ply trays + two hex inserts (3/8 in laminated ply, cut from the smart-part flat patterns) | shop | $90 | | |
 | Hardware: butterfly latches ×4 (L905 surface), RH-0533 handle, rivets, M4 | Penn Elcom / Reliable | $85 | | |
 | Inline luggage wheels 64 × 24 mm ×2 + M6 axles | Amazon | $14 | | |
-| Aluminium tube for the pull handle: 2 × 18 mm + 2 × 14 mm | Online Metals | $30 | | |
+| Telescoping luggage pull handle (replacement part) | Amazon | $25 | | |
 | Foam, cable well and deck plate (fit-out) | shop | $50 | | |
 | Power: inlet + strip + PD bricks per the shared standard | new | $60 | | |
 | Cable set (short, permanent, internal) | new | $40 | | |
 | DMX pucks ×2 (lighting) | self | $50 | | |
 
-**Subtotal:** $419 · **+25%:** ~$105 · **Budget: ~$525**
+**Subtotal:** $414 · **+25%:** ~$104 · **Budget: ~$520**
 
 ## Open questions for Jax
 
