@@ -26,7 +26,10 @@ is what makes it a one-minute setup.
   inserts** span both trays and fill them (front: controller jacks; end:
   the pass-through). Open, the end bites face each other and the front bites
   give access. Tray B is tray A's mirror.
-- **Tray A (front):** the DDJ-FLX4 deck.
+- **Tray A (front):** the DDJ-FLX4 deck. Two 64 mm inline luggage wheels in
+  printed housings at its X0 Z0 corners, so the closed case rolls on its end
+  like a roller bag (pull point to decide: a grab handle on the end insert,
+  or a strap).
 - **Tray B (back):** the laptop stand folded, the Launchkey Mini, the small
   Yamaha mixer, the power/cable well. At the gig the stand goes up over B; the
   laptop travels separately (bag) and lands on the stand.
@@ -50,13 +53,14 @@ and a spring surface-mount handle. Tracker: the Rig Case Build Book (smart-part
 | Part | Source | Est. | Actual | Have it? |
 |---|---|---|---|---|
 | Two ply trays + two hex inserts (3/8 in laminated ply, cut from the smart-part flat patterns) | shop | $90 | | |
-| ATA hardware: extrusion, ball corners, butterfly latches ×4, handles ×2 | Penn Elcom | $110 | | |
+| Hardware: butterfly latches ×4 (L905 surface), RH-0533 handle, rivets, M4 | Penn Elcom / Reliable | $85 | | |
+| Inline luggage wheels 64 × 24 mm ×2 + M6 axles | Amazon | $14 | | |
 | Foam, cable well and deck plate (fit-out) | shop | $50 | | |
 | Power: inlet + strip + PD bricks per the shared standard | new | $60 | | |
 | Cable set (short, permanent, internal) | new | $40 | | |
 | DMX pucks ×2 (lighting) | self | $50 | | |
 
-**Subtotal:** $400 · **+25%:** ~$100 · **Budget: ~$500**
+**Subtotal:** $389 · **+25%:** ~$97 · **Budget: ~$490**
 
 ## Open questions for Jax
 
