@@ -40,7 +40,12 @@ crate first).
 
 ## The round (Jax, 2026-09-10)
 
-Stickers · buttons · magnets · dog tags · T-shirts · lighters · can coolers.
+Stickers · buttons · magnets · dog tags · tote bags · lighters · can coolers.
+
+**Tees swapped for totes (Jax, 2026-09-10):** one SKU, no sizes, the library
+makes the whole run, flat canvas takes the neon and the stencil process
+better than a knit. The tee moves to round 2 with the design pass it
+deserves.
 
 **Button standard (Jax, 2026-09-10): one size, 2.25".** It is the only size
 both branches stock, it fits the A006 avatar and the full wordmark legibly,
@@ -52,15 +57,15 @@ and one face template (2.633" circle) serves buttons and magnets alike.
 | **Buttons** — 2.25" only (the one size both branches have); avatar face | either branch, 2.25" button maker | ~$0.36 | $3 · 2/$5 | 50 | ~$18 | ~$125 | ready to file |
 | **Magnets** — 2.25", same face, magnet back | either branch, 2.25" button maker | ~$0.41 | $4 | 30 | ~$13 | ~$120 | ready to file |
 | **Dog tags** — colored anodized aluminum blanks (50×29×2 mm, ~100/pack with chains), laser-marked, numbered | either laser; test one tag first (painted vs anodized) | ~$0.30 | $8 | 30 | ~$25 (one pack) | ~$240 | blank candidate found (Jax, 2026-09-10); pink or black, not green |
-| **T-shirt** — flagship; design pass first | library = prototype shop (Cricut HTV / stencil samples); production likely screen print | samples ~$7 · run ~$10 | $25 | 4 samples now; run of 24 after the design pass | ~$30 samples · ~$240 run | ~$100 samples · ~$600 run | **design open** (see below) |
+| **Tote bag** — heavyweight black canvas (10–12 oz, ~15×16"), wordmark in Bone HTV + pink X, or the wall-splat stencil | Cricut HTV / stencil mask + fabric spray, either branch; BYO blanks | ~$3.50 | $15 | 24 | ~$85 | ~$360 | design pick (HTV vs stencil) then file |
 | **Lighters** — Bic/Clipper with a permanent-vinyl wordmark decal | Cricut permanent vinyl, either branch | ~$1.00 | $3 | 50 | ~$50 | ~$150 | ready to file |
 | **Can coolers** — light-ground wordmark + "Get Splattered!" on white neoprene | Marksbury sublimation + heat press; BYO blanks | ~$1.70 | $5 | 24 | ~$41 | ~$120 | ready to file |
 
-| | Without the tee run | With a 24-tee screen run |
-|---|---|---|
-| Outlay | ~$195 | ~$435 |
-| Gross at full sell-through | ~$945 | ~$1,445 |
-| Break-even sell-through | ~21% | ~30% |
+| | Round 1 |
+|---|---|
+| Outlay | ~$255 |
+| Gross at full sell-through | ~$1,090 |
+| Break-even sell-through | ~23% |
 
 **Table kit, not merch (confirm):** 24×72" wordmark banner with URL + QR on
 the Eastside HP (~$27) and a price card in the brand type. The table has to
@@ -70,9 +75,10 @@ look like the act.
 landing later in September (Jax, 2026-09-10). Marksbury already lists one;
 the hold stands regardless.
 
-**Out of round 1:** acrylic keychains (dog tags own that slot), key-art
-print (needs print-res re-render + the rights gate), mugs, totes, key-art
-printable-HTV tee, 3D-printed tags, kiln/CNC pieces. Bench for round 2.
+**Out of round 1:** the T-shirt (round 2, after the design pass — see
+below), acrylic keychains (dog tags own that slot), key-art print (needs
+print-res re-render + the rights gate), mugs, key-art printable-HTV tee,
+3D-printed tags, kiln/CNC pieces. Bench for round 2.
 
 Same trips, not for sale: **DMX puck enclosures ×2** (~70 g PLA, ~$10.50
 each — gate 1 of [dmx-puck.md](dmx-puck.md)), **show flyers** for Oct 24 /
@@ -81,7 +87,7 @@ percussion crate.
 
 ## The two open design threads
 
-**The tee.** The flagship, not a line item: the surface people wear for
+**The tee (round 2).** The flagship, not a line item: the surface people wear for
 years and the one that carries the brand into rooms Jax isn't in. Great band
 tees are an artwork with a name attached, not a logo alone. The library can
 cut one or two flat neon colors (HTV) or cut the letters as a **stencil
@@ -90,11 +96,13 @@ mask** for fluorescent fabric spray — which is the wall-splat process
 streak, the name as negative space, slime thrown over. Neither branch screen
 prints; a production run of two-color fluorescent plastisol is the standard
 route at ~$10/shirt. Plan: library = prototype shop (3–4 samples across
-directions, worn at MULTIPASS Sep 19, photographed), then decide production.
+directions, worn and photographed), then decide production — after round 1.
 Open: wordmark vs artwork front; blank (Static Gray vs black); cut (unisex vs
 crop/tank — the scene buys both); back copy ("GET SPLATTERED!" / "NEON GLITCH
 SLUT POP", both ratified lines). Next step once Jax answers "wordmark or
-artwork": a tee pick sheet, 4–6 directions rendered on the blank.
+artwork": a tee pick sheet, 4–6 directions rendered on the blank. The
+tote is the first test of that same question at lower stakes: HTV wordmark
+versus the wall-splat stencil on canvas.
 
 **The dog tag.** In. The effect decides the process:
 
@@ -146,7 +154,7 @@ every tag unique, never reissued.** Three digits with leading zeros
 |---|---|---|
 | JAX-A007 | sticker-set | the Roland print+cut sheet: two designs with bleed and CutContour |
 | JAX-A008 | button-face | one 2.633" face circle for the 2.25" maker — buttons and magnets |
-| JAX-A009 | tee | the design that wins the pass: art, placement, blank, ink/process |
+| JAX-A009 | tote | the tote art: HTV cut file or stencil mask, placement, blank spec |
 | JAX-A010 | dog-tag | marking file, both faces, numbering scheme |
 | JAX-A011 | lighter-decal | permanent-vinyl cut file, ~2.3×0.8" |
 | JAX-A012 | can-cooler | light-ground sublimation wrap |
@@ -162,12 +170,12 @@ wrap.
 
 | Week | What | Where |
 |---|---|---|
-| Sep 14–18 | Sign the agreement; recon visit with the [first-visit checklist](makerspace.md#first-visit-checklist--questions-for-staff) — laser metal-marking and acrylic answers decide the dog-tag process. Order blanks: lighters, can coolers, dog-tag blanks + chains + silencers, tee samples, fluorescent HTV / fabric spray. Wordmark SVG + sticker/button/lighter/cooler files → candidates → Jax signs. Tee pick sheet → tee samples cut. Optional: Sep 15 button class (Eastside), Sep 17 Cricut class (Marksbury). | both |
-| Sep 19 | MULTIPASS — wear the tee samples. Otherwise clear. | — |
+| Sep 14–18 | Sign the agreement; recon visit with the [first-visit checklist](makerspace.md#first-visit-checklist--questions-for-staff) — laser metal-marking and acrylic answers decide the dog-tag process. Order blanks: lighters, can coolers, dog-tag blanks (one pack), heavyweight black totes ×24, fluorescent HTV / fabric spray. Wordmark SVG + sticker/button/lighter/cooler/tote files → candidates → Jax signs. Two tote samples (HTV vs stencil) → pick. Optional: Sep 15 button class (Eastside), Sep 17 Cricut class (Marksbury). | both |
+| Sep 19 | MULTIPASS — clear. | — |
 | Sep 21–25 | Marksbury run: Roland stickers + button faces (reserve); buttons and magnets pressed same visit; can coolers sublimated; lighter decals cut; dog-tag marking test. Sep 26–27 weekend walk-in for overflow. | Marksbury |
-| Sep 28–Oct 2 | Tee production decision from the sample reactions; screen-print order placed if that's the route (2–3 wk turnaround). Dog-tag run. Banner on the HP if confirmed (reserve). Oct 3–4 Eastside weekend for overflow. | Eastside / printer |
+| Sep 28–Oct 2 | Tote run on the heat press; dog-tag jig + run 021–050 (reserve the laser); banner on the HP if confirmed (reserve). Oct 3–4 Eastside weekend for overflow. | Eastside |
 | Oct 5–9 | Fixes and second batch; flyers for Oct 24; puck enclosures. | either |
-| Oct 12–16 | Buffer; screen-printed tees land. Oct 17–18 Eastside weekend if needed. | — |
+| Oct 12–16 | Buffer. Oct 17–18 Eastside weekend if needed. | — |
 | **Oct 24** | **DILDOZER — the merch table debuts.** | — |
 | Oct 26–30 | Restock for Nov 6 Louisville from the sell-through numbers. | both |
 
@@ -176,8 +184,8 @@ wrap.
 - **At the table:** cash box seeded with ones and fives; Square Tap to Pay
   on the phone (no hardware, ~2.6% + a per-tap fee); Venmo / Cash App QR
   on the table sign. Prices on one card in the brand type.
-- **Bundles:** any two small items $5; a sticker in every bag; tee + tag
-  $30.
+- **Bundles:** any two small items $5; a sticker in every bag; tote + tag
+  $20.
 - **Online:** none in round 1. Bandcamp (accounts-inventory row 4, still
   unclaimed) is the round-2 unlock — it is the store and the only platform
   that pays directly.
@@ -190,8 +198,8 @@ wrap.
 
 ## Open questions for Jax
 
-- Tee: wordmark front, or an artwork the name rides on? (unlocks the tee
-  pick sheet)
+- Tote art: HTV wordmark or the wall-splat stencil? (two samples first)
+- Tee, round 2: wordmark front, or an artwork the name rides on?
 - Dog tag: which of the three effects?
 - Table banner — confirm as table kit?
 - Who clears the paintball-photo rights (ground rule 5)?
