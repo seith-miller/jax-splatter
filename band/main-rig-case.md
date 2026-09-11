@@ -12,36 +12,49 @@ chest rig pucks).
 is what makes it a one-minute setup.
 **Tier:** $100–500 (custom build) — or $500+ if bought as a flight case.
 
-## Spec (draft, 2026-09-10 — for Jax to tear apart)
+## Spec (v0.2, Seith 2026-09-10 — modelled in smart-part as `rig-case`)
 
-- **Form factor:** overhead-bin sized, **22 × 14 × 9**, the stage-box
-  footprint, so it packs and rides like the boxes and sits on the riser
-  as a fourth object in the family. Carry-on rule applies.
-- **Nothing gets unplugged between shows.** Laptop, interface, controller,
-  wireless receivers, DMX node and power distribution stay cabled inside.
-  Lid off = performance surface (controller + laptop).
-- **One rear panel** carries every connection to the world: power in,
-  audio out to FOH (XLR ×2), HDMI out to the projector, DMX out (3-pin,
-  ×2 for two chains), Ethernet/antenna ports for the wireless links.
-- **Power:** one inlet; inside, the act's USB-C PD standard feeds anything
-  that can take it, a small strip feeds the rest.
-- **Lit like everything else:** DMX pucks inside a translucent lid or side
-  band so the rig glows in sync with the set.
-- **Modular between the two scales:** the same case is the rig at 16×8 and
-  at 32×24; only what plugs into the panel changes.
+- **Form factor:** the 22 × 14 × 9 in overhead-bin case, ATA style (3/8 in
+  laminated ply, aluminium tongue-and-groove extrusion, ball corners, butterfly
+  latches), **split 50/50** into two 4.5 in trays.
+- **Opening:** unlatch, flip the top tray over to the right onto the riser.
+  Both trays are now open tubs side by side.
+- **Removable end walls:** the two 14 × 4.5 in end walls that face each other
+  drop out (retained by the extrusion groove when latched), so the trays butt
+  into **one 44 × 13 × 4 in channel**. A notch in each wall's floor edge lets
+  the harness cross the join with the walls in.
+- **Tray A (front):** the DDJ-FLX4 deck. A **removable front insert** (like the
+  removable front on ProX controller cases) exposes the FLX4's headphone/mic
+  jacks. The **connector panel** is on A's rear wall.
+- **Tray B (back):** the laptop stand folded, the Launchkey Mini, the small
+  Yamaha mixer, the power/cable well. At the gig the stand goes up over B; the
+  laptop travels separately (bag) and lands on the stand.
+- **Raceway:** a 45 mm trough along the back of both trays (glued ply divider,
+  lift-out lid strip) for USB, master out, mixer tails and power; the panel
+  opens into it.
+- **Rear panel:** Neutrik D-series cut-outs (powerCON TRUE1 in, XLR out ×2,
+  HDMI-D, RJ45-D, DMX out ×2, spare) + two SMA bulkheads, 180 × 90 mm, 3 mm
+  aluminium, laser cut.
+- **Lit like everything else:** DMX pucks in both trays (not modelled).
+
+smart-part: `components/rig-case` (open) and `rig-case-closed` (transport)
+place the same seven parts; the FLX4 is placed as an envelope body so the fit
+is proven by the assembly interference check. Internal fit-out (foam, well,
+deck plate, securing the gear) is deliberately not modelled yet.
 
 ## Draft BOM
 
 | Part | Source | Est. | Actual | Have it? |
 |---|---|---|---|---|
-| Shell: ply/HDPE build (or used Pelican/SKB-class case in the footprint) | shop / used | $120 | | |
+| Two ply trays + removable end walls + front insert (3/8 in laminated ply, cut from the smart-part flat patterns) | shop | $90 | | |
+| ATA hardware: extrusion, ball corners, butterfly latches ×4, handles ×2 | Penn Elcom | $110 | | |
 | Rear connector panel: Neutrik powerCON/IEC in, XLR ×2, HDMI, DMX 3-pin ×2, Ethernet, SMA antenna ×2 | new | $90 | | |
-| Internal tray/rails for laptop + interface + controller | shop | $40 | | |
+| Raceway strips, foam, cable well and deck plate (fit-out) | shop | $50 | | |
 | Power: inlet + strip + PD bricks per the shared standard | new | $60 | | |
 | Cable set (short, permanent, internal) | new | $40 | | |
 | DMX pucks ×2 (lighting) | self | $50 | | |
 
-**Subtotal:** $400 · **+25%:** ~$100 · **Budget: ~$500**
+**Subtotal:** $490 · **+25%:** ~$125 · **Budget: ~$615**
 
 ## Open questions for Jax
 
@@ -63,3 +76,4 @@ list above. Tracked in the smart-part backlog.
 ## Build log
 
 - 2026-09-10 — concept + draft BOM, spec for review.
+- 2026-09-10 — v0.2: two-tray split with removable end walls (Seith); modelled in smart-part (#227).

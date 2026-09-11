@@ -57,10 +57,10 @@ Proposed arc:
 3. T-bar + screen (~$590) — the upstage
 4. Kick/snare chest rig, Phase A (~$535) — the beat
 5. Fog drive kit (~$250)
-6. [Main rig case](../band/main-rig-case.md) (~$500) — the rig, permanently wired: drop, plug, go
+6. [Main rig case](../band/main-rig-case.md) (~$615) — two-tray split case, the rig permanently wired: unlatch, flip, plug, go
 7. Then per-song video packages for the setlist (video/ lane)
 
-≈ **$3,400 to a stageable debut**; guitar/bass/keytar/Mach/rototoms join
+≈ **$3,500 to a stageable debut**; guitar/bass/keytar/Mach/rototoms join
 as they're finished — the form absorbs additions by design.
 
 ## Open decisions for Jax
