@@ -40,13 +40,18 @@ crate first).
 
 ## The round (Jax, 2026-09-10)
 
-Stickers · buttons · dog tags · T-shirts · lighters · can coolers.
+Stickers · buttons · magnets · dog tags · T-shirts · lighters · can coolers.
+
+**Button standard (Jax, 2026-09-10): one size, 2.25".** It is the only size
+both branches stock, it fits the A006 avatar and the full wordmark legibly,
+and one face template (2.633" circle) serves buttons and magnets alike.
 
 | Item | Make | COGS ea | Sell | Qty | Outlay | Gross at sell-through | Status |
 |---|---|---|---|---|---|---|---|
 | **Stickers** — wordmark kiss-cut 4×1.25", JAX splat die-cut 3", QR tile 2.5" | Marksbury Roland, sticker paper $2/ft | $0.06–0.13 | $2 · 3/$5 · free in every bag | ~150 | ~$14 | ~$85 (50 sold) | ready to file |
-| **Buttons** — 2.25" avatar, 1.25" JAX crop (+ magnets, same press) | either branch, button makers | $0.36 / $0.23 | $3 / $2 · 2/$5 · magnets $4 | 50 + 50 | ~$30 | ~$250 | ready to file |
-| **Dog tags** — stainless or anodized, laser-marked, ball chain, colored silencer, numbered | Marksbury small laser (if it marks steel) or Eastside laser on anodized | ~$1.00 | $8 | 30 | ~$30 | ~$240 | **process open** — depends on the effect Jax wants (see below) |
+| **Buttons** — 2.25" only (the one size both branches have); avatar face | either branch, 2.25" button maker | ~$0.36 | $3 · 2/$5 | 50 | ~$18 | ~$125 | ready to file |
+| **Magnets** — 2.25", same face, magnet back | either branch, 2.25" button maker | ~$0.41 | $4 | 30 | ~$13 | ~$120 | ready to file |
+| **Dog tags** — colored anodized aluminum blanks (50×29×2 mm, ~100/pack with chains), laser-marked, numbered | either laser; test one tag first (painted vs anodized) | ~$0.30 | $8 | 30 | ~$25 (one pack) | ~$240 | blank candidate found (Jax, 2026-09-10); pink or black, not green |
 | **T-shirt** — flagship; design pass first | library = prototype shop (Cricut HTV / stencil samples); production likely screen print | samples ~$7 · run ~$10 | $25 | 4 samples now; run of 24 after the design pass | ~$30 samples · ~$240 run | ~$100 samples · ~$600 run | **design open** (see below) |
 | **Lighters** — Bic/Clipper with a permanent-vinyl wordmark decal | Cricut permanent vinyl, either branch | ~$1.00 | $3 | 50 | ~$50 | ~$150 | ready to file |
 | **Can coolers** — light-ground wordmark + "Get Splattered!" on white neoprene | Marksbury sublimation + heat press; BYO blanks | ~$1.70 | $5 | 24 | ~$41 | ~$120 | ready to file |
@@ -108,7 +113,7 @@ the neon accent, wordmark front, a subverted GI five-line back (name / number
 | Proposed ID | slug | what gets signed |
 |---|---|---|
 | JAX-A007 | sticker-set | the Roland print+cut sheet: three designs with bleed and CutContour |
-| JAX-A008 | button-faces | 2.633" and 1.629" face circles (2.25" and 1.25" makers) |
+| JAX-A008 | button-face | one 2.633" face circle for the 2.25" maker — buttons and magnets |
 | JAX-A009 | tee | the design that wins the pass: art, placement, blank, ink/process |
 | JAX-A010 | dog-tag | marking file, both faces, numbering scheme |
 | JAX-A011 | lighter-decal | permanent-vinyl cut file, ~2.3×0.8" |
@@ -127,7 +132,7 @@ wrap.
 |---|---|---|
 | Sep 14–18 | Sign the agreement; recon visit with the [first-visit checklist](makerspace.md#first-visit-checklist--questions-for-staff) — laser metal-marking and acrylic answers decide the dog-tag process. Order blanks: lighters, can coolers, dog-tag blanks + chains + silencers, tee samples, fluorescent HTV / fabric spray. Wordmark SVG + sticker/button/lighter/cooler files → candidates → Jax signs. Tee pick sheet → tee samples cut. Optional: Sep 15 button class (Eastside), Sep 17 Cricut class (Marksbury). | both |
 | Sep 19 | MULTIPASS — wear the tee samples. Otherwise clear. | — |
-| Sep 21–25 | Marksbury run: Roland stickers + button faces (reserve); buttons + magnets pressed same visit; can coolers sublimated; lighter decals cut; dog-tag marking test. Sep 26–27 weekend walk-in for overflow. | Marksbury |
+| Sep 21–25 | Marksbury run: Roland stickers + button faces (reserve); buttons and magnets pressed same visit; can coolers sublimated; lighter decals cut; dog-tag marking test. Sep 26–27 weekend walk-in for overflow. | Marksbury |
 | Sep 28–Oct 2 | Tee production decision from the sample reactions; screen-print order placed if that's the route (2–3 wk turnaround). Dog-tag run. Banner on the HP if confirmed (reserve). Oct 3–4 Eastside weekend for overflow. | Eastside / printer |
 | Oct 5–9 | Fixes and second batch; flyers for Oct 24; puck enclosures. | either |
 | Oct 12–16 | Buffer; screen-printed tees land. Oct 17–18 Eastside weekend if needed. | — |
