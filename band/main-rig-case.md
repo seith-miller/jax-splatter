@@ -19,13 +19,12 @@ is what makes it a one-minute setup.
   latches), **split 50/50** into two 4.5 in trays.
 - **Opening:** unlatch, flip the top tray over to the right onto the riser.
   Both trays are now open tubs side by side.
-- **Removable end walls:** the two 14 × 4.5 in end walls that face each other
-  drop out (retained by the extrusion groove when latched), so the trays butt
-  into **one 44 × 13 × 4 in channel**. A notch in each wall's floor edge lets
-  the harness cross the join with the walls in.
-- **Tray A (front):** the DDJ-FLX4 deck. A **removable front insert** (like the
-  removable front on ProX controller cases) exposes the FLX4's headphone/mic
-  jacks.
+- **Hex insert openings:** each tray's end wall at the join carries an
+  elongated-hexagon opening (280 × 80 mm, 60° ends); with the inserts out the
+  two openings line up into a pass-through between the trays. Tray A's front
+  wall has the same opening for the controller's jacks. **All three inserts
+  are one interchangeable part** (like the removable front on ProX cases).
+- **Tray A (front):** the DDJ-FLX4 deck.
 - **Tray B (back):** the laptop stand folded, the Launchkey Mini, the small
   Yamaha mixer, the power/cable well. At the gig the stand goes up over B; the
   laptop travels separately (bag) and lands on the stand.
@@ -37,7 +36,7 @@ is what makes it a one-minute setup.
 - **Lit like everything else:** DMX pucks in both trays (not modelled).
 
 smart-part: `components/rig-case` (open) and `rig-case-closed` (transport)
-place the same five parts (two trays, two end walls, front insert). Only the
+place the same five parts (two trays, three hex inserts). Only the
 case is modelled; internal gear, layout, foam and cable management are the
 fit-out, done by hand later. Construction: aluminium angle frame per tray,
 laser-cut ply skins, printed corner caps, routed drop-in walls, metal latches
@@ -48,7 +47,7 @@ and a spring surface-mount handle. Tracker: the Rig Case Build Book (smart-part
 
 | Part | Source | Est. | Actual | Have it? |
 |---|---|---|---|---|
-| Two ply trays + removable end walls + front insert (3/8 in laminated ply, cut from the smart-part flat patterns) | shop | $90 | | |
+| Two ply trays + three hex inserts (3/8 in laminated ply, cut from the smart-part flat patterns) | shop | $90 | | |
 | ATA hardware: extrusion, ball corners, butterfly latches ×4, handles ×2 | Penn Elcom | $110 | | |
 | Foam, cable well and deck plate (fit-out) | shop | $50 | | |
 | Power: inlet + strip + PD bricks per the shared standard | new | $60 | | |
@@ -77,4 +76,4 @@ list above. Tracked in the smart-part backlog.
 ## Build log
 
 - 2026-09-10 — concept + draft BOM, spec for review.
-- 2026-09-10 — v0.2: two-tray split with removable end walls (Seith); modelled in smart-part (#227). No jack plate and no raceway in the first version.
+- 2026-09-10 — v0.2: two-tray split with removable end walls (Seith); modelled in smart-part (#227). No jack plate and no raceway in the first version. Hex insert openings (front + both join ends), one interchangeable insert.
