@@ -20,9 +20,9 @@ is what makes it a one-minute setup.
 - **Opening:** unlatch, flip the top tray over to the right onto the riser.
   Both trays are now open tubs side by side.
 - **Half-hex bites:** each tray takes two half-hexagon bites out of its rim
-  (280 mm wide at the rim, 40 deep, 60° sides), one in the join-end wall and
+  (280 mm wide at the rim, 60 deep, 60° sides), one in the join-end wall and
   one in the audience-side wall. Closed, the bites pair up into two full
-  hexagonal openings (280 × 80) centred on the mating line; **two identical
+  hexagonal openings (280 × 120) centred on the mating line; **two identical
   inserts** span both trays and fill them (front: controller jacks; end:
   the pass-through). Open, the end bites face each other and the front bites
   give access. Tray B is tray A's mirror.
