@@ -25,16 +25,16 @@ is what makes it a one-minute setup.
   the harness cross the join with the walls in.
 - **Tray A (front):** the DDJ-FLX4 deck. A **removable front insert** (like the
   removable front on ProX controller cases) exposes the FLX4's headphone/mic
-  jacks. The **connector panel** is on A's rear wall.
+  jacks.
 - **Tray B (back):** the laptop stand folded, the Launchkey Mini, the small
   Yamaha mixer, the power/cable well. At the gig the stand goes up over B; the
   laptop travels separately (bag) and lands on the stand.
 - **Raceway:** a 45 mm trough along the back of both trays (glued ply divider,
   lift-out lid strip) for USB, master out, mixer tails and power; the panel
   opens into it.
-- **Rear panel:** Neutrik D-series cut-outs (powerCON TRUE1 in, XLR out ×2,
-  HDMI-D, RJ45-D, DMX out ×2, spare) + two SMA bulkheads, 180 × 90 mm, 3 mm
-  aluminium, laser cut.
+- **No jack plate in v0.2** (Seith): the harness leaves over the rim or
+  through the join when the case is open. A Neutrik D-series rear panel stays
+  modelled in smart-part as a later option.
 - **Lit like everything else:** DMX pucks in both trays (not modelled).
 
 smart-part: `components/rig-case` (open) and `rig-case-closed` (transport)
@@ -48,13 +48,12 @@ deck plate, securing the gear) is deliberately not modelled yet.
 |---|---|---|---|---|
 | Two ply trays + removable end walls + front insert (3/8 in laminated ply, cut from the smart-part flat patterns) | shop | $90 | | |
 | ATA hardware: extrusion, ball corners, butterfly latches ×4, handles ×2 | Penn Elcom | $110 | | |
-| Rear connector panel: Neutrik powerCON/IEC in, XLR ×2, HDMI, DMX 3-pin ×2, Ethernet, SMA antenna ×2 | new | $90 | | |
 | Raceway strips, foam, cable well and deck plate (fit-out) | shop | $50 | | |
 | Power: inlet + strip + PD bricks per the shared standard | new | $60 | | |
 | Cable set (short, permanent, internal) | new | $40 | | |
 | DMX pucks ×2 (lighting) | self | $50 | | |
 
-**Subtotal:** $490 · **+25%:** ~$125 · **Budget: ~$615**
+**Subtotal:** $400 · **+25%:** ~$100 · **Budget: ~$500**
 
 ## Open questions for Jax
 
@@ -76,4 +75,4 @@ list above. Tracked in the smart-part backlog.
 ## Build log
 
 - 2026-09-10 — concept + draft BOM, spec for review.
-- 2026-09-10 — v0.2: two-tray split with removable end walls (Seith); modelled in smart-part (#227).
+- 2026-09-10 — v0.2: two-tray split with removable end walls (Seith); modelled in smart-part (#227). No jack plate in the first version.
