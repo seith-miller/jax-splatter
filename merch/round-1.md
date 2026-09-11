@@ -48,7 +48,7 @@ and one face template (2.633" circle) serves buttons and magnets alike.
 
 | Item | Make | COGS ea | Sell | Qty | Outlay | Gross at sell-through | Status |
 |---|---|---|---|---|---|---|---|
-| **Stickers** — wordmark kiss-cut 4×1.25", JAX splat die-cut 3", QR tile 2.5" | Marksbury Roland, sticker paper $2/ft | $0.06–0.13 | $2 · 3/$5 · free in every bag | ~150 | ~$14 | ~$85 (50 sold) | ready to file |
+| **Stickers** — two designs (Jax, 2026-09-10): wordmark kiss-cut 4×1.25" with jaxsplatter.com small beneath; JAX splat die-cut 3". QR tile dropped. | Marksbury Roland, sticker paper $2/ft | $0.06–0.13 | $2 · 3/$5 · free in every bag | ~150 (90 + 60) | ~$12 | ~$85 (50 sold) | ready to file |
 | **Buttons** — 2.25" only (the one size both branches have); avatar face | either branch, 2.25" button maker | ~$0.36 | $3 · 2/$5 | 50 | ~$18 | ~$125 | ready to file |
 | **Magnets** — 2.25", same face, magnet back | either branch, 2.25" button maker | ~$0.41 | $4 | 30 | ~$13 | ~$120 | ready to file |
 | **Dog tags** — colored anodized aluminum blanks (50×29×2 mm, ~100/pack with chains), laser-marked, numbered | either laser; test one tag first (painted vs anodized) | ~$0.30 | $8 | 30 | ~$25 (one pack) | ~$240 | blank candidate found (Jax, 2026-09-10); pink or black, not green |
@@ -104,15 +104,47 @@ artwork": a tee pick sheet, 4–6 directions rendered on the blank.
 | Neon brand object — pink or slime tag, silver letters | laser-engraved anodized aluminum (dye removal) | either laser |
 | Crew token — numbered stainless, cast wears theirs first | IR/fiber marking on bare steel; verify Marksbury's small laser has it (it sells metal keychain blanks) | Marksbury |
 
-Whichever: 24" ball chain + 4" mini chain, pink or slime rubber silencer as
-the neon accent, wordmark front, a subverted GI five-line back (name / number
-/ GET SPLATTERED / NEON GLITCH SLUT POP / jaxsplatter.com).
+Blank found (Jax, 2026-09-10): colored anodized aluminum, 50×29×2 mm, ~100
+per pack with ball chains — route 2. Pink or black, not green (anodized green
+is emerald, not Slime). Test one tag before the run: painted blanks flake.
+
+### Numbering — how it works
+
+The number is a promise: **one continuous series for the life of the act,
+every tag unique, never reissued.** Three digits with leading zeros
+(001–999); the day it passes 999 is a good day.
+
+| Block | Who | Rule |
+|---|---|---|
+| 001 | Jax | — |
+| 002–020 | the cast — band, dancers, guest vocalists, crew | assigned as people join; a tag is how you know you're in the crew (stage-vision's rotating cast, made physical) |
+| 021 → | fans, in order sold | round 1 = 021–050 |
+
+- **Register:** `merch/dog-tags.md` — number → cast name, or show + date
+  sold (buyer anonymous unless they want in). Updated after every show; it
+  is the crew roster and the sales log in one table.
+- **Layout:** front — wordmark, number small at the bottom edge (visible
+  when worn; the number is the point). Back — the GI five-line block:
+  SPLATTER, JAX / No. ### / GET SPLATTERED / NEON GLITCH SLUT POP /
+  JAXSPLATTER.COM.
+- **The file:** one signed marking file (JAX-A010) with a `{NUMBER}` field.
+  If the library runs LightBurn, its Variable Text does serials natively
+  (CSV or auto-increment) — one job, thirty numbers. If it runs xTool
+  Creative Space or similar, `tools/dog-tag-gen.py` (to write) emits one
+  SVG per number laid onto the jig positions.
+- **The jig:** laser-cut 3 mm MDF or chipboard with 50×29 mm pockets, cut
+  on the Eastside laser in the same reservation. Tags drop in, batch
+  engraves front; flip each in place, batch engraves back. ~30–60 s per
+  face; a run of 30 is one reservation.
+- **Gates, in order:** buy one pack → mark one tag (anodized vs painted)
+  → sign A010 with the numbering scheme → cut the jig → run 021–050 →
+  cast tags 001–020 as the roster fills.
 
 ## Proposed sign-off candidates
 
 | Proposed ID | slug | what gets signed |
 |---|---|---|
-| JAX-A007 | sticker-set | the Roland print+cut sheet: three designs with bleed and CutContour |
+| JAX-A007 | sticker-set | the Roland print+cut sheet: two designs with bleed and CutContour |
 | JAX-A008 | button-face | one 2.633" face circle for the 2.25" maker — buttons and magnets |
 | JAX-A009 | tee | the design that wins the pass: art, placement, blank, ink/process |
 | JAX-A010 | dog-tag | marking file, both faces, numbering scheme |
