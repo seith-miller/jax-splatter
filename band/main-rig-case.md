@@ -26,10 +26,11 @@ is what makes it a one-minute setup.
   inserts** span both trays and fill them (front: controller jacks; end:
   the pass-through). Open, the end bites face each other and the front bites
   give access. Tray B is tray A's mirror.
-- **Tray A (front):** the DDJ-FLX4 deck. Two 64 mm inline luggage wheels in
-  printed housings at its X0 Z0 corners, so the closed case rolls on its end
-  like a roller bag (pull point to decide: a grab handle on the end insert,
-  or a strap).
+- **Tray A (front):** the DDJ-FLX4 deck. Two 80 × 32 × 80 mm square cut-outs
+  at its X0 Z0 corners take **wheel cassettes**, a separate module built
+  around the common 64 mm inline luggage wheel, so the closed case rolls on
+  its end like a roller bag (pull point to decide: a grab handle on the end
+  insert, or a strap).
 - **Tray B (back):** the laptop stand folded, the Launchkey Mini, the small
   Yamaha mixer, the power/cable well. At the gig the stand goes up over B; the
   laptop travels separately (bag) and lands on the stand.
