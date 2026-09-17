@@ -72,6 +72,28 @@ passage is the bed.
   AI artifacts is a site rule, but it's the right instinct here too. The
   cheapness should look like cheapness, not like a model.
 
+## The lines (Jax, 2026-09-17)
+
+The anchor lead-ins, verbatim. Each one ends where the episode starts;
+the completion is written per segment, per gig.
+
+> "Jax Splatter, best known as the only man dumb enough to divorce
+> Mozelle Shante twice, has been seen this week in…"
+
+> "Jax Splatter, unrepentant alcoholic and cotton candy mogul, has just
+> announced…"
+
+> "Speaking of people incapable of keeping their mouth shut on the
+> toilet, Jax Splatter is in the news again today for…"
+
+Where they land, with proposed completions (Jax edits):
+
+| Line | Slot | Proposed completion |
+|---|---|---|
+| Mozelle Shante | **Sightings** (pre-show loop) — this is the per-venue line | "…in **[CITY]**, a place we had to look up. Sources say he is 'putting something together.' Sources say that every week." |
+| Cotton candy mogul | **The Comeback?** | "…his sixth farewell tour, and his first from a planet. Funding is described, in his own press release, as 'the merch table.' Ms. Shante's representatives declined to comment, then commented at length." |
+| Mouth shut on the toilet | **Breaking** | "…a forty-minute recording made in a stall at an undisclosed venue, in which he can be heard rehearsing what sources call 'a set list' and what Ms. Shante's attorneys call 'admissible.'" |
+
 ## Rules
 
 - The anchors talk to *their* audience, never to the room.
