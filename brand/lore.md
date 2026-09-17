@@ -57,6 +57,9 @@ Not a villain, not a hero. A hustler whose hustle is the show.
 Nothing on the site, nothing in the bio, no origin post. The lore is a
 feel, not a text. It leaks out through:
 
+- **the broadcast** — core-side entertainment news covering him as a
+  C-list has-been, played between songs (Cowboy Bebop's Big Shot move);
+  see [video/interstitials.md](../video/interstitials.md)
 - **song titles and lyrics** — the pitch, the come-on, the con
 - **merch copy** — the caravan's souvenirs
 - **the hotline** — a real number, comedy 1-900 energy (AGENDA item;
