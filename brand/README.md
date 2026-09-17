@@ -10,6 +10,10 @@ Brand art for Jax Splatter, split by a hard line:
 - **[reference/](reference/)** — the archive. Everything that informs the brand
   but isn't (or isn't yet) an official release.
 
+The words: [bio.md](bio.md) is the canonical profile copy (pasted everywhere,
+verbatim); [lore.md](lore.md) is who the character is — the feel behind
+the art, never explained to the audience.
+
 ## reference/originals
 
 The three "Jax Splatter" AI-generated images (ChatGPT, Jul 2025) from the Drive
