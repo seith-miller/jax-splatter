@@ -72,4 +72,4 @@ built for the small stage is wasted on the big one.
 | Phase | Unlocks | Funded by | Status |
 |---|---|---|---|
 | 0 | Vision captured (this doc) | — | **done 2026-09-08** |
-| 1 | *first instrument + per-song video pipeline candidates — to be planned* | first reinvestment | open |
+| 1 | *first instrument + per-song video pipeline candidates — to be planned* | first reinvestment | open — **debut 2026-12-19** (docs/debut-staging.md) |

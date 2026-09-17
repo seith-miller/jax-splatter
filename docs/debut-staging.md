@@ -1,8 +1,8 @@
 # The debut — what we actually stage
 
 Production design for the first Jax Splatter show, at core scale (16×8 +
-riser), built entirely from specced kit. No date; this is the show itself.
-Draft for Jax to tear apart.
+riser), built entirely from specced kit. **Dated: Saturday 2026-12-19**
+(Jax, 2026-09-17; venue TBD). Draft for Jax to tear apart.
 
 ## The stage plot (16×8, audience at bottom)
 
