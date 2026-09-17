@@ -45,6 +45,12 @@ Not a villain, not a hero. A hustler whose hustle is the show.
   if he can ever mount it. Every gig is a down payment on the big one.
 - **The budget is the merch table.** Shoestring by canon: what the table
   makes tonight is what the show can afford tomorrow (D13, the phase map).
+- **Mozelle Shante is the ex.** Twice. Bigger than him, always was; the
+  divorces are the thing he's best known for back home.
+- **The money was cotton candy.** Mogul, past tense. Where it went is
+  never explained.
+- **Unrepentant alcoholic**, and **incapable of keeping his mouth shut on
+  the toilet** — the two ways the press keeps finding him.
 - **The crew is whoever he can rope in.** The rotating cast, all wireless,
   all roaming (docs/stage-vision.md) — a pickup band, a pirate crew, a
   marching band that was sold to the town last week.
