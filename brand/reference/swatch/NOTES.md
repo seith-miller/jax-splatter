@@ -5,7 +5,7 @@ neutral spec). This file keeps the provenance and the usage logic.
 
 ## Provenance
 
-- **Splatter Pink #ea3e86** — sampled from the Jack Splatter AI originals; the
+- **Splatter Pink #ea3e86** — sampled from the Jax Splatter AI originals; the
   color that is the name. Kin to Blade Runner's neon title lettering.
 - **Blood Red #c70f38 / Deep Blue #1668d6 / Electric Blue #46b3ff / Smog Indigo
   #11141f / Night #05060a** — the site theme (D7): black + blue reads slow and
