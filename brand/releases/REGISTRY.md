@@ -63,6 +63,6 @@ Proposed but **not signed off**.
 
 Kept for the record; no longer candidates. Files remain in `../reference/` as archive.
 
-- **logotype / new-song-card / put-it-in-my-shirt** — the Jack Splatter remakes; superseded by the JAX-A002 wordmark. Reference archive only.
+- **logotype / new-song-card / put-it-in-my-shirt** — the Jax Splatter remakes; superseded by the JAX-A002 wordmark. Reference archive only.
 - **jax-off** — custom splat TTF experiment; direction dropped 2026-08-24.
 - **type v1** — Nosifer/Oswald lineup; superseded by type v2.

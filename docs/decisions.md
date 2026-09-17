@@ -66,7 +66,7 @@ Flagged as publicly readable once flipped, since going public exposes the repo a
 ## D12 — Art releases are gated on operator sign-off, tracked in a registry  — 2026-08-24
 Stated by the operator: "releases are never official until I sign off on them."
 All brand art lives in [brand/](../brand/): [brand/reference/](../brand/reference/)
-is the archive (the three Jack Splatter AI originals plus their Jax Splatter
+is the archive (the three Jax Splatter AI originals plus their Jax Splatter
 remakes — all reference material, none of it finished art), and
 [brand/releases/REGISTRY.md](../brand/releases/REGISTRY.md) is the system of
 record. Release IDs are `JAX-A###`, assigned only at sign-off; canonical

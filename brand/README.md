@@ -12,8 +12,8 @@ Brand art for Jax Splatter, split by a hard line:
 
 ## reference/originals
 
-The three "Jack Splatter" AI-generated images (ChatGPT, Jul 2025) from the Drive
-folder [P32: Release Jack Splatter](https://drive.google.com/drive/folders/1xmnZTiHMYDFYFXroYTGpU8gLpAz9ions),
+The three "Jax Splatter" AI-generated images (ChatGPT, Jul 2025) from the Drive
+folder [P32: Release Jax Splatter](https://drive.google.com/drive/folders/1xmnZTiHMYDFYFXroYTGpU8gLpAz9ions),
 archived here verbatim. The act was renamed **Jax Splatter** in Aug 2026
 (docs/accounts-inventory.md), so these carry the dead name — reference only.
 
