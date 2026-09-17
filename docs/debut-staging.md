@@ -34,7 +34,9 @@ apart (marching band ↔ pirate crew).
 
 ## The set structure — solving the 21-minute problem
 
-The catalog today: ~6 pieces, ~21 min. A set wants 45–60. The act's shape
+The catalog today: ~6 pieces, ~21 min of *bounces* — **0 min stage-ready**
+(Jax, 2026-09-17: nothing is rehearsed or performance-tracked yet). A set
+wants 45–60. The act's shape
 solves this: **live songs bridged by DJ/VJ passages** — Jax is also a DJ,
 so between-song segments are part of the form, not filler. They also cover
 cast changes and breath, and every bridge is a place for FX cues.
