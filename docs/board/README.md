@@ -25,6 +25,11 @@ the network can reach it. Stop it with Ctrl-C.
 **Stripped to essentials (Jax, 2026-09-26):** the next show, and the songs
 in play for it. DILDOZER, Saturday October 24, venue TBD.
 
+Covers are flagged on the list (Ghost Rider, World Up My Ass, Hella
+Nervous) — they carry a mechanical-licence obligation if a set recording
+ever goes to a DSP. The dildozer catalog records that on the track row; see
+"Owed upstream" below.
+
 Track lengths are measured off the masters and bounces, not guessed —
 dildozer from `shows/art_farm/audio/mastered/`, Jax Splatter from the
 Bitwig project bounces.
@@ -44,3 +49,15 @@ Keep the `<meta charset="utf-8">`. `python3 -m http.server` sends
 `text/html` with no charset, so without that line the browser guesses
 windows-1252 and every non-ASCII character breaks — the middle dot in
 "Sat · Oct 24" turns into `Â·`.
+
+## Owed upstream
+
+`smartsquared/dildozer` `catalog/catalog.yaml` records covers on the track
+row — DLDZR-0004 Ghost Rider carries `licensing: cover — mechanical needed
+for DSP` and names Suicide in its title. **DLDZR-0007 Hella Nervous is also
+a cover** (Jax, 2026-09-26) and carries neither. DLDZR-0010 World Up My Ass
+names Circle Jerks in its title but has no `licensing:` line either.
+
+Not fixed here: that repo was checked out on another thread's branch. The
+edit is one `licensing:` line per row, plus the original artist in the
+title.
