@@ -12,7 +12,8 @@ Nov 6   DILDOZER Louisville (venue TBD) — billed.
         Both: announce when venue locks, then the 5-post template.
 Dec 19  JAX SPLATTER — THE DEBUT (venue TBD) — billed. Locked 2026-09-17.
         The first Jax Splatter show (docs/debut-staging.md). Announce 3 weeks
-        out = Nov 28; venue must lock before that.
+        out = Nov 28; venue must lock before that. Twelve-week plan:
+        docs/debut-calendar.md.
 
 Billed shows also live in src/content/shows/ (the site renders those;
 TBD-venue ones sit as drafts until confirmed).

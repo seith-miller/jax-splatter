@@ -2,7 +2,8 @@
 
 Production design for the first Jax Splatter show, at core scale (16×8 +
 riser), built entirely from specced kit. **Dated: Saturday 2026-12-19**
-(Jax, 2026-09-17; venue TBD). Draft for Jax to tear apart.
+(Jax, 2026-09-17; venue TBD) — the twelve-week plan is
+[debut-calendar.md](debut-calendar.md). Draft for Jax to tear apart.
 
 ## The stage plot (16×8, audience at bottom)
 
@@ -23,20 +24,28 @@ riser), built entirely from specced kit. **Dated: Saturday 2026-12-19**
 Empty middle is deliberate: wireless cast needs room to form up and break
 apart (marching band ↔ pirate crew).
 
-## The cast (debut minimum that reads "band")
+## The cast — ratified 2026-09-26
+
+**Jax, 2026-09-26: the band is three.** Jax plus **one guitarist and one
+percussionist**, and the two players get written parts and charts
+([../band/charts/](../band/charts/)). Guests and dancers still take crate
+percussion in the crate moment; they don't get charts.
 
 | Who | Rig |
 |---|---|
 | Jax | vocal (wireless), roams; keytar plate and/or Mach for songs |
-| Percussionist | kick/snare chest rig (+ rototoms if built) |
-| Utility performer | Mach / crate percussion / guest vocal |
-| Dancers / guests | crate percussion, box platforms |
+| **Guitarist** | a normal guitar at the debut (the lit takedown guitar has no design yet); wireless, roaming |
+| **Percussionist** | kick/snare chest rig — piccolo snare L, muffled 13" tom R |
+| Dancers / guests | crate percussion, box platforms — the crate moment only |
+
+Supersedes the four-plus cast sketched before the date existed.
 
 ## The set structure — solving the 21-minute problem
 
-The catalog today: ~6 pieces, ~21 min of *bounces* — **0 min stage-ready**
-(Jax, 2026-09-17: nothing is rehearsed or performance-tracked yet). A set
-wants 45–60. The act's shape
+The catalog today: **6 songs, 17:05 of bounces** (measured 2026-09-26) —
+**0 min stage-ready** (Jax, 2026-09-17: nothing is rehearsed or
+performance-tracked yet). **Jax set the target at one hour**; where the
+hour comes from is in [debut-calendar.md](debut-calendar.md). The act's shape
 solves this: **live songs bridged by DJ/VJ passages** — Jax is also a DJ,
 so between-song segments are part of the form, not filler. They also cover
 cast changes and breath, and every bridge is a place for FX cues.
