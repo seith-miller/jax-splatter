@@ -1,481 +1,62 @@
 <title>Splatter Ops</title>
 <style id="css">
 :root{
-  --night:#05060a; --indigo:#11141f; --panel:#0c0f18; --line:#1c2030;
-  --ink:#d2cab6; --pink:#ea3e86; --blue:#46b3ff; --slime:#39ff14;
-  --red:#c70f38; --gray:#454c5c; --sheet:#f2efe9;
-  --bg:var(--night); --surface:var(--panel); --edge:var(--line);
-  --text:var(--ink); --muted:#7d8496; --accent:var(--blue); --mark:var(--pink);
-  --good:var(--slime); --bad:var(--red); --warn:#ff6a1f; --track:#1a1e2b;
-  --shadow:0 1px 0 rgba(255,255,255,.03) inset;
+  --bg:#05060a; --text:#d2cab6; --muted:#7d8496; --mark:#ea3e86; --edge:#1c2030;
   color-scheme:dark;
 }
 :root[data-theme="light"]{
-  --bg:var(--sheet); --surface:#ffffff; --edge:#d8d3c8; --text:#05060a;
-  --muted:#5b6172; --accent:#1668d6; --mark:#c22c6d; --good:#1f9e06;
-  --bad:#a50c2e; --warn:#c2470c; --track:#e6e1d6;
-  --shadow:none; color-scheme:light;
+  --bg:#f2efe9; --text:#05060a; --muted:#5b6172; --mark:#c22c6d; --edge:#d8d3c8;
+  color-scheme:light;
 }
 *{box-sizing:border-box}
-html,body{margin:0}
+html,body{margin:0;height:100%}
 img{max-width:100%}
 [hidden]{display:none!important}
 body{
   background:var(--bg); color:var(--text);
-  font-family:Inter,system-ui,-apple-system,sans-serif; font-size:15px; line-height:1.5;
-  padding-block:0 56px; padding-left:16px; padding-right:16px;
-  -webkit-font-smoothing:antialiased;
+  font-family:Inter,system-ui,-apple-system,sans-serif;
+  display:flex; align-items:center; justify-content:center;
+  padding-left:16px; padding-right:16px; padding-block:48px;
 }
-.wrap{max-width:1040px; margin:0 auto}
-h1,h2,h3{margin:0; text-wrap:balance}
-a{color:var(--accent)}
-.mono{font-variant-numeric:tabular-nums}
-
-/* ---- masthead ---- */
-.top{
-  display:flex; flex-wrap:wrap; align-items:flex-end; gap:16px 24px;
-  padding-block:28px 20px; border-bottom:1px solid var(--edge);
+.card{text-align:center; max-width:640px; width:100%}
+.kicker{
+  font-family:'Bebas Neue',Impact,sans-serif; letter-spacing:.22em; font-size:13px;
+  text-transform:uppercase; color:var(--muted);
 }
-.mark{font-family:'Pathway Gothic One',Oswald,sans-serif; font-size:40px; line-height:.9;
-  letter-spacing:.02em; text-transform:uppercase; color:var(--text)}
-.mark b{color:var(--mark); font-weight:400}
-.kicker{font-family:'Bebas Neue',Impact,sans-serif; letter-spacing:.16em; font-size:12px;
-  color:var(--muted); text-transform:uppercase; display:block; margin-bottom:6px}
-.count{margin-left:auto; text-align:right}
-.count .n{font-family:'Bebas Neue',Impact,sans-serif; font-size:56px; line-height:.85;
-  color:var(--mark); font-variant-numeric:tabular-nums}
-.count .u{font-size:12px; color:var(--muted); letter-spacing:.14em; text-transform:uppercase}
-
-/* ---- meter ---- */
-.meter{padding-block:22px}
-.meter-head{display:flex; align-items:baseline; gap:12px; flex-wrap:wrap; margin-bottom:10px}
-.meter-head .big{font-family:'Bebas Neue',Impact,sans-serif; font-size:38px; line-height:1;
-  font-variant-numeric:tabular-nums}
-.meter-head .of{color:var(--muted); font-size:14px}
-.bar{height:20px; border-radius:2px; background:var(--track); display:flex; overflow:hidden;
-  border:1px solid var(--edge)}
-.bar span{display:block; height:100%}
-.bar .s-ready{background:var(--good)}
-.bar .s-work{background:var(--accent); opacity:.55}
-.legend{display:flex; gap:18px; flex-wrap:wrap; margin-top:8px; font-size:12.5px; color:var(--muted)}
-.legend i{width:9px; height:9px; display:inline-block; margin-right:6px; border-radius:1px}
-
-/* ---- sections ---- */
-section{padding-block:26px; border-top:1px solid var(--edge)}
-.h{display:flex; align-items:baseline; gap:12px; flex-wrap:wrap; margin-bottom:14px}
-.h h2{font-family:'Bebas Neue',Impact,sans-serif; font-size:22px; letter-spacing:.1em;
-  text-transform:uppercase}
-.h .note{font-size:13px; color:var(--muted)}
-
-/* ---- gates ---- */
-.gates{display:grid; gap:8px}
-.gate{display:grid; grid-template-columns:auto 68px 1fr auto; gap:12px; align-items:center;
-  padding:10px 12px; background:var(--surface); border:1px solid var(--edge); border-left-width:3px;
-  border-left-color:var(--gray); box-shadow:var(--shadow)}
-.gate.next{border-left-color:var(--mark)}
-.gate.done{border-left-color:var(--good); opacity:.62}
-.gate .id{font-family:'Bebas Neue',Impact,sans-serif; font-size:15px; color:var(--muted);
-  letter-spacing:.08em}
-.gate .by{font-size:12.5px; color:var(--muted); font-variant-numeric:tabular-nums; white-space:nowrap}
-.gate.next .by{color:var(--mark)}
-.gate .what{font-size:14px}
-.gate.done .what{text-decoration:line-through}
-.days{font-size:11.5px; color:var(--muted); white-space:nowrap; font-variant-numeric:tabular-nums}
-
-/* ---- songs ---- */
-.tablewrap{overflow-x:auto}
-table{border-collapse:collapse; width:100%; min-width:560px}
-th{font-family:'Bebas Neue',Impact,sans-serif; font-weight:400; font-size:12px;
-  letter-spacing:.14em; text-transform:uppercase; color:var(--muted); text-align:left;
-  padding:0 10px 8px; border-bottom:1px solid var(--edge); white-space:nowrap}
-td{padding:9px 10px; border-bottom:1px solid var(--edge); font-size:14px; vertical-align:middle}
-td.num{font-variant-numeric:tabular-nums; color:var(--muted); white-space:nowrap}
-.song{font-weight:500}
-.steps{display:flex; gap:3px}
-.steps button{
-  width:22px; height:22px; padding:0; border:1px solid var(--edge); background:var(--track);
-  color:var(--muted); font-size:10px; font-family:Inter,sans-serif; cursor:pointer; border-radius:1px;
+.event{
+  font-family:'Pathway Gothic One',Oswald,sans-serif; text-transform:uppercase;
+  font-size:clamp(34px,9vw,64px); line-height:1; letter-spacing:.02em;
+  margin:18px 0 0; color:var(--mark);
 }
-.steps button[data-on="1"]{background:var(--accent); border-color:var(--accent); color:var(--night)}
-.steps button[data-on="2"]{background:var(--good); border-color:var(--good); color:var(--night)}
-.steps button:focus-visible{outline:2px solid var(--mark); outline-offset:1px}
-.pill{font-family:'Bebas Neue',Impact,sans-serif; font-size:12px; letter-spacing:.1em;
-  padding:2px 8px; border:1px solid currentColor; white-space:nowrap}
-.pill.ready{color:var(--good)} .pill.work{color:var(--accent)} .pill.cold{color:var(--muted)}
-
-/* ---- blocks / lanes ---- */
-.cards{display:grid; grid-template-columns:repeat(auto-fit,minmax(215px,1fr)); gap:10px}
-.card{background:var(--surface); border:1px solid var(--edge); padding:12px 13px;
-  box-shadow:var(--shadow); display:flex; flex-direction:column; gap:6px}
-.card .t{font-family:'Bebas Neue',Impact,sans-serif; letter-spacing:.09em; font-size:14px}
-.card .m{font-size:12.5px; color:var(--muted)}
-.card .mins{font-variant-numeric:tabular-nums; font-size:24px; font-family:'Bebas Neue',Impact,sans-serif}
-.card label{display:flex; gap:8px; align-items:center; font-size:12.5px; color:var(--muted); cursor:pointer}
-input[type=checkbox]{accent-color:var(--good); width:15px; height:15px}
-
-/* ---- fields ---- */
-.fields{display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:12px}
-label.f{display:block}
-label.f .lab{font-family:'Bebas Neue',Impact,sans-serif; font-size:12px; letter-spacing:.14em;
-  text-transform:uppercase; color:var(--muted); display:block; margin-bottom:5px}
-input[type=text],textarea{
-  width:100%; background:var(--surface); border:1px solid var(--edge); color:var(--text);
-  font:inherit; font-size:14px; padding:8px 10px; border-radius:1px;
+.date{
+  font-family:'Bebas Neue',Impact,sans-serif;
+  font-size:clamp(54px,16vw,128px); line-height:.9; margin:14px 0 0;
+  font-variant-numeric:tabular-nums;
 }
-input[type=text]:focus,textarea:focus{outline:2px solid var(--accent); outline-offset:-1px; border-color:var(--accent)}
-textarea{min-height:76px; resize:vertical}
-.empty{color:var(--bad)}
-
-/* ---- calls ---- */
-ol.calls{margin:0; padding-left:20px; display:grid; gap:9px; font-size:14px}
-ol.calls b{color:var(--text)}
-ol.calls span{color:var(--muted)}
-
-/* ---- savebar ---- */
-.savebar{
-  position:fixed; left:0; right:0; bottom:0; background:var(--surface);
-  border-top:1px solid var(--edge); padding:10px 16px;
-  padding-bottom:calc(10px + env(safe-area-inset-bottom,0px));
-  display:flex; gap:14px; align-items:center; justify-content:flex-end; z-index:9;
+.days{
+  margin-top:22px; padding-top:20px; border-top:1px solid var(--edge);
+  font-size:15px; color:var(--muted);
 }
-.savebar .msg{margin-right:auto; font-size:12.5px; color:var(--muted)}
-button.save{
-  font-family:'Bebas Neue',Impact,sans-serif; letter-spacing:.12em; font-size:15px;
-  background:var(--mark); color:#05060a; border:1px solid var(--mark); padding:8px 22px;
-  cursor:pointer; border-radius:1px;
-}
-button.save[disabled]{opacity:.4; cursor:default}
-button.save:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
-.foot{font-size:12px; color:var(--muted); padding-block:22px 0; border-top:1px solid var(--edge)}
-@media (max-width:560px){
-  .gate{grid-template-columns:auto 1fr; }
-  .gate .by{grid-column:2} .gate .what{grid-column:1/-1} .days{grid-column:1/-1}
-  .count{margin-left:0}
-}
-@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+.days b{color:var(--text); font-variant-numeric:tabular-nums}
+.venue{margin-top:8px; font-size:15px; color:var(--muted)}
 </style>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Pathway+Gothic+One&family=Inter:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Pathway+Gothic+One&family=Inter:wght@400;500&display=swap">
 
-<div class="wrap">
-  <header class="top">
-    <div>
-      <span class="kicker">Internal — not jaxsplatter.com</span>
-      <h1 class="mark">JA<b>X</b> SPLATTER · OPS</h1>
-      <div class="kicker" style="margin-top:8px;letter-spacing:.1em" id="showline"></div>
-    </div>
-    <div class="count">
-      <div class="n mono" id="days">—</div>
-      <div class="u">days to the debut</div>
-    </div>
-  </header>
-
-  <div class="meter">
-    <div class="meter-head">
-      <span class="big mono" id="readyclock">0:00</span>
-      <span class="of">stage-ready of <b id="targetclock">60:00</b> · <span id="workclock"></span></span>
-    </div>
-    <div class="bar" id="bar"></div>
-    <div class="legend">
-      <span><i style="background:var(--good)"></i>ready</span>
-      <span><i style="background:var(--accent);opacity:.55"></i>in progress</span>
-      <span><i style="background:var(--track);border:1px solid var(--edge)"></i>not started</span>
-    </div>
-  </div>
-
-  <section>
-    <div class="h"><h2>Gates</h2><span class="note">A date something must be <em>true</em> by, not worked on.</span></div>
-    <div class="gates" id="gates"></div>
-  </section>
-
-  <section>
-    <div class="h"><h2>The set</h2><span class="note">Click a step to advance it. Ready minutes feed the meter.</span></div>
-    <div class="tablewrap">
-      <table>
-        <thead><tr>
-          <th>Song</th><th>Source</th><th>BPM*</th><th>Staged</th>
-          <th>Arr · Trk · Cht · Reh · Ready</th><th>State</th>
-        </tr></thead>
-        <tbody id="songs"></tbody>
-      </table>
-    </div>
-    <p class="note" style="font-size:12.5px;color:var(--muted);margin:10px 0 0">
-      *Machine-estimated off the newest bounce (librosa, 2026-09-26) — correct by ear.
-      Daddy Likes It reads half-time; treat as ~126.
-    </p>
-  </section>
-
-  <section>
-    <div class="h"><h2>The rest of the hour</h2><span class="note">Tick a block when it's built and timed.</span></div>
-    <div class="cards" id="blocks"></div>
-  </section>
-
-  <section>
-    <div class="h"><h2>Who and where</h2><span class="note">G1 cast · G4 venue</span></div>
-    <div class="fields">
-      <label class="f"><span class="lab">Venue</span><input type="text" id="venue" placeholder="unbooked"></label>
-      <label class="f"><span class="lab">City</span><input type="text" id="city" placeholder="—"></label>
-      <label class="f"><span class="lab">Guitarist</span><input type="text" id="guitar" placeholder="uncast"></label>
-      <label class="f"><span class="lab">Percussionist</span><input type="text" id="perc" placeholder="uncast"></label>
-    </div>
-  </section>
-
-  <section>
-    <div class="h"><h2>Money and kit</h2></div>
-    <div class="cards">
-      <div class="card"><span class="t">Merch round 1</span><span class="mins">$255</span>
-        <span class="m">outlay · ~$1,090 gross at full sell-through. Tables: Oct 24 DILDOZER, Nov 6 Louisville.</span></div>
-      <div class="card"><span class="t">Phase 1 build</span><span class="mins">$2,900</span>
-        <span class="m">crew crate → stage boxes → T-bar + screen → chest rig A → fog. Funded by the tables.</span></div>
-      <div class="card"><span class="t">Chest rig, Phase A</span><span class="mins">$535</span>
-        <span class="m">Needed for rehearsal Nov 9 — before the merch money lands. Jump the queue, or rehearse on stand-ins.</span></div>
-    </div>
-  </section>
-
-  <section>
-    <div class="h"><h2>Open calls</h2><span class="note">Nobody but Jax can settle these.</span></div>
-    <ol class="calls">
-      <li><b>How many new songs?</b> <span>Three or four makes the date; six from zero is how the plan fails.</span></li>
-      <li><b>Percussion rig before Nov 9,</b> <span>or rehearsals 1–2 on borrowed drums?</span></li>
-      <li><b>Takedown guitar:</b> <span>off the critical path, or does the debut wait for it?</span></li>
-      <li><b>The broadcast:</b> <span>show title, anchor names, who plays them.</span></li>
-      <li><b>The crew:</b> <span>a collective name, or it stays "the crew."</span></li>
-      <li><b>The hotline:</b> <span>a real number, or cut the Tip Line segment.</span></li>
-    </ol>
-  </section>
-
-  <section>
-    <div class="h"><h2>Notes</h2></div>
-    <textarea id="notes" placeholder="Anything the docs don't hold yet."></textarea>
-  </section>
-
-  <p class="foot">
-    The board is the record. Repo: <code>docs/board/board.html</code> is a code snapshot —
-    plan in <code>docs/debut-calendar.md</code>, charts in <code>band/charts/</code>,
-    staging in <code>docs/debut-staging.md</code>.
-  </p>
+<div class="card">
+  <span class="kicker">Next show</span>
+  <h1 class="event">Dildozer</h1>
+  <p class="date">Sat · Oct 24</p>
+  <p class="days"><b id="days">—</b> days out</p>
+  <p class="venue">Venue TBD</p>
 </div>
-
-<div class="savebar">
-  <span class="msg" id="msg">Nothing to save.</span>
-  <button class="save" id="save" disabled>Save</button>
-</div>
-
-<script type="application/json" id="state">
-{
- "v": 1,
- "show": {"date":"2026-12-19","venue":"","city":""},
- "cast": {"guitar":"","perc":""},
- "target": 60,
- "songs": [
-  {"id":"piss-on-me","t":"Piss On Me","src":288,"bpm":"117.5","staged":5.5,"s":0},
-  {"id":"daddy-likes-it","t":"Daddy Likes It","src":229,"bpm":"63†","staged":4.5,"s":0},
-  {"id":"where-is-da-club","t":"Where Is Da Club","src":185,"bpm":"129.2","staged":4.0,"s":0},
-  {"id":"put-it-in-my","t":"Put It In My","src":131,"bpm":"152.0","staged":3.0,"s":0},
-  {"id":"put-your-pussy-on-my-face","t":"Put Your Pussy On My Face","src":94,"bpm":"107.7","staged":2.5,"s":0},
-  {"id":"bitch-boy","t":"Bitch Boy","src":98,"bpm":"152.0","staged":2.5,"s":0},
-  {"id":"new-1","t":"New song 1","src":0,"bpm":"—","staged":4.0,"s":0},
-  {"id":"new-2","t":"New song 2","src":0,"bpm":"—","staged":4.0,"s":0},
-  {"id":"new-3","t":"New song 3","src":0,"bpm":"—","staged":4.0,"s":0}
- ],
- "blocks": [
-  {"id":"dj","t":"DJ passages","mins":12,"m":"Crate tracks between songs. Program time, not filler.","done":false},
-  {"id":"cast","t":"March-in · crate moment · finale","mins":9,"m":"The drum features that open, break and close the set.","done":false},
-  {"id":"bcast","t":"Broadcast bridges","mins":5,"m":"Seven segments, one green-screen shoot.","done":false}
- ],
- "gates": [
-  {"id":"G1","by":"2026-10-18","w":"Guitarist and percussionist named and committed","done":false},
-  {"id":"G2","by":"2026-10-25","w":"Set list v1 locked — running order, existing vs new","done":false},
-  {"id":"G3","by":"2026-11-08","w":"Performance tracks for all six; charts v1 in the players' hands","done":false},
-  {"id":"G4","by":"2026-11-21","w":"Venue locked","done":false},
-  {"id":"G5","by":"2026-11-22","w":"New material written and arranged; first full-band rehearsal done","done":false},
-  {"id":"G6","by":"2026-11-28","w":"ANNOUNCE — flyer out, show file live on the site","done":false},
-  {"id":"G7","by":"2026-12-06","w":"Chart freeze — no arrangement changes after this","done":false},
-  {"id":"G8","by":"2026-12-13","w":"Full run at tempo, in costume, with the broadcast playing","done":false},
-  {"id":"G9","by":"2026-12-19","w":"Show","done":false}
- ],
- "notes": ""
-}
-</script>
 
 <script id="js">
 (function () {
-  var STEPS = ['Arranged', 'Tracked', 'Charted', 'Rehearsed', 'Ready'];
-  var S, dirty = false, saving = false, writable = true;
-
-  try { S = JSON.parse(document.getElementById('state').textContent); }
-  catch (e) { S = { songs: [], blocks: [], gates: [], show: {}, cast: {}, target: 60, notes: '' }; }
-
-  var $ = function (id) { return document.getElementById(id); };
-  function clock(mins) {
-    var m = Math.floor(mins), s = Math.round((mins - m) * 60);
-    if (s === 60) { m += 1; s = 0; }
-    return m + ':' + (s < 10 ? '0' : '') + s;
-  }
-  function daysTo(iso) {
-    var p = iso.split('-'), n = new Date();
-    var a = Date.UTC(+p[0], +p[1] - 1, +p[2]);
-    var b = Date.UTC(n.getFullYear(), n.getMonth(), n.getDate());
-    return Math.round((a - b) / 86400000);
-  }
-  function touch() {
-    dirty = true;
-    $('save').disabled = !writable;
-    $('msg').textContent = writable ? 'Unsaved changes.' : 'Read-only — ask Jax for edit access.';
-  }
-
-  function renderHead() {
-    var v = S.show.venue && S.show.venue.trim();
-    var c = S.show.city && S.show.city.trim();
-    $('showline').innerHTML = 'Saturday 19 December 2026 · ' +
-      (v ? (v + (c ? ', ' + c : '')) : '<span class="empty">venue unbooked</span>');
-    var d = daysTo(S.show.date);
-    $('days').textContent = d > 0 ? d : (d === 0 ? 'TONIGHT' : '—');
-  }
-
-  function renderMeter() {
-    var ready = 0, work = 0;
-    S.songs.forEach(function (x) {
-      if (x.s >= 5) ready += x.staged; else if (x.s > 0) work += x.staged;
-    });
-    S.blocks.forEach(function (b) { if (b.done) ready += b.mins; });
-    var tgt = S.target;
-    $('readyclock').textContent = clock(ready);
-    $('targetclock').textContent = clock(tgt);
-    $('workclock').textContent = clock(work) + ' in progress';
-    var pr = Math.min(100, ready / tgt * 100), pw = Math.min(100 - pr, work / tgt * 100);
-    $('bar').innerHTML = '<span class="s-ready" style="width:' + pr + '%"></span>' +
-      '<span class="s-work" style="width:' + pw + '%"></span>';
-  }
-
-  function renderGates() {
-    var firstOpen = S.gates.filter(function (g) { return !g.done; })[0];
-    $('gates').innerHTML = S.gates.map(function (g) {
-      var d = daysTo(g.by);
-      return '<div class="gate ' + (g.done ? 'done' : (firstOpen && firstOpen.id === g.id ? 'next' : '')) + '">' +
-        '<input type="checkbox" data-gate="' + g.id + '"' + (g.done ? ' checked' : '') +
-        ' aria-label="' + g.id + ' done">' +
-        '<span class="id">' + g.id + '</span>' +
-        '<span class="what">' + g.w + '</span>' +
-        '<span class="by">' + g.by.slice(5).replace('-', '/') +
-        '<span class="days"> · ' + (g.done ? 'done' : (d < 0 ? 'LATE' : d + 'd')) + '</span></span>' +
-        '</div>';
-    }).join('');
-  }
-
-  function renderSongs() {
-    $('songs').innerHTML = S.songs.map(function (x) {
-      var steps = STEPS.map(function (label, i) {
-        var on = x.s > i ? (i === 4 ? '2' : '1') : '0';
-        return '<button data-song="' + x.id + '" data-step="' + (i + 1) + '" data-on="' + on +
-          '" title="' + label + '">' + label[0] + '</button>';
-      }).join('');
-      var state = x.s >= 5 ? '<span class="pill ready">READY</span>'
-        : x.s > 0 ? '<span class="pill work">' + STEPS[x.s - 1].toUpperCase() + '</span>'
-          : '<span class="pill cold">SOURCE</span>';
-      return '<tr><td class="song">' + x.t + '</td>' +
-        '<td class="num">' + (x.src ? clock(x.src / 60) : '—') + '</td>' +
-        '<td class="num">' + x.bpm + '</td>' +
-        '<td class="num">' + clock(x.staged) + '</td>' +
-        '<td><div class="steps">' + steps + '</div></td>' +
-        '<td>' + state + '</td></tr>';
-    }).join('');
-  }
-
-  function renderBlocks() {
-    $('blocks').innerHTML = S.blocks.map(function (b) {
-      return '<div class="card"><span class="t">' + b.t + '</span>' +
-        '<span class="mins">' + clock(b.mins) + '</span>' +
-        '<span class="m">' + b.m + '</span>' +
-        '<label><input type="checkbox" data-block="' + b.id + '"' + (b.done ? ' checked' : '') +
-        '> built and timed</label></div>';
-    }).join('');
-  }
-
-  function renderFields() {
-    $('venue').value = S.show.venue || '';
-    $('city').value = S.show.city || '';
-    $('guitar').value = S.cast.guitar || '';
-    $('perc').value = S.cast.perc || '';
-    $('notes').value = S.notes || '';
-  }
-
-  function renderAll() { renderHead(); renderMeter(); renderGates(); renderSongs(); renderBlocks(); }
-
-  document.addEventListener('click', function (e) {
-    var b = e.target.closest ? e.target.closest('button[data-song]') : null;
-    if (!b) return;
-    var song = S.songs.filter(function (x) { return x.id === b.dataset.song; })[0];
-    if (!song) return;
-    var step = +b.dataset.step;
-    song.s = (song.s === step) ? step - 1 : step;
-    renderSongs(); renderMeter(); touch();
-  });
-
-  document.addEventListener('change', function (e) {
-    var t = e.target;
-    if (t.dataset && t.dataset.gate) {
-      S.gates.forEach(function (g) { if (g.id === t.dataset.gate) g.done = t.checked; });
-      renderGates(); touch();
-    } else if (t.dataset && t.dataset.block) {
-      S.blocks.forEach(function (b) { if (b.id === t.dataset.block) b.done = t.checked; });
-      renderMeter(); touch();
-    }
-  });
-
-  ['venue', 'city'].forEach(function (k) {
-    $(k).addEventListener('input', function (e) { S.show[k] = e.target.value; renderHead(); touch(); });
-  });
-  $('guitar').addEventListener('input', function (e) { S.cast.guitar = e.target.value; touch(); });
-  $('perc').addEventListener('input', function (e) { S.cast.perc = e.target.value; touch(); });
-  $('notes').addEventListener('input', function (e) { S.notes = e.target.value; touch(); });
-
-  function buildDoc() {
-    var css = document.getElementById('css').textContent;
-    var body = document.body.cloneNode(true);
-    Array.prototype.forEach.call(body.querySelectorAll('script[src],style,title,link'), function (n) {
-      n.parentNode.removeChild(n);
-    });
-    ['gates', 'songs', 'blocks', 'bar'].forEach(function (id) {
-      var n = body.querySelector('#' + id); if (n) n.innerHTML = '';
-    });
-    var st = body.querySelector('#state');
-    if (st) st.textContent = '\n' + JSON.stringify(S, null, 1) + '\n';
-    var close = '<' + '/script>';
-    return '<!doctype html>\n<html lang="en"><head><meta charset="utf-8">' +
-      '<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">' +
-      '<title>Splatter Ops</title>' +
-      '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>' +
-      '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Pathway+Gothic+One&family=Inter:wght@400;500;600&display=swap">' +
-      '<style id="css">' + css + '</style></head><body>' + body.innerHTML + '</body></html>';
-  }
-
-  $('save').addEventListener('click', async function () {
-    if (saving || !dirty) return;
-    saving = true; $('save').disabled = true; $('msg').textContent = 'Saving…';
-    try {
-      var api = await window.claude.use('artifact');
-      if (!api) throw new Error('unavailable');
-      await api.publish(buildDoc());
-      dirty = false; $('msg').textContent = 'Saved.';
-    } catch (err) {
-      var code = (err && err.code) || '';
-      if (code === 'conflict') {
-        $('msg').textContent = 'Someone else saved first — reloading to their version.';
-      } else if (code === 'not_granted' || code === 'not_writer') {
-        writable = false; $('msg').textContent = 'Read-only — ask Jax for edit access.';
-      } else {
-        $('msg').textContent = 'Save failed. Try again.'; $('save').disabled = false;
-      }
-    } finally { saving = false; }
-  });
-
-  renderAll(); renderFields();
-
-  window.claude && window.claude.use('artifact').then(function (api) {
-    if (!api) { writable = false; $('msg').textContent = 'Read-only view.'; $('save').disabled = true; }
-  }).catch(function () { });
-
-  setInterval(function () { renderHead(); renderGates(); }, 3600000);
+  var p = [2026, 10, 24], n = new Date();
+  var a = Date.UTC(p[0], p[1] - 1, p[2]);
+  var b = Date.UTC(n.getFullYear(), n.getMonth(), n.getDate());
+  var d = Math.round((a - b) / 86400000);
+  document.getElementById('days').textContent = d > 0 ? d : (d === 0 ? 'Today —' : 'Past —');
 })();
 </script>
