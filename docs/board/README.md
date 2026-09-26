@@ -28,3 +28,8 @@ We build back from October 24, not December 19.
 
 `index.html` is the page — plain static HTML, no build step. Save and
 refresh.
+
+Keep the `<meta charset="utf-8">`. `python3 -m http.server` sends
+`text/html` with no charset, so without that line the browser guesses
+windows-1252 and every non-ASCII character breaks — the middle dot in
+"Sat · Oct 24" turns into `Â·`.
