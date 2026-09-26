@@ -16,19 +16,22 @@ the network can reach it. Stop it with Ctrl-C.
 ## Tabs
 
 - **Next** — the show and the days out.
-- **Songs** — what we might play on Oct 24. Both pools with real lengths
-  (dildozer's mastered tracks, the Jax Splatter bounces); tick to build a
-  set and watch the running time. Picks are kept in this browser only.
+- **Songs** — what we might play on Oct 24, in three pools: **Dildozer**
+  originals, **Covers** (neither act's), and **Jax Splatter**. Real lengths
+  off the files; tick to build a set and watch the running time. Picks are
+  kept in this browser only.
 
 ## What's on it
 
 **Stripped to essentials (Jax, 2026-09-26):** the next show, and the songs
 in play for it. DILDOZER, Saturday October 24, venue TBD.
 
-Covers are flagged on the list (Ghost Rider, World Up My Ass, Hella
-Nervous) — they carry a mechanical-licence obligation if a set recording
-ever goes to a DSP. The dildozer catalog records that on the track row; see
-"Owed upstream" below.
+**Covers are their own pool (Jax, 2026-09-26)** — Ghost Rider (Suicide),
+World Up My Ass (Circle Jerks) and Hella Nervous. They belong to neither
+catalog: whoever's night it is can play them. They also carry a
+mechanical-licence obligation if a set recording ever reaches a DSP. That
+leaves dildozer with 10 originals (17:27) and the covers at 6:56 — 24:23
+between them, which is what a DILDOZER night has to draw on.
 
 Track lengths are measured off the masters and bounces, not guessed —
 dildozer from `shows/art_farm/audio/mastered/`, Jax Splatter from the
@@ -66,8 +69,12 @@ Upstream consequence: DLDZR-0014 should be retired or re-pointed in
 `smartsquared/dildozer` `catalog/catalog.yaml` records covers on the track
 row — DLDZR-0004 Ghost Rider carries `licensing: cover — mechanical needed
 for DSP` and names Suicide in its title. **DLDZR-0007 Hella Nervous is also
-a cover** (Jax, 2026-09-26) and carries neither. DLDZR-0010 World Up My Ass
-names Circle Jerks in its title but has no `licensing:` line either.
+a cover** (Jax, 2026-09-26) and carries neither; its original artist is not
+recorded anywhere and needs confirming. DLDZR-0010 World Up My Ass names
+Circle Jerks in its title but has no `licensing:` line either.
+
+The covers also sit under DLDZR serials while belonging to neither act —
+worth deciding whether the catalog keeps them or marks them shared.
 
 Not fixed here: that repo was checked out on another thread's branch. The
 edit is one `licensing:` line per row, plus the original artist in the
