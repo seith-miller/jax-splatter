@@ -50,6 +50,17 @@ Keep the `<meta charset="utf-8">`. `python3 -m http.server` sends
 windows-1252 and every non-ASCII character breaks — the middle dot in
 "Sat · Oct 24" turns into `Â·`.
 
+## Eat My Puss moved
+
+**Jax, 2026-09-26:** Eat My Puss (DLDZR-0014) moves to Jax Splatter. It was
+the one dildozer track with no master, and it follows the same path the rest
+of the Jax Splatter material took. It has no recording at all yet, so it
+counts as a song, not as minutes.
+
+Upstream consequence: DLDZR-0014 should be retired or re-pointed in
+`dildozer/catalog/catalog.yaml`, and the song wants a row in
+`record-producer-hq/catalog.md` under the Jax Splatter set. Neither is done.
+
 ## Owed upstream
 
 `smartsquared/dildozer` `catalog/catalog.yaml` records covers on the track
