@@ -64,6 +64,19 @@ Upstream consequence: DLDZR-0014 should be retired or re-pointed in
 `dildozer/catalog/catalog.yaml`, and the song wants a row in
 `record-producer-hq/catalog.md` under the Jax Splatter set. Neither is done.
 
+## What Clovers has
+
+Confirmed against Drive 2026-09-26. The handoff was a **Drive share, not an
+email** — `Clovers+Dildozer:Lickety-Split/Demos-a-Gogo`, shared as writer
+with itscloversb1tch@gmail.com and j.cheyenne.hohman@gmail.com since
+2026-08-15. It holds **Piss On Me**, **Put Your Pussy On My Face**,
+**Bitch Boy** and **Bruce LaBruce** — flagged on the songs list.
+
+Not shared: Daddy Likes It, Where Is Da Club, Put It In My, Eat My Puss.
+
+No terms exist anywhere — no email, no calendar event, nothing written about
+what the split is or what's due. Detail in `record-producer-hq/catalog.md`.
+
 ## Owed upstream
 
 `smartsquared/dildozer` `catalog/catalog.yaml` records covers on the track
