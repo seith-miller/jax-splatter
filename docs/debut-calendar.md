@@ -45,6 +45,9 @@ zero rehearsed material, while charting and building, is the way this
 plan fails. Three or four new, with the DJ side carrying twelve minutes,
 is the version that makes the date. Jax overrides if he wants more.
 
+**The live board** — countdown, gate ticks, the hour meter counting up from
+zero — is [board/](board/) (private artifact; the board is the record).
+
 ## Gates
 
 A gate is a date something must be **true** by, not worked on.
