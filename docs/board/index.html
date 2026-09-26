@@ -6,65 +6,217 @@
 <title>Splatter Ops</title>
 <style id="css">
 :root{
-  --bg:#05060a; --text:#d2cab6; --muted:#7d8496; --mark:#ea3e86; --edge:#1c2030;
+  --bg:#05060a; --surface:#0c0f18; --text:#d2cab6; --muted:#7d8496;
+  --mark:#ea3e86; --edge:#1c2030; --good:#39ff14;
   color-scheme:dark;
 }
 :root[data-theme="light"]{
-  --bg:#f2efe9; --text:#05060a; --muted:#5b6172; --mark:#c22c6d; --edge:#d8d3c8;
+  --bg:#f2efe9; --surface:#fff; --text:#05060a; --muted:#5b6172;
+  --mark:#c22c6d; --edge:#d8d3c8; --good:#1f9e06;
   color-scheme:light;
 }
 *{box-sizing:border-box}
-html,body{margin:0;height:100%}
+html,body{margin:0}
 img{max-width:100%}
 [hidden]{display:none!important}
 body{
   background:var(--bg); color:var(--text);
-  font-family:Inter,system-ui,-apple-system,sans-serif;
-  display:flex; align-items:center; justify-content:center;
-  padding-left:16px; padding-right:16px; padding-block:48px;
+  font-family:Inter,system-ui,-apple-system,sans-serif; font-size:15px; line-height:1.5;
+  padding-left:16px; padding-right:16px; padding-block:0 60px;
+  -webkit-font-smoothing:antialiased;
 }
-.card{text-align:center; max-width:640px; width:100%}
-.kicker{
-  font-family:'Bebas Neue',Impact,sans-serif; letter-spacing:.22em; font-size:13px;
-  text-transform:uppercase; color:var(--muted);
+.wrap{max-width:660px; margin:0 auto}
+
+/* tabs */
+nav{display:flex; gap:26px; border-bottom:1px solid var(--edge); padding-block:22px 0}
+nav button{
+  background:none; border:0; padding:0 0 12px; cursor:pointer;
+  font-family:'Bebas Neue',Impact,sans-serif; font-size:19px; letter-spacing:.16em;
+  text-transform:uppercase; color:var(--muted); border-bottom:2px solid transparent;
 }
-.event{
-  font-family:'Pathway Gothic One',Oswald,sans-serif; text-transform:uppercase;
-  font-size:clamp(34px,9vw,64px); line-height:1; letter-spacing:.02em;
-  margin:18px 0 0; color:var(--mark);
-}
-.date{
-  font-family:'Bebas Neue',Impact,sans-serif;
-  font-size:clamp(54px,16vw,128px); line-height:.9; margin:14px 0 0;
-  font-variant-numeric:tabular-nums;
-}
-.days{
-  margin-top:22px; padding-top:20px; border-top:1px solid var(--edge);
-  font-size:15px; color:var(--muted);
-}
+nav button[aria-selected="true"]{color:var(--text); border-bottom-color:var(--mark)}
+nav button:focus-visible{outline:2px solid var(--mark); outline-offset:3px}
+
+/* next */
+.next{text-align:center; padding-block:64px}
+.kicker{font-family:'Bebas Neue',Impact,sans-serif; letter-spacing:.22em; font-size:13px;
+  text-transform:uppercase; color:var(--muted)}
+.event{font-family:'Pathway Gothic One',Oswald,sans-serif; text-transform:uppercase;
+  font-size:clamp(34px,9vw,64px); line-height:1; letter-spacing:.02em; margin:18px 0 0;
+  color:var(--mark)}
+.date{font-family:'Bebas Neue',Impact,sans-serif; font-size:clamp(54px,16vw,128px);
+  line-height:.9; margin:14px 0 0; font-variant-numeric:tabular-nums}
+.days{margin-top:22px; padding-top:20px; border-top:1px solid var(--edge);
+  font-size:15px; color:var(--muted)}
 .days b{color:var(--text); font-variant-numeric:tabular-nums}
 .venue{margin-top:8px; font-size:15px; color:var(--muted)}
+
+/* songs */
+.songs{padding-block:24px}
+.pool{margin-bottom:30px}
+.pool h2{font-family:'Bebas Neue',Impact,sans-serif; font-size:20px; letter-spacing:.12em;
+  text-transform:uppercase; margin:0 0 3px}
+.pool p{margin:0 0 12px; font-size:13px; color:var(--muted)}
+ul{list-style:none; margin:0; padding:0}
+li label{
+  display:grid; grid-template-columns:auto 1fr auto; gap:12px; align-items:center;
+  padding:9px 11px; border:1px solid var(--edge); border-left-width:3px;
+  border-left-color:var(--edge); background:var(--surface); cursor:pointer;
+  margin-bottom:4px;
+}
+li label:hover{border-color:var(--muted); border-left-color:var(--muted)}
+li input:checked ~ .t{font-weight:500}
+li label:has(input:checked){border-left-color:var(--good)}
+input[type=checkbox]{accent-color:var(--good); width:16px; height:16px; margin:0}
+.t{font-size:14.5px}
+.len{font-variant-numeric:tabular-nums; color:var(--muted); font-size:13.5px}
+.flag{color:var(--mark); font-size:12px}
+.none{color:var(--muted); font-style:italic}
+
+/* running total */
+.total{
+  position:fixed; left:0; right:0; bottom:0; background:var(--surface);
+  border-top:1px solid var(--edge); padding:11px 16px;
+  padding-bottom:calc(11px + env(safe-area-inset-bottom,0px));
+  display:flex; gap:16px; align-items:baseline; justify-content:center; z-index:9;
+}
+.total .n{font-family:'Bebas Neue',Impact,sans-serif; font-size:26px;
+  font-variant-numeric:tabular-nums; color:var(--good)}
+.total .l{font-size:13px; color:var(--muted)}
+.ask{
+  border:1px solid var(--mark); border-left-width:3px; padding:12px 14px;
+  margin:0 0 26px; font-size:14px; background:var(--surface);
+}
+.ask b{color:var(--mark); font-family:'Bebas Neue',Impact,sans-serif; letter-spacing:.1em;
+  font-weight:400; font-size:15px; display:block; margin-bottom:3px}
 </style>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Pathway+Gothic+One&family=Inter:wght@400;500&display=swap">
 </head>
 <body>
 
-<div class="card">
-  <span class="kicker">Next show</span>
-  <h1 class="event">Dildozer</h1>
-  <p class="date">Sat · Oct 24</p>
-  <p class="days"><b id="days">—</b> days out</p>
-  <p class="venue">Venue TBD</p>
+<div class="wrap">
+  <nav role="tablist">
+    <button role="tab" id="tab-next" aria-controls="panel-next" aria-selected="true">Next</button>
+    <button role="tab" id="tab-songs" aria-controls="panel-songs" aria-selected="false">Songs</button>
+  </nav>
+
+  <div class="next" id="panel-next" role="tabpanel" aria-labelledby="tab-next">
+    <span class="kicker">Next show</span>
+    <h1 class="event">Dildozer</h1>
+    <p class="date">Sat · Oct 24</p>
+    <p class="days"><b id="days">—</b> days out</p>
+    <p class="venue">Venue TBD</p>
+  </div>
+
+  <div class="songs" id="panel-songs" role="tabpanel" aria-labelledby="tab-songs" hidden>
+    <div class="ask">
+      <b>The question</b>
+      October 24 is a DILDOZER bill. The band's 13 mastered tracks are the set
+      that exists. The Jax Splatter six are the material dildozer turned down —
+      so whether any of it goes on this night is a band call, not a given.
+    </div>
+
+    <div class="pool">
+      <h2>Dildozer</h2>
+      <p>13 mastered · 24:23. Eat My Puss has no master.</p>
+      <ul id="dz"></ul>
+    </div>
+
+    <div class="pool">
+      <h2>Jax Splatter</h2>
+      <p>6 bounces · 17:05 · none stage-ready. Rejected by the band — needs a yes.</p>
+      <ul id="js"></ul>
+    </div>
+  </div>
 </div>
 
-<script id="js">
+<div class="total" id="total" hidden>
+  <span class="n" id="picked">0:00</span>
+  <span class="l"><span id="count">0</span> songs picked</span>
+</div>
+
+<script id="js-script">
 (function () {
+  var DZ = [
+    ['say-red', 'Say Red', 129.0, ''],
+    ['gay-rats', 'Gay Rats', 20.6, 'master is 21s — interlude or truncated?'],
+    ['asl', 'A/S/L', 82.4, ''],
+    ['ghost-rider', 'Ghost Rider', 165.2, 'Suicide cover'],
+    ['bear', 'Bear', 149.0, ''],
+    ['dungeon-eyes', 'Dungeon Eyes', 103.7, ''],
+    ['hella-nervous', 'Hella Nervous', 160.0, ''],
+    ['ak-69', 'AK-69', 122.4, ''],
+    ['rough-pup', 'Rough Pup', 74.3, ''],
+    ['world-up-my-ass', 'World Up My Ass', 90.6, 'Circle Jerks cover'],
+    ['sex-trash', 'Sex Trash', 56.0, ''],
+    ['dykes-on-bikes', 'Dykes on Bikes', 178.7, ''],
+    ['two-pump-chump', 'Two Pump Chump', 130.8, ''],
+    ['eat-my-puss', 'Eat My Puss', 0, 'no master']
+  ];
+  var JS = [
+    ['piss-on-me', 'Piss On Me', 288, ''],
+    ['daddy-likes-it', 'Daddy Likes It', 229, ''],
+    ['where-is-da-club', 'Where Is Da Club', 185, ''],
+    ['put-it-in-my', 'Put It In My', 131, ''],
+    ['put-your-pussy', 'Put Your Pussy On My Face', 94, ''],
+    ['bitch-boy', 'Bitch Boy', 98, '']
+  ];
+  var KEY = 'splatter-ops-picks', TABKEY = 'splatter-ops-tab';
+  var picks = {};
+  try { picks = JSON.parse(localStorage.getItem(KEY) || '{}') || {}; } catch (e) { picks = {}; }
+
+  function clock(sec) {
+    var m = Math.floor(sec / 60), s = Math.round(sec % 60);
+    if (s === 60) { m += 1; s = 0; }
+    return m + ':' + (s < 10 ? '0' : '') + s;
+  }
+  function row(x) {
+    var id = x[0], on = picks[id] ? ' checked' : '';
+    return '<li><label><input type="checkbox" data-id="' + id + '"' + on + '>' +
+      '<span class="t">' + x[1] + (x[3] ? ' <span class="flag">· ' + x[3] + '</span>' : '') + '</span>' +
+      '<span class="len">' + (x[2] ? clock(x[2]) : '—') + '</span></label></li>';
+  }
+  document.getElementById('dz').innerHTML = DZ.map(row).join('');
+  document.getElementById('js').innerHTML = JS.map(row).join('');
+
+  function total() {
+    var sec = 0, n = 0;
+    DZ.concat(JS).forEach(function (x) { if (picks[x[0]]) { sec += x[2]; n += 1; } });
+    document.getElementById('picked').textContent = clock(sec);
+    document.getElementById('count').textContent = n;
+    document.getElementById('total').hidden = (n === 0) ||
+      document.getElementById('panel-songs').hidden;
+  }
+
+  document.addEventListener('change', function (e) {
+    var id = e.target.dataset && e.target.dataset.id;
+    if (!id) return;
+    if (e.target.checked) picks[id] = 1; else delete picks[id];
+    try { localStorage.setItem(KEY, JSON.stringify(picks)); } catch (err) { }
+    total();
+  });
+
+  function show(name) {
+    ['next', 'songs'].forEach(function (t) {
+      document.getElementById('tab-' + t).setAttribute('aria-selected', String(t === name));
+      document.getElementById('panel-' + t).hidden = (t !== name);
+    });
+    try { localStorage.setItem(TABKEY, name); } catch (e) { }
+    total();
+  }
+  document.getElementById('tab-next').addEventListener('click', function () { show('next'); });
+  document.getElementById('tab-songs').addEventListener('click', function () { show('songs'); });
+
   var p = [2026, 10, 24], n = new Date();
   var a = Date.UTC(p[0], p[1] - 1, p[2]);
   var b = Date.UTC(n.getFullYear(), n.getMonth(), n.getDate());
   var d = Math.round((a - b) / 86400000);
   document.getElementById('days').textContent = d > 0 ? d : (d === 0 ? 'Today —' : 'Past —');
+
+  var saved = 'next';
+  try { saved = localStorage.getItem(TABKEY) || 'next'; } catch (e) { }
+  show(saved === 'songs' ? 'songs' : 'next');
 })();
 </script>
 

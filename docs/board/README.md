@@ -13,10 +13,21 @@ npm run board          # serves docs/board on 127.0.0.1:8787
 Then open **http://localhost:8787**. Bound to localhost only — nothing on
 the network can reach it. Stop it with Ctrl-C.
 
+## Tabs
+
+- **Next** — the show and the days out.
+- **Songs** — what we might play on Oct 24. Both pools with real lengths
+  (dildozer's mastered tracks, the Jax Splatter bounces); tick to build a
+  set and watch the running time. Picks are kept in this browser only.
+
 ## What's on it
 
-**Stripped to one thing (Jax, 2026-09-26):** the next show and how many days
-out. DILDOZER, Saturday October 24, venue TBD.
+**Stripped to essentials (Jax, 2026-09-26):** the next show, and the songs
+in play for it. DILDOZER, Saturday October 24, venue TBD.
+
+Track lengths are measured off the masters and bounces, not guessed —
+dildozer from `shows/art_farm/audio/mastered/`, Jax Splatter from the
+Bitwig project bounces.
 
 An earlier version carried gates, an hour meter, cast fields and money —
 too much. That detail lives in [debut-calendar.md](../debut-calendar.md) and
