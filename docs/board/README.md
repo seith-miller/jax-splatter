@@ -74,6 +74,10 @@ with itscloversb1tch@gmail.com and j.cheyenne.hohman@gmail.com since
 
 Not shared: Daddy Likes It, Where Is Da Club, Put It In My, Eat My Puss.
 
+**Those four are the in-progress list (Jax, 2026-09-26)** — the work with a
+second party waiting on it. Bruce LaBruce joined the Jax Splatter pool with
+them: it went out in the same handoff and appears in no dildozer serial.
+
 No terms exist anywhere — no email, no calendar event, nothing written about
 what the split is or what's due. Detail in `record-producer-hq/catalog.md`.
 
