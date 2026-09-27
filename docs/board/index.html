@@ -71,6 +71,11 @@ input[type=checkbox]{accent-color:var(--good); width:16px; height:16px; margin:0
 .t{font-size:14.5px}
 .len{font-variant-numeric:tabular-nums; color:var(--muted); font-size:13.5px}
 .flag{color:var(--mark); font-size:12px}
+.wip{
+  font-family:'Bebas Neue',Impact,sans-serif; letter-spacing:.1em; font-size:11px;
+  text-transform:uppercase; color:var(--bg); background:var(--good);
+  padding:1px 6px; margin-left:6px; vertical-align:1px; white-space:nowrap;
+}
 .none{color:var(--muted); font-style:italic}
 
 /* running total */
@@ -133,9 +138,9 @@ input[type=checkbox]{accent-color:var(--good); width:16px; height:16px; margin:0
 
     <div class="pool">
       <h2>Jax Splatter</h2>
-      <p>7 songs · 17:05 recorded · none stage-ready. The material dildozer
-      turned down — putting any of it on a band night needs a yes. Three are
-      already sitting in Clovers' Drive folder.</p>
+      <p>8 songs · 18:04 recorded · none stage-ready. The material dildozer
+      turned down — putting any of it on a band night needs a yes. <b>Four are
+      in progress</b>: the Demos-a-Gogo handoff sitting in Clovers' Drive.</p>
       <ul id="js"></ul>
     </div>
   </div>
@@ -166,13 +171,14 @@ input[type=checkbox]{accent-color:var(--good); width:16px; height:16px; margin:0
     ['world-up-my-ass', 'World Up My Ass', 90.6, 'Circle Jerks']
   ];
   var JS = [
-    ['piss-on-me', 'Piss On Me', 288, 'with Clovers'],
-    ['daddy-likes-it', 'Daddy Likes It', 229, ''],
-    ['where-is-da-club', 'Where Is Da Club', 185, ''],
-    ['put-it-in-my', 'Put It In My', 131, ''],
-    ['put-your-pussy', 'Put Your Pussy On My Face', 94, 'with Clovers'],
-    ['bitch-boy', 'Bitch Boy', 98, 'with Clovers'],
-    ['eat-my-puss', 'Eat My Puss', 0, 'from dildozer · no recording']
+    ['piss-on-me', 'Piss On Me', 288, 'with Clovers', 'in progress'],
+    ['daddy-likes-it', 'Daddy Likes It', 229, '', ''],
+    ['where-is-da-club', 'Where Is Da Club', 185, '', ''],
+    ['put-it-in-my', 'Put It In My', 131, '', ''],
+    ['put-your-pussy', 'Put Your Pussy On My Face', 94, 'with Clovers', 'in progress'],
+    ['bitch-boy', 'Bitch Boy', 98, 'with Clovers', 'in progress'],
+    ['eat-my-puss', 'Eat My Puss', 0, 'from dildozer · no recording', ''],
+    ['bruce-labruce', 'Bruce LaBruce', 59.5, 'with Clovers', 'in progress']
   ];
   var KEY = 'splatter-ops-picks', TABKEY = 'splatter-ops-tab';
   var picks = {};
@@ -185,8 +191,10 @@ input[type=checkbox]{accent-color:var(--good); width:16px; height:16px; margin:0
   }
   function row(x) {
     var id = x[0], on = picks[id] ? ' checked' : '';
+    var status = x[4] ? ' <span class="wip">' + x[4] + '</span>' : '';
     return '<li><label><input type="checkbox" data-id="' + id + '"' + on + '>' +
-      '<span class="t">' + x[1] + (x[3] ? ' <span class="flag">· ' + x[3] + '</span>' : '') + '</span>' +
+      '<span class="t">' + x[1] + status +
+      (x[3] ? ' <span class="flag">· ' + x[3] + '</span>' : '') + '</span>' +
       '<span class="len">' + (x[2] ? clock(x[2]) : '—') + '</span></label></li>';
   }
   document.getElementById('dz').innerHTML = DZ.map(row).join('');
