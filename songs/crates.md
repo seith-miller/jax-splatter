@@ -5,7 +5,9 @@
 built from. Complete track lists pulled from
 Spotify's public embed pages on 2026-08-24 (no login; playlists set private can't
 be read this way). Spotify is the live source; this file exists so the crates
-survive independently of it.
+survive independently of it. The TIDAL reference playlists — covers and
+inspiration, which are not crates — are written out track by track in
+[references.md](references.md).
 
 | Crate | Tracks | Spotify |
 |---|---|---|
@@ -20,7 +22,8 @@ survive independently of it.
 | interzone livestream part 2 | 36 | [4l3aSFxasEccFR9PVz2F8A](https://open.spotify.com/playlist/4l3aSFxasEccFR9PVz2F8A) |
 | December Sinspiration | 49 | [0q7G0ielj5TnccymQ1Qq08](https://open.spotify.com/playlist/0q7G0ielj5TnccymQ1Qq08) |
 | *(djseith pipeline feed — untitled)* | — | [7KCjqcdRGNoF4Hg8IVnvAX](https://open.spotify.com/playlist/7KCjqcdRGNoF4Hg8IVnvAX) |
-| splatter inspo | 11 | [Tidal 1f336ab1](https://tidal.com/browse/playlist/1f336ab1-401a-4fad-ad9b-54da46b0a120) |
+| jax inspo *(was "splatter inspo")* | 22 | [Tidal 1f336ab1](https://tidal.com/browse/playlist/1f336ab1-401a-4fad-ad9b-54da46b0a120) |
+| dildozer covers | 29 | [Tidal d409d2f3](https://tidal.com/browse/playlist/d409d2f3-3a94-46d2-a412-1698dc521278) |
 
 ---
 
