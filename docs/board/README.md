@@ -87,8 +87,9 @@ what the split is or what's due. Detail in `record-producer-hq/catalog.md`.
 row — DLDZR-0004 Ghost Rider carries `licensing: cover — mechanical needed
 for DSP` and names Suicide in its title. **DLDZR-0007 Hella Nervous is also
 a cover** (Jax, 2026-09-26) and carries neither; its original artist is not
-recorded anywhere and needs confirming. DLDZR-0010 World Up My Ass names
-Circle Jerks in its title but has no `licensing:` line either.
+recorded anywhere and needs confirming. It is the **only** cover missing the
+line — DLDZR-0010 World Up My Ass has it (corrected 2026-09-26; an earlier
+note here wrongly said it didn't).
 
 The covers also sit under DLDZR serials while belonging to neither act —
 worth deciding whether the catalog keeps them or marks them shared.
