@@ -89,17 +89,25 @@ doubled and been renamed.
 Tracks called out in session that aren't in either playlist yet. Add them to
 the TIDAL playlist and the next pull picks them up.
 
-| Artist | Track | Album | Time | TIDAL | gather |
-|---|---|---|---|---|---|
-| The Stranglers | Tank | *Black and White* (1978) | 2:57 | [1563164](https://tidal.com/browse/track/1563164) | queued `ab33dcc5` in `jax-splatter-refs` |
+| Artist | Track | Album | Time | gather |
+|---|---|---|---|---|
+| The Stranglers | Tank | *Black and White* (1978) | 2:57 | **fetched** `505780c3` → `~/gather/jax-splatter-refs/Tank.mp4` |
+
+Fetched from YouTube (Jax's call, 2026-09-27) rather than TIDAL: 4.5 MB mp4,
+AV1 video + **AAC 128 kbps stereo 44.1 kHz**, 2:57 — matching the TIDAL
+listing's length exactly. Fine as a reference; too lossy to build from. The
+TIDAL entry `ab33dcc5` ([track 1563164](https://tidal.com/browse/track/1563164))
+is still queued and unfetched if a clean capture is ever wanted.
 
 Jax, 2026-09-26: *"the track by the Stranglers called I can drive my very own
 tank"* — that line is Tank's hook.
 
-**Fetching is a manual act.** `gather`'s TIDAL fetcher records the desktop
-app's audio through a virtual device (TIDAL is DRM'd, so there's no file to
-download). Running `gather fetch` plays the track aloud and takes over the
-audio output — local operator only, never in the background.
+**On the two paths.** YouTube is a plain yt-dlp download — quiet, quick,
+lossy. `gather`'s TIDAL fetcher instead records the desktop app's audio
+through a virtual device (TIDAL is DRM'd, so there's no file to pull), which
+means it plays the track aloud in real time and seizes the audio output:
+local operator only, never in the background. Reach for YouTube by default;
+TIDAL when the quality has to be right.
 
 ## Still to pull — the Spotify side
 
