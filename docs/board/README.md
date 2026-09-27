@@ -85,14 +85,21 @@ what the split is or what's due. Detail in `record-producer-hq/catalog.md`.
 
 `smartsquared/dildozer` `catalog/catalog.yaml` records covers on the track
 row — DLDZR-0004 Ghost Rider carries `licensing: cover — mechanical needed
-for DSP` and names Suicide in its title. **DLDZR-0007 Hella Nervous is also
-a cover** (Jax, 2026-09-26) and carries neither; its original artist is not
-recorded anywhere and needs confirming. It is the **only** cover missing the
-line — DLDZR-0010 World Up My Ass has it (corrected 2026-09-26; an earlier
-note here wrongly said it didn't).
+for DSP` and names Suicide in its title. **DLDZR-0007 Hella Nervous is a
+Gravy Train!!!! cover** (Seith, 2026-09-26) and carried neither. It was the
+only cover missing them — DLDZR-0010 World Up My Ass has both (corrected
+2026-09-26; an earlier note here wrongly said it didn't). Fixed in
+[dildozer PR #6](https://github.com/seith-miller/dildozer/pull/6), open for
+review.
 
 The covers also sit under DLDZR serials while belonging to neither act —
 worth deciding whether the catalog keeps them or marks them shared.
+
+Still open, both put to Seith: retiring DLDZR-0014 (dildozer-70 recommends a
+tombstone — status `retired`, note "moved to Jax Splatter", serial never
+reused), and whether `D_Bruce_LaBruce` is a dildozer piece at all. It holds
+no serial and appears nowhere in that repo, so it stays in the Jax Splatter
+pool for now.
 
 Not fixed here: that repo was checked out on another thread's branch. The
 edit is one `licensing:` line per row, plus the original artist in the
