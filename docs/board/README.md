@@ -16,6 +16,10 @@ the network can reach it. Stop it with Ctrl-C.
 ## Tabs
 
 - **Next** — the show and the days out.
+- **Playlists** — the 51 reference tracks pulled off TIDAL
+  ([songs/references.md](../../songs/references.md)). Tag each one
+  **inspo** / **cover** / **steal**; the tags are independent, so a track
+  can be more than one. Running tally at the top. Kept in this browser only.
 - **Songs** — what we might play on Oct 24, in three pools: **Dildozer**
   originals, **Covers** (neither act's), and **Jax Splatter**. Real lengths
   off the files; tick to build a set and watch the running time. Picks are

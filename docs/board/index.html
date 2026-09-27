@@ -78,6 +78,35 @@ input[type=checkbox]{accent-color:var(--good); width:16px; height:16px; margin:0
 }
 .none{color:var(--muted); font-style:italic}
 
+/* reference rows */
+li.ref{
+  display:grid; grid-template-columns:1fr auto auto; gap:12px; align-items:center;
+  padding:8px 11px; border:1px solid var(--edge); background:var(--surface);
+  margin-bottom:4px;
+}
+li.ref .t{font-size:14px; color:var(--muted)}
+li.ref .t b{color:var(--text); font-weight:500}
+.tags{display:flex; gap:4px}
+button.tag{
+  font-family:'Bebas Neue',Impact,sans-serif; letter-spacing:.1em; font-size:11px;
+  text-transform:uppercase; padding:3px 8px; border:1px solid var(--edge);
+  background:none; color:var(--muted); cursor:pointer; border-radius:1px;
+}
+button.tag:hover{border-color:currentColor}
+button.tag:focus-visible{outline:2px solid var(--mark); outline-offset:2px}
+button.t-inspo[data-on]{background:var(--accent); border-color:var(--accent); color:var(--bg)}
+button.t-cover[data-on]{background:var(--mark); border-color:var(--mark); color:var(--bg)}
+button.t-steal[data-on]{background:var(--good); border-color:var(--good); color:var(--bg)}
+.c-inspo{color:var(--accent)} .c-cover{color:var(--mark)} .c-steal{color:var(--good)}
+.ask .k{font-family:'Bebas Neue',Impact,sans-serif; letter-spacing:.08em; font-weight:400;
+  font-size:14px; display:inline; margin:0}
+.tally{display:block; margin-top:8px; color:var(--muted); font-size:13px;
+  font-variant-numeric:tabular-nums}
+@media (max-width:520px){
+  li.ref{grid-template-columns:1fr auto}
+  li.ref .tags{grid-column:1/-1}
+}
+
 /* running total */
 .total{
   position:fixed; left:0; right:0; bottom:0; background:var(--surface);
@@ -104,6 +133,7 @@ input[type=checkbox]{accent-color:var(--good); width:16px; height:16px; margin:0
   <nav role="tablist">
     <button role="tab" id="tab-next" aria-controls="panel-next" aria-selected="true">Next</button>
     <button role="tab" id="tab-songs" aria-controls="panel-songs" aria-selected="false">Songs</button>
+    <button role="tab" id="tab-refs" aria-controls="panel-refs" aria-selected="false">Playlists</button>
   </nav>
 
   <div class="next" id="panel-next" role="tabpanel" aria-labelledby="tab-next">
@@ -145,6 +175,31 @@ input[type=checkbox]{accent-color:var(--good); width:16px; height:16px; margin:0
       <ul id="js"></ul>
     </div>
   </div>
+  <div class="songs" id="panel-refs" role="tabpanel" aria-labelledby="tab-refs" hidden>
+    <div class="ask">
+      <b>Three jobs</b>
+      <b class="k c-inspo">Inspo</b> — the feel to chase, never copied.
+      <b class="k c-cover">Cover</b> — we might actually play it; a recording on a
+      DSP owes a mechanical. <b class="k c-steal">Steal</b> — one specific musical
+      idea lifted into an original: a rhythm, a sound, a move.
+      <span class="tally">So far: <span id="tally"></span></span>
+    </div>
+
+    <div class="pool">
+      <h2>Dildozer covers</h2>
+      <p>29 · TIDAL. Named for the band — covers belong to neither act.</p>
+      <ul id="cov"></ul>
+    </div>
+
+    <div class="pool">
+      <h2>Jax inspo</h2>
+      <p>22 · TIDAL. Was "splatter inspo" at 11 tracks; it has doubled since.</p>
+      <ul id="insp"></ul>
+    </div>
+
+    <p class="none" style="font-size:13px">Spotify side still to come — gather has no
+    credentials for it, so "steal" (if it lives there) isn't pulled yet.</p>
+  </div>
 </div>
 
 <div class="total" id="total" hidden>
@@ -181,7 +236,65 @@ input[type=checkbox]{accent-color:var(--good); width:16px; height:16px; margin:0
     ['eat-my-puss', 'Eat My Puss', 0, 'from dildozer · no recording', ''],
     ['bruce-labruce', 'Bruce LaBruce', 59.5, 'with Clovers', 'in progress']
   ];
-  var KEY = 'splatter-ops-picks', TABKEY = 'splatter-ops-tab';
+  var COVERS = [
+    ['sylvester-i-need-somebody-to-love-tonight', 'Sylvester', 'I Need Somebody To Love Tonight', 411],
+    ['red-hot-chili-peppers-dark-necessities', 'Red Hot Chili Peppers', 'Dark Necessities', 302],
+    ['bruce-springsteen-dream-baby-dream', 'Bruce Springsteen', 'Dream Baby Dream', 300],
+    ['fad-gadget-swallow-it', 'Fad Gadget', 'Swallow It', 343],
+    ['public-image-ltd-car-chase', 'Public Image Ltd.', 'Car Chase', 226],
+    ['iggy-pop-tonight', 'Iggy Pop', 'Tonight', 220],
+    ['the-stooges-shake-appeal-2023-remaster', 'The Stooges', 'Shake Appeal [2023 Remaster]', 185],
+    ['television-friction', 'Television', 'Friction', 284],
+    ['the-velvet-underground-head-held-high-2015-remas', 'The Velvet Underground', 'Head Held High (2015 Remaster)', 177],
+    ['john-cale-the-endless-plain-of-fortune', 'John Cale', 'The Endless Plain of Fortune', 250],
+    ['the-walker-brothers-nite-flights', 'The Walker Brothers', 'Nite Flights', 262],
+    ['new-order-ecstacy-2015-remaster', 'New Order', 'Ecstacy (2015 Remaster)', 266],
+    ['the-kinks-waterloo-sunset', 'The Kinks', 'Waterloo Sunset', 195],
+    ['the-stooges-dirt', 'The Stooges', 'Dirt', 420],
+    ['the-velvet-underground-here-she-comes-now', 'The Velvet Underground', 'Here She Comes Now', 125],
+    ['the-walker-brothers-shutout', 'The Walker Brothers', 'Shutout', 167],
+    ['wire-three-girl-rhumba-2006-remastered-version', 'Wire', 'Three Girl Rhumba (2006 Remastered Version)', 84],
+    ['david-bowie-five-years-2012-remaster', 'David Bowie', 'Five Years (2012 Remaster)', 284],
+    ['patti-smith-free-money', 'Patti Smith', 'Free Money', 234],
+    ['divine-shoot-your-shot', 'Divine', 'Shoot Your Shot', 391],
+    ['divine-love-reaction', 'Divine', 'Love Reaction', 335],
+    ['patrick-cowley-sylvester-menergy', 'Patrick Cowley, Sylvester', 'Menergy', 249],
+    ['baltimora-tarzan-boy', 'Baltimora', 'Tarzan Boy', 230],
+    ['slint-good-morning-captain', 'Slint', 'Good Morning, Captain', 459],
+    ['soft-cell-sex-dwarf', 'Soft Cell', 'Sex Dwarf', 316],
+    ['the-normal-warm-leatherette', 'The Normal', 'Warm Leatherette', 204],
+    ['the-human-league-being-boiled', 'The Human League', 'Being Boiled', 234],
+    ['alan-vega-wipeout-beat', 'Alan Vega', 'Wipeout Beat', 344],
+    ['sparks-the-number-one-song-in-heaven', 'Sparks', 'The Number One Song In Heaven', 446]
+  ];
+  var INSPO = [
+    ['mattofficiel-danza-kuduro-x-pepas', 'MattOfficiel', 'Danza kuduro x Pepas', 314],
+    ['mother-mother-hayloft-ii-smashup', 'Mother Mother', 'Hayloft II (SMASHUP)', 224],
+    ['alt-rahhhh', 'Alt!', 'RAHHHH', 61],
+    ['mindless-self-indulgence-bitches', 'Mindless Self Indulgence', 'Bitches', 166],
+    ['mindless-self-indulgence-lights-out', 'Mindless Self Indulgence', 'Lights Out', 157],
+    ['alice-in-videoland-dance-with-me', 'Alice in Videoland', 'Dance with Me', 149],
+    ['death-grips-guillotine', 'Death Grips', 'Guillotine', 223],
+    ['clipping-wriggle', 'clipping.', 'Wriggle', 244],
+    ['bj-rk-pluto', 'Björk', 'Pluto', 199],
+    ['death-grips-giving-bad-people-good-ideas', 'Death Grips', 'Giving Bad People Good Ideas', 187],
+    ['youth-code-consuming-guilt', 'YOUTH CODE', 'Consuming Guilt', 183],
+    ['author-punisher-nihil-strength', 'Author & Punisher​', 'Nihil Strength', 216],
+    ['gary-clark-jr-junkie-xl-come-together', 'Gary Clark Jr., Junkie XL', 'Come Together', 194],
+    ['junkie-xl-brothers-in-arms', 'Junkie XL', 'Brothers In Arms', 262],
+    ['elvis-presley-a-little-less-conversation', 'Elvis Presley', 'A Little Less Conversation', 213],
+    ['apollo-440-stop-the-rock', 'Apollo 440', 'Stop the Rock', 213],
+    ['junkie-xl-apex', 'Junkie XL', 'Apex', 170],
+    ['joey-valence-brae-hyperyouth', 'Joey Valence & Brae', 'HYPERYOUTH', 168],
+    ['buck-tick-iconoclasm', 'Buck-Tick', 'ICONOCLASM', 182],
+    ['my-life-with-the-thrill-kill-kult-a-daisy-chain-', 'My Life With The Thrill Kill Kult', 'A Daisy Chain 4 Satan (Forever And Ever Mix)', 305],
+    ['devo-uncontrollable-urge', 'DEVO', 'Uncontrollable Urge', 191],
+    ['psy-i-luv-it', 'PSY', 'I LUV IT', 189]
+  ];
+  var JOBS = ['inspo', 'cover', 'steal'];
+  var KEY = 'splatter-ops-picks', TABKEY = 'splatter-ops-tab', TAGKEY = 'splatter-ops-tags';
+  var tags = {};
+  try { tags = JSON.parse(localStorage.getItem(TAGKEY) || '{}') || {}; } catch (e) { tags = {}; }
   var picks = {};
   try { picks = JSON.parse(localStorage.getItem(KEY) || '{}') || {}; } catch (e) { picks = {}; }
 
@@ -219,16 +332,56 @@ input[type=checkbox]{accent-color:var(--good); width:16px; height:16px; margin:0
     total();
   });
 
+  function refRow(x) {
+    var id = x[0], mine = tags[id] || {};
+    var btns = JOBS.map(function (j) {
+      return '<button data-ref="' + id + '" data-tag="' + j + '" class="tag t-' + j + '"' +
+        (mine[j] ? ' data-on="1"' : '') + '>' + j + '</button>';
+    }).join('');
+    return '<li class="ref"><span class="t">' + x[1] + ' — <b>' + x[2] + '</b></span>' +
+      '<span class="tags">' + btns + '</span>' +
+      '<span class="len">' + clock(x[3]) + '</span></li>';
+  }
+
+  function counts() {
+    var c = { inspo: 0, cover: 0, steal: 0 };
+    Object.keys(tags).forEach(function (id) {
+      JOBS.forEach(function (j) { if (tags[id][j]) c[j] += 1; });
+    });
+    document.getElementById('tally').innerHTML = JOBS.map(function (j) {
+      return '<span class="c-' + j + '">' + c[j] + ' ' + j + '</span>';
+    }).join(' · ');
+  }
+
+  function renderRefs() {
+    document.getElementById('cov').innerHTML = COVERS.map(refRow).join('');
+    document.getElementById('insp').innerHTML = INSPO.map(refRow).join('');
+    counts();
+  }
+
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest ? e.target.closest('button[data-ref]') : null;
+    if (!b) return;
+    var id = b.dataset.ref, j = b.dataset.tag;
+    if (!tags[id]) tags[id] = {};
+    if (tags[id][j]) { delete tags[id][j]; b.removeAttribute('data-on'); }
+    else { tags[id][j] = 1; b.setAttribute('data-on', '1'); }
+    if (!Object.keys(tags[id]).length) delete tags[id];
+    try { localStorage.setItem(TAGKEY, JSON.stringify(tags)); } catch (err) { }
+    counts();
+  });
+
   function show(name) {
-    ['next', 'songs'].forEach(function (t) {
+    ['next', 'songs', 'refs'].forEach(function (t) {
       document.getElementById('tab-' + t).setAttribute('aria-selected', String(t === name));
       document.getElementById('panel-' + t).hidden = (t !== name);
     });
     try { localStorage.setItem(TABKEY, name); } catch (e) { }
     total();
   }
-  document.getElementById('tab-next').addEventListener('click', function () { show('next'); });
-  document.getElementById('tab-songs').addEventListener('click', function () { show('songs'); });
+  ['next', 'songs', 'refs'].forEach(function (t) {
+    document.getElementById('tab-' + t).addEventListener('click', function () { show(t); });
+  });
 
   var p = [2026, 10, 24], n = new Date();
   var a = Date.UTC(p[0], p[1] - 1, p[2]);
@@ -236,9 +389,11 @@ input[type=checkbox]{accent-color:var(--good); width:16px; height:16px; margin:0
   var d = Math.round((a - b) / 86400000);
   document.getElementById('days').textContent = d > 0 ? d : (d === 0 ? 'Today —' : 'Past —');
 
+  renderRefs();
+
   var saved = 'next';
   try { saved = localStorage.getItem(TABKEY) || 'next'; } catch (e) { }
-  show(saved === 'songs' ? 'songs' : 'next');
+  show(['songs', 'refs'].indexOf(saved) >= 0 ? saved : 'next');
 })();
 </script>
 
