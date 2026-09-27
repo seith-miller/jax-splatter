@@ -84,6 +84,23 @@ doubled and been renamed.
 | 21 | DEVO | Uncontrollable Urge | 3:11 |
 | 22 | PSY | I LUV IT | 3:09 |
 
+## Added by hand
+
+Tracks called out in session that aren't in either playlist yet. Add them to
+the TIDAL playlist and the next pull picks them up.
+
+| Artist | Track | Album | Time | TIDAL | gather |
+|---|---|---|---|---|---|
+| The Stranglers | Tank | *Black and White* (1978) | 2:57 | [1563164](https://tidal.com/browse/track/1563164) | queued `ab33dcc5` in `jax-splatter-refs` |
+
+Jax, 2026-09-26: *"the track by the Stranglers called I can drive my very own
+tank"* — that line is Tank's hook.
+
+**Fetching is a manual act.** `gather`'s TIDAL fetcher records the desktop
+app's audio through a virtual device (TIDAL is DRM'd, so there's no file to
+download). Running `gather fetch` plays the track aloud and takes over the
+audio output — local operator only, never in the background.
+
 ## Still to pull — the Spotify side
 
 Blocked 2026-09-26: `gather`'s Spotify credentials are empty
