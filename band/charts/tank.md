@@ -11,6 +11,11 @@ with the charts rather than in the Jax Splatter pool.
 | **Source** | `~/gather/jax-splatter-refs/Tank.mp4` — YouTube, AAC 128 kbps. Approved by Jax 2026-09-27 |
 | **Stems** | `~/un-mix-her-qa/tank/htdemucs_6s/` — six files |
 
+This is the first song through **teach-her** — un-mix-her's stage that ends
+in paper rather than a DAW session
+([spec](https://github.com/seith-miller/un-mix-her/blob/develop/docs/teach-her.md)).
+Done by hand; the stage isn't built yet.
+
 Everything below is **derived from the recording by us** (demucs separation,
 then librosa analysis). Published tabs and lyrics are linked at the foot, not
 copied in — they belong to their authors, and our own timings are more use to

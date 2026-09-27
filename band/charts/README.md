@@ -35,6 +35,11 @@ someone else's recording, so the parts are derived by separating it into
 stems and analysing them. Published tabs and lyrics are **linked, never
 copied in**.
 
+That process has a name: **teach-her** (Jax, 2026-09-27) — un-mix-her's last
+stage, the one that ends in paper rather than a DAW session. Spec:
+[un-mix-her/docs/teach-her.md](https://github.com/seith-miller/un-mix-her/blob/develop/docs/teach-her.md).
+Tank is its first worked example, done by hand.
+
 ## How a chart gets filled
 
 1. **Skeleton** — sections, bar numbers and energy are machine-segmented
