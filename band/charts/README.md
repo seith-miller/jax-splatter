@@ -24,6 +24,17 @@ page, readable on a dark stage.
 *Machine-estimated off the newest bounce (librosa, 2026-09-26) — **correct
 by ear**. New songs get a chart as they're written.
 
+## Covers
+
+| Song | Source | BPM* | Key* |
+|---|---|---|---|
+| [Tank](tank.md) — The Stranglers | 2:57 | 161.5 | Em |
+
+A cover gets the same chart, built the same way — except the source is
+someone else's recording, so the parts are derived by separating it into
+stems and analysing them. Published tabs and lyrics are **linked, never
+copied in**.
+
 ## How a chart gets filled
 
 1. **Skeleton** — sections, bar numbers and energy are machine-segmented

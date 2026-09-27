@@ -91,7 +91,7 @@ the TIDAL playlist and the next pull picks them up.
 
 | Artist | Track | Album | Time | gather |
 |---|---|---|---|---|
-| The Stranglers | Tank | *Black and White* (1978) | 2:57 | **fetched** `505780c3` → `~/gather/jax-splatter-refs/Tank.mp4` |
+| The Stranglers | Tank | *Black and White* (1978) | 2:57 | **fetched + approved** `505780c3` → `~/gather/jax-splatter-refs/Tank.mp4` · stems + chart: [band/charts/tank.md](../band/charts/tank.md) |
 
 Fetched from YouTube (Jax's call, 2026-09-27) rather than TIDAL: 4.5 MB mp4,
 AV1 video + **AAC 128 kbps stereo 44.1 kHz**, 2:57 — matching the TIDAL
