@@ -70,7 +70,8 @@ merely correct.
 as *played* — a riff, a lead, a run someone can watch happen.
 
 **Non-tuned percussion** — hits and figures on a bar grid, phrased as
-choreography. Where the player *moves* is part of the part.
+choreography. Where the player *moves* is not on this sheet: that's the
+count sheet's job, and this chair will usually have one.
 
 **Tuned percussion** — same, plus pitch. Rototoms by drum, jam blocks by
 note.
@@ -98,5 +99,7 @@ job when it gets built.
 - **Does Vocal 2 double any other chair?** A guest who sings *and* takes
   crate percussion is one body, two chairs — worth saying which chairs can
   be stacked on one person.
-- **Dancers are not a chair.** They take crate percussion in the crate
-  moment and don't get charts. Correct?
+- **Which chairs also need a count sheet?** Settled in principle (Jax,
+  2026-09-28): blocking is never chart content, and a musician who roams
+  gets a count sheet like anyone else. Open is *which* of the nine actually
+  need one per song — all of them, or only the chairs that leave their spot.

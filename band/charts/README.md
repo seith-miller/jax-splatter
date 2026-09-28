@@ -88,7 +88,8 @@ shape.
 
 ## Notation on the page
 
-Plain text, no staves. Hits on a bar grid:
+Plain text, no staves. Charts count in **bars**; the count sheet handles 8s.
+Hits on a bar grid:
 
 ```
 |x . . x|. . x .|   x = hit   . = rest   X = accent   ~ = roll   > = crash/stop
@@ -97,6 +98,44 @@ Plain text, no staves. Hits on a bar grid:
 Chords by name (`Dm`, `Dm–F–C`), figures in words ("two bars of eighths,
 crescendo into the drop"). Anything a player can read at a glance, in the
 dark, while walking.
+
+## Charts and count sheets are different documents
+
+**Jax, 2026-09-28.** A chart never carries blocking. Stage direction — where
+you stand, where you move, when you form up — lives on the **count sheet**
+([choreo/counts/](../../choreo/counts/)), and always has.
+
+| | Chart | Count sheet |
+|---|---|---|
+| Answers | what do I play? | where do I go, and when? |
+| Counts in | **bars** | **8s and counts** (`8.beat`) |
+| Lives in | [band/charts/](.) | [choreo/counts/](../../choreo/counts/) |
+| Who gets one | the nine chairs | **everyone on stage** |
+
+**Musicians get count sheets too.** A player who roams is being blocked like
+a dancer, and the blocking belongs where all the blocking is — one document
+per song that the whole stage reads, not a Roam column on nine separate
+sheets that drift apart.
+
+**Dancers get a count sheet and no chart.** That's why they aren't a chair
+([chairs.md](chairs.md)): a chair is a charted musical part.
+
+### The conversion
+
+Both documents describe the same moments, so they must agree. The counting
+convention is locked in [choreo/README.md](../../choreo/README.md):
+
+| Tempo | One 8-count | Bar → 8 |
+|---|---|---|
+| **under 140 BPM** | 2 bars (1 beat = 1 count) | `8 = ceil(bar / 2)` |
+| **140 BPM and over** | 4 bars (2 beats = 1 count, half-time) | `8 = ceil(bar / 4)` |
+
+Worked: [Tank](tank.md) is 161.5 BPM, so half-time — one 8-count is **4
+bars**, and its ~119 bars are about **30 8s**. Chart bar 49 is count sheet
+**8 13**.
+
+Where a chart says a section starts, the count sheet must start it too. If
+they disagree, the count sheet is wrong — the chart is keyed to the recording.
 
 ## Printing
 
