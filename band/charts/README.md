@@ -1,7 +1,10 @@
 # Charts — the written parts
 
-**Jax, 2026-09-26: the debut band is three — Jax, one guitarist, one
-percussionist — and the two players get written parts and charts.**
+**Jax, 2026-09-27: chart for a professional touring company — nine chairs —
+even though that company doesn't exist yet.** The ensemble is defined in
+[chairs.md](chairs.md); every song is charted for all nine and any given
+night plays a subset. The debut's three (Jax, one guitarist, one
+percussionist) is the smallest subset, not a different plan.
 
 A chart here is not notation. The act plays **on track**
 ([../../docs/stage-vision.md](../../docs/stage-vision.md)): the backing
@@ -51,6 +54,10 @@ Tank is its first worked example, done by hand.
    it changed. On track with in-ears or wedge only, the cue is the part.
 5. **Rehearse, then revise.** Charts v2 comes out of rehearsal, not before.
    After **Dec 6 the charts freeze** ([../../docs/debut-calendar.md](../../docs/debut-calendar.md)).
+
+Per-chair writing conventions live in [chairs.md](chairs.md). The two below
+predate it and are the fullest worked examples; the rest follow the same
+shape.
 
 ## Guitar — conventions
 
