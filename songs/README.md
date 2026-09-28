@@ -10,3 +10,8 @@ Tooling that feeds this: [seith-miller/djseith](https://github.com/seith-miller/
 URLs from its own `playlists.md`; keep that file pointed at whatever crates
 are in active rotation. A TIDAL sync path (Spotify crates → TIDAL) is planned
 to live in gather, not here.
+
+New tracks are written with the ensemble and its paperwork in mind from the
+start — see [writing-for-the-ensemble.md](writing-for-the-ensemble.md). Most
+of it is cheap before a track exists and expensive afterwards, especially
+section lengths against the choreo count grid.
