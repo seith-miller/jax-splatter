@@ -50,6 +50,9 @@ Two chairs are load-bearing: **Vocal 1 and DJ**. Everything else is a layer.
 That's what makes the three-piece debut legitimate rather than a compromise —
 it's both load-bearing chairs plus the two that can't be faked.
 
+**Writing new songs for these chairs** is its own set of rules —
+[songs/writing-for-the-ensemble.md](../../songs/writing-for-the-ensemble.md).
+
 ## Writing for a chair
 
 The chart format is in [README.md](README.md) — a performance map, not
