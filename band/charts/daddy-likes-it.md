@@ -17,16 +17,16 @@
 
 Sections are machine-segmented off the bounce (agglomerative on MFCC+chroma, 2026-09-26) — **a starting skeleton, not the arrangement.** Rename the sections, fix the bar counts against the project, then fill the parts.
 
-| § | Name | In | Bar | Bars | Energy | Guitar | Percussion | Light / FX | Roam |
-|---|---|---|---|---|---|---|---|---|---|
-| A | — | 0:07 | 1 | 3.9 | 63% | — | — | — | — |
-| B | — | 0:22 | 4.8 | 12.8 | 76% | — | — | — | — |
-| C | — | 1:11 | 17.5 | 3.5 | 70% | — | — | — | — |
-| D | — | 1:24 | 21 | 4.3 | 80% | — | — | — | — |
-| E | — | 1:40 | 25.2 | 1.7 | 100% | — | — | — | — |
-| F | — | 1:47 | 27 | 12.5 | 95% | — | — | — | — |
-| G | — | 2:34 | 39.5 | 4.5 | 67% | — | — | — | — |
-| H | — | 2:52 | 44 | 14.8 | 73% | — | — | — | — |
+| § | Name | In | Bar | Bars | Energy | Guitar | Percussion | Light / FX |
+|---|---|---|---|---|---|---|---|---|
+| A | — | 0:07 | 1 | 3.9 | 63% | — | — | — |
+| B | — | 0:22 | 4.8 | 12.8 | 76% | — | — | — |
+| C | — | 1:11 | 17.5 | 3.5 | 70% | — | — | — |
+| D | — | 1:24 | 21 | 4.3 | 80% | — | — | — |
+| E | — | 1:40 | 25.2 | 1.7 | 100% | — | — | — |
+| F | — | 1:47 | 27 | 12.5 | 95% | — | — | — |
+| G | — | 2:34 | 39.5 | 4.5 | 67% | — | — | — |
+| H | — | 2:52 | 44 | 14.8 | 73% | — | — | — |
 
 ## Notes
 

@@ -156,6 +156,21 @@ So: a bass tab exists, and that's it. **No MIDI, no drum chart, no guitar tab
 specific to this song.** Which means our stems plus this analysis are the best
 source material available for four of the five parts.
 
+## Counting, for the count sheet
+
+161.5 BPM is over the 140 boundary, so **half-time**: one 8-count is **4
+bars** ([choreo/README.md](../../choreo/README.md)). The ~119 bars are about
+**30 8s**, and `8 = ceil(bar / 4)`.
+
+| Section | Bar | 8 |
+|---|---|---|
+| Body starts (D) | 9 | 3 |
+| Instrumental (F) | 49 | 13 |
+| Outro begins (H) | 102 | 26 |
+
+Blocking for this song, if it gets any, goes on a count sheet in
+[choreo/counts/](../../choreo/counts/) — not on this sheet.
+
 ## What's left before these are playable charts
 
 1. **Settle the keyboard question** — listen to `other.wav`.

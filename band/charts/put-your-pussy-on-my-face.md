@@ -15,11 +15,11 @@
 
 Sections are machine-segmented off the bounce (agglomerative on MFCC+chroma, 2026-09-26) — **a starting skeleton, not the arrangement.** Rename the sections, fix the bar counts against the project, then fill the parts.
 
-| § | Name | In | Bar | Bars | Energy | Guitar | Percussion | Light / FX | Roam |
-|---|---|---|---|---|---|---|---|---|---|
-| A | — | 0:01 | 1.8 | 28.8 | 87% | — | — | — | — |
-| B | — | 1:06 | 30.5 | 8.5 | 100% | — | — | — | — |
-| C | — | 1:24 | 39 | 4 | 15% | — | — | — | — |
+| § | Name | In | Bar | Bars | Energy | Guitar | Percussion | Light / FX |
+|---|---|---|---|---|---|---|---|---|
+| A | — | 0:01 | 1.8 | 28.8 | 87% | — | — | — |
+| B | — | 1:06 | 30.5 | 8.5 | 100% | — | — | — |
+| C | — | 1:24 | 39 | 4 | 15% | — | — | — |
 
 ## Notes
 

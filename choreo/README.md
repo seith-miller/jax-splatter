@@ -3,6 +3,13 @@
 Movement and staging: what happens on stage during a set, blocking, guest
 performers, and any rehearsed sequences tied to specific tracks.
 
+Count sheets are for **everyone on stage**, not only dancers — a musician who
+roams is being blocked too, and **blocking is never chart content** (Jax,
+2026-09-28). The musical side lives in [band/charts/](../band/charts/), which
+counts in bars; this side counts in 8s. The conversion is the convention
+below, and where the two disagree the count sheet is wrong: charts are keyed
+to the recording.
+
 ## Counting convention — locked 2026-08-27
 
 All tracks are 4/4. Counts sheets use dancer 8-counts with a fixed
