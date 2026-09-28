@@ -40,6 +40,12 @@ percussion in the crate moment; they don't get charts.
 
 Supersedes the four-plus cast sketched before the date existed.
 
+**Three of nine.** Charts are written for the full touring ensemble
+([band/charts/chairs.md](../band/charts/chairs.md)); the debut fills the two
+load-bearing chairs (Vocal 1, DJ) plus the two a backing track cannot fake
+(guitar's visual gesture, percussion's visible hit). Adding a player later
+costs no writing — the sheet already exists.
+
 ## The set structure — solving the 21-minute problem
 
 The catalog today: **6 songs, 17:05 of bounces** (measured 2026-09-26) —
