@@ -15,6 +15,10 @@
 - **Steps library**: the Splatter Steps app (Claude artifact) — every bold
   step below has a card with a loop-clean clip
 
+**No Riding column here.** The template carries one — what the music does at
+each 8 — but this sheet's track is still unidentified, so there is nothing to
+ride and nothing to write. It gets filled when the track is named.
+
 Everything before 0.5 is freeform. The choreographer's call is the count-in:
 "5-6-7-8" on 0.5-0.8.
 
