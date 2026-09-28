@@ -3,6 +3,12 @@
 Movement and staging: what happens on stage during a set, blocking, guest
 performers, and any rehearsed sequences tied to specific tracks.
 
+Count sheets carry a **Riding** column — what the music is doing under the
+movement at each 8 (Jax, 2026-09-28). A dancer hitting on 5 needs to know
+what they're hitting *with*; without it they're counting in silence and drift
+the moment the monitor is bad. It is filled from the song's chart, converted
+bar → 8 by the convention below.
+
 Count sheets are for **everyone on stage**, not only dancers — a musician who
 roams is being blocked too, and **blocking is never chart content** (Jax,
 2026-09-28). The musical side lives in [band/charts/](../band/charts/), which
