@@ -123,6 +123,28 @@ button.t-steal[data-on]{background:var(--good); border-color:var(--good); color:
 }
 .ask b{color:var(--mark); font-family:'Bebas Neue',Impact,sans-serif; letter-spacing:.1em;
   font-weight:400; font-size:15px; display:block; margin-bottom:3px}
+/* merch */
+.mrow{
+  display:grid; grid-template-columns:1fr auto 58px 58px; gap:10px; align-items:center;
+  padding:8px 11px; border:1px solid var(--edge); background:var(--surface); margin-bottom:4px;
+}
+.mrow .t b{font-weight:500}
+.mrow .price{font-variant-numeric:tabular-nums; color:var(--muted); font-size:13.5px}
+.mrow input[type=number]{
+  width:58px; padding:5px 6px; font:inherit; font-size:13.5px; font-variant-numeric:tabular-nums;
+  background:var(--bg); color:var(--text); border:1px solid var(--edge); border-radius:1px; text-align:right;
+}
+.mrow input[type=number]:focus-visible{outline:2px solid var(--mark); outline-offset:1px}
+.mhead{display:grid; grid-template-columns:1fr auto 58px 58px; gap:10px; padding:0 11px 4px;
+  font-family:'Bebas Neue',Impact,sans-serif; letter-spacing:.12em; font-size:11px; color:var(--muted); text-transform:uppercase}
+.mhead span:nth-child(n+2){text-align:right}
+.showpick{display:flex; gap:8px; align-items:center; margin:0 0 12px; font-size:13px; color:var(--muted)}
+.showpick select{font:inherit; font-size:13px; background:var(--surface); color:var(--text); border:1px solid var(--edge); padding:4px 8px}
+.late{color:var(--mark); font-size:12px; font-family:'Bebas Neue',Impact,sans-serif; letter-spacing:.1em}
+.due{font-variant-numeric:tabular-nums; color:var(--muted); font-size:13px; white-space:nowrap}
+.money{display:flex; flex-wrap:wrap; gap:6px 22px; font-size:13px; color:var(--muted); margin:-8px 0 26px; font-variant-numeric:tabular-nums}
+.money b{color:var(--text); font-weight:500}
+@media (max-width:420px){ .mrow,.mhead{grid-template-columns:1fr 50px 50px} .mrow .price,.mhead span:nth-child(2){display:none} .mrow input[type=number]{width:50px} }
 </style>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Pathway+Gothic+One&family=Inter:wght@400;500&display=swap">
@@ -134,6 +156,7 @@ button.t-steal[data-on]{background:var(--good); border-color:var(--good); color:
     <button role="tab" id="tab-next" aria-controls="panel-next" aria-selected="true">Next</button>
     <button role="tab" id="tab-songs" aria-controls="panel-songs" aria-selected="false">Songs</button>
     <button role="tab" id="tab-refs" aria-controls="panel-refs" aria-selected="false">Playlists</button>
+    <button role="tab" id="tab-merch" aria-controls="panel-merch" aria-selected="false">Merch</button>
   </nav>
 
   <div class="next" id="panel-next" role="tabpanel" aria-labelledby="tab-next">
@@ -200,11 +223,48 @@ button.t-steal[data-on]{background:var(--good); border-color:var(--good); color:
     <p class="none" style="font-size:13px">Spotify side still to come — gather has no
     credentials for it, so "steal" (if it lives there) isn't pulled yet.</p>
   </div>
+  <div class="songs" id="panel-merch" role="tabpanel" aria-labelledby="tab-merch" hidden>
+    <div class="ask">
+      <b>The table</b>
+      Round 1 goes on a table at the Green Lantern on Oct 24, restocks for
+      Louisville Nov 6, and the full ladder shows up at the debut. A gate is a
+      date something must be <em>true</em> by. The plan is
+      <code>merch/implementation.md</code>; the list is <code>merch/round-1.md</code>.
+    </div>
+    <p class="money"><span>Outlay <b>~$300</b></span><span>Gross at sell-through <b>~$1,090</b></span><span>Break-even <b>23%</b></span></p>
+
+    <div class="pool">
+      <h2>Gates</h2>
+      <p>Tick when it's true. Red means the date passed and it isn't.</p>
+      <ul id="mgates"></ul>
+    </div>
+
+    <div class="pool">
+      <h2>Jax, this week</h2>
+      <p>The hands-and-orders side. Claude has the files.</p>
+      <ul id="mtodo"></ul>
+    </div>
+
+    <div class="pool">
+      <h2>The count</h2>
+      <p>Count in before doors, count out after. The difference is the sale.
+      Bundles aren't modelled — the tally is list price.</p>
+      <div class="showpick"><label for="mshow">Show</label>
+        <select id="mshow"><option value="2026-10-24">Oct 24 · Green Lantern</option><option value="2026-11-06">Nov 6 · Louisville</option><option value="2026-12-19">Dec 19 · the debut</option></select>
+      </div>
+      <div class="mhead"><span>Item</span><span>Sell</span><span>In</span><span>Out</span></div>
+      <ul id="mcount"></ul>
+    </div>
+  </div>
 </div>
 
 <div class="total" id="total" hidden>
   <span class="n" id="picked">0:00</span>
   <span class="l"><span id="count">0</span> songs picked</span>
+</div>
+<div class="total" id="mtotal" hidden>
+  <span class="n" id="msold">$0</span>
+  <span class="l"><span id="mitems">0</span> sold · <span id="mshowlabel"></span></span>
 </div>
 
 <script id="js-script">
@@ -372,14 +432,15 @@ button.t-steal[data-on]{background:var(--good); border-color:var(--good); color:
   });
 
   function show(name) {
-    ['next', 'songs', 'refs'].forEach(function (t) {
+    ['next', 'songs', 'refs', 'merch'].forEach(function (t) {
       document.getElementById('tab-' + t).setAttribute('aria-selected', String(t === name));
       document.getElementById('panel-' + t).hidden = (t !== name);
     });
     try { localStorage.setItem(TABKEY, name); } catch (e) { }
     total();
+    mtotal();
   }
-  ['next', 'songs', 'refs'].forEach(function (t) {
+  ['next', 'songs', 'refs', 'merch'].forEach(function (t) {
     document.getElementById('tab-' + t).addEventListener('click', function () { show(t); });
   });
 
@@ -391,9 +452,121 @@ button.t-steal[data-on]{background:var(--good); border-color:var(--good); color:
 
   renderRefs();
 
+  /* ---- merch ---- */
+  var GATES = [
+    ['g1', 'G1', '2026-09-29', 'Blanks ordered — two dog-tag listings, 50 lighters, 25 coolers, 24 heavyweight black totes, fluorescent HTV, fabric spray'],
+    ['res', '', '2026-10-02', 'Reservations booked — Marksbury Roland (Oct 5/6), Eastside laser (Oct 7/8)'],
+    ['g2', 'G2', '2026-10-03', 'Files signed — A007 sticker sheet, A008 button face, A010 tag marking, A011 lighter decal, A012 cooler wrap, A009 tote'],
+    ['g3', 'G3', '2026-10-08', 'Tag blank marks clean on the laser (anodized, not painted)'],
+    ['g4', 'G4', '2026-10-09', 'Tote sample picked — HTV or stencil'],
+    ['r1', '', '2026-10-16', 'Round 1 complete — everything made'],
+    ['g5', 'G5', '2026-10-23', 'Table packed — price card, float, Square tested, counted in, register seeded']
+  ];
+  var TODO = [
+    ['agree', 'Sign the Experiential Learning Agreement (either branch, in person) — skip if done'],
+    ['order', 'Place the blank order (list in implementation.md)'],
+    ['roland', 'Reserve the Marksbury Roland — reserve.lexpublib.org or 859-231-5500 x2822'],
+    ['laser', 'Reserve the Eastside laser — x2207'],
+    ['signoff', 'One sign-off session for the six files (~Oct 2–3)'],
+    ['square', 'Square Tap to Pay set up and tested with one real tap'],
+    ['tax', 'Kentucky sales-tax registration'],
+    ['float', 'Cash float — ones and fives']
+  ];
+  var ITEMS = [
+    ['stickers', 'Stickers', 2, 150, 'two designs'],
+    ['buttons', 'Buttons 2.25"', 3, 50, ''],
+    ['magnets', 'Magnets 2.25"', 4, 30, ''],
+    ['tags', 'Dog tags', 8, 30, 'No. 021–050'],
+    ['totes', 'Totes', 15, 24, ''],
+    ['lighters', 'Lighters', 3, 50, ''],
+    ['coolers', 'Can coolers', 5, 24, '']
+  ];
+  var GKEY = 'splatter-ops-merch-gates', TKEY = 'splatter-ops-merch-todo',
+      CKEY = 'splatter-ops-merch-counts', SKEY = 'splatter-ops-merch-show';
+  var gates = {}, todo = {}, counts = {}, mshow = '2026-10-24';
+  try { gates = JSON.parse(localStorage.getItem(GKEY) || '{}') || {}; } catch (e) { }
+  try { todo = JSON.parse(localStorage.getItem(TKEY) || '{}') || {}; } catch (e) { }
+  try { counts = JSON.parse(localStorage.getItem(CKEY) || '{}') || {}; } catch (e) { }
+  try { mshow = localStorage.getItem(SKEY) || mshow; } catch (e) { }
+
+  function today() { var n = new Date(); return Date.UTC(n.getFullYear(), n.getMonth(), n.getDate()); }
+  function dueLabel(iso) {
+    var p = iso.split('-'); return ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][+p[1]-1] + ' ' + (+p[2]);
+  }
+  function gateRow(g) {
+    var on = gates[g[0]] ? ' checked' : '';
+    var p = g[2].split('-'), due = Date.UTC(+p[0], +p[1]-1, +p[2]);
+    var late = (!gates[g[0]] && today() > due) ? ' <span class="late">late</span>' : '';
+    return '<li><label><input type="checkbox" data-gate="' + g[0] + '"' + on + '>' +
+      '<span class="t">' + (g[1] ? '<b>' + g[1] + '</b> · ' : '') + g[3] + late + '</span>' +
+      '<span class="due">' + dueLabel(g[2]) + '</span></label></li>';
+  }
+  function todoRow(t) {
+    var on = todo[t[0]] ? ' checked' : '';
+    return '<li><label><input type="checkbox" data-todo="' + t[0] + '"' + on + '>' +
+      '<span class="t">' + t[1] + '</span><span class="len"></span></label></li>';
+  }
+  function countRow(x) {
+    var c = (counts[mshow] && counts[mshow][x[0]]) || {};
+    var inv = (c.i === undefined || c.i === null) ? '' : c.i;
+    var outv = (c.o === undefined || c.o === null) ? '' : c.o;
+    return '<li class="mrow"><span class="t"><b>' + x[1] + '</b>' +
+      (x[4] ? ' <span class="flag">· ' + x[4] + '</span>' : '') +
+      ' <span class="len">· plan ' + x[3] + '</span></span>' +
+      '<span class="price">$' + x[2] + '</span>' +
+      '<input type="number" min="0" inputmode="numeric" data-item="' + x[0] + '" data-k="i" value="' + inv + '" placeholder="in" aria-label="' + x[1] + ' count in">' +
+      '<input type="number" min="0" inputmode="numeric" data-item="' + x[0] + '" data-k="o" value="' + outv + '" placeholder="out" aria-label="' + x[1] + ' count out"></li>';
+  }
+  function renderMerch() {
+    document.getElementById('mgates').innerHTML = GATES.map(gateRow).join('');
+    document.getElementById('mtodo').innerHTML = TODO.map(todoRow).join('');
+    document.getElementById('mcount').innerHTML = ITEMS.map(countRow).join('');
+    document.getElementById('mshow').value = mshow;
+  }
+  function mtotal() {
+    var dollars = 0, n = 0, any = false;
+    ITEMS.forEach(function (x) {
+      var c = (counts[mshow] && counts[mshow][x[0]]) || {};
+      if (c.i !== undefined && c.i !== null && c.o !== undefined && c.o !== null && c.i !== '' && c.o !== '') {
+        var sold = Math.max(0, (+c.i) - (+c.o)); dollars += sold * x[2]; n += sold; any = true;
+      }
+    });
+    document.getElementById('msold').textContent = '$' + dollars;
+    document.getElementById('mitems').textContent = n;
+    var sel = document.getElementById('mshow');
+    document.getElementById('mshowlabel').textContent = sel.options[sel.selectedIndex] ? sel.options[sel.selectedIndex].text : '';
+    document.getElementById('mtotal').hidden = !any || document.getElementById('panel-merch').hidden;
+  }
+  document.addEventListener('change', function (e) {
+    var t = e.target;
+    if (t.dataset && t.dataset.gate) {
+      if (t.checked) gates[t.dataset.gate] = 1; else delete gates[t.dataset.gate];
+      try { localStorage.setItem(GKEY, JSON.stringify(gates)); } catch (err) { }
+      document.getElementById('mgates').innerHTML = GATES.map(gateRow).join('');
+    } else if (t.dataset && t.dataset.todo) {
+      if (t.checked) todo[t.dataset.todo] = 1; else delete todo[t.dataset.todo];
+      try { localStorage.setItem(TKEY, JSON.stringify(todo)); } catch (err) { }
+    } else if (t.id === 'mshow') {
+      mshow = t.value;
+      try { localStorage.setItem(SKEY, mshow); } catch (err) { }
+      document.getElementById('mcount').innerHTML = ITEMS.map(countRow).join('');
+      mtotal();
+    }
+  });
+  document.addEventListener('input', function (e) {
+    var t = e.target;
+    if (!(t.dataset && t.dataset.item)) return;
+    if (!counts[mshow]) counts[mshow] = {};
+    if (!counts[mshow][t.dataset.item]) counts[mshow][t.dataset.item] = {};
+    counts[mshow][t.dataset.item][t.dataset.k] = t.value === '' ? null : Math.max(0, parseInt(t.value, 10) || 0);
+    try { localStorage.setItem(CKEY, JSON.stringify(counts)); } catch (err) { }
+    mtotal();
+  });
+  renderMerch();
+
   var saved = 'next';
   try { saved = localStorage.getItem(TABKEY) || 'next'; } catch (e) { }
-  show(['songs', 'refs'].indexOf(saved) >= 0 ? saved : 'next');
+  show(['songs', 'refs', 'merch'].indexOf(saved) >= 0 ? saved : 'next');
 })();
 </script>
 
