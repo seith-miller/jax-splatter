@@ -70,7 +70,7 @@ purchase that fits them.
 | $15 | tote (table run) | 3 |
 | $25–35 | tee (screen-printed neon at the table; POD photo/one-color online) | 3 / 2 |
 | $30 | card wallet | 3 |
-| $40 | guitar strap | 3 |
+| $40 | guitar strap · engraved Zippo (numbered edition) | 3 |
 | $75 | belt (numbered, hand-finished) | 3 |
 | $300+ | one-of-one: worn stage kit, retired instrument, by announcement | 4 |
 | $1–10 | the music, name-your-price | 1 |
