@@ -67,6 +67,20 @@ is unchanged by this; it is the low end of tier 3.
    product also owes what a relic doesn't: setup, a spec sheet (the build
    sheet in band/instruments/ is it), and a fix-it promise.
 
+## Two rules for margin (Jax, 2026-09-29)
+
+Projected profit is the same sum everywhere — units × (price − cost) — but
+which term you police depends on how many you expect to sell.
+
+| Where | Rule | Why |
+|---|---|---|
+| **Volume** — stickers, buttons, wraps, coolers, totes | **percentage margin** — a floor on (price − cost) ÷ price | per-unit cash is small, so only the ratio guarantees the pile adds up and survives bundles and discounts |
+| **Rare** — pedals, pucks, rigs, instruments, relics | **cash minimum per unit** — a floor on (price − cost) in dollars | units are few, so the percentage is noise; what matters is that each sale clears a number (and for a relic, funds its successor) |
+| **Handmade** — belts, leather | **cash per hour** — the cash minimum divided by Jax's time | the scarce input is hours, not materials |
+
+The multiples quoted below (2.5–4× BOM, product × 1.5–3) are market sanity
+checks, not the rule; the rule is the cash floor.
+
 ## What belongs at each price point
 
 One item per rung, no gaps, so nobody leaves the table without a size of
@@ -106,11 +120,13 @@ pays; above $75 the object must have a story, not just labor.
 - Each one is different because the process is a gesture (hand-dyed,
   hand-splattered), not because we say so.
 
-**Tier 4a — the line.** Cost-plus, not story. **Pedals lead** (Jax,
-2026-09-28): a stompbox is the most merch-shaped object the act builds —
-bought by the people at the show, usable by any band, the mark on the top
-plate lands on other people's boards. Small-run hardware (pedals, pucks)
-prices at 2.5–4× BOM — the standard for boutique
+**Tier 4a — the line.** A cash minimum per unit, not a percentage.
+**Pedals lead** (Jax, 2026-09-28): a stompbox is the most merch-shaped
+object the act builds — bought by the people at the show, usable by any
+band, the mark on the top plate lands on other people's boards. Set the
+floor per object (what a pedal sale must clear; what a guitar sale must
+clear); the market check is that small-run hardware (pedals, pucks) sits
+at 2.5–4× BOM — the standard for boutique
 electronics, and what covers the hours, the failures and the support.
 Instruments price at BOM + hours at ≥$40–60/hr + ≥40%, sanity-checked
 against boutique headless builders ($1.5–3k). Batches of 3–10 per model
