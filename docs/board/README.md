@@ -24,6 +24,11 @@ the network can reach it. Stop it with Ctrl-C.
   originals, **Covers** (neither act's), and **Jax Splatter**. Real lengths
   off the files; tick to build a set and watch the running time. Picks are
   kept in this browser only.
+- **Merch** — round 1 against the three shows: the gates from
+  [merch/implementation.md](../../merch/implementation.md) (red when the
+  date passed unticked), Jax's this-week list, and the count — in before
+  doors, out after, per show; the tally is list price. Kept in this browser
+  only.
 
 ## What's on it
 
