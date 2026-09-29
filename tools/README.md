@@ -23,3 +23,14 @@ with sync_playwright() as pw:
     b.close()
 PY
 ```
+
+## `wordmark-svg.py` → `brand/reference/wordmark/svg/`
+
+Outlines the JAX-A002 wordmark from Pathway Gothic One (OFL, `tools/`) into
+SVG paths with the signed spacing (letter-spacing .015em, .30em word gap,
+kerning via HarfBuzz). Dark, light, one-colour cut, and JAX-crop variants.
+
+```bash
+python3 -m venv .venv && .venv/bin/pip install fonttools uharfbuzz
+.venv/bin/python tools/wordmark-svg.py            # writes the five SVGs
+```
