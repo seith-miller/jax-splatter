@@ -43,7 +43,10 @@ crate first).
 
 ## The round (Jax, 2026-09-10)
 
-Stickers · buttons · magnets · dog tags · tote bags · lighters · can coolers.
+Stickers · buttons · dog tags · tote bags · lighters · can coolers.
+
+**Magnets shelved (Jax, 2026-09-28)** — same press and face as the buttons,
+so they're a one-visit add whenever wanted.
 
 **Tees swapped for totes (Jax, 2026-09-10):** one SKU, no sizes, the library
 makes the whole run, flat canvas takes the neon and the stencil process
@@ -52,13 +55,12 @@ deserves.
 
 **Button standard (Jax, 2026-09-10): one size, 2.25".** It is the only size
 both branches stock, it fits the A006 avatar and the full wordmark legibly,
-and one face template (2.633" circle) serves buttons and magnets alike.
+and one face template (2.633" circle) serves buttons — and magnets, if they come back.
 
 | Item | Make | COGS ea | Sell | Qty | Outlay | Gross at sell-through | Status |
 |---|---|---|---|---|---|---|---|
 | **Stickers** — two designs (Jax, 2026-09-10): wordmark kiss-cut 4×1.25" with jaxsplatter.com small beneath; JAX splat die-cut 3". QR tile dropped. | Marksbury Roland, sticker paper $2/ft | $0.06–0.13 | $2 · 3/$5 · free in every bag | ~150 (90 + 60) | ~$12 | ~$85 (50 sold) | ready to file |
 | **Buttons** — 2.25" only (the one size both branches have); avatar face | either branch, 2.25" button maker | ~$0.36 | $3 · 2/$5 | 50 | ~$18 | ~$125 | ready to file |
-| **Magnets** — 2.25", same face, magnet back | either branch, 2.25" button maker | ~$0.41 | $4 | 30 | ~$13 | ~$120 | ready to file |
 | **Dog tags** — colored anodized aluminum blanks (50×29×2 mm, ~100/pack with chains), laser-marked, numbered | either laser; test one tag first (painted vs anodized) | ~$0.30 | $8 | 30 | ~$25 (one pack) | ~$240 | blank candidate found (Jax, 2026-09-10); pink or black, not green |
 | **Tote bag** — heavyweight black canvas (10–12 oz, ~15×16"), wordmark in Bone HTV + pink X, or the wall-splat stencil | Cricut HTV / stencil mask + fabric spray, either branch; BYO blanks | ~$3.50 | $15 | 24 | ~$85 | ~$360 | design pick (HTV vs stencil) then file |
 | **Lighters** — Bic/Clipper with a permanent-vinyl wordmark decal | Cricut permanent vinyl, either branch | ~$1.00 | $3 | 50 | ~$50 | ~$150 | ready to file |
@@ -66,9 +68,9 @@ and one face template (2.633" circle) serves buttons and magnets alike.
 
 | | Round 1 |
 |---|---|
-| Outlay | ~$255 |
-| Gross at full sell-through | ~$1,090 |
-| Break-even sell-through | ~23% |
+| Outlay | ~$240 |
+| Gross at full sell-through | ~$970 |
+| Break-even sell-through | ~25% |
 
 **Table kit, not merch (confirm):** 24×72" wordmark banner with URL + QR on
 the Eastside HP (~$27) and a price card in the brand type. The table has to
@@ -160,7 +162,7 @@ series (021–050).
 | Proposed ID | slug | what gets signed |
 |---|---|---|
 | JAX-A007 | sticker-set | the Roland print+cut sheet: two designs with bleed and CutContour |
-| JAX-A008 | button-face | one 2.633" face circle for the 2.25" maker — buttons and magnets |
+| JAX-A008 | button-face | one 2.633" face circle for the 2.25" maker |
 | JAX-A009 | tote | the tote art: HTV cut file or stencil mask, placement, blank spec |
 | JAX-A010 | dog-tag | marking file, both faces, numbering scheme |
 | JAX-A011 | lighter-decal | permanent-vinyl cut file, ~2.3×0.8" |
