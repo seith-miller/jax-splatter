@@ -41,6 +41,29 @@ crate first).
    own code) and sign a v2. Wordmark-only items are clean (Pathway Gothic
    One is SIL OFL).
 
+## Committed for Oct 24 (2026-09-29)
+
+Twenty-five days out, nothing ordered. What the table **will** have, and
+what it has only if a test passes:
+
+| Commit | Why it's safe |
+|---|---|
+| Stickers — the wordmark kiss-cut (the splat die-cut only if its rights clear) | one Roland job, no blanks to wait on |
+| Buttons 2.25" — JAX-crop wordmark face (the A006 face only if the rights clear) | same visit, parts bought at the branch |
+| Wrapped lighters | same Roland job; Bic Maxis arrive in days |
+| Can coolers | one sublimation session; blanks cheap and fast |
+| Price card | paper |
+
+| Stretch — promised only once its gate passes (by Oct 9) | Gate |
+|---|---|
+| Dog tags 021–050 | one blank marks clean; laser slot booked |
+| Totes | sample picked (HTV vs stencil); press session booked |
+| Zippo proof, one unit | a laser slot |
+
+Conditions on the commit: blanks ordered by **Oct 1**; the Marksbury Roland
+reserved for the week of **Oct 5**. Miss those and the committed set is
+stickers and buttons.
+
 ## The round (Jax, 2026-09-10)
 
 Stickers · buttons · dog tags · tote bags · lighters (two kinds) · can coolers.
