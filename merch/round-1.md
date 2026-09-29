@@ -173,18 +173,10 @@ One → outlined SVG from `brand/reference/wordmark/jax-wordmark.html`) —
 that one file feeds the Cricut, the lasers, the Roland and the sublimation
 wrap.
 
-## Schedule against Oct 24
+## Schedule
 
-| Week | What | Where |
-|---|---|---|
-| Sep 14–18 | Sign the agreement; recon visit with the [first-visit checklist](makerspace.md#first-visit-checklist--questions-for-staff) — laser metal-marking and acrylic answers decide the dog-tag process. Order blanks: lighters, can coolers, dog-tag blanks (one pack), heavyweight black totes ×24, fluorescent HTV / fabric spray. Wordmark SVG + sticker/button/lighter/cooler/tote files → candidates → Jax signs. Two tote samples (HTV vs stencil) → pick. Optional: Sep 15 button class (Eastside), Sep 17 Cricut class (Marksbury). | both |
-| Sep 19 | MULTIPASS — clear. | — |
-| Sep 21–25 | Marksbury run: Roland stickers + button faces (reserve); buttons and magnets pressed same visit; can coolers sublimated; lighter decals cut; dog-tag marking test. Sep 26–27 weekend walk-in for overflow. | Marksbury |
-| Sep 28–Oct 2 | Tote run on the heat press; dog-tag jig + run 021–050 (reserve the laser); banner on the HP if confirmed (reserve). Oct 3–4 Eastside weekend for overflow. | Eastside |
-| Oct 5–9 | Fixes and second batch; flyers for Oct 24; puck enclosures. | either |
-| Oct 12–16 | Buffer. Oct 17–18 Eastside weekend if needed. | — |
-| **Oct 24** | **DILDOZER — the merch table debuts.** | — |
-| Oct 26–30 | Restock for Nov 6 Louisville from the sell-through numbers. | both |
+Superseded 2026-09-28 by [implementation.md](implementation.md) — the
+run sheet across Oct 24, Nov 6 and Dec 19, with orders, visits, gates.
 
 ## Selling it
 
