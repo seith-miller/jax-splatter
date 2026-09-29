@@ -46,8 +46,9 @@ crate first).
 Stickers · buttons · dog tags · tote bags · lighters (two kinds) · can coolers.
 
 **Two lighters (Jax, 2026-09-28):** vinyl-wrapped Bic-style plastic at $3, and
-laser-engraved Zippos as a numbered edition at $40. The Zippo is the round's
-first limited edition.
+a laser-engraved Zippo — one proof unit first. At $22 a blank a $40 Zippo
+runs 45% gross against 65–90% on everything else; the proof tests $50 and
+the engraving before any edition.
 
 **Magnets shelved (Jax, 2026-09-28)** — same press and face as the buttons,
 so they're a one-visit add whenever wanted.
@@ -68,14 +69,14 @@ and one face template (2.633" circle) serves buttons — and magnets, if they co
 | **Dog tags** — colored anodized aluminum blanks (50×29×2 mm, ~100/pack with chains), laser-marked, numbered | either laser; test one tag first (painted vs anodized) | ~$0.30 | $8 | 30 | ~$25 (one pack) | ~$240 | blank candidate found (Jax, 2026-09-10); pink or black, not green |
 | **Tote bag** — heavyweight black canvas (10–12 oz, ~15×16"), wordmark in Bone HTV + pink X, or the wall-splat stencil | Cricut HTV / stencil mask + fabric spray, either branch; BYO blanks | ~$3.50 | $15 | 24 | ~$85 | ~$360 | design pick (HTV vs stencil) then file |
 | **Lighters, wrapped** — Bic-style plastic, full vinyl wrap (~2.9×2.1" around the body) | Marksbury Roland: printed on sticker stock, contour-cut, laminated if the branch has it; fallback Cricut permanent vinyl (cut, true neon) | ~$1.00 | $3 | 50 | ~$50 | ~$150 | ready to file |
-| **Lighters, Zippo** — genuine matte-black Zippo (218), wordmark laser-engraved on the lid, unit-numbered on the base | either laser; insert out, unfueled, in a jig | ~$20 | $40 | 12 (edition 1) | ~$240 | ~$480 | blank to order; test one |
+| **Lighters, Zippo** — genuine matte-black Zippo (218), wordmark laser-engraved on the lid, numbered on the base | either laser; insert out, unfueled, in a jig | ~$22 | $50 | **1 — a proof** (Jax, 2026-09-28) | ~$25 | $50 | one unit to prove the engraving and the price; an edition only if it sells and the blank lands under ~$20 |
 | **Can coolers** — light-ground wordmark + "Get Splattered!" on white neoprene | Marksbury sublimation + heat press; BYO blanks | ~$1.70 | $5 | 24 | ~$41 | ~$120 | ready to file |
 
 | | Round 1 |
 |---|---|
-| Outlay | ~$480 (half of it the twelve Zippos) |
-| Gross at full sell-through | ~$1,450 |
-| Break-even sell-through | ~33% |
+| Outlay | ~$265 |
+| Gross at full sell-through | ~$1,020 |
+| Break-even sell-through | ~26% |
 
 **Table kit, not merch (confirm):** 24×72" wordmark banner with URL + QR on
 the Eastside HP (~$27) and a price card in the brand type. The table has to
