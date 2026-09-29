@@ -10,7 +10,8 @@ goes to print without a JAX-A### behind it.
 |---|---|
 | [makerspace.md](makerspace.md) | The factory: Lexington Public Library's two makerspaces — which branch has which machine, hours, prices, rules, the first-visit checklist. |
 | [tiers.md](tiers.md) | The philosophy: four tiers (digital, print-on-demand, table exclusives, one-of-one), how they reinforce each other, the price ladder, scarcity and story at the top, the leather line costed. |
-| [round-1.md](round-1.md) | The first merch round — the decided list with COGS and sell prices, sign-off candidates, schedule against Oct 24. |
+| [round-1.md](round-1.md) | The first merch round — the decided list with COGS and sell prices, sign-off candidates. |
+| [implementation.md](implementation.md) | The run sheet: three shows (Oct 24, Nov 6, Dec 19), who does what, order list, makerspace calendar, gates and fallbacks. |
 | [dmx-puck.md](dmx-puck.md) | The DMX puck — the act's lighting standard with a second life as a micro-manufactured product. |
 | `inventory.md` | *(created when round 1 is produced)* counts in/out per show, cash in; feeds band/instruments/BUDGET.md. |
 | `register.md` | *(created with the first belt)* every unit-numbered object — tags, belts, straps, instruments, limited prints — number → who / where / which hide. Batches of everything else: inventory.md. |
