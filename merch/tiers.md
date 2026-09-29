@@ -14,7 +14,7 @@ is unchanged by this; it is the low end of tier 3.
 | 1 | Paid digital — the music | $1–10, name-your-price | **Reach.** The door. Turns a listener into a fan with an email address. | none | ~100% | Bandcamp | **empty** — needs the first finished original ([distribution-plan.md](../docs/distribution-plan.md)); Bandcamp unclaimed |
 | 2 | Print-on-demand — tees, totes, hoodies | $20–45 | **Identity at scale.** Anyone, anywhere, any size, wears the mark. | none | 30–40% | Printful/Printify → Bandcamp merch | not set up |
 | 3 | Table exclusives — made by the act, numbered, limited | $2–75 | **The reason to come to the table.** Round 1 is its low end; leather is its high end. | inventory + Jax's hours | 60–85% | the makerspace, Jax's bench | round 1 in production |
-| 4a | Manufactured goods — anything the act builds, sold as a product: DMX pucks, pedals, clamps, rigs and racks, instruments (band/instruments/, merch/dmx-puck.md) | $60–3,000 by object | **A line.** Serialized, batched, repeatable; priced on full cost. | materials + hours | small-run hardware 2.5–4× BOM; instruments ≥40% over full cost | the bench, the makerspace | puck at gate 1; instrument designs in progress |
+| 4a | Manufactured goods — anything the act builds, sold as a product: **guitar pedals** (the lead item — the LM386 pedal in smart-part-guitar-pedals, locked 2026-09-21), DMX pucks, rigs and racks, instruments (band/instruments/, merch/dmx-puck.md). Clamps: probably not (Jax). | $60–3,000 by object | **A line.** Serialized, batched, repeatable; priced on full cost. | materials + hours | small-run hardware 2.5–4× BOM; instruments ≥40% over full cost | the bench, the makerspace | pedal circuit locked, enclosure in smart-part; puck at gate 1; instrument designs in progress |
 | 4b | One-of-one — the stage-used unit of any of the above, worn stage kit | product price × 1.5–3 | **Myth.** Provenance objects; the instrument program's retirement fund. | none (it already exists) | n/a | the stage | nothing retired yet |
 
 ## How the tiers reinforce each other
@@ -56,7 +56,7 @@ is unchanged by this; it is the low end of tier 3.
    and pays for its successor. "Buy my guitar" is the instrument program's
    funding model, not a joke.
 7. **Two kinds of everything the act builds** (Jax, 2026-09-28): the
-   units Jax *manufactures* — pucks, pedals, clamps, rigs, instruments —
+   units Jax *manufactures* — pedals first, then pucks, rigs, instruments —
    and the units Jax *used on stage*. Same line, same serials — the relic
    is serial 001 of the model anyone can buy 004–010 of. The relic
    sells the line (it proves the instrument is real, not a prop); the line
@@ -86,7 +86,7 @@ purchase that fits them.
 | $75 | belt (numbered, hand-finished) | 3 |
 | $60–90 | DMX puck from the line | 4a |
 | $150–300 | a pedal from the line | 4a |
-| $300–800 | a rig, rack or clamp set from the line | 4a |
+| $300–800 | a rig or rack from the line | 4a |
 | $1,200–3,000 | a guitar from the line — serialized, batched | 4a |
 | product × 1.5–3 | the one Jax played — by announcement | 4b |
 | $1–10 | the music, name-your-price | 1 |
@@ -106,8 +106,11 @@ pays; above $75 the object must have a story, not just labor.
 - Each one is different because the process is a gesture (hand-dyed,
   hand-splattered), not because we say so.
 
-**Tier 4a — the line.** Cost-plus, not story. Small-run hardware (pucks,
-pedals, clamps) prices at 2.5–4× BOM — the standard for boutique
+**Tier 4a — the line.** Cost-plus, not story. **Pedals lead** (Jax,
+2026-09-28): a stompbox is the most merch-shaped object the act builds —
+bought by the people at the show, usable by any band, the mark on the top
+plate lands on other people's boards. Small-run hardware (pedals, pucks)
+prices at 2.5–4× BOM — the standard for boutique
 electronics, and what covers the hours, the failures and the support.
 Instruments price at BOM + hours at ≥$40–60/hr + ≥40%, sanity-checked
 against boutique headless builders ($1.5–3k). Batches of 3–10 per model
