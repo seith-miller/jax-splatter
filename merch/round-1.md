@@ -14,7 +14,10 @@ crate first).
    wordmark, A005 key art, A006 avatar) are the only source art. Each
    production file (sticker sheet, button face, HTV cut file, marking
    file…) becomes a candidate and gets signed before the machine runs —
-   proposed IDs below.
+   proposed IDs below. That ID is the item's **release number**, printed
+   small on the back or edge where it fits; each production run is a
+   **batch** of it, logged in `merch/inventory.md`. Unit numbers only on
+   the dog tags in this round.
 2. **Neon by cut, photo by print.** Slime #39ff14 sits at 99% of sRGB's
    green chroma and Splatter Pink is near the edge — no CMYK, eco-solvent
    or dye-sub process can hit them; they print dull. The neons are
@@ -118,9 +121,13 @@ is emerald, not Slime). Test one tag before the run: painted blanks flake.
 
 ### Numbering — how it works
 
-The number is a promise: **one continuous series for the life of the act,
-every tag unique, never reissued.** Three digits with leading zeros
-(001–999); the day it passes 999 is a good day.
+Dog tags are an **open series** — unit-numbered, no cap (Jax, 2026-09-28:
+most items carry only a release number and a batch; unit numbers are for
+limited editions and open series like this one — see
+[tiers.md](tiers.md)). One continuous tag series for the life of the act,
+every tag unique, never reissued. Three digits with leading zeros
+(001–999); the day it passes 999 is a good day. Round 1 = batch 1 of the
+series (021–050).
 
 | Block | Who | Rule |
 |---|---|---|

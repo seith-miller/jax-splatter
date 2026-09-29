@@ -33,12 +33,18 @@ is unchanged by this; it is the low end of tier 3.
 3. **Up the funnel: the list.** Tier-1 downloads are the email list; the
    list is how a tier-4 drop gets announced to the people who'd want it.
    Without tier 1 the top of the ladder has no audience.
-4. **The number is the spine.** Dog tags started the series (001 Jax,
-   002–020 cast, fans from 021). Belts get numbers. Instruments get
-   numbers. One register for every numbered object the act has made —
-   `merch/register.md`, the crew roster and the provenance ledger in one
-   file. A number is a promise that the object is unique and the act knows
-   where it went.
+4. **Three numbers, not one** (Jax, 2026-09-28). Every object carries a
+   **release number** — the signed design, `JAX-A###`, printed small where
+   it fits, like a catalogue number on a record. Every production run is a
+   **batch** (`b1`, `b2`…) of that release: date, quantity, machine, blank
+   and dye lots, tracked in `merch/inventory.md`. Only some objects carry a
+   **unit number**: *limited editions* state the edition (No. 7/12) and
+   *open series* count without a cap (dog tag No. 047, the crew keeps
+   growing). A series and a batch are not the same thing — tags 021–050 are
+   batch 1 of the tag series; belts 1–12 are edition 1, which might be made
+   in two batches. `merch/register.md` holds only the unit-numbered
+   objects: number → who / where / which hide. A unit number is a promise
+   that the object is unique and the act knows where it went.
 5. **The hide funds five SKUs.** A side of veg-tan is belts first (prime
    strips), then guitar straps (long offcuts), then fobs, pick holders and
    card wallets (scrap). The offcuts drop the effective belt-blank cost
@@ -76,9 +82,9 @@ pays; above $75 the object must have a story, not just labor.
 ## Scarcity and story at the top
 
 **Tier 3 limited (belts and up).**
-- Numbered, in the same series as the tags. Run size is honest: it is the
-  number Jax actually made, and it's printed on nothing — the register is
-  the proof.
+- Unit-numbered: limited editions state the edition size (No. 7/12);
+  open series just count. Edition size is honest — it is the number Jax
+  actually made — and the register is the proof.
 - Sold at the table first. Leftovers go online after the show, never
   before. The table is the primary market by rule.
 - Each one is different because the process is a gesture (hand-dyed,
@@ -150,15 +156,16 @@ the offcut line alongside.
 
 **The offcut line** (same hide, same story, fills the $8–40 rungs): guitar
 straps 2.5" × 50" ($40), key fobs ($8), pick holders ($12), card wallets
-($30). Each numbered in the series; each register line says which belt's
-hide it came from.
+($30). Straps and wallets unit-numbered; fobs and pick holders batch-only.
+Each register line says which belt's hide it came from.
 
 ## What this changes
 
 - Round 1: nothing. It is tier 3's low end and ships as planned.
 - New file when the first belt is cut: `merch/register.md` — every
-  numbered object (tags, belts, straps, instruments), number → who / where
-  / from which hide.
+  unit-numbered object (tags, belts, straps, instruments, limited prints),
+  number → who / where / from which hide. Batches of everything else live
+  in `merch/inventory.md`.
 - Tier 1 and 2 are set-up tasks that live elsewhere: distribution-plan.md
   (the first release creates tier 1) and accounts-inventory row 4
   (Bandcamp, which also hosts tier-2 POD).
