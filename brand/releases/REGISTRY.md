@@ -57,7 +57,10 @@ Proposed but **not signed off**.
 
 | slug | what it is | source of truth |
 |---|---|---|
-| — | *none* | — |
+| sticker-sheet (→ A007) | wordmark kiss-cut sticker 4×1.25 in, 32-up Roland sheet with CutContour | `../reference/merch/sticker-sheet/` |
+| button-face (→ A008) | JAX-crop face, 2.633 in cut for the 2.25 in maker, 12-up | `../reference/merch/button-face/` |
+| lighter-wrap (→ A011) | Bic Maxi full wrap 2.875×2.375 in, 30-up Roland sheet | `../reference/merch/lighter-wrap/` |
+| cooler-wrap (→ A012) | 12 oz can-cooler sublimation wrap 8×4 in, mirrored 2-up | `../reference/merch/cooler-wrap/` |
 
 ## Withdrawn
 
