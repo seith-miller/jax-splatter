@@ -16,8 +16,8 @@ crate first).
    file…) becomes a candidate and gets signed before the machine runs —
    proposed IDs below. That ID is the item's **release number**, printed
    small on the back or edge where it fits; each production run is a
-   **batch** of it, logged in `merch/inventory.md`. Unit numbers only on
-   the dog tags in this round.
+   **batch** of it, logged in `merch/inventory.md`. Unit numbers on the dog
+   tags (open series) and the Zippos (edition of 12) in this round.
 2. **Neon by cut, photo by print.** Slime #39ff14 sits at 99% of sRGB's
    green chroma and Splatter Pink is near the edge — no CMYK, eco-solvent
    or dye-sub process can hit them; they print dull. The neons are
@@ -43,7 +43,11 @@ crate first).
 
 ## The round (Jax, 2026-09-10)
 
-Stickers · buttons · dog tags · tote bags · lighters · can coolers.
+Stickers · buttons · dog tags · tote bags · lighters (two kinds) · can coolers.
+
+**Two lighters (Jax, 2026-09-28):** vinyl-wrapped Bic-style plastic at $3, and
+laser-engraved Zippos as a numbered edition at $40. The Zippo is the round's
+first limited edition.
 
 **Magnets shelved (Jax, 2026-09-28)** — same press and face as the buttons,
 so they're a one-visit add whenever wanted.
@@ -63,14 +67,15 @@ and one face template (2.633" circle) serves buttons — and magnets, if they co
 | **Buttons** — 2.25" only (the one size both branches have); avatar face | either branch, 2.25" button maker | ~$0.36 | $3 · 2/$5 | 50 | ~$18 | ~$125 | ready to file |
 | **Dog tags** — colored anodized aluminum blanks (50×29×2 mm, ~100/pack with chains), laser-marked, numbered | either laser; test one tag first (painted vs anodized) | ~$0.30 | $8 | 30 | ~$25 (one pack) | ~$240 | blank candidate found (Jax, 2026-09-10); pink or black, not green |
 | **Tote bag** — heavyweight black canvas (10–12 oz, ~15×16"), wordmark in Bone HTV + pink X, or the wall-splat stencil | Cricut HTV / stencil mask + fabric spray, either branch; BYO blanks | ~$3.50 | $15 | 24 | ~$85 | ~$360 | design pick (HTV vs stencil) then file |
-| **Lighters** — Bic/Clipper with a permanent-vinyl wordmark decal | Cricut permanent vinyl, either branch | ~$1.00 | $3 | 50 | ~$50 | ~$150 | ready to file |
+| **Lighters, wrapped** — Bic-style plastic, full vinyl wrap (~2.9×2.1" around the body) | Marksbury Roland: printed on sticker stock, contour-cut, laminated if the branch has it; fallback Cricut permanent vinyl (cut, true neon) | ~$1.00 | $3 | 50 | ~$50 | ~$150 | ready to file |
+| **Lighters, Zippo** — genuine matte-black Zippo (218), wordmark laser-engraved on the lid, unit-numbered on the base | either laser; insert out, unfueled, in a jig | ~$20 | $40 | 12 (edition 1) | ~$240 | ~$480 | blank to order; test one |
 | **Can coolers** — light-ground wordmark + "Get Splattered!" on white neoprene | Marksbury sublimation + heat press; BYO blanks | ~$1.70 | $5 | 24 | ~$41 | ~$120 | ready to file |
 
 | | Round 1 |
 |---|---|
-| Outlay | ~$240 |
-| Gross at full sell-through | ~$970 |
-| Break-even sell-through | ~25% |
+| Outlay | ~$480 (half of it the twelve Zippos) |
+| Gross at full sell-through | ~$1,450 |
+| Break-even sell-through | ~33% |
 
 **Table kit, not merch (confirm):** 24×72" wordmark banner with URL + QR on
 the Eastside HP (~$27) and a price card in the brand type. The table has to
@@ -165,9 +170,10 @@ series (021–050).
 | JAX-A008 | button-face | one 2.633" face circle for the 2.25" maker |
 | JAX-A009 | tote | the tote art: HTV cut file or stencil mask, placement, blank spec |
 | JAX-A010 | dog-tag | marking file, both faces, numbering scheme |
-| JAX-A011 | lighter-decal | permanent-vinyl cut file, ~2.3×0.8" |
+| JAX-A011 | lighter-wrap | full-wrap print+cut file for the Bic body |
+| JAX-A013 | zippo | lid engraving file + base numbering |
 | JAX-A012 | can-cooler | light-ground sublimation wrap |
-| JAX-A013 | table-banner | 24×72 layout with URL + QR (if confirmed) |
+| JAX-A014 | table-banner | 24×72 layout with URL + QR (if confirmed) |
 
 Rows land in the registry's Candidates table when the files exist; none
 of them exist yet. The wordmark needs a vector export first (Pathway Gothic
