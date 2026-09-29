@@ -8,7 +8,7 @@ growing it show by show. Sources: [round-1.md](round-1.md) (what),
 
 | Date | Show | Room | What's on the table |
 |---|---|---|---|
-| **Oct 24** | DILDOZER, The Green Lantern, Lexington — headline, cap 150 | sellout is the goal | **Round 1**: stickers, buttons, magnets, dog tags 021–050, totes, lighters, can coolers |
+| **Oct 24** | DILDOZER, The Green Lantern, Lexington — headline, cap 150 | sellout is the goal | **Round 1**: stickers, buttons, dog tags 021–050, totes, lighters, can coolers |
 | **Nov 6** | DILDOZER, Louisville | TBD | Round 1 restocked from the Oct 24 count + **belts edition 1 (12)** if approved |
 | **Dec 19** | JAX SPLATTER — the debut | TBD | The full ladder: round 1, leather line, **the tee** (screen-printed, after the design pass), beanies once the embroidery machine is in |
 
@@ -37,7 +37,7 @@ restock.
 | Totes | 12 oz black cotton canvas, ~15×16", self handles | 24 | $75 |
 | HTV | Siser EasyWeed fluorescent pink 12×36"; fluorescent green 12×36"; cream/bone 12×5 ft | 1 each | $30 |
 | Fabric spray (stencil candidate) | fluorescent pink + green fabric spray paint | 1 each | $15 |
-| Bought at the branch | 2.25" pin parts ×50, magnet parts ×30, Roland sticker paper + photo paper, 12×12 transfer tape | — | ~$45 |
+| Bought at the branch | 2.25" pin parts ×50, Roland sticker paper + photo paper, 12×12 transfer tape | — | ~$35 |
 | | | **Total** | **~$300** |
 
 ## The calendar (makerspace days only)
@@ -48,7 +48,7 @@ E = Eastside (Wed–Fri, 1st/3rd weekends) · M = Marksbury (Mon/Tue/Thu/Fri,
 | Week | Days | Do | Gate |
 |---|---|---|---|
 | **Sep 28–Oct 4** | Mon–Tue M · Wed–Fri E · Sat–Sun E | Orders placed. Files built and signed. Reservations made. Recon visit if none yet (the [first-visit checklist](makerspace.md#first-visit-checklist--questions-for-staff): acrylic policy, IR module on the small laser, PLA colours, sticker stock). Optional Tue Sep 29 5pm button class (E). | **G1** blanks ordered · **G2** files signed |
-| **Oct 5–11** | Mon–Tue M · Wed–Fri E · Sat–Sun M | **Mon/Tue M:** Roland — sticker sheet + button faces; press 50 buttons + 30 magnets; cut and apply lighter decals; sublimate coolers if blanks landed. **Wed–Fri E:** dog-tag test on one blank → jig → run 021–050; two tote samples (HTV vs stencil) on the auto press. **Sat–Sun M:** catch-up for anything the blanks delayed. | **G3** tag blank marks clean (anodized) · **G4** tote sample picked |
+| **Oct 5–11** | Mon–Tue M · Wed–Fri E · Sat–Sun M | **Mon/Tue M:** Roland — sticker sheet + button faces; press 50 buttons; cut and apply lighter decals; sublimate coolers if blanks landed. **Wed–Fri E:** dog-tag test on one blank → jig → run 021–050; two tote samples (HTV vs stencil) on the auto press. **Sat–Sun M:** catch-up for anything the blanks delayed. | **G3** tag blank marks clean (anodized) · **G4** tote sample picked |
 | **Oct 12–18** | Mon–Tue M · Wed–Fri E · Sat–Sun E | Tote run of 24 (either branch). Second sticker batch if the first looked thin. Show flyers on the Eastside plain roll. Puck enclosures if there's printer time. | round 1 complete |
 | **Oct 19–23** | Mon–Tue M · Wed–Fri E | Table kit: price card printed; banner if confirmed (E, reserve); cash float; Square tested with one real tap; `inventory.md` counted in; `register.md` seeded with 001–020 reserved and 021–050 in stock; packing list. | **G5** table packed Oct 23 |
 | **Oct 24** | — | **The Green Lantern.** A sticker in every bag. Count out after. | — |
