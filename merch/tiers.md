@@ -14,7 +14,8 @@ is unchanged by this; it is the low end of tier 3.
 | 1 | Paid digital — the music | $1–10, name-your-price | **Reach.** The door. Turns a listener into a fan with an email address. | none | ~100% | Bandcamp | **empty** — needs the first finished original ([distribution-plan.md](../docs/distribution-plan.md)); Bandcamp unclaimed |
 | 2 | Print-on-demand — tees, totes, hoodies | $20–45 | **Identity at scale.** Anyone, anywhere, any size, wears the mark. | none | 30–40% | Printful/Printify → Bandcamp merch | not set up |
 | 3 | Table exclusives — made by the act, numbered, limited | $2–75 | **The reason to come to the table.** Round 1 is its low end; leather is its high end. | inventory + Jax's hours | 60–85% | the makerspace, Jax's bench | round 1 in production |
-| 4 | One-of-one — stage-used instruments, worn stage kit | $300–3,000+ | **Myth.** Provenance objects; the instrument program's retirement fund. | none (it already exists) | n/a | the stage | nothing retired yet |
+| 4a | Instruments as product — small-batch guitars Jax manufactures (the takedown platform, band/instruments/) | $1,200–3,000 | **A line.** Serialized, batched, repeatable; priced on full cost. | materials + many hours | ≥40% over full cost | the bench, the makerspace | designs in progress |
+| 4b | One-of-one — the stage-played instrument, worn stage kit | product price × 1.5–3 | **Myth.** Provenance objects; the instrument program's retirement fund. | none (it already exists) | n/a | the stage | nothing retired yet |
 
 ## How the tiers reinforce each other
 
@@ -54,6 +55,16 @@ is unchanged by this; it is the low end of tier 3.
    communicates for a year of shows, then retires into a collector's hands
    and pays for its successor. "Buy my guitar" is the instrument program's
    funding model, not a joke.
+7. **Two kinds of guitar for sale** (Jax, 2026-09-28): the ones Jax
+   *manufactures* and the ones Jax *played*. Same line, same serials —
+   the relic is serial 001 of the model fans can buy 004–010 of. The relic
+   sells the line (it proves the instrument is real, not a prop); the line
+   makes the relic priceable (a market exists for the object underneath
+   the story). Rules: the relic never sells below the product price, or it
+   devalues the line; the product is priced on full cost — BOM plus hours
+   at a real rate plus margin — or it is a hobby with a price tag. A
+   product also owes what a relic doesn't: setup, a spec sheet (the build
+   sheet in band/instruments/ is it), and a fix-it promise.
 
 ## What belongs at each price point
 
@@ -72,7 +83,8 @@ purchase that fits them.
 | $30 | card wallet | 3 |
 | $40 | guitar strap · engraved Zippo (numbered edition) | 3 |
 | $75 | belt (numbered, hand-finished) | 3 |
-| $300+ | one-of-one: worn stage kit, retired instrument, by announcement | 4 |
+| $1,200–3,000 | a guitar from the line — serialized, batched | 4a |
+| product × 1.5–3 | the one Jax played — by announcement | 4b |
 | $1–10 | the music, name-your-price | 1 |
 
 Rules: whole dollars; every rung has one thing, not three; the $8–40 band
@@ -90,7 +102,12 @@ pays; above $75 the object must have a story, not just labor.
 - Each one is different because the process is a gesture (hand-dyed,
   hand-splattered), not because we say so.
 
-**Tier 4 one-of-one.**
+**Tier 4a — the line.** Cost-plus, not story: BOM + hours at ≥$40–60/hr +
+≥40%; sanity-check against boutique headless builders ($1.5–3k). Batch of
+3–5 per model; every unit serialized in the register; the build sheet is
+the spec.
+
+**Tier 4b — one-of-one.**
 - **It has to have done something.** A stage object is sellable after it
   has played shows, not before. The provenance is the setlist: which shows,
   which songs, a photo of it on stage. An instrument built and never played
