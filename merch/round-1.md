@@ -89,7 +89,7 @@ the hold stands regardless.
 **Out of round 1:** the T-shirt (round 2, after the design pass — see
 below), acrylic keychains (dog tags own that slot), key-art print (needs
 print-res re-render + the rights gate), mugs, key-art printable-HTV tee,
-3D-printed tags, kiln/CNC pieces. Bench for round 2.
+3D-printed tags, kiln/CNC pieces, **LED wands** (Jax's tier-2 example, 2026-09-29 — blank glow wands with a wrap; a debut item). Bench for round 2.
 
 Same trips, not for sale: **DMX puck enclosures ×2** (~70 g PLA, ~$10.50
 each — gate 1 of [dmx-puck.md](dmx-puck.md)), **show flyers** for Oct 24 /

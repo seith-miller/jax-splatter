@@ -1,85 +1,69 @@
 # The tiers — a philosophy of merch
 
-Drafted 2026-09-28 from Jax's radio notes (two messages via the foreman,
-2026-09-27). Jax's frame: four tiers — digital downloads, print-on-demand,
-table exclusives (handmade, limited), one-of-one. What follows is how the
-tiers reinforce each other, what belongs at each price point, and what
-scarcity and story look like at the top. Round 1 ([round-1.md](round-1.md))
-is unchanged by this; it is the low end of tier 3.
+Drafted 2026-09-28 from Jax's radio notes; **reframed to three tiers by
+Jax, 2026-09-29.** Round 1 ([round-1.md](round-1.md)) spans tiers 1 and 2.
 
-## The ladder
+## The three tiers
 
-| Tier | What | Price band | Role | Risk | Margin | Made where | Live today |
-|---|---|---|---|---|---|---|---|
-| 1 | Paid digital — the music | $1–10, name-your-price | **Reach.** The door. Turns a listener into a fan with an email address. | none | ~100% | Bandcamp | **empty** — needs the first finished original ([distribution-plan.md](../docs/distribution-plan.md)); Bandcamp unclaimed |
-| 2 | Print-on-demand — tees, totes, hoodies | $20–45 | **Identity at scale.** Anyone, anywhere, any size, wears the mark. | none | 30–40% | Printful/Printify → Bandcamp merch | not set up |
-| 3 | Table exclusives — made by the act, numbered, limited | $2–75 | **The reason to come to the table.** Round 1 is its low end; leather is its high end. | inventory + Jax's hours | 60–85% | the makerspace, Jax's bench | round 1 in production |
-| 4a | Manufactured goods — anything the act builds, sold as a product: **guitar pedals** (the lead item — the LM386 pedal in smart-part-guitar-pedals, locked 2026-09-21), DMX pucks, rigs and racks, instruments (band/instruments/, merch/dmx-puck.md). Clamps: probably not (Jax). | $60–3,000 by object | **A line.** Serialized, batched, repeatable; priced on full cost. | materials + hours | small-run hardware 2.5–4× BOM; instruments ≥40% over full cost | the bench, the makerspace | pedal circuit locked, enclosure in smart-part; puck at gate 1; instrument designs in progress |
-| 4b | One-of-one — the stage-used unit of any of the above, worn stage kit | product price × 1.5–3 | **Myth.** Provenance objects; the instrument program's retirement fund. | none (it already exists) | n/a | the stage | nothing retired yet |
+| Tier | What | Job | Examples | Margin rule |
+|---|---|---|---|---|
+| 1 | **Free or nearly free per unit** | Attract attention, engage the audience, establish the brand. | stickers, downloads / name-your-price music, the sticker in every bag, temporary tattoos | none — the unit cost is the marketing budget; judge by reach |
+| 2 | **High-volume, mass-produced** | Move as many units as possible. | T-shirts, buttons, totes, lighters, can coolers, LED wands, print-on-demand online | **percentage margin** — a floor on (price − cost) ÷ price; ≥60% garments, ≥75% small goods |
+| 3 | **Handmade artifacts** | Give fans something to hold onto; make them part of the experience. | belts and the leather line, engraved Zippos, guitar pedals, instruments Jax builds, the stage-used relic | **cash minimum per unit** — a floor in dollars each sale must clear; for handmade, also **cash per hour** |
 
-## How the tiers reinforce each other
-
-1. **One design family, four material truths.** The wordmark is printed
-   (tier 2), cut in real neon vinyl or burned into leather (tier 3), and
-   scarred into an instrument that played a show (tier 4). Same mark; the
-   material tells you which tier you're holding. This is also why POD and
-   the table don't cannibalize: CMYK cannot print Slime or Splatter Pink,
-   so the neon version of anything *only exists at the show*. Tier 2 is
-   the photo key art and one-color designs that survive DTG; the neon tee
-   is a table exclusive by physics, not policy.
-2. **Down the funnel: story sells the next tier.** A tier-4 guitar that
-   played DILDOZER makes the tier-3 strap "cut from the same hide as the
-   strap on that guitar" worth $40. Tier-3 exclusives make people come to
-   shows. Shows make fans. Fans buy tiers 1–2 from anywhere.
-3. **Up the funnel: the list.** Tier-1 downloads are the email list; the
-   list is how a tier-4 drop gets announced to the people who'd want it.
-   Without tier 1 the top of the ladder has no audience.
-4. **Three numbers, not one** (Jax, 2026-09-28). Every object carries a
-   **release number** — the signed design, `JAX-A###`, printed small where
-   it fits, like a catalogue number on a record. Every production run is a
-   **batch** (`b1`, `b2`…) of that release: date, quantity, machine, blank
-   and dye lots, tracked in `merch/inventory.md`. Only some objects carry a
-   **unit number**: *limited editions* state the edition (No. 7/12) and
-   *open series* count without a cap (dog tag No. 047, the crew keeps
-   growing). A series and a batch are not the same thing — tags 021–050 are
-   batch 1 of the tag series; belts 1–12 are edition 1, which might be made
-   in two batches. `merch/register.md` holds only the unit-numbered
-   objects: number → who / where / which hide. A unit number is a promise
-   that the object is unique and the act knows where it went.
-5. **The hide funds five SKUs.** A side of veg-tan is belts first (prime
-   strips), then guitar straps (long offcuts), then fobs, pick holders and
-   card wallets (scrap). The offcuts drop the effective belt-blank cost
-   and populate the $8–40 rungs with objects that share the belt's story.
-6. **Reinvestment is literal at the top.** D13 says income funds the next
-   phase. Tier 4 is that sentence made physical: an instrument is built,
-   communicates for a year of shows, then retires into a collector's hands
-   and pays for its successor. "Buy my guitar" is the instrument program's
-   funding model, not a joke.
-7. **Two kinds of everything the act builds** (Jax, 2026-09-28): the
-   units Jax *manufactures* — pedals first, then pucks, rigs, instruments —
-   and the units Jax *used on stage*. Same line, same serials — the relic
-   is serial 001 of the model anyone can buy 004–010 of. The relic
-   sells the line (it proves the instrument is real, not a prop); the line
-   makes the relic priceable (a market exists for the object underneath
-   the story). Rules: the relic never sells below the product price, or it
-   devalues the line; the product is priced on full cost — BOM plus hours
-   at a real rate plus margin — or it is a hobby with a price tag. A
-   product also owes what a relic doesn't: setup, a spec sheet (the build
-   sheet in band/instruments/ is it), and a fix-it promise.
+Not for sale at this time (Jax, 2026-09-29): DMX pucks, rigs, clamps. They
+are the act's kit, not merch.
 
 ## Two rules for margin (Jax, 2026-09-29)
 
 Projected profit is the same sum everywhere — units × (price − cost) — but
-which term you police depends on how many you expect to sell.
+which term you police depends on how many you expect to sell. Tier 2 is
+policed by **percentage** (per-unit cash is small; only the ratio
+guarantees the pile adds up and survives bundles). Tier 3 is policed by a
+**cash floor per unit** (units are few; the ratio is noise; each sale has to
+clear a number), and where the object is Jax's hours, by **cash per hour**.
+Tier 1 has no margin rule; its cost is what attention costs.
 
-| Where | Rule | Why |
-|---|---|---|
-| **Volume** — stickers, buttons, wraps, coolers, totes | **percentage margin** — a floor on (price − cost) ÷ price | per-unit cash is small, so only the ratio guarantees the pile adds up and survives bundles and discounts |
-| **Rare** — pedals, pucks, rigs, instruments, relics | **cash minimum per unit** — a floor on (price − cost) in dollars | units are few, so the percentage is noise; what matters is that each sale clears a number (and for a relic, funds its successor) |
-| **Handmade** — belts, leather | **cash per hour** — the cash minimum divided by Jax's time | the scarce input is hours, not materials |
+Market sanity checks, not rules: small-run hardware sits at 2.5–4× BOM;
+a stage relic at 1.5–3× the made-to-sell version, never below it.
 
-The multiples quoted below (2.5–4× BOM, product × 1.5–3) are market sanity
-checks, not the rule; the rule is the cash floor.
+## How the tiers reinforce each other
+
+1. **One design family, three material truths.** The wordmark is printed
+   (tier 2), cut in real neon vinyl or burned into leather and metal
+   (tier 3), and scarred into a relic that played a show (tier 3, top).
+   CMYK cannot print Slime or Splatter Pink, so the neon version of
+   anything *only exists at the show*; print-on-demand gets the photo key
+   art and one-color designs. Tiers 2 and 3 don't cannibalize by physics.
+2. **Tier 1 pays for itself in tier 2.** The sticker in every bag and the
+   free download are how a listener becomes a fan with an address; the
+   list is how a tier-3 drop finds the people who'd want it.
+3. **Story flows down.** A relic that played DILDOZER makes the strap
+   "cut from the same hide" worth $40; the artifacts make people come to
+   the table; the table makes the show a place to be.
+4. **Three numbers, not one** (Jax, 2026-09-28). Every object carries a
+   **release number** — the signed design, `JAX-A###`, printed small like
+   a catalogue number. Every production run is a **batch** (`b1`, `b2`…)
+   tracked in `merch/inventory.md`. Only some objects carry a **unit
+   number**: limited editions state the edition (No. 7/12); open series
+   count without a cap (dog tag No. 047). A series and a batch are not the
+   same thing. `merch/register.md` holds the unit-numbered objects: number
+   → who / where / which hide.
+5. **The hide funds five SKUs.** Belts first, then straps, then fobs, pick
+   holders and wallets from the scrap — one tier-3 story across the $8–75
+   rungs, and a lower effective blank cost.
+6. **Two kinds of everything Jax builds.** The units *made to sell*
+   (pedals, guitars) and the unit *used on stage*. Same line, same
+   serials — the relic is serial 001 of the model anyone can buy 004–010
+   of. The relic proves the object is real; the line gives the relic a
+   market underneath the story. A made-to-sell unit owes what a relic
+   doesn't: a spec sheet (the build sheet in band/instruments/), a setup,
+   a fix-it promise. **Pedals lead** — a stompbox is the most merch-shaped
+   thing the act builds, and the mark on its top plate lands on other
+   people's boards.
+7. **Reinvestment is literal at the top.** D13 says income funds the next
+   phase. A relic retires when its successor is built and pays for it;
+   its cash floor is the successor's BOM.
 
 ## What belongs at each price point
 
@@ -88,69 +72,36 @@ purchase that fits them.
 
 | Rung | Item | Tier |
 |---|---|---|
-| $2 | sticker | 3 |
-| $3 | lighter, button | 3 |
-| $5 | can cooler | 3 |
-| $8 | dog tag (numbered), leather fob | 3 |
+| free | sticker in every bag; name-your-price download | 1 |
+| $2 | sticker | 1 |
+| $3 | wrapped lighter, button | 2 |
+| $5 | can cooler, LED wand | 2 |
+| $8 | dog tag (open series), leather fob | 2 / 3 |
 | $12 | pick holder | 3 |
-| $15 | tote (table run) | 3 |
-| $25–35 | tee (screen-printed neon at the table; POD photo/one-color online) | 3 / 2 |
+| $15 | tote | 2 |
+| $25–35 | tee (neon at the table; photo or one-color online) | 2 |
 | $30 | card wallet | 3 |
-| $40 | guitar strap · engraved Zippo (numbered edition) | 3 |
-| $75 | belt (numbered, hand-finished) | 3 |
-| $60–90 | DMX puck from the line | 4a |
-| $150–300 | a pedal from the line | 4a |
-| $300–800 | a rig or rack from the line | 4a |
-| $1,200–3,000 | a guitar from the line — serialized, batched | 4a |
-| product × 1.5–3 | the one Jax played — by announcement | 4b |
-| $1–10 | the music, name-your-price | 1 |
+| $40 | guitar strap | 3 |
+| $50 | engraved Zippo | 3 |
+| $75 | belt, numbered | 3 |
+| $120–180 | a pedal from the line | 3 |
+| $1,200–3,000 | a guitar from the line | 3 |
+| by announcement | the stage-used relic | 3 |
 
-Rules: whole dollars; every rung has one thing, not three; the $8–40 band
-is leather because that's where hand-made at 15–25 minutes a piece still
-pays; above $75 the object must have a story, not just labor.
+## Scarcity and story in tier 3
 
-## Scarcity and story at the top
-
-**Tier 3 limited (belts and up).**
-- Unit-numbered: limited editions state the edition size (No. 7/12);
-  open series just count. Edition size is honest — it is the number Jax
-  actually made — and the register is the proof.
-- Sold at the table first. Leftovers go online after the show, never
-  before. The table is the primary market by rule.
+- Unit-numbered: limited editions state the edition (No. 7/12); open
+  series just count. Edition size is honest — the number Jax actually
+  made — and the register is the proof.
+- Sold at the table first; leftovers online after the show, never before.
 - Each one is different because the process is a gesture (hand-dyed,
   hand-splattered), not because we say so.
-
-**Tier 4a — the line.** A cash minimum per unit, not a percentage.
-**Pedals lead** (Jax, 2026-09-28): a stompbox is the most merch-shaped
-object the act builds — bought by the people at the show, usable by any
-band, the mark on the top plate lands on other people's boards. Set the
-floor per object (what a pedal sale must clear; what a guitar sale must
-clear); the market check is that small-run hardware (pedals, pucks) sits
-at 2.5–4× BOM — the standard for boutique
-electronics, and what covers the hours, the failures and the support.
-Instruments price at BOM + hours at ≥$40–60/hr + ≥40%, sanity-checked
-against boutique headless builders ($1.5–3k). Batches of 3–10 per model
-(pucks more); every unit serialized in the register; the build sheet is the
-spec. The puck's own stage gates (merch/dmx-puck.md) are the template: build
-for the act first, standardize, then sell the batch.
-
-**Tier 4b — one-of-one.**
-- **It has to have done something.** A stage object is sellable after it
-  has played shows, not before. The provenance is the setlist: which shows,
-  which songs, a photo of it on stage. An instrument built and never played
-  is inventory, not myth.
-- **A provenance card, signed.** The registry's stamp already exists
-  (tools/stamp.py). Each tier-4 object gets a card with its number, its
-  shows, its build sheet (band/instruments/*.md is the build record — the
-  buyer gets the BOM), and Jax's signature. The repo is the provenance.
-- **Retire on a rule, not a whim.** An instrument retires when its
-  successor is built (the takedown guitar v2 retires v1). That makes tier 4
-  a cadence, not a fire sale, and ties every sale to a new build.
-- **Announce, don't list.** Tier-4 drops go to the list (tier 1) and the
-  socials with the story first; price by ask or auction; one at a time;
-  never two in a season.
-- **Keep some.** The first of each instrument type is never sold. The act
-  needs its own museum.
+- **Relics have to have done something.** Sellable after shows, not
+  before; provenance is the setlist, a photo of it on stage, and the build
+  sheet. A signed provenance card (the registry stamp exists in
+  tools/stamp.py). Retire on a rule — when the successor exists — not a
+  whim. Announce, don't list; one at a time. The first of each type is
+  never sold.
 
 ## Leather goods — the belt, costed
 
@@ -205,14 +156,15 @@ Each register line says which belt's hide it came from.
 
 ## What this changes
 
-- Round 1: nothing. It is tier 3's low end and ships as planned.
+- Round 1: nothing. Stickers are tier 1; buttons, totes, wrapped lighters,
+  coolers are tier 2; the dog tags and the proof Zippo are the first
+  tier-3 objects.
 - New file when the first belt is cut: `merch/register.md` — every
-  unit-numbered object (tags, belts, straps, instruments, limited prints),
-  number → who / where / from which hide. Batches of everything else live
-  in `merch/inventory.md`.
-- Tier 1 and 2 are set-up tasks that live elsewhere: distribution-plan.md
-  (the first release creates tier 1) and accounts-inventory row 4
-  (Bandcamp, which also hosts tier-2 POD).
+  unit-numbered object, number → who / where / from which hide. Batches of
+  everything else live in `merch/inventory.md`.
+- Downloads and print-on-demand are set-up tasks that live elsewhere:
+  distribution-plan.md (the first release creates the download) and
+  accounts-inventory row 4 (Bandcamp, which also hosts POD).
 
 ## Open questions for Jax
 
@@ -221,4 +173,5 @@ Each register line says which belt's hide it came from.
 - Belt colour: black-dyed and splattered, or a dyed colour (oxblood /
   saddle) with the neon only on the buckle panel?
 - Buckle: engraved brass (pending the IR-laser check) or leather panel?
-- Round-1 status since Sep 10 — what's been made, what's still to file?
+- LED wands — a tier-2 item for the debut? (blank glow wands with a
+  wrap; the crowd lights the room in brand colours)
