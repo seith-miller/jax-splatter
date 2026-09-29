@@ -220,9 +220,15 @@ li.fact .len{white-space:nowrap}
     </div>
 
     <div class="pool">
-      <h2>Decided</h2>
-      <p>The round-1 list (Jax, Sep 10). Nothing on it is designed, ordered or made.</p>
-      <ul id="mlist"></ul>
+      <h2>Committed for Oct 24</h2>
+      <p>Will be on the table. Conditions: blanks ordered by Oct 1, the Roland reserved for the week of Oct 5.</p>
+      <ul id="mcommit"></ul>
+    </div>
+
+    <div class="pool">
+      <h2>Stretch</h2>
+      <p>On the table only once its gate passes, by Oct 9.</p>
+      <ul id="mstretch"></ul>
     </div>
 
     <div class="pool">
@@ -425,26 +431,31 @@ li.fact .len{white-space:nowrap}
 
   /* ---- merch ---- */
   var MADE = [];   // [release, name, batch, count] — add a row when something physically exists
-  var LIST = [
-    ['Stickers', 'two designs', '$2'],
-    ['Buttons 2.25"', '', '$3'],
-    ['Dog tags', 'open series, unit-numbered', '$8'],
-    ['Totes', 'heavyweight black canvas', '$15'],
-    ['Lighters, wrapped', 'Bic-style, vinyl wrap', '$3'],
-    ['Lighters, Zippo', 'engraved, one proof unit', '$50'],
-    ['Can coolers', '', '$5']
+  var COMMIT = [
+    ['Stickers', 'wordmark kiss-cut; splat die-cut only if rights clear', '$2'],
+    ['Buttons 2.25"', 'JAX-crop face; A006 face only if rights clear', '$3'],
+    ['Lighters, wrapped', 'Bic Maxi, Roland wrap', '$3'],
+    ['Can coolers', 'sublimation', '$5'],
+    ['Price card', '', '—']
   ];
-  var STATUS = 'Nothing made, nothing ordered, no design signed. The list is decided; ' +
-    'the wordmark vector and the production files come first, then a sign-off, then a machine. ' +
+  var STRETCH = [
+    ['Dog tags 021–050', 'gate: one blank marks clean + laser slot', '$8'],
+    ['Totes', 'gate: sample picked (HTV vs stencil) + press session', '$15'],
+    ['Zippo proof', 'gate: a laser slot; one unit', '$50']
+  ];
+  var STATUS = 'Nothing made, nothing ordered, no design signed. Wordmark vector done (Sep 29). ' +
+    'Production files next, then a sign-off, then a machine. ' +
     'Tees are round 2; beanies wait for the embroidery machine; belts are proposed, not decided.';
   var NEXT = 'Production files from the wordmark vector (brand/reference/wordmark/svg/): sticker sheet, button face, tag marking, lighter wrap, cooler wrap, tote — then one sign-off session.';
   document.getElementById('mstatus').textContent = STATUS;
   document.getElementById('mhave').innerHTML = MADE.length ? MADE.map(function (x) {
     return '<li class="fact"><span class="t"><b>' + x[1] + '</b> <span class="flag">· ' + x[0] + ' · ' + x[2] + '</span></span><span class="len">' + x[3] + '</span></li>';
   }).join('') : '<li class="none">— none yet.</li>';
-  document.getElementById('mlist').innerHTML = LIST.map(function (x) {
+  function factRow(x) {
     return '<li class="fact"><span class="t"><b>' + x[0] + '</b>' + (x[1] ? ' <span class="flag">· ' + x[1] + '</span>' : '') + '</span><span class="len">' + x[2] + '</span></li>';
-  }).join('');
+  }
+  document.getElementById('mcommit').innerHTML = COMMIT.map(factRow).join('');
+  document.getElementById('mstretch').innerHTML = STRETCH.map(factRow).join('');
   document.getElementById('mnext').textContent = NEXT;
 
   var saved = 'next';
