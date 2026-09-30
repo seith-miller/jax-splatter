@@ -9,7 +9,7 @@ with the charts rather than in the Jax Splatter pool.
 | **Key** | **Em** (machine, confidence 0.83; strongest pitch classes E, B, D, G) |
 | **Length** | 2:57 · **≈119 bars** |
 | **Source** | `~/gather/jax-splatter-refs/Tank.mp4` — YouTube, AAC 128 kbps. Approved by Jax 2026-09-27 |
-| **Stems** | `~/un-mix-her-qa/tank/htdemucs_6s/` — six files |
+| **Production folder** | `~/Music/jax-splatter/tank/` — source recording, six stems (`htdemucs_6s/`), mix, REAPER session `tank.rpp`; everything the session uses lives in this one folder |
 
 This is the first song through **teach-her** — un-mix-her's stage that ends
 in paper rather than a DAW session
