@@ -5,11 +5,11 @@ with the charts rather than in the Jax Splatter pool.
 
 | | |
 |---|---|
-| **Tempo** | **161.5 BPM** (machine — correct by ear). Bar = 1.49 s at 4/4 |
-| **Key** | **Em** (machine, confidence 0.83; strongest pitch classes E, B, D, G) |
-| **Length** | 2:57 · **≈119 bars** |
+| **Tempo** | **median 80.75 BPM**, and it moves — see *The grid* below. Bar = 2.97 s at 4/4 |
+| **Key** | unresolved — three machine runs gave Em, E:maj and D:maj. Settle by ear |
+| **Length** | 2:57 · **58 bars** |
 | **Source** | `~/gather/jax-splatter-refs/Tank.mp4` — YouTube, AAC 128 kbps. Approved by Jax 2026-09-27 |
-| **Stems** | `~/un-mix-her-qa/tank/htdemucs_6s/` — six files |
+| **Production folder** | `~/Music/jax-splatter/tank/` — source recording, six stems (`htdemucs_6s/`), mix, REAPER session `tank.rpp`; everything the session uses lives in this one folder |
 
 This is the first song through **teach-her** — un-mix-her's stage that ends
 in paper rather than a DAW session
@@ -51,6 +51,74 @@ Two readings, and only ears can settle it:
 model is trained on acoustic piano, so a Hammond or a synth would never land
 in that stem — its silence is not evidence of no keyboard.
 
+## The grid — it moves
+
+**This is not a fixed-tempo recording.** Jax, 2026-10-01: *"a very competent
+drummer from before the era that everything was on click — steady, but not
+metronomic."* The measurements agree exactly:
+
+| | |
+|---|---|
+| Median | **80.75 BPM** · bar = 2.97 s · **58 bars** |
+| Beat range (5th–95th pct) | **78.3 – 86.1 BPM** — he breathes about 8 BPM |
+| Bar-to-bar change | median **0.8 %**, 90th pct 2.3 % |
+
+Small, smooth, continuous — a player holding tempo, not drift and not noise.
+No single BPM fits: every candidate from 75–175 scored an onset-to-grid RMS of
+**28–29 % of a beat**, and uniformly random onsets against an arbitrary grid
+give 28.9 %. A fixed grid is right at bar 1 and a beat and a half out by the
+end.
+
+So the session carries a **tempo map**, one point per bar:
+`~/Music/jax-splatter/tank/tank-tempomap.rpp`. Bar 1 is a free lead-in that
+absorbs the offset; every bar line after it sits on a detected downbeat, and
+no audio is stretched.
+
+**Earlier numbers here were wrong.** 161.5 BPM was a doubling error of mine
+and 162 was forced with `--tempo-octave double`, which manufactured a
+confidence the machine never had. un-mix-her's `grid` reported
+`tempo_confidence: 0.0` twice and was right to.
+
+### Two slips, both repaired
+
+Half a beat vanished twice — the tracker jumped to the offbeat and stayed
+there, so the click was fine then wrong from that bar on. Found by ear first
+("something strange happens around measure 16"), then located:
+
+| Bar | Short by | |
+|---|---|---|
+| 15 | 348 ms | 0.47 beats |
+| 33 | 372 ms | 0.50 beats |
+
+A bar short by almost exactly half a beat is the signature. Worth automating.
+
+## The intro fill is free
+
+The first bar of drumming (3.41–6.36 s) has a **72 %** spread between hits;
+bars 2, 3 and 4 sit at 34–37 %. The opening fill is **rubato** and the band
+arrives in time after it. Don't chart it to the grid, and don't expect a
+drummer to play it to a click.
+
+## Bar 53 — the drums go into three
+
+From roughly bar 51 the song stops agreeing with itself. Autocorrelating the
+drum stem:
+
+| | Strongest periods |
+|---|---|
+| Body (bars 21–50) | **1.00 beat** (0.79), 2.00 beats (0.64) — locked |
+| From bar 53 | **1.53 beats** (0.66), 0.75 beats (0.64) — nothing on the beat |
+
+1.5 beats is three eighth-notes. The drums group **in three against a bar that
+stays 4/4** — a hemiola, not a metre change (bar lengths hold at ~3.0 s). Jax:
+*"most of the instrumentation becomes timeless — a swirling mass, and the
+drums start playing a pattern in three."*
+
+That is also where `other` takes the song over (39 %, 65 %, 57 % across H, I,
+J) and the bass stops entirely. **For the chart: this section is felt, not
+counted.** Whoever plays it needs the cross-rhythm written as a figure, not as
+bar-by-bar hits.
+
 ## Section map
 
 Levels are each stem against **its own peak**, so read down a column (when is
@@ -58,16 +126,16 @@ the guitar loudest?), not across a row.
 
 | § | Bar | In | Bars | Drums | Bass | Guitar | Vocals | Other |
 |---|---|---|---|---|---|---|---|---|
-| A | 1 | 0:00.8 | 2 | 9% | 0% | 23% | 0% | 0% |
-| B | 3 | 0:03.8 | 2 | 72% | 4% | 12% | 0% | 0% |
-| C | 5 | 0:06.7 | 4 | 37% | 54% | 19% | 0% | 0% |
-| D | 9 | 0:12.0 | 18 | 26% | 46% | 31% | 17% | 9% |
-| E | 27 | 0:38.7 | 22 | 24% | 10% | 38% | 37% | 7% |
-| F | 49 | 1:11.3 | 20 | 22% | 11% | 54% | 9% | 0% |
-| G | 70 | 1:41.7 | 33 | 25% | 19% | 37% | 22% | 10% |
-| H | 102 | 2:30.5 | 7 | 30% | 0% | 40% | 8% | 39% |
-| I | 109 | 2:41.2 | 3 | 36% | 0% | 19% | 0% | 65% |
-| J | 112 | 2:45.7 | 3 | 42% | 0% | 9% | 0% | 57% |
+| A | 0 | 0:00.8 | 1 | 9% | 0% | 23% | 0% | 0% |
+| B | 1 | 0:03.8 | 1 | 72% | 4% | 12% | 0% | 0% |
+| C | 2 | 0:06.7 | 2 | 37% | 54% | 19% | 0% | 0% |
+| D | 4 | 0:12.0 | 9 | 26% | 46% | 31% | 17% | 9% |
+| E | 13 | 0:38.7 | 11 | 24% | 10% | 38% | 37% | 7% |
+| F | 24 | 1:11.3 | 10 | 22% | 11% | 54% | 9% | 0% |
+| G | 34 | 1:41.7 | 16 | 25% | 19% | 37% | 22% | 10% |
+| H | 51 | 2:30.5 | 4 | 30% | 0% | 40% | 8% | 39% |
+| I | 54 | 2:41.2 | 1 | 36% | 0% | 19% | 0% | 65% |
+| J | 56 | 2:45.7 | 3 | 42% | 0% | 9% | 0% | 57% |
 
 Shape: a two-bar guitar figure alone (A), drums in (B), bass in (C), then the
 body from bar 9. **F (bars 49–69) is the guitar's loudest stretch with the
@@ -82,20 +150,20 @@ transcript.
 
 | Phrase | In (bar) | Out (bar) | Length (s) |
 |---|---|---|---|
-| 1 | 20 | 22 | 2.0 |
-| 2 | 22 | 24 | 1.9 |
-| 3 | 25 | 35 | 10.0 |
-| 4 | 38 | 40 | 2.0 |
-| 5 | 41 | 44 | 2.1 |
-| 6 | 44 | 49 | 4.4 |
-| 7 | 61 | 62 | 1.7 |
-| 8 | 63 | 67 | 4.1 |
-| 9 | 80 | 81 | 1.9 |
-| 10 | 82 | 84 | 2.1 |
-| 11 | 85 | 90 | 4.4 |
-| 12 | 90 | 97 | 6.6 |
-| 13 | 104 | 105 | 1.4 |
-| 14 | 116 | 117 | 1.1 |
+| 1 | 10 | 11 | 2.0 |
+| 2 | 11 | 12 | 1.9 |
+| 3 | 12 | 17 | 10.0 |
+| 4 | 19 | 20 | 2.0 |
+| 5 | 20 | 22 | 2.1 |
+| 6 | 22 | 24 | 4.4 |
+| 7 | 30 | 31 | 1.7 |
+| 8 | 31 | 33 | 4.1 |
+| 9 | 40 | 40 | 1.9 |
+| 10 | 41 | 42 | 2.1 |
+| 11 | 42 | 45 | 4.4 |
+| 12 | 45 | 48 | 6.6 |
+| 13 | 51 | 52 | 1.4 |
+| 14 | 57 | 58 | 1.1 |
 
 Note the gaps: **nothing from bar 49 to 60**, and **nothing from bar 97 to
 103**. Fourteen phrases, most of them 2–3 s, with four longer runs.
@@ -158,15 +226,20 @@ source material available for four of the five parts.
 
 ## Counting, for the count sheet
 
-161.5 BPM is over the 140 boundary, so **half-time**: one 8-count is **4
-bars** ([choreo/README.md](../../choreo/README.md)). The ~119 bars are about
-**30 8s**, and `8 = ceil(bar / 4)`.
+80.75 BPM is **under** the 140 boundary, so **full-time**: one 8-count is
+**2 bars** ([choreo/README.md](../../choreo/README.md)). 58 bars are about
+**29 8s**, and `8 = ceil(bar / 2)`.
 
 | Section | Bar | 8 |
 |---|---|---|
-| Body starts (D) | 9 | 3 |
-| Instrumental (F) | 49 | 13 |
-| Outro begins (H) | 102 | 26 |
+| Body starts (D) | 4 | 2 |
+| Instrumental (F) | 24 | 12 |
+| Outro begins (H) | 51 | 26 |
+
+This reverses what this sheet said at 161.5 BPM, where the song counted
+half-time at 4 bars to an 8. The tempo map also means an 8-count is not a
+fixed number of seconds — the Riding column should name musical events, not
+clock times.
 
 Blocking for this song, if it gets any, goes on a count sheet in
 [choreo/counts/](../../choreo/counts/) — not on this sheet.
@@ -174,8 +247,8 @@ Blocking for this song, if it gets any, goes on a count sheet in
 ## What's left before these are playable charts
 
 1. **Settle the keyboard question** — listen to `other.wav`.
-2. **Correct the tempo and the bar-one downbeat by ear.** Every bar number here
-   hangs off 161.5 BPM; if that's off, everything shifts.
+2. ~~Correct the tempo and the bar-one downbeat by ear.~~ **Done 2026-10-01** —
+   tempo map built and auditioned; bar numbers above are keyed to it.
 3. **Name the sections.** A–J are machine labels, not musical ones.
 4. **Human bass pass** against the stem to fill the dropouts.
 5. **Then one sheet per player**, per the format in [README.md](README.md).
