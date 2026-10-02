@@ -102,6 +102,14 @@ button.t-steal[data-on]{background:var(--good); border-color:var(--good); color:
   font-size:14px; display:inline; margin:0}
 .tally{display:block; margin-top:8px; color:var(--muted); font-size:13px;
   font-variant-numeric:tabular-nums}
+.srcnote{margin:10px 0 0; font-size:13px; color:var(--muted)}
+.srcnote em{color:var(--text); font-style:normal}
+.rollup{display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:12px;
+  margin:0 0 26px}
+.rg{background:var(--surface); border:1px solid var(--edge); padding:11px 13px}
+.rh{font-family:'Bebas Neue',Impact,sans-serif; letter-spacing:.12em; font-size:13px;
+  text-transform:uppercase; display:block; margin-bottom:6px}
+.rg ol{margin:0; padding-left:18px; font-size:13px; display:grid; gap:3px}
 @media (max-width:520px){
   li.ref{grid-template-columns:1fr auto}
   li.ref .tags{grid-column:1/-1}
@@ -190,6 +198,13 @@ li.fact .len{white-space:nowrap}
       DSP owes a mechanical. <b class="k c-steal">Steal</b> — one specific musical
       idea lifted into an original: a rhythm, a sound, a move.
       <span class="tally">So far: <span id="tally"></span></span>
+      <p class="srcnote">A playlist is where a track came from, not what it is.
+      There are covers sitting in <em>inspo</em> and in <em>steal</em> — tag what it
+      <em>does</em>, and the shortlist below collects them across both lists.</p>
+    </div>
+
+    <div class="rollup" id="rollup" hidden></div>
+    <div style="display:none">
     </div>
 
     <div class="pool">
@@ -383,13 +398,25 @@ li.fact .len{white-space:nowrap}
   }
 
   function counts() {
-    var c = { inspo: 0, cover: 0, steal: 0 };
-    Object.keys(tags).forEach(function (id) {
-      JOBS.forEach(function (j) { if (tags[id][j]) c[j] += 1; });
+    var c = { inspo: 0, cover: 0, steal: 0 }, by = { inspo: [], cover: [], steal: [] };
+    var all = COVERS.concat(INSPO);
+    all.forEach(function (x) {
+      var t = tags[x[0]]; if (!t) return;
+      JOBS.forEach(function (j) { if (t[j]) { c[j] += 1; by[j].push(x[1] + ' — ' + x[2]); } });
     });
     document.getElementById('tally').innerHTML = JOBS.map(function (j) {
       return '<span class="c-' + j + '">' + c[j] + ' ' + j + '</span>';
     }).join(' · ');
+    // the shortlist: by job, across both playlists — a playlist is a source, not a job
+    var r = document.getElementById('rollup');
+    var any = JOBS.some(function (j) { return by[j].length; });
+    r.hidden = !any;
+    if (!any) return;
+    r.innerHTML = JOBS.filter(function (j) { return by[j].length; }).map(function (j) {
+      return '<div class="rg"><span class="rh c-' + j + '">' + j + ' · ' + by[j].length +
+        '</span><ol>' + by[j].map(function (n) { return '<li>' + n + '</li>'; }).join('') +
+        '</ol></div>';
+    }).join('');
   }
 
   function renderRefs() {
