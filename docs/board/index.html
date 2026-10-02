@@ -121,6 +121,20 @@ li.num .nm em{color:var(--muted); font-style:normal; font-size:12.5px}
 .chip.on{border-color:var(--good); color:var(--bg); background:var(--good)}
 .score{font-variant-numeric:tabular-nums; font-size:13px; color:var(--muted); white-space:nowrap}
 .score b{color:var(--text)}
+li.num[data-n]{cursor:pointer}
+li.num[data-n]:hover{border-color:var(--muted)}
+li.num[data-n]:focus-visible{outline:2px solid var(--mark); outline-offset:1px}
+li.num.open{border-left:3px solid var(--mark)}
+.cnt{font-size:11.5px; color:var(--muted); font-variant-numeric:tabular-nums}
+li.det{margin:-4px 0 6px; padding:2px 0 0}
+li.det ul{list-style:none; margin:0; padding:0 0 0 11px; border-left:1px solid var(--edge)}
+li.rs{display:flex; gap:10px; align-items:baseline; flex-wrap:wrap;
+  padding:5px 10px; font-size:13px}
+li.rs code{font-size:12px; color:var(--muted); font-family:ui-monospace,Menlo,monospace;
+  word-break:break-all}
+li.rs-doc span,li.rs-doc a{color:var(--accent)}
+li.rs-grid span{color:var(--good)}
+li.rs-gap span,li.rs-gap code{color:var(--mark)}
 @media (max-width:560px){ li.num{grid-template-columns:1fr auto} li.num .chips{grid-column:1/-1} }
 @media (max-width:520px){
   li.ref{grid-template-columns:1fr auto}
@@ -403,6 +417,49 @@ li.fact .len{white-space:nowrap}
     ['video',  'the per-song video package'],
     ['lights', 'the cue list']
   ];
+  var GH = 'https://github.com/seith-miller/jax-splatter/blob/develop/';
+  // every resource we hold per number. link = clickable, path = selectable text.
+  var RES = {
+    'Tank': [
+      ['doc',   'Chart — grid, form, parts',        GH + 'band/charts/tank.md', 'link'],
+      ['doc',   'Dossier — who made it, and how',   GH + 'songs/covers/tank.md', 'link'],
+      ['audio', 'Reference recording (gather 505780c3)', '~/gather/jax-splatter-refs/Tank.mp4', 'path'],
+      ['audio', 'Mix, 44.1k WAV',                   '~/Music/jax-splatter/tank/mix.wav', 'path'],
+      ['audio', 'Stems ×6 — htdemucs_6s',           '~/Music/jax-splatter/tank/htdemucs_6s/', 'path'],
+      ['audio', 'Drum cascade ×6 — kick, snare, toms, hh, ride, crash', '~/un-mix-her-qa/tank/separate/stems/drums/', 'path'],
+      ['audio', 'Residual (mix minus named stems)', '~/Music/jax-splatter/tank/residual_minus_named.wav', 'path'],
+      ['grid',  'REAPER session — tempo map, half-time click', '~/Music/jax-splatter/tank/tank-halftime.rpp', 'path'],
+      ['grid',  'Click overlay — the grid made audible', '~/un-mix-her-qa/tank/grid/click_overlay.wav', 'path'],
+      ['grid',  'grid.json / cues.json',            '~/un-mix-her-qa/tank/', 'path'],
+      ['out',   'Bass tab — Songsterr',             'https://www.songsterr.com/a/wsa/stranglers-tank-bass-tab-s251140', 'link'],
+      ['out',   'Bass tab — Ultimate Guitar',       'https://tabs.ultimate-guitar.com/tab/the-stranglers/tank-bass-6582443', 'link'],
+      ['out',   'Album background — Black and White', 'https://en.wikipedia.org/wiki/Black_and_White_(The_Stranglers_album)', 'link'],
+      ['gap',   'No MIDI, no drum transcription, no song-specific guitar tab', 'checked 2026-09-27', 'note']
+    ],
+    'Piss On Me':                ['JS_piss-on-me'],
+    'Daddy Likes It':            ['JS_daddy-likes-it'],
+    'Where Is Da Club':          ['JS_where-is-da-club'],
+    'Put It In My':              ['JS_put-it-in-my'],
+    'Put Your Pussy On My Face': ['JS_put-your-pussy-on-my-face'],
+    'Bitch Boy':                 ['JS_bitch-boy'],
+    'Bruce LaBruce':             ['D_Bruce_LaBruce']
+  };
+  var CHART_SLUG = {
+    'Piss On Me': 'piss-on-me', 'Daddy Likes It': 'daddy-likes-it',
+    'Where Is Da Club': 'where-is-da-club', 'Put It In My': 'put-it-in-my',
+    'Put Your Pussy On My Face': 'put-your-pussy-on-my-face', 'Bitch Boy': 'bitch-boy'
+  };
+  // the six share a shape: a Bitwig project, its bounce, and a chart skeleton
+  Object.keys(RES).forEach(function (k) {
+    if (k === 'Tank') return;
+    var proj = RES[k][0], out = [
+      ['audio', 'Bitwig project + bounce', '~/Documents/Bitwig Studio/Projects/' + proj + '/', 'path']
+    ];
+    if (CHART_SLUG[k]) out.push(['doc', 'Chart — skeleton, parts not written',
+                                 GH + 'band/charts/' + CHART_SLUG[k] + '.md', 'link']);
+    RES[k] = out;
+  });
+
   // what exists on 2026-10-02, read off the repo
   var NUMBERS = [
     ['Piss On Me',                'jax',   ['track','chart']],
@@ -534,10 +591,21 @@ li.fact .len{white-space:nowrap}
         return '<span class="chip' + (have.indexOf(x[0]) >= 0 ? ' on' : '') +
           '" title="' + x[1] + '">' + x[0] + '</span>';
       }).join('');
-      return '<li class="num"><span class="nm">' + n[0] +
-        (n[1] === 'cover' ? ' <em>· cover</em>' : '') + '</span>' +
+      var r = RES[n[0]] || [];
+      var detail = r.length
+        ? r.map(function (x) {
+            var body = x[3] === 'link'
+              ? '<a href="' + x[2] + '" target="_blank" rel="noopener">' + x[1] + '</a>'
+              : '<span>' + x[1] + '</span><code>' + x[2] + '</code>';
+            return '<li class="rs rs-' + x[0] + '">' + body + '</li>';
+          }).join('')
+        : '<li class="rs"><span class="none">Nothing collected yet.</span></li>';
+      return '<li class="num" data-n="' + n[0] + '" tabindex="0"><span class="nm">' + n[0] +
+        (n[1] === 'cover' ? ' <em>· cover</em>' : '') +
+        ' <span class="cnt">' + (r.length || 0) + '</span></span>' +
         '<span class="chips">' + chips + '</span>' +
-        '<span class="score"><b>' + have.length + '</b>/' + STD.length + '</span></li>';
+        '<span class="score"><b>' + have.length + '</b>/' + STD.length + '</span></li>' +
+        '<li class="det" data-for="' + n[0] + '" hidden><ul>' + detail + '</ul></li>';
     }
     function fill(id, list, empty) {
       document.getElementById(id).innerHTML = list.length
@@ -552,6 +620,19 @@ li.fact .len{white-space:nowrap}
     fill('nwip',  wip,  'Nothing in progress.');
     fill('nnone', none, 'Nothing idle.');
   })();
+
+  document.addEventListener('click', function (e) {
+    var row = e.target.closest ? e.target.closest('li.num[data-n]') : null;
+    if (!row) return;
+    var d = document.querySelector('li.det[data-for="' + row.dataset.n + '"]');
+    if (d) { d.hidden = !d.hidden; row.classList.toggle('open', !d.hidden); }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    var row = e.target.closest ? e.target.closest('li.num[data-n]') : null;
+    if (!row) return;
+    e.preventDefault(); row.click();
+  });
 
   renderRefs();
 
