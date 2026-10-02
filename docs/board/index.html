@@ -110,6 +110,18 @@ button.t-steal[data-on]{background:var(--good); border-color:var(--good); color:
 .rh{font-family:'Bebas Neue',Impact,sans-serif; letter-spacing:.12em; font-size:13px;
   text-transform:uppercase; display:block; margin-bottom:6px}
 .rg ol{margin:0; padding-left:18px; font-size:13px; display:grid; gap:3px}
+li.num{display:grid; grid-template-columns:1fr auto auto; gap:10px; align-items:center;
+  padding:9px 11px; border:1px solid var(--edge); background:var(--surface); margin-bottom:4px}
+li.num .nm{font-size:14.5px}
+li.num .nm em{color:var(--muted); font-style:normal; font-size:12.5px}
+.chips{display:flex; gap:3px; flex-wrap:wrap}
+.chip{font-family:'Bebas Neue',Impact,sans-serif; letter-spacing:.08em; font-size:10.5px;
+  text-transform:uppercase; padding:2px 6px; border:1px solid var(--edge);
+  color:var(--edge); white-space:nowrap}
+.chip.on{border-color:var(--good); color:var(--bg); background:var(--good)}
+.score{font-variant-numeric:tabular-nums; font-size:13px; color:var(--muted); white-space:nowrap}
+.score b{color:var(--text)}
+@media (max-width:560px){ li.num{grid-template-columns:1fr auto} li.num .chips{grid-column:1/-1} }
 @media (max-width:520px){
   li.ref{grid-template-columns:1fr auto}
   li.ref .tags{grid-column:1/-1}
@@ -129,6 +141,7 @@ button.t-steal[data-on]{background:var(--good); border-color:var(--good); color:
   border:1px solid var(--mark); border-left-width:3px; padding:12px 14px;
   margin:0 0 26px; font-size:14px; background:var(--surface);
 }
+.ask strong{color:var(--text); font-weight:600}
 .ask b{color:var(--mark); font-family:'Bebas Neue',Impact,sans-serif; letter-spacing:.1em;
   font-weight:400; font-size:15px; display:block; margin-bottom:3px}
 /* merch */
@@ -149,6 +162,7 @@ li.fact .len{white-space:nowrap}
     <button role="tab" id="tab-songs" aria-controls="panel-songs" aria-selected="false">Songs</button>
     <button role="tab" id="tab-refs" aria-controls="panel-refs" aria-selected="false">Playlists</button>
     <button role="tab" id="tab-merch" aria-controls="panel-merch" aria-selected="false">Merch</button>
+    <button role="tab" id="tab-numbers" aria-controls="panel-numbers" aria-selected="false">Numbers</button>
   </nav>
 
   <div class="next" id="panel-next" role="tabpanel" aria-labelledby="tab-next">
@@ -254,6 +268,26 @@ li.fact .len{white-space:nowrap}
   </div>
 </div>
 
+  <div class="songs" id="panel-numbers" role="tabpanel" aria-labelledby="tab-numbers" hidden>
+    <div class="ask">
+      <b>What finishes a number</b>
+      A number is not finished when the song is written. It is finished when we
+      could <strong>hire a full suite of professional musicians</strong>, hand them
+      what we have, and stage a world-class production of it — without anyone
+      asking a question we have not already answered.
+      <span class="tally">Eight things make that true: <span id="nstd"></span></span>
+    </div>
+
+    <div class="pool">
+      <h2>The numbers</h2>
+      <p>What exists today, per song. Lit means we have it.</p>
+      <ul id="nums"></ul>
+    </div>
+  </div>
+
+</div>
+
+<div style="display:none">
 <div class="total" id="total" hidden>
   <span class="n" id="picked">0:00</span>
   <span class="l"><span id="count">0</span> songs picked</span>
@@ -346,6 +380,30 @@ li.fact .len{white-space:nowrap}
     ['ministry-rickys-hand', 'Ministry', 'Ricky\'s Hand', 221]
   ];
   var JOBS = ['inspo', 'cover', 'steal'];
+  // A number is finished when a hired professional needs nothing else.
+  var STD = [
+    ['track',  'the backing track — the spine the DJ chair runs'],
+    ['stems',  'separated stems, so any chair can be covered or dropped'],
+    ['grid',   'tempo and downbeats, confirmed by ear'],
+    ['chart',  'the performance map'],
+    ['parts',  'the per-chair parts actually written'],
+    ['counts', 'the count sheet, where it is danced'],
+    ['video',  'the per-song video package'],
+    ['lights', 'the cue list']
+  ];
+  // what exists on 2026-10-02, read off the repo
+  var NUMBERS = [
+    ['Piss On Me',                'jax',   ['track','chart']],
+    ['Daddy Likes It',            'jax',   ['track','chart']],
+    ['Where Is Da Club',          'jax',   ['track','chart']],
+    ['Put It In My',              'jax',   ['track','chart']],
+    ['Put Your Pussy On My Face', 'jax',   ['track','chart']],
+    ['Bitch Boy',                 'jax',   ['track','chart']],
+    ['Bruce LaBruce',             'jax',   ['track']],
+    ['Eat My Puss',               'jax',   []],
+    ['Tank',                      'cover', ['track','stems','grid','chart']]
+  ];
+
   var KEY = 'splatter-ops-picks', TABKEY = 'splatter-ops-tab', TAGKEY = 'splatter-ops-tags';
   var tags = {};
   try { tags = JSON.parse(localStorage.getItem(TAGKEY) || '{}') || {}; } catch (e) { tags = {}; }
@@ -438,14 +496,14 @@ li.fact .len{white-space:nowrap}
   });
 
   function show(name) {
-    ['next', 'songs', 'refs', 'merch'].forEach(function (t) {
+    ['next', 'songs', 'refs', 'numbers', 'merch'].forEach(function (t) {
       document.getElementById('tab-' + t).setAttribute('aria-selected', String(t === name));
       document.getElementById('panel-' + t).hidden = (t !== name);
     });
     try { localStorage.setItem(TABKEY, name); } catch (e) { }
     total();
   }
-  ['next', 'songs', 'refs', 'merch'].forEach(function (t) {
+  ['next', 'songs', 'refs', 'numbers', 'merch'].forEach(function (t) {
     document.getElementById('tab-' + t).addEventListener('click', function () { show(t); });
   });
 
@@ -454,6 +512,22 @@ li.fact .len{white-space:nowrap}
   var b = Date.UTC(n.getFullYear(), n.getMonth(), n.getDate());
   var d = Math.round((a - b) / 86400000);
   document.getElementById('days').textContent = d > 0 ? d : (d === 0 ? 'Today —' : 'Past —');
+
+  (function renderNumbers() {
+    document.getElementById('nstd').textContent =
+      STD.map(function (x) { return x[0]; }).join(' · ');
+    document.getElementById('nums').innerHTML = NUMBERS.map(function (n) {
+      var have = n[2];
+      var chips = STD.map(function (x) {
+        return '<span class="chip' + (have.indexOf(x[0]) >= 0 ? ' on' : '') +
+          '" title="' + x[1] + '">' + x[0] + '</span>';
+      }).join('');
+      return '<li class="num"><span class="nm">' + n[0] +
+        (n[1] === 'cover' ? ' <em>· cover</em>' : '') + '</span>' +
+        '<span class="chips">' + chips + '</span>' +
+        '<span class="score"><b>' + have.length + '</b>/' + STD.length + '</span></li>';
+    }).join('');
+  })();
 
   renderRefs();
 
