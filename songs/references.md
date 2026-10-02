@@ -53,9 +53,9 @@ because covers belong to neither act ([docs/board/](../docs/board/)).
 | 28 | Alan Vega | Wipeout Beat | 5:44 |
 | 29 | Sparks | The Number One Song In Heaven | 7:26 |
 
-## jax inspo — 22 tracks
+## jax inspo — 23 tracks
 
-TIDAL `1f336ab1-401a-4fad-ad9b-54da46b0a120`. Listed in
+TIDAL `1f336ab1-401a-4fad-ad9b-54da46b0a120`. Re-pulled 2026-10-02. Listed in
 [crates.md](crates.md) as "splatter inspo" with 11 tracks — it has since
 doubled and been renamed.
 
@@ -83,54 +83,4 @@ doubled and been renamed.
 | 20 | My Life With The Thrill Kill Kult | A Daisy Chain 4 Satan (Forever And Ever Mix) | 5:05 |
 | 21 | DEVO | Uncontrollable Urge | 3:11 |
 | 22 | PSY | I LUV IT | 3:09 |
-
-## Added by hand
-
-Tracks called out in session that aren't in either playlist yet. Add them to
-the TIDAL playlist and the next pull picks them up.
-
-| Artist | Track | Album | Time | gather |
-|---|---|---|---|---|
-| The Stranglers | Tank | *Black and White* (1978) | 2:57 | **fetched + approved** `505780c3` → `~/gather/jax-splatter-refs/Tank.mp4` · stems + chart: [band/charts/tank.md](../band/charts/tank.md) |
-
-Fetched from YouTube (Jax's call, 2026-09-27) rather than TIDAL: 4.5 MB mp4,
-AV1 video + **AAC 128 kbps stereo 44.1 kHz**, 2:57 — matching the TIDAL
-listing's length exactly. Fine as a reference; too lossy to build from. The
-TIDAL entry `ab33dcc5` ([track 1563164](https://tidal.com/browse/track/1563164))
-is still queued and unfetched if a clean capture is ever wanted.
-
-Jax, 2026-09-26: *"the track by the Stranglers called I can drive my very own
-tank"* — that line is Tank's hook.
-
-**On the two paths.** YouTube is a plain yt-dlp download — quiet, quick,
-lossy. `gather`'s TIDAL fetcher instead records the desktop app's audio
-through a virtual device (TIDAL is DRM'd, so there's no file to pull), which
-means it plays the track aloud in real time and seizes the audio output:
-local operator only, never in the background. Reach for YouTube by default;
-TIDAL when the quality has to be right.
-
-## Still to pull — the Spotify side
-
-Blocked 2026-09-26: `gather`'s Spotify credentials are empty
-(`spotify.client_id` and `spotify.client_secret` are `""` in
-`~/.config/gather/config.yaml`), so no playlist can be listed or read. The
-TIDAL side worked from the saved session in the same directory.
-
-Two ways to unblock, either is fine:
-
-1. Set the credentials — `gather config set spotify.client_id …` and
-   `spotify.client_secret` from a Spotify developer app.
-2. Paste the playlist links. Public playlists can be read with no login at
-   all through their embed pages, which is how [crates.md](crates.md) was
-   built.
-
-No playlist named "steal" exists on TIDAL, so if that one is real it is
-Spotify-only.
-
-## How this was pulled
-
-TIDAL has no playlist support in `gather`'s fetcher (tracks only), so the
-playlists were read straight off the TIDAL API using the OAuth session at
-`~/.config/gather/tidal_session.json`. The access token was expired; the
-refresh token still worked. Worth teaching `gather` properly — a TIDAL
-playlist fetcher to match the Spotify one.
+| 23 | Ministry | Ricky's Hand | 3:41 |
