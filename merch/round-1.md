@@ -14,7 +14,10 @@ crate first).
    wordmark, A005 key art, A006 avatar) are the only source art. Each
    production file (sticker sheet, button face, HTV cut file, marking
    file…) becomes a candidate and gets signed before the machine runs —
-   proposed IDs below.
+   proposed IDs below. That ID is the item's **release number**, printed
+   small on the back or edge where it fits; each production run is a
+   **batch** of it, logged in `merch/inventory.md`. Unit numbers on the dog
+   tags (open series) and the Zippos (edition of 12) in this round.
 2. **Neon by cut, photo by print.** Slime #39ff14 sits at 99% of sRGB's
    green chroma and Splatter Pink is near the edge — no CMYK, eco-solvent
    or dye-sub process can hit them; they print dull. The neons are
@@ -38,9 +41,40 @@ crate first).
    own code) and sign a v2. Wordmark-only items are clean (Pathway Gothic
    One is SIL OFL).
 
+## Committed for Oct 24 (2026-09-29)
+
+Twenty-five days out, nothing ordered. What the table **will** have, and
+what it has only if a test passes:
+
+| Commit | Why it's safe |
+|---|---|
+| Stickers — the wordmark kiss-cut (the splat die-cut only if its rights clear) | one Roland job, no blanks to wait on |
+| Buttons 2.25" — JAX-crop wordmark face (the A006 face only if the rights clear) | same visit, parts bought at the branch |
+| Wrapped lighters | same Roland job; Bic Maxis arrive in days |
+| Can coolers | one sublimation session; blanks cheap and fast |
+| Price card | paper |
+
+| Stretch — promised only once its gate passes (by Oct 9) | Gate |
+|---|---|
+| Dog tags 021–050 | one blank marks clean; laser slot booked |
+| Totes | sample picked (HTV vs stencil); press session booked |
+| Zippo proof, one unit | a laser slot |
+
+Conditions on the commit: blanks ordered by **Oct 1**; the Marksbury Roland
+reserved for the week of **Oct 5**. Miss those and the committed set is
+stickers and buttons.
+
 ## The round (Jax, 2026-09-10)
 
-Stickers · buttons · magnets · dog tags · tote bags · lighters · can coolers.
+Stickers · buttons · dog tags · tote bags · lighters (two kinds) · can coolers.
+
+**Two lighters (Jax, 2026-09-28):** vinyl-wrapped Bic-style plastic at $3, and
+a laser-engraved Zippo — one proof unit first. At $22 a blank a $40 Zippo
+runs 45% gross against 65–90% on everything else; the proof tests $50 and
+the engraving before any edition.
+
+**Magnets shelved (Jax, 2026-09-28)** — same press and face as the buttons,
+so they're a one-visit add whenever wanted.
 
 **Tees swapped for totes (Jax, 2026-09-10):** one SKU, no sizes, the library
 makes the whole run, flat canvas takes the neon and the stencil process
@@ -49,23 +83,23 @@ deserves.
 
 **Button standard (Jax, 2026-09-10): one size, 2.25".** It is the only size
 both branches stock, it fits the A006 avatar and the full wordmark legibly,
-and one face template (2.633" circle) serves buttons and magnets alike.
+and one face template (2.633" circle) serves buttons — and magnets, if they come back.
 
 | Item | Make | COGS ea | Sell | Qty | Outlay | Gross at sell-through | Status |
 |---|---|---|---|---|---|---|---|
 | **Stickers** — two designs (Jax, 2026-09-10): wordmark kiss-cut 4×1.25" with jaxsplatter.com small beneath; JAX splat die-cut 3". QR tile dropped. | Marksbury Roland, sticker paper $2/ft | $0.06–0.13 | $2 · 3/$5 · free in every bag | ~150 (90 + 60) | ~$12 | ~$85 (50 sold) | ready to file |
 | **Buttons** — 2.25" only (the one size both branches have); avatar face | either branch, 2.25" button maker | ~$0.36 | $3 · 2/$5 | 50 | ~$18 | ~$125 | ready to file |
-| **Magnets** — 2.25", same face, magnet back | either branch, 2.25" button maker | ~$0.41 | $4 | 30 | ~$13 | ~$120 | ready to file |
 | **Dog tags** — colored anodized aluminum blanks (50×29×2 mm, ~100/pack with chains), laser-marked, numbered | either laser; test one tag first (painted vs anodized) | ~$0.30 | $8 | 30 | ~$25 (one pack) | ~$240 | blank candidate found (Jax, 2026-09-10); pink or black, not green |
 | **Tote bag** — heavyweight black canvas (10–12 oz, ~15×16"), wordmark in Bone HTV + pink X, or the wall-splat stencil | Cricut HTV / stencil mask + fabric spray, either branch; BYO blanks | ~$3.50 | $15 | 24 | ~$85 | ~$360 | design pick (HTV vs stencil) then file |
-| **Lighters** — Bic/Clipper with a permanent-vinyl wordmark decal | Cricut permanent vinyl, either branch | ~$1.00 | $3 | 50 | ~$50 | ~$150 | ready to file |
+| **Lighters, wrapped** — Bic-style plastic, full vinyl wrap (~2.9×2.1" around the body) | Marksbury Roland: printed on sticker stock, contour-cut, laminated if the branch has it; fallback Cricut permanent vinyl (cut, true neon) | ~$1.00 | $3 | 50 | ~$50 | ~$150 | ready to file |
+| **Lighters, Zippo** — genuine matte-black Zippo (218), wordmark laser-engraved on the lid, numbered on the base | either laser; insert out, unfueled, in a jig | ~$22 | $50 | **1 — a proof** (Jax, 2026-09-28) | ~$25 | $50 | one unit to prove the engraving and the price; an edition only if it sells and the blank lands under ~$20 |
 | **Can coolers** — light-ground wordmark + "Get Splattered!" on white neoprene | Marksbury sublimation + heat press; BYO blanks | ~$1.70 | $5 | 24 | ~$41 | ~$120 | ready to file |
 
 | | Round 1 |
 |---|---|
-| Outlay | ~$255 |
-| Gross at full sell-through | ~$1,090 |
-| Break-even sell-through | ~23% |
+| Outlay | ~$265 |
+| Gross at full sell-through | ~$1,020 |
+| Break-even sell-through | ~26% |
 
 **Table kit, not merch (confirm):** 24×72" wordmark banner with URL + QR on
 the Eastside HP (~$27) and a price card in the brand type. The table has to
@@ -78,7 +112,7 @@ the hold stands regardless.
 **Out of round 1:** the T-shirt (round 2, after the design pass — see
 below), acrylic keychains (dog tags own that slot), key-art print (needs
 print-res re-render + the rights gate), mugs, key-art printable-HTV tee,
-3D-printed tags, kiln/CNC pieces. Bench for round 2.
+3D-printed tags, kiln/CNC pieces, **LED wands** (Jax's tier-2 example, 2026-09-29 — blank glow wands with a wrap; a debut item). Bench for round 2.
 
 Same trips, not for sale: **DMX puck enclosures ×2** (~70 g PLA, ~$10.50
 each — gate 1 of [dmx-puck.md](dmx-puck.md)), **show flyers** for Oct 24 /
@@ -118,9 +152,13 @@ is emerald, not Slime). Test one tag before the run: painted blanks flake.
 
 ### Numbering — how it works
 
-The number is a promise: **one continuous series for the life of the act,
-every tag unique, never reissued.** Three digits with leading zeros
-(001–999); the day it passes 999 is a good day.
+Dog tags are an **open series** — unit-numbered, no cap (Jax, 2026-09-28:
+most items carry only a release number and a batch; unit numbers are for
+limited editions and open series like this one — see
+[tiers.md](tiers.md)). One continuous tag series for the life of the act,
+every tag unique, never reissued. Three digits with leading zeros
+(001–999); the day it passes 999 is a good day. Round 1 = batch 1 of the
+series (021–050).
 
 | Block | Who | Rule |
 |---|---|---|
@@ -153,12 +191,13 @@ every tag unique, never reissued.** Three digits with leading zeros
 | Proposed ID | slug | what gets signed |
 |---|---|---|
 | JAX-A007 | sticker-set | the Roland print+cut sheet: two designs with bleed and CutContour |
-| JAX-A008 | button-face | one 2.633" face circle for the 2.25" maker — buttons and magnets |
+| JAX-A008 | button-face | one 2.633" face circle for the 2.25" maker |
 | JAX-A009 | tote | the tote art: HTV cut file or stencil mask, placement, blank spec |
 | JAX-A010 | dog-tag | marking file, both faces, numbering scheme |
-| JAX-A011 | lighter-decal | permanent-vinyl cut file, ~2.3×0.8" |
+| JAX-A011 | lighter-wrap | full-wrap print+cut file for the Bic body |
+| JAX-A013 | zippo | lid engraving file + base numbering |
 | JAX-A012 | can-cooler | light-ground sublimation wrap |
-| JAX-A013 | table-banner | 24×72 layout with URL + QR (if confirmed) |
+| JAX-A014 | table-banner | 24×72 layout with URL + QR (if confirmed) |
 
 Rows land in the registry's Candidates table when the files exist; none
 of them exist yet. The wordmark needs a vector export first (Pathway Gothic
@@ -166,18 +205,10 @@ One → outlined SVG from `brand/reference/wordmark/jax-wordmark.html`) —
 that one file feeds the Cricut, the lasers, the Roland and the sublimation
 wrap.
 
-## Schedule against Oct 24
+## Schedule
 
-| Week | What | Where |
-|---|---|---|
-| Sep 14–18 | Sign the agreement; recon visit with the [first-visit checklist](makerspace.md#first-visit-checklist--questions-for-staff) — laser metal-marking and acrylic answers decide the dog-tag process. Order blanks: lighters, can coolers, dog-tag blanks (one pack), heavyweight black totes ×24, fluorescent HTV / fabric spray. Wordmark SVG + sticker/button/lighter/cooler/tote files → candidates → Jax signs. Two tote samples (HTV vs stencil) → pick. Optional: Sep 15 button class (Eastside), Sep 17 Cricut class (Marksbury). | both |
-| Sep 19 | MULTIPASS — clear. | — |
-| Sep 21–25 | Marksbury run: Roland stickers + button faces (reserve); buttons and magnets pressed same visit; can coolers sublimated; lighter decals cut; dog-tag marking test. Sep 26–27 weekend walk-in for overflow. | Marksbury |
-| Sep 28–Oct 2 | Tote run on the heat press; dog-tag jig + run 021–050 (reserve the laser); banner on the HP if confirmed (reserve). Oct 3–4 Eastside weekend for overflow. | Eastside |
-| Oct 5–9 | Fixes and second batch; flyers for Oct 24; puck enclosures. | either |
-| Oct 12–16 | Buffer. Oct 17–18 Eastside weekend if needed. | — |
-| **Oct 24** | **DILDOZER — the merch table debuts.** | — |
-| Oct 26–30 | Restock for Nov 6 Louisville from the sell-through numbers. | both |
+Superseded 2026-09-28 by [implementation.md](implementation.md) — the
+run sheet across Oct 24, Nov 6 and Dec 19, with orders, visits, gates.
 
 ## Selling it
 

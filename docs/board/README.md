@@ -24,6 +24,10 @@ the network can reach it. Stop it with Ctrl-C.
   originals, **Covers** (neither act's), and **Jax Splatter**. Real lengths
   off the files; tick to build a set and watch the running time. Picks are
   kept in this browser only.
+- **Merch** — what is: what's on hand (nothing yet), the decided round-1
+  list, and the single next thing. No plans, no gates, no counts until there
+  is something to count. Data lives in the file; a row is added when an
+  object exists.
 
 ## What's on it
 

@@ -123,6 +123,12 @@ button.t-steal[data-on]{background:var(--good); border-color:var(--good); color:
 }
 .ask b{color:var(--mark); font-family:'Bebas Neue',Impact,sans-serif; letter-spacing:.1em;
   font-weight:400; font-size:15px; display:block; margin-bottom:3px}
+/* merch */
+li.fact{display:grid; grid-template-columns:1fr auto; gap:12px; align-items:center;
+  padding:8px 11px; border:1px solid var(--edge); background:var(--surface); margin-bottom:4px}
+li.fact .t{font-size:14.5px}
+li.fact .t b{font-weight:500}
+li.fact .len{white-space:nowrap}
 </style>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Pathway+Gothic+One&family=Inter:wght@400;500&display=swap">
@@ -134,6 +140,7 @@ button.t-steal[data-on]{background:var(--good); border-color:var(--good); color:
     <button role="tab" id="tab-next" aria-controls="panel-next" aria-selected="true">Next</button>
     <button role="tab" id="tab-songs" aria-controls="panel-songs" aria-selected="false">Songs</button>
     <button role="tab" id="tab-refs" aria-controls="panel-refs" aria-selected="false">Playlists</button>
+    <button role="tab" id="tab-merch" aria-controls="panel-merch" aria-selected="false">Merch</button>
   </nav>
 
   <div class="next" id="panel-next" role="tabpanel" aria-labelledby="tab-next">
@@ -200,12 +207,43 @@ button.t-steal[data-on]{background:var(--good); border-color:var(--good); color:
     <p class="none" style="font-size:13px">Spotify side still to come — gather has no
     credentials for it, so "steal" (if it lives there) isn't pulled yet.</p>
   </div>
+  <div class="songs" id="panel-merch" role="tabpanel" aria-labelledby="tab-merch" hidden>
+    <div class="ask">
+      <b>Where it stands</b>
+      <span id="mstatus"></span>
+    </div>
+
+    <div class="pool">
+      <h2>On hand</h2>
+      <p>What physically exists. Release · batch · count.</p>
+      <ul id="mhave"></ul>
+    </div>
+
+    <div class="pool">
+      <h2>Committed for Oct 24</h2>
+      <p>Will be on the table. Conditions: blanks ordered by Oct 1, the Roland reserved for the week of Oct 5.</p>
+      <ul id="mcommit"></ul>
+    </div>
+
+    <div class="pool">
+      <h2>Stretch</h2>
+      <p>On the table only once its gate passes, by Oct 9.</p>
+      <ul id="mstretch"></ul>
+    </div>
+
+    <div class="pool">
+      <h2>Next</h2>
+      <p id="mnext"></p>
+    </div>
+  </div>
+  </div>
 </div>
 
 <div class="total" id="total" hidden>
   <span class="n" id="picked">0:00</span>
   <span class="l"><span id="count">0</span> songs picked</span>
 </div>
+
 
 <script id="js-script">
 (function () {
@@ -372,14 +410,14 @@ button.t-steal[data-on]{background:var(--good); border-color:var(--good); color:
   });
 
   function show(name) {
-    ['next', 'songs', 'refs'].forEach(function (t) {
+    ['next', 'songs', 'refs', 'merch'].forEach(function (t) {
       document.getElementById('tab-' + t).setAttribute('aria-selected', String(t === name));
       document.getElementById('panel-' + t).hidden = (t !== name);
     });
     try { localStorage.setItem(TABKEY, name); } catch (e) { }
     total();
   }
-  ['next', 'songs', 'refs'].forEach(function (t) {
+  ['next', 'songs', 'refs', 'merch'].forEach(function (t) {
     document.getElementById('tab-' + t).addEventListener('click', function () { show(t); });
   });
 
@@ -391,9 +429,38 @@ button.t-steal[data-on]{background:var(--good); border-color:var(--good); color:
 
   renderRefs();
 
+  /* ---- merch ---- */
+  var MADE = [];   // [release, name, batch, count] — add a row when something physically exists
+  var COMMIT = [
+    ['Stickers', 'wordmark kiss-cut; splat die-cut only if rights clear', '$2'],
+    ['Buttons 2.25"', 'JAX-crop face; A006 face only if rights clear', '$3'],
+    ['Lighters, wrapped', 'Bic Maxi, Roland wrap', '$3'],
+    ['Can coolers', 'sublimation', '$5'],
+    ['Price card', '', '—']
+  ];
+  var STRETCH = [
+    ['Dog tags 021–050', 'gate: one blank marks clean + laser slot', '$8'],
+    ['Totes', 'gate: sample picked (HTV vs stencil) + press session', '$15'],
+    ['Zippo proof', 'gate: a laser slot; one unit', '$50']
+  ];
+  var STATUS = 'Nothing made, nothing ordered. Wordmark vector and the four production files exist (Sep 29), unsigned. ' +
+    'Sign-off next, then a machine. ' +
+    'Tees are round 2; beanies wait for the embroidery machine; belts are proposed, not decided.';
+  var NEXT = 'Jax signs the four files (sign-off sheet), orders blanks by Oct 1, reserves the Marksbury Roland for the week of Oct 5.';
+  document.getElementById('mstatus').textContent = STATUS;
+  document.getElementById('mhave').innerHTML = MADE.length ? MADE.map(function (x) {
+    return '<li class="fact"><span class="t"><b>' + x[1] + '</b> <span class="flag">· ' + x[0] + ' · ' + x[2] + '</span></span><span class="len">' + x[3] + '</span></li>';
+  }).join('') : '<li class="none">— none yet.</li>';
+  function factRow(x) {
+    return '<li class="fact"><span class="t"><b>' + x[0] + '</b>' + (x[1] ? ' <span class="flag">· ' + x[1] + '</span>' : '') + '</span><span class="len">' + x[2] + '</span></li>';
+  }
+  document.getElementById('mcommit').innerHTML = COMMIT.map(factRow).join('');
+  document.getElementById('mstretch').innerHTML = STRETCH.map(factRow).join('');
+  document.getElementById('mnext').textContent = NEXT;
+
   var saved = 'next';
   try { saved = localStorage.getItem(TABKEY) || 'next'; } catch (e) { }
-  show(['songs', 'refs'].indexOf(saved) >= 0 ? saved : 'next');
+  show(['songs', 'refs', 'merch'].indexOf(saved) >= 0 ? saved : 'next');
 })();
 </script>
 
