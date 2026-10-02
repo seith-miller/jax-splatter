@@ -279,9 +279,21 @@ li.fact .len{white-space:nowrap}
     </div>
 
     <div class="pool">
-      <h2>The numbers</h2>
-      <p>What exists today, per song. Lit means we have it.</p>
-      <ul id="nums"></ul>
+      <h2>Finished</h2>
+      <p>All eight. Hand it to a hired band and walk away.</p>
+      <ul id="ndone"></ul>
+    </div>
+
+    <div class="pool">
+      <h2>In progress</h2>
+      <p>Something exists. Lit means we have it; the count is how far.</p>
+      <ul id="nwip"></ul>
+    </div>
+
+    <div class="pool">
+      <h2>Not started</h2>
+      <p>Named, and nothing else.</p>
+      <ul id="nnone"></ul>
     </div>
   </div>
 
@@ -516,7 +528,7 @@ li.fact .len{white-space:nowrap}
   (function renderNumbers() {
     document.getElementById('nstd').textContent =
       STD.map(function (x) { return x[0]; }).join(' · ');
-    document.getElementById('nums').innerHTML = NUMBERS.map(function (n) {
+    function row(n) {
       var have = n[2];
       var chips = STD.map(function (x) {
         return '<span class="chip' + (have.indexOf(x[0]) >= 0 ? ' on' : '') +
@@ -526,7 +538,19 @@ li.fact .len{white-space:nowrap}
         (n[1] === 'cover' ? ' <em>· cover</em>' : '') + '</span>' +
         '<span class="chips">' + chips + '</span>' +
         '<span class="score"><b>' + have.length + '</b>/' + STD.length + '</span></li>';
-    }).join('');
+    }
+    function fill(id, list, empty) {
+      document.getElementById(id).innerHTML = list.length
+        ? list.map(row).join('')
+        : '<li class="num"><span class="nm none">' + empty + '</span></li>';
+    }
+    var done = NUMBERS.filter(function (n) { return n[2].length === STD.length; });
+    var wip  = NUMBERS.filter(function (n) { return n[2].length > 0 && n[2].length < STD.length; })
+                      .sort(function (a, b) { return b[2].length - a[2].length; });
+    var none = NUMBERS.filter(function (n) { return n[2].length === 0; });
+    fill('ndone', done, 'None yet. No number has all eight.');
+    fill('nwip',  wip,  'Nothing in progress.');
+    fill('nnone', none, 'Nothing idle.');
   })();
 
   renderRefs();
