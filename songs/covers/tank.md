@@ -66,21 +66,30 @@ Full detail in [band/charts/tank.md](../../band/charts/tank.md). Headlines:
 - **The opening drum fill is rubato** — don't chart it, don't click it.
 - **From bar 105 the drums go into three** against a bar that stays 4/4, while
   the keys take over and the bass stops. In character for this album.
-- **Our own bass transcription** — `unmixher transcribe --transcriber bass` on
-  our bass stem: **516 notes, grid-lock 1.00 against eighths**, monophonic,
-  67 ms glide, margin 0.63 over the silence baseline. 4.5 notes a bar. MIDI and
-  a resynth to audition it sit beside the session in
-  `~/Music/jax-splatter/tank/`.
+- **Our own bass transcription — attempted and REJECTED (2026-10-02).**
+  `unmixher transcribe --transcriber bass` produced 516 notes that Jax heard
+  immediately as a different line from the record. The numbers agree:
 
-  This is why the dossier links tabs rather than copying them. A published tab
-  is someone else's transcription and someone else's to license; a transcript
-  we make from the record is **ours to edit**, is keyed to our own tempo map
-  rather than an idealised grid, and drops straight into the session. Use the
-  published tabs to check ourselves, not as source.
+  | | |
+  |---|---|
+  | chroma correlation, resynth vs bass stem | **0.415** (under 0.5 = a different line) |
+  | margin over silence | 0.63 — **below** un-mix-her's own 0.76–0.81 "transparent" band |
+  | median note | **A#1**, with **78 % below E1** — under a bass's lowest string |
+  | pitch classes | E **31 %** against 13 % in the stem |
 
-  **It stays out of the repo.** The MIDI is our transcription of someone else's
-  composition — fine to hold and play from, not ours to publish — so it lives
-  with the audio in `~/Music/`, like the stems, and never in git.
+  Diagnosis: the `htdemucs_ft` bass stem carries **kick bleed**, and the
+  tracker followed it into the sub region, reporting a near-drone instead of
+  the line. `--transcriber spectral` is worse (margin 0.349); `mono` and
+  `basic-pitch` have no backend installed here.
+
+  **The lesson for reading these reports:** `grid_lock_8ths: 1.00` means every
+  note landed on an eighth. It says nothing about whether the pitches are
+  right, and it was read as quality here when it is only rhythm.
+
+  Next thing to try, one at a time: high-pass the bass stem above the kick
+  fundamental before transcribing, or transcribe the `htdemucs_6s` bass stem
+  instead, and score each by chroma correlation against the stem rather than by
+  the margin alone.
 
 ## Open questions
 
