@@ -66,6 +66,21 @@ Full detail in [band/charts/tank.md](../../band/charts/tank.md). Headlines:
 - **The opening drum fill is rubato** — don't chart it, don't click it.
 - **From bar 105 the drums go into three** against a bar that stays 4/4, while
   the keys take over and the bass stops. In character for this album.
+- **Our own bass transcription** — `unmixher transcribe --transcriber bass` on
+  our bass stem: **516 notes, grid-lock 1.00 against eighths**, monophonic,
+  67 ms glide, margin 0.63 over the silence baseline. 4.5 notes a bar. MIDI and
+  a resynth to audition it sit beside the session in
+  `~/Music/jax-splatter/tank/`.
+
+  This is why the dossier links tabs rather than copying them. A published tab
+  is someone else's transcription and someone else's to license; a transcript
+  we make from the record is **ours to edit**, is keyed to our own tempo map
+  rather than an idealised grid, and drops straight into the session. Use the
+  published tabs to check ourselves, not as source.
+
+  **It stays out of the repo.** The MIDI is our transcription of someone else's
+  composition — fine to hold and play from, not ours to publish — so it lives
+  with the audio in `~/Music/`, like the stems, and never in git.
 
 ## Open questions
 
