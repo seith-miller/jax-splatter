@@ -15,3 +15,8 @@ New tracks are written with the ensemble and its paperwork in mind from the
 start — see [writing-for-the-ensemble.md](writing-for-the-ensemble.md). Most
 of it is cheap before a track exists and expensive afterwards, especially
 section lengths against the choreo count grid.
+
+Covers get a **dossier** before anyone plays them —
+[covers/](covers/): who wrote it, how it was made, every tab and
+transcription that exists (linked, never copied), and what our own analysis
+found. Know the song before you touch it.
