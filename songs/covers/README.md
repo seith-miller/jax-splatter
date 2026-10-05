@@ -53,6 +53,13 @@ one member (`DirectForager`) with a documented slot for LLM-backed foragers.
 A `reference-dossier` forager belongs there. Filed against gather; until it
 exists, dossiers are built by hand and the template is the spec.
 
+## Where the files go
+
+Scores, sessions, MIDI and stems are media masters and go to the
+**archivist**; the dossier and chart stay in git; the source recording stays
+in gather; third-party transcriptions stay local and go nowhere. The full
+rule is [docs/storage.md](../../docs/storage.md).
+
 ## The library
 
 | Track | Dossier | Chart |

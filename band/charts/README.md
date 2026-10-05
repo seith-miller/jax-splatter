@@ -137,6 +137,12 @@ bars**, and its ~119 bars are about **30 8s**. Chart bar 49 is count sheet
 Where a chart says a section starts, the count sheet must start it too. If
 they disagree, the count sheet is wrong — the chart is keyed to the recording.
 
+## Where the files go
+
+A chart is prose and lives here in git. The scores, parts and MIDI it points
+at are media masters and go to the archivist — see
+[docs/storage.md](../../docs/storage.md).
+
 ## Printing
 
 One song per sheet, big type, matte, on the rig case. Laminate after the
