@@ -79,8 +79,18 @@ Full detail in [band/charts/tank.md](../../band/charts/tank.md). Headlines:
   drift never enters. Check: both basses enter at bar 5, both lead lines at
   bar 1, drum entries differ only by the rubato fill (2.73 vs 3.00). Songsterr's
   "gtr0" is set to a synth-lead program so the Minimoog question can be heard,
-  not just argued. Built by `midimaster.py`; Save As `.mscz` in MuseScore to
-  keep mixer state.
+  not just argued. Built by `midimaster.py`.
+
+  **With tablature (same day):** `notation/tank-master.musicxml` is the same
+  seven parts as MusicXML, with a **TAB staff under every pitched part** —
+  guitars on standard six-string tuning, basses on four — strings and frets
+  assigned per note, chords grouped, ties across barlines, every measure
+  checked to sum to one bar. Written so the tab exists on open rather than
+  being added by hand in the GUI. Built by `xmlmaster.py`. Jax's native save
+  is `tank-master.mscz` — the copy that keeps mixer state and edits; the tab
+  is fully editable there (strings, frets, slides, bars that don't match the
+  ear), and that editing is the point: Songsterr's reading is the start of
+  our arrangement, not something we file as ours.
 
 - **Drums: transcribed and notated (2026-10-02).** Per-part MIDI from the
   cascade (kick, snare, hh, ride, toms, crash), cleaned and quantised at 161.5
