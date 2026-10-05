@@ -8,18 +8,18 @@ tank."* Fast, mean, short, and built on a figure a three-piece can carry.
 
 | | |
 |---|---|
-| Written by | **to confirm** — Stranglers credits of this era are usually the whole band (Burnel / Cornwell / Greenfield / Black); not verified |
+| Written by | **The Stranglers** — Hugh Cornwell, Jean-Jacques Burnel, Dave Greenfield, Jet Black (album credit: all tracks, except as noted; Tank carries no separate credit) |
 | From | *Black and White* (1978) |
-| Released | album 12 May 1978. Tank was the **B-side to "Walk On By"**, later pressed as a double-A for radio |
+| Released | album 12 May 1978 — **White side, track 1, 2:54**. Then the **B-side to "Walk On By"** (July 1978, with "Old Codger"); an edited version with Tank was pressed as a double-A radio single |
 | Label | United Artists; A&M in America |
 | Producer | **Martin Rushent** — their first three albums |
-| Engineer | **Alan Winstanley** — all tracks |
+| Engineer | **Alan Winstanley** — all tracks; co-produced "Old Codger" |
 | Studio | **T.W. Studios, Fulham, London** |
 | Recorded | February–March 1978 |
-| Personnel | to confirm per track |
+| Personnel | Hugh Cornwell — guitar, lead/backing vocals · Jean-Jacques Burnel — bass, lead/backing vocals · **Dave Greenfield — keyboards: Hammond L100 organ, Hohner Cembalet, Minimoog** · Jet Black — drums, percussion |
 
-Sources: [Black and White (Wikipedia)](https://en.wikipedia.org/wiki/Black_and_White_(The_Stranglers_album))
-· [Discogs release](https://www.discogs.com/release/1490350-The-Stranglers-Black-And-White)
+Sources: [Black and White (Wikipedia)](https://en.wikipedia.org/wiki/Black_and_White_(The_Stranglers_album)) — credits and personnel read 2026-10-05
+· [Discogs release](https://www.discogs.com/release/1490350-The-Stranglers-Black-And-White) — refuses non-browser requests (403); unverified against it
 
 ## The context
 
@@ -45,6 +45,8 @@ a band re-voices a cover anyway.
 | Clean capture (unfetched) | gather `ab33dcc5` — [TIDAL track 1563164](https://tidal.com/browse/track/1563164) | queued; the fetcher records the desktop app in real time |
 
 | **Songsterr MIDI export** — gtr ×2, bass, drums | `~/Music/jax-splatter/tank/refs/songsterr/` (local, outside git) | **Their transcription, not ours.** `songsterr.json` records it: machine-origin (initial revision "via AI", 2025-01-17), human-edited 2025-07-15, written at a fixed 160 BPM. Use to *check* our work; never as source |
+
+| Bass tab — Ultimate Guitar | [page](https://tabs.ultimate-guitar.com/tab/the-stranglers/tank-bass-6582443) | script-rendered; unreadable without a browser (2026-10-05). Author, date and whether it covers the outro all unknown |
 
 **Does not exist** (checked 2026-09-27): **no MIDI** — [MIDI DB](https://www.mididb.com/the-stranglers/)
 carries Stranglers files but not this one, and requests for it go back years on
@@ -127,10 +129,13 @@ Full detail in [band/charts/tank.md](../../band/charts/tank.md). Headlines:
   bottom octave of the instrument, where Songsterr's transcription also sits
   (74 %). The register was fine.
 
-  **The outro disagreement is open.** Our stem analysis has the bass at 0 %
-  from bar 100 and our MIDI stops there; Songsterr's tab keeps the bass going
-  to the end. Either the separator lost the bass under the organ, or an
-  AI-origin tab filled in a part that isn't there. Only ears settle it.
+  **The outro disagreement, sharpened (2026-10-05).** Songsterr's bass runs
+  at a steady **8 notes a bar — straight eighths — from bar 9 through bar
+  112**, and only stops for the last five bars. Our stems have it gone from
+  bar ~100. So it is not a vague difference: either the separator lost eight
+  bars of bass under the organ, or an AI tab invented them. **Ears, at
+  2:30–2:50 of the mix.** The same table diagnoses our transcription exactly:
+  4.4 notes a bar against a steady 8 means it caught **every other eighth**.
 
   **Fix path:** a human pass against the stem in MuseScore, starting from the
   original MIDI, with Songsterr open as the check. More tracker runs won't get
@@ -138,7 +143,7 @@ Full detail in [band/charts/tank.md](../../band/charts/tank.md). Headlines:
 
 ## Open questions
 
-- **Writer credits** — not verified. Needed before any recording of a cover.
+- ~~Writer credits~~ — **resolved 2026-10-05**: The Stranglers, all four, per the album credit.
 - **Is the `other` stem a keyboard?** Greenfield's keys are a Stranglers
   signature, and `other` surges exactly where the bass drops out. Unconfirmed
   by ear.
@@ -161,6 +166,15 @@ Full detail in [band/charts/tank.md](../../band/charts/tank.md). Headlines:
   |---|---|---|---|
   | gtr 0 — lead / intro figure | **0.517** | 0.271 | 0.368 |
   | gtr 1 — strummed rhythm | **0.631** | 0.308 | 0.440 |
+
+  **The personnel settle most of it (2026-10-05).** This is a four-piece with
+  **one guitarist**. Two "distortion guitar" tracks can only both be guitars
+  if Cornwell overdubbed; the far likelier reading is that Songsterr's
+  "guitar 0" is **Greenfield on the Minimoog** — a monophonic lead line that
+  climbs to F#5 is exactly what an AI transcriber would file as a guitar.
+  Songsterr's own density profile agrees: that track is sparse through the
+  verses (2 notes a bar), fills in for the instrumental, and is busiest at
+  bars 97–104 (19.5 a bar) — precisely where our keys-ish `other` stem surges.
 
   Both land in the guitar stem — but that only says where the **separator**
   put the energy. `htdemucs_6s` is known to file organ under guitar, and
