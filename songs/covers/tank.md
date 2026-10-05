@@ -84,6 +84,25 @@ Full detail in [band/charts/tank.md](../../band/charts/tank.md). Headlines:
   input, Songsterr's two guitar exports are the check, and the score is the
   same bar-by-bar chroma used for bass — never the margin alone.
 
+- **Guitar: transcribed (2026-10-04) — the best transcription we have.**
+  Basic Pitch on the `htdemucs_6s` guitar stem: **1553 notes, 13.3 a bar,
+  margin 0.700** — the closest any run has come to un-mix-her's 0.76
+  "transparent" band. Scored against Songsterr's two guitar exports:
+
+  | vs | bar-by-bar chroma |
+  |---|---|
+  | gtr 1 — strummed rhythm | **0.678** |
+  | both merged | 0.629 |
+  | gtr 0 — lead / intro figure | 0.558 |
+
+  Rhythm alone beats the merge, so **the stem is mostly the rhythm guitar** —
+  our **Guitar 2** chair — with the lead/intro figure only partly captured.
+  That is what a separator does with two guitars: the louder strummed part
+  wins. MIDI and a resynth sit beside the session in
+  `~/Music/jax-splatter/tank/` (outside git, like the stems). Next: a human
+  pass in MuseScore to split what's there into the rhythm part and recover
+  the lead figure from the intro, where it plays alone.
+
 - **Our own bass transcription — partly right, not wrong (reassessed
   2026-10-04).** I first rejected it as "a different line". Scored bar by bar
   against Songsterr's export as an external check, it isn't:
