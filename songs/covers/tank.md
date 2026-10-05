@@ -78,36 +78,44 @@ Full detail in [band/charts/tank.md](../../band/charts/tank.md). Headlines:
   five parts done.
 
 - **Guitar and bass parts: next.** Jax, 2026-10-04 — tabs and charts for
-  both. Same route as drums: transcribe from *our* stems, score the result by
-  chroma correlation against the stem, notate in MuseScore, export tab +
-  MIDI. Bass needs a cleaner source first (below). Guitar is polyphonic and
-  harder; the `htdemucs_6s` guitar stem is the input and Songsterr's export
-  is the check.
+  both. Bass: a human pass from our MIDI (below). Guitar: polyphonic, so the
+  pitched backend is **Basic Pitch** via un-mix-her's `[transcription]` extra
+  (`basic-pitch[onnx]`, `setuptools<81`); the `htdemucs_6s` guitar stem is the
+  input, Songsterr's two guitar exports are the check, and the score is the
+  same bar-by-bar chroma used for bass — never the margin alone.
 
-- **Our own bass transcription — attempted and REJECTED (2026-10-02).**
-  `unmixher transcribe --transcriber bass` produced 516 notes that Jax heard
-  immediately as a different line from the record. The numbers agree:
+- **Our own bass transcription — partly right, not wrong (reassessed
+  2026-10-04).** I first rejected it as "a different line". Scored bar by bar
+  against Songsterr's export as an external check, it isn't:
 
-  | | |
-  |---|---|
-  | chroma correlation, resynth vs bass stem | **0.415** (under 0.5 = a different line) |
-  | margin over silence | 0.63 — **below** un-mix-her's own 0.76–0.81 "transparent" band |
-  | median note | **A#1**, with **78 % below E1** — under a bass's lowest string |
-  | pitch classes | E **31 %** against 13 % in the stem |
+  | candidate | notes/bar | vs Songsterr |
+  |---|---|---|
+  | **original** `tank-bass.mid` (ft stem) | 4.4 | **0.520** — 0.62–0.63 through the body |
+  | retry A — ft stem high-passed 60 Hz | 3.5 | 0.515 |
+  | retry B — `htdemucs_6s` bass stem | 1.9 | 0.483 |
+  | Songsterr's own | 7.1 | — |
 
-  Diagnosis: the `htdemucs_ft` bass stem carries **kick bleed**, and the
-  tracker followed it into the sub region, reporting a near-drone instead of
-  the line. `--transcriber spectral` is worse (margin 0.349); `mono` and
-  `basic-pitch` have no backend installed here.
+  What's actually wrong with it: **it has 4.4 notes a bar where the part has
+  about 7** — the roots are mostly right and the moving notes are missing,
+  which is exactly what "sounds like a different melody" means when the
+  harmony is intact. It is weak at the entry (0.35 over bars 1–16, under the
+  rubato fill), weak in the instrumental (0.42), and **empty after ~152 s**.
 
-  **The lesson for reading these reports:** `grid_lock_8ths: 1.00` means every
-  note landed on an eighth. It says nothing about whether the pitches are
-  right, and it was read as quality here when it is only rhythm.
+  Two corrections to my own earlier reading. The chroma correlation of 0.415
+  was against a bass stem that carries kick bleed — a polluted reference, so a
+  low number there was never proof of a wrong line. And "78 % below MIDI 40,
+  under the lowest string" was a mislabel: MIDI 40 is **E2**, so that is the
+  bottom octave of the instrument, where Songsterr's transcription also sits
+  (74 %). The register was fine.
 
-  Next thing to try, one at a time: high-pass the bass stem above the kick
-  fundamental before transcribing, or transcribe the `htdemucs_6s` bass stem
-  instead, and score each by chroma correlation against the stem rather than by
-  the margin alone.
+  **The outro disagreement is open.** Our stem analysis has the bass at 0 %
+  from bar 100 and our MIDI stops there; Songsterr's tab keeps the bass going
+  to the end. Either the separator lost the bass under the organ, or an
+  AI-origin tab filled in a part that isn't there. Only ears settle it.
+
+  **Fix path:** a human pass against the stem in MuseScore, starting from the
+  original MIDI, with Songsterr open as the check. More tracker runs won't get
+  there — both retries scored lower.
 
 ## Open questions
 
