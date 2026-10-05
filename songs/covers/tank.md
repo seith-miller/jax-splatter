@@ -70,8 +70,14 @@ Full detail in [band/charts/tank.md](../../band/charts/tank.md). Headlines:
 - **The opening drum fill is rubato** — don't chart it, don't click it.
 - **From bar 105 the drums go into three** against a bar that stays 4/4, while
   the keys take over and the bass stops. In character for this album.
-- **Master score (2026-10-05)** — `notation/tank-master.mid`: every part on
-  one bar grid as its own staff, for A/B listening in MuseScore's Mixer.
+- **Master score (2026-10-05) — Songsterr's four parts only.** First built
+  with our three machine transcriptions alongside for A/B; Jax judged the
+  comparison in one listen ("see how much more usable than anything that is
+  ours") and had them removed. The working score is now Songsterr's lead,
+  rhythm, bass and drums on one bar grid, each pitched part with a TAB staff.
+  Our raw MIDIs stay as separate files, out of the score.
+
+  How it was built —
   Ours (drums quantised at 161, bass, guitar) sit on the measured grid
   (161.499 BPM, first downbeat 0.406 s); Songsterr's four sit on their fixed
   160. Each is mapped to **bar.beat on its own grid** and rebuilt on one
