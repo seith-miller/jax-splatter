@@ -125,4 +125,12 @@ Full detail in [band/charts/tank.md](../../band/charts/tank.md). Headlines:
   by ear.
 - **Key** — three machine runs gave Em, E:maj and D:maj. Unresolved.
 - **Which chairs does it need?** It is a four-piece record; we have nine
-  chairs ([band/charts/chairs.md](../../band/charts/chairs.md)).
+  chairs ([band/charts/chairs.md](../../band/charts/chairs.md)). First
+  evidence on the guitar question, 2026-10-04: **Songsterr's export carries
+  two distinct guitar parts** — guitar 0 is a lead/intro figure (972 notes,
+  8.3 a bar, from 0:00, range up to F#5) and guitar 1 is a strummed rhythm
+  part (2065 notes, 17.6 a bar, 60 % chordal, enters at 0:06). They correlate
+  at 0.67 bar by bar — related, not doubled. That is an AI-origin tab's
+  arrangement choice, not ground truth, but if it holds up by ear it fills
+  **both Guitar 1 and Guitar 2** rather than one. Our `htdemucs_6s` guitar stem
+  would hold both merged; a transcription of it is the next check.
