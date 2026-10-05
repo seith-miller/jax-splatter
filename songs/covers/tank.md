@@ -150,6 +150,24 @@ Full detail in [band/charts/tank.md](../../band/charts/tank.md). Headlines:
   8.3 a bar, from 0:00, range up to F#5) and guitar 1 is a strummed rhythm
   part (2065 notes, 17.6 a bar, 60 % chordal, enters at 0:06). They correlate
   at 0.67 bar by bar — related, not doubled. That is an AI-origin tab's
-  arrangement choice, not ground truth, but if it holds up by ear it fills
-  **both Guitar 1 and Guitar 2** rather than one. Our `htdemucs_6s` guitar stem
-  would hold both merged; a transcription of it is the next check.
+  arrangement choice, not ground truth.
+
+  **Jax, 2026-10-04: "yes, Tank has two 'guitars' — I think one is actually a
+  keyboard."** The lead/intro figure, then, would be Greenfield's keys — which
+  fits a keyboard-forward record and a single-line part that climbs to F#5.
+  Tested against our stems by bar-by-bar chroma:
+
+  | Songsterr track | vs guitar stem | vs `other` (keys) | vs piano |
+  |---|---|---|---|
+  | gtr 0 — lead / intro figure | **0.517** | 0.271 | 0.368 |
+  | gtr 1 — strummed rhythm | **0.631** | 0.308 | 0.440 |
+
+  Both land in the guitar stem — but that only says where the **separator**
+  put the energy. `htdemucs_6s` is known to file organ under guitar, and
+  `other` correlating weakly with everything says that stem holds almost no
+  pitched material through the body (it only surges in the outro). So the
+  numbers cannot distinguish "a lead guitar" from "a keyboard mis-filed as
+  guitar". **Inconclusive by machine; Jax's ear decides.** If he's right, the
+  chairs are **Guitar (rhythm) + Keytar (the lead figure)**, not Guitar 1 and
+  2 — and the Basic Pitch transcription of the guitar stem (below) contains
+  the keyboard part too, to be split out by hand.
