@@ -70,6 +70,18 @@ Full detail in [band/charts/tank.md](../../band/charts/tank.md). Headlines:
 - **The opening drum fill is rubato** — don't chart it, don't click it.
 - **From bar 105 the drums go into three** against a bar that stays 4/4, while
   the keys take over and the bass stops. In character for this album.
+- **Master score (2026-10-05)** — `notation/tank-master.mid`: every part on
+  one bar grid as its own staff, for A/B listening in MuseScore's Mixer.
+  Ours (drums quantised at 161, bass, guitar) sit on the measured grid
+  (161.499 BPM, first downbeat 0.406 s); Songsterr's four sit on their fixed
+  160. Each is mapped to **bar.beat on its own grid** and rebuilt on one
+  timeline at 161.5, so alignment holds by construction and the 160-vs-161.5
+  drift never enters. Check: both basses enter at bar 5, both lead lines at
+  bar 1, drum entries differ only by the rubato fill (2.73 vs 3.00). Songsterr's
+  "gtr0" is set to a synth-lead program so the Minimoog question can be heard,
+  not just argued. Built by `midimaster.py`; Save As `.mscz` in MuseScore to
+  keep mixer state.
+
 - **Drums: transcribed and notated (2026-10-02).** Per-part MIDI from the
   cascade (kick, snare, hh, ride, toms, crash), cleaned and quantised at 161.5
   over **117 bars**; `drums_patterns.json` holds the groove per section with a
