@@ -105,7 +105,10 @@ Full detail in [band/charts/tank.md](../../band/charts/tank.md). Headlines:
   `x.x.....x.x.....` and snare `....x.......x...` are Jax's "1+ and 3+ / 2 and
   4" exactly. Notated in MuseScore: `notation/tank-drums-clean.pdf` is a
   **handable drum part**, with `.mscz` source and MusicXML beside it. One of
-  five parts done.
+  five parts done. **Timekeeping cymbal resolved (2026-10-09), Seith's call:
+  the verses have a ride. Matches our transcription; Songsterr's hi-hat
+  reading was wrong** (see
+  [band/charts/tank.md](../../band/charts/tank.md)'s Drum transcription row).
 
 - **Guitar and bass parts: next.** Jax, 2026-10-04 — tabs and charts for
   both. Bass: a human pass from our MIDI (below). Guitar: polyphonic, so the
