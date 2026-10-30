@@ -44,6 +44,23 @@ neutral spec). This file keeps the provenance and the usage logic.
 - Between the named neutrals, UI ramps (dim text, hairlines) are derived tokens,
   interpolated as needed — they are not brand colors and don't get signed off.
 
+## Physical color tolerance
+
+This is a usage rule, not a palette change — the swatch hexes above are
+unchanged. It governs how closely a physical part (filament, paint, print)
+must match when realizing a named color.
+
+- The canonical hex for a signed color (e.g. JAX-A001's Splatter Pink
+  #ea3e86) is the centre. Every physical part must land within **Delta E 5
+  (CIEDE2000)** of its canon hex.
+- Parts that sit next to each other, or in the same assembly, must additionally
+  land within **Delta E 2** of each other — measured part to part, not just
+  each against canon. The easiest way to hit this is printing the whole
+  assembly from one spool or one paint batch.
+- Vendor-published hexes are only good for first acceptance of a
+  material — confirm the real tolerance against a printed chip, not the spec
+  sheet.
+
 ## Companion views
 
 - `jax-wheel.html` — the color solid in four lightness slices, all 11 colors
