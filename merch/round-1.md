@@ -34,12 +34,9 @@ crate first).
    revise the garment rule; it revises it in the registry, not on the press.
 4. **No faces on merch.** Mark and key art only. The wordmark is never
    stacked, outlined or distressed; splatter lives around it.
-5. **Rights gate on the splat.** A005/A006 are built on four keyed
-   paintball photos whose source is not recorded in the repo. Confirm the
-   licence before anything carrying the splat is *sold*. Fallback if it
-   can't be cleared: regenerate the splat with `tools/splat-gen.py` (our
-   own code) and sign a v2. Wordmark-only items are clean (Pathway Gothic
-   One is SIL OFL).
+5. **The splat is ours.** A005/A006 are built on four keyed paintball
+   images that Jax made himself (Jax, 2026-11-04), so goods carrying the
+   splat clear to sell. The wordmark's font, Pathway Gothic One, is SIL OFL.
 
 ## Committed for Oct 24 (2026-09-29)
 
@@ -48,8 +45,8 @@ what it has only if a test passes:
 
 | Commit | Why it's safe |
 |---|---|
-| Stickers — the wordmark kiss-cut (the splat die-cut only if its rights clear) | one Roland job, no blanks to wait on |
-| Buttons 2.25" — JAX-crop wordmark face (the A006 face only if the rights clear) | same visit, parts bought at the branch |
+| Stickers — the wordmark kiss-cut (the splat die-cut optional) | one Roland job, no blanks to wait on |
+| Buttons 2.25" — JAX-crop wordmark face (the A006 face optional) | same visit, parts bought at the branch |
 | Wrapped lighters | same Roland job; Bic Maxis arrive in days |
 | Can coolers | one sublimation session; blanks cheap and fast |
 | Price card | paper |
@@ -111,7 +108,7 @@ the hold stands regardless.
 
 **Out of round 1:** the T-shirt (round 2, after the design pass — see
 below), acrylic keychains (dog tags own that slot), key-art print (needs
-print-res re-render + the rights gate), mugs, key-art printable-HTV tee,
+print-res re-render), mugs, key-art printable-HTV tee,
 3D-printed tags, kiln/CNC pieces, **LED wands** (Jax's tier-2 example, 2026-09-29 — blank glow wands with a wrap; a debut item). Bench for round 2.
 
 Same trips, not for sale: **DMX puck enclosures ×2** (~70 g PLA, ~$10.50
@@ -155,8 +152,7 @@ their silencers and onto their chains while the next batch is on the laser.
 Blank: DogTagBlanks BDT-01-CO, the one Dildozer's rack and library are built
 for (`dogtag-library.md`), replacing the 2 mm anodized aluminium so no new
 rack is needed. Black is listed; check pink against Splatter Pink. Test one
-tag before the run. The A006 splat falls under rule 5's rights gate: clear it
-before any tag is sold. Draft art: `merch/dogtag/` (not committed until picked).
+tag before the run. Draft art: `merch/dogtag/` (not committed until picked).
 
 ### Numbering — how it works
 
@@ -234,7 +230,6 @@ run sheet across Oct 24, Nov 6 and Dec 19, with orders, visits, gates.
 - Tote art: HTV wordmark or the wall-splat stencil? (two samples first)
 - Dog tag: blank colour, black or pink?
 - Table banner — confirm as table kit?
-- Who clears the paintball-photo rights (ground rule 5)?
 
 ## Pick sheet
 
