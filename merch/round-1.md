@@ -56,7 +56,7 @@ what it has only if a test passes:
 
 | Stretch — promised only once its gate passes (by Oct 9) | Gate |
 |---|---|
-| Dog tags 021–050 | one blank marks clean; laser slot booked |
+| Dog tag pairs 021–045 | one blank marks clean; laser slot booked |
 | Totes | sample picked (HTV vs stencil); press session booked |
 | Zippo proof, one unit | a laser slot |
 
@@ -89,7 +89,7 @@ and one face template (2.633" circle) serves buttons — and magnets, if they co
 |---|---|---|---|---|---|---|---|
 | **Stickers** — two designs (Jax, 2026-09-10): wordmark kiss-cut 4×1.25" with jaxsplatter.com small beneath; JAX splat die-cut 3". QR tile dropped. | Marksbury Roland, sticker paper $2/ft | $0.06–0.13 | $2 · 3/$5 · free in every bag | ~150 (90 + 60) | ~$12 | ~$85 (50 sold) | ready to file |
 | **Buttons** — 2.25" only (the one size both branches have); avatar face | either branch, 2.25" button maker | ~$0.36 | $3 · 2/$5 | 50 | ~$18 | ~$125 | ready to file |
-| **Dog tags** — colored anodized aluminum blanks (50×29×2 mm, ~100/pack with chains), laser-marked, numbered | either laser; test one tag first (painted vs anodized) | ~$0.30 | $8 | 30 | ~$25 (one pack) | ~$240 | blank candidate found (Jax, 2026-09-10); pink or black, not green |
+| **Dog tags, sold as a pair** — two DogTagBlanks BDT-01-CO powder-coated stainless blanks, each laser-engraved on one side, with silencers, one long neck chain and one short chain; long tag numbered | CO2 laser, if staff allow coated metal; test one tag first | ~$3.50 + short chain (unpriced) | $15 a pair | 25 pairs (50 blanks, the seller's minimum) | ~$48 blanks + ~$33 chains + silencers + short chains | ~$375 | Jax, 2026-11-04; colour black or pink, not yet picked |
 | **Tote bag** — heavyweight black canvas (10–12 oz, ~15×16"), wordmark in Bone HTV + pink X, or the wall-splat stencil | Cricut HTV / stencil mask + fabric spray, either branch; BYO blanks | ~$3.50 | $15 | 24 | ~$85 | ~$360 | design pick (HTV vs stencil) then file |
 | **Lighters, wrapped** — Bic-style plastic, full vinyl wrap (~2.9×2.1" around the body) | Marksbury Roland: printed on sticker stock, contour-cut, laminated if the branch has it; fallback Cricut permanent vinyl (cut, true neon) | ~$1.00 | $3 | 50 | ~$50 | ~$150 | ready to file |
 | **Lighters, Zippo** — genuine matte-black Zippo (218), wordmark laser-engraved on the lid, numbered on the base | either laser; insert out, unfueled, in a jig | ~$22 | $50 | **1 — a proof** (Jax, 2026-09-28) | ~$25 | $50 | one unit to prove the engraving and the price; an edition only if it sells and the blank lands under ~$20 |
@@ -141,17 +141,21 @@ artwork": a tee pick sheet, 4–6 directions rendered on the blank. The
 tote is the first test of that same question at lower stakes: HTV wordmark
 versus the wall-splat stencil on canvas.
 
-**The dog tag.** In. The effect decides the process:
+**The dog tag.** In, and always **a pair** (Jax, 2026-11-04): the long neck
+chain and the short chain are the aesthetic. Each tag is engraved on one side:
 
-| Effect wanted | Process | Where |
-|---|---|---|
-| Military authenticity — stamped steel, the rattle | embossing machine (neither branch) or hand letter-punches at home (rough, punk) | home / supplier |
-| Neon brand object — pink or slime tag, silver letters | laser-engraved anodized aluminum (dye removal) | either laser |
-| Crew token — numbered stainless, cast wears theirs first | IR/fiber marking on bare steel; verify Marksbury's small laser has it (it sells metal keychain blanks) | Marksbury |
+| Tag | Chain | Engraved | How it runs |
+|---|---|---|---|
+| Long | long neck chain | wordmark, crossed seltzer bottle and rubber chicken on a splat, SUCKER No. ### | numbered, every tag different |
+| Short | short chain | BLOOD TYPE: PINK / RELIGION: YES / RANK: NONE / IF FOUND, HONK | identical, a whole batch in one laser pass |
 
-Blank found (Jax, 2026-09-10): colored anodized aluminum, 50×29×2 mm, ~100
-per pack with ball chains — route 2. Pink or black, not green (anodized green
-is emerald, not Slime). Test one tag before the run: painted blanks flake.
+Clown, not army: a parody of the real tag's form. The short tags go into
+their silencers and onto their chains while the next batch is on the laser.
+
+Blank: DogTagBlanks BDT-01-CO, the one Dildozer's rack and library are built
+for (`dogtag-library.md`), replacing the 2 mm anodized aluminium so no new
+rack is needed. Black is listed; check pink against Splatter Pink. Test one
+tag before the run. Draft art: `merch/dogtag/` (not committed until picked).
 
 ### Numbering — how it works
 
@@ -161,32 +165,26 @@ limited editions and open series like this one — see
 [tiers.md](tiers.md)). One continuous tag series for the life of the act,
 every tag unique, never reissued. Three digits with leading zeros
 (001–999); the day it passes 999 is a good day. Round 1 = batch 1 of the
-series (021–050).
+series (021–045, 25 pairs).
 
 | Block | Who | Rule |
 |---|---|---|
 | 001 | Jax | — |
 | 002–020 | the cast — band, dancers, guest vocalists, crew | assigned as people join; a tag is how you know you're in the crew (stage-vision's rotating cast, made physical) |
-| 021 → | fans, in order sold | round 1 = 021–050 |
+| 021 → | fans, in order sold | round 1 = 021–045 |
 
 - **Register:** `merch/dog-tags.md` — number → cast name, or show + date
   sold (buyer anonymous unless they want in). Updated after every show; it
   is the crew roster and the sales log in one table.
-- **Layout:** front — wordmark, number small at the bottom edge (visible
-  when worn; the number is the point). Back — the GI five-line block:
-  SPLATTER, JAX / No. ### / GET SPLATTERED / NEON GLITCH SLUT POP /
-  JAXSPLATTER.COM.
-- **The file:** one signed marking file (JAX-A010) with a `{NUMBER}` field.
-  If the library runs LightBurn, its Variable Text does serials natively
-  (CSV or auto-increment) — one job, thirty numbers. If it runs xTool
-  Creative Space or similar, `tools/dog-tag-gen.py` (to write) emits one
-  SVG per number laid onto the jig positions.
-- **The jig:** laser-cut 3 mm MDF or chipboard with 50×29 mm pockets, cut
-  on the Eastside laser in the same reservation. Tags drop in, batch
-  engraves front; flip each in place, batch engraves back. ~30–60 s per
-  face; a run of 30 is one reservation.
-- **Gates, in order:** buy one pack → mark one tag (anodized vs painted)
-  → sign A010 with the numbering scheme → cut the jig → run 021–050 →
+- **Layout:** the number is on the long tag only; the short tag has none.
+  See the pair table above.
+- **The file:** one signed release (JAX-A010) covering both tags. The long
+  tag needs a different number in each rack pocket, which smart-part's dog
+  tag library doesn't do yet (`dogtag-library.md`). The short tag doesn't.
+- **The rack:** smart-part `dogtag-rack`, printed, not an MDF jig. No
+  flipping: each tag is one side, one pass.
+- **Order of work:** rack test piece → mark one tag (staff OK for coated
+  metal first) → sign A010 → short batch → numbered long tags 021–045 →
   cast tags 001–020 as the roster fills.
 
 ## Proposed sign-off candidates
@@ -196,7 +194,7 @@ series (021–050).
 | JAX-A007 | sticker-set | the Roland print+cut sheet: two designs with bleed and CutContour |
 | JAX-A008 | button-face | one 2.633" face circle for the 2.25" maker |
 | JAX-A009 | tote | the tote art: HTV cut file or stencil mask, placement, blank spec |
-| JAX-A010 | dog-tag | marking file, both faces, numbering scheme |
+| JAX-A010 | dog-tag | the pair: long tag and short tag marking files, numbering scheme |
 | JAX-A011 | lighter-wrap | full-wrap print+cut file for the Bic body |
 | JAX-A013 | zippo | lid engraving file + base numbering |
 | JAX-A012 | can-cooler | light-ground sublimation wrap |
@@ -233,7 +231,7 @@ run sheet across Oct 24, Nov 6 and Dec 19, with orders, visits, gates.
 ## Open questions for Jax
 
 - Tote art: HTV wordmark or the wall-splat stencil? (two samples first)
-- Dog tag: which of the three effects?
+- Dog tag: blank colour, black or pink?
 - Table banner — confirm as table kit?
 - Who clears the paintball-photo rights (ground rule 5)?
 

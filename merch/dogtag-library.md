@@ -3,7 +3,7 @@
 Handoff from the Dildozer dog tag work (2026-11-01 → 11-03, one Claude
 session with Seith). The Dildozer logo tag was signed off and cataloged
 (DLDZR-0037). Everything generic about it now lives in smart-part, so Jax's
-dog tags (round 1: numbered 021–050, `implementation.md`) start from working
+dog tags (always a pair; round 1: long tags numbered 021–045, `round-1.md`) start from working
 code, not from scratch.
 
 ## Where things are
@@ -39,13 +39,11 @@ is Jax's: art, design file, the laser files it generates.
 
 ## What Jax needs that isn't there yet
 
-1. **Jax's blank.** Round 1 specs anodized aluminium, 50 × 29 × **2 mm**,
-   pink or black. The library knows one blank (DogTagBlanks BDT-01-CO,
-   powder-coated stainless, 0.79 mm). Add Jax's to `blanks.py` from a real
-   tag's measurements; its rack then needs 2 mm pockets — a new rack, since a
-   rack is for one blank.
-2. **A number on every tag (021–050).** The library engraves the same art on
-   every tag. Numbering needs per-pocket text in the laser file, and a record
+1. **Jax's blank.** Decided 2026-11-04: Jax uses the same DogTagBlanks BDT-01
+   as Dildozer, so the rack and blank entry carry over. Colour still open (a
+   pink coat would need checking against Splatter Pink).
+2. **A number on every long tag (021–045).** The library engraves the same art
+   on every tag, which suits the short tags as is. Numbering needs per-pocket text in the laser file, and a record
    of which number went in which pocket. Dildozer wanted the same for the
    second tag of its set ("unique text"), so build it once, in the library.
 3. **Jax's look.** Jax's spray-paint / splat aesthetic may want its own
