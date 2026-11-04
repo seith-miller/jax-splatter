@@ -18,4 +18,4 @@ deterministic per seed — every seed is a different throw.
 Reference, not a release. If Jax picks one it becomes the candidate for
 **JAX-A013 merch-logotype v1** (its own release; A002 stays the site mark)
 and the round-1 production files get rebuilt in it. The splat underneath is
-the paintball-photo mass — rights gate still open for sold goods.
+the paintball-photo mass — Jax's own images, clear for sold goods (2026-11-04).
