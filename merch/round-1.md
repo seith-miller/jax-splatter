@@ -121,6 +121,9 @@ percussion crate.
 
 ## The two open design threads
 
+> **Dropped (Jax, 2026-11-03):** no screen-printed show tee, so the concept
+> below is not planned. Kept as a record; see [tiers.md](tiers.md).
+
 **The tee (round 2).** The flagship, not a line item: the surface people wear for
 years and the one that carries the brand into rooms Jax isn't in. Great band
 tees are an artwork with a name attached, not a logo alone. The library can
@@ -230,7 +233,6 @@ run sheet across Oct 24, Nov 6 and Dec 19, with orders, visits, gates.
 ## Open questions for Jax
 
 - Tote art: HTV wordmark or the wall-splat stencil? (two samples first)
-- Tee, round 2: wordmark front, or an artwork the name rides on?
 - Dog tag: which of the three effects?
 - Table banner — confirm as table kit?
 - Who clears the paintball-photo rights (ground rule 5)?

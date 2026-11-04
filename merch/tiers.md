@@ -166,8 +166,11 @@ Each register line says which belt's hide it came from.
 ## What this changes
 
 - Round 1 is now mostly tier 3: totes and dog tags by name, with the small
-  goods provisional. The tee is no longer a round-2 screen print by default;
-  it is the tier 2 print-on-demand item.
+  goods provisional. **There is no screen-printed show tee** (Jax,
+  2026-11-03: "I don't really like T-shirts"). The only tee is the tier 2
+  print-on-demand default. What people wear from the table is **fashion
+  design**, not printed shirts; pieces, makers and tier are still to be
+  defined.
 - New file when the first belt is cut: `merch/register.md` — every
   unit-numbered object, number → who / where / from which hide. Batches of
   everything else live in `merch/inventory.md`.
@@ -178,9 +181,7 @@ Each register line says which belt's hide it came from.
 
 ## Open questions for Jax
 
-- Does the print-on-demand tee replace a table tee, or does a neon screen-
-  printed tee still exist at shows? `implementation.md` still has it screen-
-  printed for Dec 19, with an order date of ~Nov 20.
+- Fashion design: what pieces, who makes them, and which tier?
 - Is 60% the right floor for a low-cost POD tee? Set it by real supplier prices.
 - Which tier do buttons, stickers, lighters, coolers, belts and Zippos belong
   to? All are provisional above.
