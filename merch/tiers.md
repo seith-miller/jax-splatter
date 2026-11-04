@@ -87,9 +87,9 @@ purchase that fits them.
 | $2 | sticker | 3 (provisional) |
 | $3 | wrapped lighter, button | 3 (provisional) |
 | $5 | can cooler, LED wand | 3 (provisional) |
-| $8 | dog tag (open series), leather fob | 3 |
+| $8 | leather fob | 3 |
 | $12 | pick holder | 3 |
-| $15 | tote | 3 |
+| $15 | tote, dog tag pair (open series) | 3 |
 | $25–35 | the default tee, print-on-demand | 2 |
 | $30 | card wallet | 3 |
 | $40 | guitar strap | 3 |

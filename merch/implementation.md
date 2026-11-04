@@ -11,7 +11,7 @@ growing it show by show. Sources: [round-1.md](round-1.md) (what),
 
 | Date | Show | Room | What's on the table |
 |---|---|---|---|
-| **Oct 24** | DILDOZER, The Green Lantern, Lexington — headline, cap 150 | sellout is the goal | **Round 1**: stickers, buttons, dog tags 021–050, totes, wrapped lighters, one proof Zippo, can coolers |
+| **Oct 24** | DILDOZER, The Green Lantern, Lexington — headline, cap 150 | sellout is the goal | **Round 1**: stickers, buttons, dog tag pairs 021–045, totes, wrapped lighters, one proof Zippo, can coolers |
 | **Nov 6** | DILDOZER, Louisville | TBD | Round 1 restocked from the Oct 24 count + **belts edition 1 (12)** if approved |
 | **Dec 19** | JAX SPLATTER — the debut | TBD | The full ladder: round 1, leather line, beanies once the embroidery machine is in |
 
