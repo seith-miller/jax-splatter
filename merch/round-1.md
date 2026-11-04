@@ -35,7 +35,7 @@ crate first).
 4. **No faces on merch.** Mark and key art only. The wordmark is never
    stacked, outlined or distressed; splatter lives around it.
 5. **The splat is ours.** A005/A006 are built on four keyed paintball
-   images that Jax made himself (Jax, 2026-11-04), so goods carrying the
+   images that Jax made (Jax, 2026-11-04), so goods carrying the
    splat clear to sell. The wordmark's font, Pathway Gothic One, is SIL OFL.
 
 ## Committed for Oct 24 (2026-09-29)
