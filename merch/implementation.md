@@ -1,5 +1,8 @@
 # Implementation — three shows, one ladder
 
+> **Superseded on tees (Jax, 2026-11-03):** no screen-printed show tee. The
+> only tee is the print-on-demand default in [tiers.md](tiers.md).
+
 Written 2026-09-28. The run sheet for getting round 1 onto a table and
 growing it show by show. Sources: [round-1.md](round-1.md) (what),
 [tiers.md](tiers.md) (why), [makerspace.md](makerspace.md) (where).
@@ -10,7 +13,7 @@ growing it show by show. Sources: [round-1.md](round-1.md) (what),
 |---|---|---|---|
 | **Oct 24** | DILDOZER, The Green Lantern, Lexington — headline, cap 150 | sellout is the goal | **Round 1**: stickers, buttons, dog tags 021–050, totes, wrapped lighters, one proof Zippo, can coolers |
 | **Nov 6** | DILDOZER, Louisville | TBD | Round 1 restocked from the Oct 24 count + **belts edition 1 (12)** if approved |
-| **Dec 19** | JAX SPLATTER — the debut | TBD | The full ladder: round 1, leather line, **the tee** (screen-printed, after the design pass), beanies once the embroidery machine is in |
+| **Dec 19** | JAX SPLATTER — the debut | TBD | The full ladder: round 1, leather line, beanies once the embroidery machine is in |
 
 Sizing: a 150-head room at 20–30% buying is 30–45 transactions. Round 1's
 quantities cover one full show; the count after Oct 24 sets the Nov 6
@@ -24,7 +27,7 @@ restock.
 | Production files: A007 sticker sheet, A008 button face, A010 tag marking file + numbering generator, A011 lighter wrap, A012 cooler wrap, A013 Zippo lid + base numbering, A009 tote (HTV cut file *and* stencil mask, two candidates) | Order the blanks (list below) — by **Tue Sep 29** |
 | Price card + banner layout | Reserve the Marksbury Roland (Oct 5 or 6) and the Eastside laser (Oct 7 or 8) |
 | `inventory.md` and `register.md` templates, seeded | Sign the files (one session, ~Oct 2–3) |
-| Restock math after Oct 24; belt edition sheet; tee pick sheet (Nov) | Hands at the makerspace on the visit days; buy button parts and sticker paper at the branch |
+| Restock math after Oct 24; belt edition sheet | Hands at the makerspace on the visit days; buy button parts and sticker paper at the branch |
 | | Square Tap to Pay on the phone; KY sales-tax registration; cash float |
 
 ## Order by Tue Sep 29 (lands ~Oct 3)
@@ -55,7 +58,7 @@ E = Eastside (Wed–Fri, 1st/3rd weekends) · M = Marksbury (Mon/Tue/Thu/Fri,
 | **Oct 24** | — | **The Green Lantern.** A sticker in every bag. Count out after. | — |
 | Oct 26–30 | Mon–Tue M · Wed–Fri E | Restock from the count (Roland + buttons first — they're the fast movers). If belts are approved: cut edition 1 the week of Oct 26 — dye/dry/finish needs a week. | belts ready Nov 4 |
 | **Nov 6** | — | **Louisville.** | — |
-| Nov 9–Dec 12 | — | Tee design pass: pick sheet → 3–4 library samples → screen-print order by ~Nov 20 (2–3 wk turnaround). Beanies when the embroidery machine is in. Belts edition 2 + the offcut line. | debut table by Dec 12 |
+| Nov 9–Dec 12 | — | Beanies when the embroidery machine is in. Belts edition 2 + the offcut line. | debut table by Dec 12 |
 | **Dec 19** | — | **The debut.** Full ladder. | — |
 
 ## Gates, and what happens if one fails
@@ -65,7 +68,7 @@ E = Eastside (Wed–Fri, 1st/3rd weekends) · M = Marksbury (Mon/Tue/Thu/Fri,
 | G1 blanks late | past Oct 8 | Marksbury weekend Oct 10–11 is the catch-up; totes can slip to Oct 12–16 without touching anything else |
 | G2 sign-off slips | no session by Oct 3 | Roland run moves to Thu/Fri Oct 8–9 (M); still lands |
 | G3 tag blank is painted, not anodized | first test flakes or burns | switch to the second listing (that's why two were ordered); worst case tags go to Nov 6 |
-| G4 stencil spray fails the wash test | cracks / bleeds | HTV route — cut vinyl always works; the stencil idea waits for the tee pass |
+| G4 stencil spray fails the wash test | cracks / bleeds | HTV route — cut vinyl always works; the stencil idea waits |
 | laser reservation unavailable | no weekday slot | Eastside weekends Oct 3–4 or 17–18 are first-come |
 | sellout at Oct 24 | table empties | good problem; Marksbury Mon/Tue Oct 26–27 restocks stickers, buttons, coolers in one visit |
 
