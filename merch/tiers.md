@@ -1,27 +1,35 @@
 # The tiers — a philosophy of merch
 
-Drafted 2026-09-28 from Jax's radio notes; **reframed to three tiers by
-Jax, 2026-09-29.** Round 1 ([round-1.md](round-1.md)) spans tiers 1 and 2.
+Drafted 2026-09-28 from Jax's radio notes; reframed to three tiers on
+2026-09-29; **set as an aggressively tiered four-step funnel by Jax,
+2026-11-03.** Round 1 ([round-1.md](round-1.md)) is mostly tier 3.
 
-## The three tiers
+## The four tiers
 
 | Tier | What | Job | Examples | Margin rule |
 |---|---|---|---|---|
-| 1 | **Free or nearly free per unit** | Attract attention, engage the audience, establish the brand. | stickers, downloads / name-your-price music, the sticker in every bag, temporary tattoos | none — the unit cost is the marketing budget; judge by reach |
-| 2 | **High-volume, mass-produced** | Move as many units as possible. | T-shirts, buttons, totes, lighters, can coolers, LED wands, print-on-demand online | **percentage margin** — a floor on (price − cost) ÷ price; ≥60% garments, ≥75% small goods |
-| 3 | **Handmade artifacts** | Give fans something to hold onto; make them part of the experience. | belts and the leather line, engraved Zippos, guitar pedals, instruments Jax builds, the stage-used relic | **cash minimum per unit** — a floor in dollars each sale must clear; for handmade, also **cash per hour** |
+| 1 | **Free art, subsidized** — the broad end of the funnel | Loss leader: reach people and establish the act. | digital downloads, music videos on YouTube | none — we pay for it; judge by reach |
+| 2 | **Low-cost print-on-demand** | The easy first purchase, with no stock to hold. | the default T-shirt, and probably nothing else | **percentage margin** — ≥60% on garments, *to be tested against real POD prices* |
+| 3 | **Small-batch handmade** | Give fans something real to hold. | tote bags, dog tags, jewelry | **cash minimum per unit**, and **cash per hour** where it is Jax's hours |
+| 4 | **Sculptural, very limited** | The top of the funnel: objects with a story. | instruments we play on stage, band-branded guitar pedals | **cash minimum per unit**; the sanity checks below |
+
+**Not yet placed** (carried over from the three-tier version; provisional
+until Jax decides): buttons, stickers, wrapped lighters and can coolers sit in
+tier 3 for now because we make them in small runs. The sticker in every bag is
+a giveaway, so its cost is marketing, not a sale. Belts and the leather line
+sit in tier 3, and engraved Zippos are undecided between 3 and 4.
 
 Not for sale at this time (Jax, 2026-09-29): DMX pucks, rigs, clamps. They
 are the act's kit, not merch.
 
-## Two rules for margin (Jax, 2026-09-29)
+## Margin rules
 
 Projected profit is the same sum everywhere — units × (price − cost) — but
-which term you police depends on how many you expect to sell. Tier 2 is
-policed by **percentage** (per-unit cash is small; only the ratio
-guarantees the pile adds up and survives bundles). Tier 3 is policed by a
-**cash floor per unit** (units are few; the ratio is noise; each sale has to
-clear a number), and where the object is Jax's hours, by **cash per hour**.
+which term you police depends on how many you expect to sell (Jax,
+2026-09-29). Tier 2 is policed by **percentage**: per-unit cash is small, so
+only the ratio guarantees the pile adds up. Tiers 3 and 4 are policed by a
+**cash floor per unit**: units are few, the ratio is noise, and each sale has
+to clear a number. Where the object is Jax's hours, also **cash per hour**.
 Tier 1 has no margin rule; its cost is what attention costs.
 
 Market sanity checks, not rules: small-run hardware sits at 2.5–4× BOM;
@@ -31,13 +39,13 @@ a stage relic at 1.5–3× the made-to-sell version, never below it.
 
 1. **One design family, three material truths.** The wordmark is printed
    (tier 2), cut in real neon vinyl or burned into leather and metal
-   (tier 3), and scarred into a relic that played a show (tier 3, top).
+   (tier 3), and scarred into a relic that played a show (tier 4).
    CMYK cannot print Slime or Splatter Pink, so the neon version of
    anything *only exists at the show*; print-on-demand gets the photo key
-   art and one-color designs. Tiers 2 and 3 don't cannibalize by physics.
-2. **Tier 1 pays for itself in tier 2.** The sticker in every bag and the
-   free download are how a listener becomes a fan with an address; the
-   list is how a tier-3 drop finds the people who'd want it.
+   art and one-color designs. The tiers don't cannibalize by physics.
+2. **Tier 1 is paid for by everything above it.** The free download and the
+   video are how a stranger becomes a fan with an address; the list is how a
+   tier-3 or tier-4 drop finds the people who'd want it.
 3. **Story flows down.** A relic that played DILDOZER makes the strap
    "cut from the same hide" worth $40; the artifacts make people come to
    the table; the table makes the show a place to be.
@@ -72,23 +80,24 @@ purchase that fits them.
 
 | Rung | Item | Tier |
 |---|---|---|
-| free | sticker in every bag; name-your-price download | 1 |
-| $2 | sticker | 1 |
-| $3 | wrapped lighter, button | 2 |
-| $5 | can cooler, LED wand | 2 |
-| $8 | dog tag (open series), leather fob | 2 / 3 |
+| free | download, YouTube video | 1 |
+| free | sticker in every bag | giveaway |
+| $2 | sticker | 3 (provisional) |
+| $3 | wrapped lighter, button | 3 (provisional) |
+| $5 | can cooler, LED wand | 3 (provisional) |
+| $8 | dog tag (open series), leather fob | 3 |
 | $12 | pick holder | 3 |
-| $15 | tote | 2 |
-| $25–35 | tee (neon at the table; photo or one-color online) | 2 |
+| $15 | tote | 3 |
+| $25–35 | the default tee, print-on-demand | 2 |
 | $30 | card wallet | 3 |
 | $40 | guitar strap | 3 |
-| $50 | engraved Zippo | 3 |
+| $50 | engraved Zippo | 3 or 4 (undecided) |
 | $75 | belt, numbered | 3 |
-| $120–180 | a pedal from the line | 3 |
-| $1,200–3,000 | a guitar from the line | 3 |
-| by announcement | the stage-used relic | 3 |
+| $120–180 | a pedal from the line | 4 |
+| $1,200–3,000 | a guitar from the line | 4 |
+| by announcement | the stage-used relic | 4 |
 
-## Scarcity and story in tier 3
+## Scarcity and story in tiers 3 and 4
 
 - Unit-numbered: limited editions state the edition (No. 7/12); open
   series just count. Edition size is honest — the number Jax actually
@@ -156,18 +165,26 @@ Each register line says which belt's hide it came from.
 
 ## What this changes
 
-- Round 1: nothing. Stickers are tier 1; buttons, totes, wrapped lighters,
-  coolers are tier 2; the dog tags and the proof Zippo are the first
-  tier-3 objects.
+- Round 1 is now mostly tier 3: totes and dog tags by name, with the small
+  goods provisional. The tee is no longer a round-2 screen print by default;
+  it is the tier 2 print-on-demand item.
 - New file when the first belt is cut: `merch/register.md` — every
   unit-numbered object, number → who / where / from which hide. Batches of
   everything else live in `merch/inventory.md`.
-- Downloads and print-on-demand are set-up tasks that live elsewhere:
-  distribution-plan.md (the first release creates the download) and
-  accounts-inventory row 4 (Bandcamp, which also hosts POD).
+- Downloads are set up through distribution-plan.md (the first release creates
+  the download). **Bandcamp does not appear to do print-on-demand itself**
+  (corrected 2026-11-03; [Hypebot](https://www.hypebot.com/how-artists-can-streamline-bandcamp-merch-orders-on-printful/)),
+  so tier 2 needs a POD supplier such as Printful behind it, by hand at first.
 
 ## Open questions for Jax
 
+- Does the print-on-demand tee replace a table tee, or does a neon screen-
+  printed tee still exist at shows? `implementation.md` still has it screen-
+  printed for Dec 19, with an order date of ~Nov 20.
+- Is 60% the right floor for a low-cost POD tee? Set it by real supplier prices.
+- Which tier do buttons, stickers, lighters, coolers, belts and Zippos belong
+  to? All are provisional above.
+- Jewelry is new at tier 3: what pieces, and who makes them?
 - Twelve belts as round 1.5, or hold leather until the belt design is
   settled?
 - Belt colour: black-dyed and splattered, or a dyed colour (oxblood /
