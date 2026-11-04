@@ -143,7 +143,7 @@ chain and the short chain are the aesthetic. Each tag is engraved on one side:
 
 | Tag | Chain | Engraved | How it runs |
 |---|---|---|---|
-| Long | long neck chain | the signed JAX-A006 mark (JAX on the splat) cut to one colour, SUCKER No. ### | numbered, every tag different |
+| Long | long neck chain | the JAX-A006 mark cut to one colour: bold JAX in black at 45° on the bright splat, which runs off the tag's edge. Locked by Jax 2026-11-04, not yet signed | one design, a whole batch |
 | Short | short chain | BLOOD TYPE: PINK / RELIGION: YES / RANK: NONE / IF FOUND, HONK | identical, a whole batch in one laser pass |
 
 Clown, not army: a parody of the real tag's form. The short tags go into
@@ -229,6 +229,8 @@ run sheet across Oct 24, Nov 6 and Dec 19, with orders, visits, gates.
 
 - Tote art: HTV wordmark or the wall-splat stencil? (two samples first)
 - Dog tag: blank colour, black or pink?
+- Dog tag: the long tag lost its number (2026-11-04). Does the numbered series below end?
+- Dog tag: the X, painted pink or a signed one-colour exception?
 - Table banner — confirm as table kit?
 
 ## Pick sheet
