@@ -1,0 +1,17 @@
+# The Jax Splatter dog tags: what is engraved, and how. Everything generic - the
+# blank, placing art on it, the printed laser rack - is smart-part's scripts/dogtag/.
+# WORKING DRAFT: not a release until Jax signs it (JAX-A010).
+blank: dogtagblanks-bdt01
+brand: Jax Splatter
+source: seith-miller/jax-splatter merch/dogtag/
+art_from: cut to one colour from the signed JAX-A006 avatar, with JAX-A003 Bebas Neue
+art: art
+designs:                  # always a pair, each tag engraved on one side only
+  long:                   # on the long neck chain
+    component: dogtag-jax-long
+    title: long-chain tag - JAX-A006 at 45 degrees, the splat running off the edge
+    turn: 0               # the art is already drawn on the tag (build_art.py)
+  short:                  # identical on every tag: one batch, one pass, on the short chain
+    component: dogtag-jax-short
+    title: short-chain tag - blood type, religion, rank, if found
+    turn: 0               # reads across the tag, like a real tag's stamped lines
