@@ -146,7 +146,7 @@ chain and the short chain are the aesthetic. Each tag is engraved on one side:
 
 | Tag | Chain | Engraved | How it runs |
 |---|---|---|---|
-| Long | long neck chain | wordmark, crossed seltzer bottle and rubber chicken on a splat, SUCKER No. ### | numbered, every tag different |
+| Long | long neck chain | the signed JAX-A006 mark (JAX on the splat) cut to one colour, SUCKER No. ### | numbered, every tag different |
 | Short | short chain | BLOOD TYPE: PINK / RELIGION: YES / RANK: NONE / IF FOUND, HONK | identical, a whole batch in one laser pass |
 
 Clown, not army: a parody of the real tag's form. The short tags go into
@@ -155,7 +155,8 @@ their silencers and onto their chains while the next batch is on the laser.
 Blank: DogTagBlanks BDT-01-CO, the one Dildozer's rack and library are built
 for (`dogtag-library.md`), replacing the 2 mm anodized aluminium so no new
 rack is needed. Black is listed; check pink against Splatter Pink. Test one
-tag before the run. Draft art: `merch/dogtag/` (not committed until picked).
+tag before the run. The A006 splat falls under rule 5's rights gate: clear it
+before any tag is sold. Draft art: `merch/dogtag/` (not committed until picked).
 
 ### Numbering — how it works
 
