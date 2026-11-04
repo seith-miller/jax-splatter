@@ -114,6 +114,26 @@ purchase that fits them.
   whim. Announce, don't list; one at a time. The first of each type is
   never sold.
 
+## The first drum — a 6-inch tom in Splatter Pink
+
+Jax, 2026-11-04: a 6-inch tom, printed in Splatter Pink, **at least two**. One
+stays with the band and the rest are for sale, sold as art objects. It is easy
+to transport, which suits the carry-on rule. Price and parts cost are still
+open, and no 6-inch has been printed from the current design.
+
+Filament candidates against Splatter Pink `#ea3e86`, by Delta E 2000, from
+[FilamentColors](https://filamentcolors.xyz) measured swatches (2026-11-04). The
+limit is Delta E 5 on our own printed chip
+([swatch notes](../brand/reference/swatch/NOTES.md)). Stock and price not checked.
+
+| Filament | Measured | ΔE |
+|---|---|---|
+| Redline Neon Pink PLA | `#E33D8C` | 2.5 |
+| Fillamentum Everybody's Magenta PLA Extrafill | `#E1347D` | 2.9 |
+| Prusament Ms. Pink PLA | `#E34A93` | 3.2 |
+| Polymaker Magenta PolyLite PLA | `#D85786` | 3.9 |
+| Bambu Hot Pink PLA (vendor-listed hex, not measured) | `#F5547C` | 7.2, out |
+
 ## Leather goods — the belt, costed
 
 Jax's numbers: Tandy veg-tan belt blanks hand-dyed a distinct colour,
