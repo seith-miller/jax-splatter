@@ -66,7 +66,9 @@ a stage relic at 1.5–3× the made-to-sell version, never below it.
    of. The relic proves the object is real; the line gives the relic a
    market underneath the story. A made-to-sell unit owes what a relic
    doesn't: a spec sheet (the build sheet in band/instruments/), a setup,
-   a fix-it promise. **Pedals lead** — a stompbox is the most merch-shaped
+   a fix-it promise. **Drums are the exception (Jax, 2026-11-04):** a drum
+   is sold as an art object, a sculptural object more than a musical
+   instrument, with no promise to fix it. Say so on its card at the sale. **Pedals lead** — a stompbox is the most merch-shaped
    thing the act builds, and the mark on its top plate lands on other
    people's boards.
 7. **Reinvestment is literal at the top.** D13 says income funds the next
@@ -182,6 +184,7 @@ Each register line says which belt's hide it came from.
 ## Open questions for Jax
 
 - Fashion design: what pieces, who makes them, and which tier?
+- Does the art-object position cover pedals and guitars too, or only drums?
 - Is 60% the right floor for a low-cost POD tee? Set it by real supplier prices.
 - Which tier do buttons, stickers, lighters, coolers, belts and Zippos belong
   to? All are provisional above.
