@@ -53,7 +53,7 @@ what it has only if a test passes:
 
 | Stretch — promised only once its gate passes (by Oct 9) | Gate |
 |---|---|
-| Dog tag pairs 021–045 | one blank marks clean; laser slot booked |
+| Dog tag pairs 021–044 | one blank marks clean; laser slot booked |
 | Totes | sample picked (HTV vs stencil); press session booked |
 | Zippo proof, one unit | a laser slot |
 
@@ -144,7 +144,7 @@ chain and the short chain are the aesthetic. Each tag is engraved on one side:
 | Tag | Chain | Engraved | How it runs |
 |---|---|---|---|
 | Long | long neck chain | the JAX-A006 mark cut to one colour: bold JAX in black at 45° on the bright splat, which runs off the tag's edge. Locked by Jax 2026-11-04, not yet signed | one design, a whole batch |
-| Short | short chain | BLOOD TYPE: PINK / RELIGION: YES / RANK: NONE / IF FOUND, HONK | identical, a whole batch in one laser pass |
+| Short | short chain | class No. ###, four lines of that tag's own words, the class's gauge in eight numbered hollow boxes. Draft words: `merch/dogtag/tags.yml` | every tag numbered and unique (Jax, 2026-11-04) |
 
 Clown, not army: a parody of the real tag's form. The short tags go into
 their silencers and onto their chains while the next batch is on the laser.
@@ -162,26 +162,26 @@ limited editions and open series like this one — see
 [tiers.md](tiers.md)). One continuous tag series for the life of the act,
 every tag unique, never reissued. Three digits with leading zeros
 (001–999); the day it passes 999 is a good day. Round 1 = batch 1 of the
-series (021–045, 25 pairs).
+series (021–044, 24 pairs: 8 each of red, orange and blue, from 50 blanks, leaving 2 to test on).
 
 | Block | Who | Rule |
 |---|---|---|
 | 001 | Jax | — |
 | 002–020 | the cast — band, dancers, guest vocalists, crew | assigned as people join; a tag is how you know you're in the crew (stage-vision's rotating cast, made physical) |
-| 021 → | fans, in order sold | round 1 = 021–045 |
+| 021 → | fans; each number is tied to its colour and words when engraved | round 1 = 021–044 |
 
 - **Register:** `merch/dog-tags.md` — number → cast name, or show + date
   sold (buyer anonymous unless they want in). Updated after every show; it
   is the crew roster and the sales log in one table.
-- **Layout:** the number is on the long tag only; the short tag has none.
+- **Layout:** the number is on the short tag only; the long tag has none.
   See the pair table above.
-- **The file:** one signed release (JAX-A010) covering both tags. The long
-  tag needs a different number in each rack pocket, which smart-part's dog
-  tag library doesn't do yet (`dogtag-library.md`). The short tag doesn't.
+- **The file:** one signed release (JAX-A010) covering both tags. The short
+  tag needs different art in each rack pocket, which smart-part's dog tag
+  library doesn't do yet (`dogtag-library.md`). The long tag doesn't.
 - **The rack:** smart-part `dogtag-rack`, printed, not an MDF jig. No
   flipping: each tag is one side, one pass.
 - **Order of work:** rack test piece → mark one tag (staff OK for coated
-  metal first) → sign A010 → short batch → numbered long tags 021–045 →
+  metal first) → sign A010 → long batch → unique short tags 021–044 →
   cast tags 001–020 as the roster fills.
 
 ## Proposed sign-off candidates
@@ -228,8 +228,7 @@ run sheet across Oct 24, Nov 6 and Dec 19, with orders, visits, gates.
 ## Open questions for Jax
 
 - Tote art: HTV wordmark or the wall-splat stencil? (two samples first)
-- Dog tag: blank colour, black or pink?
-- Dog tag: the long tag lost its number (2026-11-04). Does the numbered series below end?
+- Dog tag: does the 50-blank minimum apply per colour? Ask DogTagBlanks.
 - Dog tag: the X, painted pink or a signed one-colour exception?
 - Table banner — confirm as table kit?
 

@@ -92,6 +92,22 @@ If someone asks, Jax is from out of town.
 | No faces on the site | he doesn't have a fixed one |
 | The AI originals in `reference/originals/` | wanted posters from a previous alias |
 
+## The tag colours (Jax, 2026-11-04)
+
+The universe is absurd 1980s sci-fi. A dog tag's colour says what its wearer
+is, and its short tag tracks that class's own stats. Never explained: people
+just choose at the table.
+
+| Colour | Who | Gauge | Status |
+|---|---|---|---|
+| Red | space marines | morale | Jax's; launch class |
+| Orange | android sex workers | battery | Jax's; launch class |
+| Green | mutants | radiation dosimeter | Jax's; green blank is a special order |
+| Blue | merchant marine | union dues | launch class |
+| Pink | carnies, Jax's people | shame | proposed; pink blank is a special order |
+| White | pets, human or alien | good boy | proposed |
+| Black | deserters, deadbeats | back taxes | proposed |
+
 ## Open
 
 - **A collective name for the crew** — or it stays "the crew."
