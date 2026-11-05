@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Draw the Jax tag's art into art/: filled M/L/Z paths, as scripts/dogtag wants.
 
-    uv run --no-project --with fonttools --with shapely --with pillow --with numpy --with opencv-python-headless merch/dogtag/build_art.py
+    uv run --no-project --with fonttools --with shapely --with pillow --with numpy --with opencv-python-headless --with pyyaml merch/dogtag/build_art.py
 
 Wordmark from brand/reference/wordmark (JAX-A002), text in Bebas Neue (JAX-A003).
 The long tag is JAX-A006 cut to one colour; the splat images are Jax's own.
@@ -11,12 +11,13 @@ from pathlib import Path
 
 import cv2
 import numpy as np
+import yaml
 from fontTools.pens.recordingPen import RecordingPen
 from fontTools.svgLib.path import parse_path
 from fontTools.ttLib import TTFont
 from PIL import Image, ImageChops
 from shapely import affinity
-from shapely.geometry import Point, Polygon
+from shapely.geometry import Point, Polygon, box
 from shapely.ops import unary_union
 
 # the blank's outline and hole come from smart-part's dog tag library
@@ -29,6 +30,9 @@ JAX_W_MM = 15.7  # how wide JAX runs on the tag: the dial for how far the splat 
 ANGLE = 45       # degrees, rising left to right as it hangs
 DROP_MM = -1.5    # the mark's centre below the middle of the room under the hole
 BOLD_PX = 11     # added all round each letter, avatar px
+BEBAS_CAP = 0.7  # Bebas Neue cap height, in ems
+SHORT_X = 10.0   # the short tag's left margin, mm, clear of the hole
+RIGHT_MM = 44.0  # and its right margin
 TAG_PX = 40      # art px per tag mm
 EDGE_MM = 0.2    # the engraving stops this far inside the outline, off the rack
 HOLE_CLEAR_MM = 0.7   # and this far from the chain hole and its peg
@@ -216,12 +220,73 @@ def main():
         f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w:.0f} {h:.0f}" width="{w:.0f}" height="{h:.0f}" '
         f'data-tag-px-per-mm="{TAG_PX}">\n{body}\n</svg>\n')
 
-    lines = ["BLOOD TYPE: PINK", "RELIGION: YES", "RANK: NONE", "IF FOUND, HONK"]
-    size, lead, out = 200, 228, []
-    for i, s in enumerate(lines):
-        t = text(s, size=size, tracking=18)
-        out.append(affinity.translate(t, -t.bounds[0], i * lead))
-    write("short", {"text": unary_union(out)})
+    data = yaml.safe_load((HERE / "tags.yml").read_text())
+    sheet = []
+    for t in data["tags"]:
+        c = data["classes"][t["class"]]
+        head = f'{c["who"]} No. {t["num"]:03d}'.upper()
+        lines = [head, *t["lines"]]
+        too_long = [l for l in lines if cap(l, 2.4).bounds[2] / TAG_PX > RIGHT_MM - SHORT_X]
+        assert not too_long, f"{t["num"]}: too long: {too_long}"
+        name = f"short-{t["num"]:03d}"
+        write_on_tag(name, {"text": short_text(lines), "insignia": gauge(c["gauge"], len(lines))})
+        sheet.append((name, c["hex"]))
+    write_sheet(sheet)
+
+
+def write_sheet(tags):
+    """A page of every tag as it would come off the laser, on its colour."""
+    w, h = dogtag.TAG_W, dogtag.TAG_H
+    shape = dogtag.outline()
+    hole = f'<circle cx="{dogtag.HOLE_X}" cy="{h / 2}" r="{dogtag.HOLE_D / 2}" fill="#05060a"/>'
+    cards = []
+    for name, hex_ in tags:
+        src = (HERE / "art" / f"{name}.svg").read_text()
+        paths = "".join(f'<path fill="#e8e6e1" fill-rule="evenodd" d="{d}"/>' for d in re.findall(r' d="([^"]+)"', src))
+        cards.append(f'<svg viewBox="0 0 {w} {h}"><path d="{shape}" fill="{hex_}"/>{hole}'
+                     f'<g transform="scale({1 / TAG_PX})">{paths}</g></svg>')
+    (HERE / "tags-sheet.html").write_text(
+        '<!doctype html><meta charset="utf-8"><title>Jax short tags</title>'
+        '<style>body{margin:0;padding:24px;background:#05060a;display:grid;gap:20px;'
+        'grid-template-columns:repeat(auto-fill,minmax(420px,1fr))}svg{width:100%}</style>'
+        + "".join(cards))
+
+
+def cap(s, cap_mm, tracking=18):
+    """Bebas Neue at a cap height in mm, left end and baseline at (0, 0), tag px."""
+    t = text(s, size=cap_mm * TAG_PX / BEBAS_CAP, tracking=tracking)
+    return affinity.translate(t, -t.bounds[0], 0)
+
+
+def at(g, x_mm, base_mm):
+    return affinity.translate(g, x_mm * TAG_PX, base_mm * TAG_PX)
+
+
+def short_text(lines):
+    return unary_union([at(cap(l, 2.4), SHORT_X, 5.7 + i * 3.1) for i, l in enumerate(lines)])
+
+
+def gauge(label, n_lines):
+    """The class's gauge: its label, one more line of the block, then eight hollow numbered squares."""
+    side, wall, n, top = 3.4, 0.3, 8, 21.7
+    gap = (RIGHT_MM - SHORT_X - n * side) / (n - 1)
+    parts = [at(cap(label, 2.4), SHORT_X, 5.7 + n_lines * 3.1)]
+    for i in range(n):
+        sx = SHORT_X + i * (side + gap)
+        outer = box(sx * TAG_PX, top * TAG_PX, (sx + side) * TAG_PX, (top + side) * TAG_PX)
+        parts.append(outer.difference(outer.buffer(-wall * TAG_PX, join_style=2)))
+        num = cap(str(i + 1), 1.7, tracking=0)
+        parts.append(at(num, sx + side / 2 - num.bounds[2] / TAG_PX / 2, top + side / 2 + 0.85))
+    return unary_union(parts)
+
+
+def write_on_tag(name, parts):
+    w, h = dogtag.TAG_W * TAG_PX, dogtag.TAG_H * TAG_PX
+    body = "\n".join(f'<path fill="#000000" fill-rule="evenodd" data-part="{k}" d="{rings(g.simplify(0.3))}"/>'
+                     for k, g in parts.items())
+    (HERE / "art" / f"{name}.svg").write_text(
+        f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w:.0f} {h:.0f}" width="{w:.0f}" height="{h:.0f}" '
+        f'data-tag-px-per-mm="{TAG_PX}">\n{body}\n</svg>\n')
 
 
 if __name__ == "__main__":

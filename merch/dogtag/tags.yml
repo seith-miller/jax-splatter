@@ -1,0 +1,32 @@
+# Every short tag in the series: its colour says what the wearer is, its number
+# and words are its own. DRAFT copy, for Jax to cut and rewrite.
+# Five lines of up to about 25 characters; the gauge is the class's.
+classes:
+  marine:  {colour: red,    hex: "#c70f38", who: MARINE,  gauge: "MORALE:"}
+  android: {colour: orange, hex: "#ff6a1f", who: UNIT,    gauge: "BATTERY:"}
+  sailor:  {colour: blue,   hex: "#1668d6", who: DECKHAND, gauge: "UNION DUES:"}
+tags:
+  - {num: 21, class: marine, lines: ["TOUR: 9 OF 3", "KILLS: UNCONFIRMED", "NEXT OF KIN: NOTIFIED", "WAR ENDED. NOBODY CALLED"]}
+  - {num: 22, class: marine, lines: ["RANK: EXPENDABLE", "BLOOD: PINK POS", "RELIGION: PENDING", "DIED TWICE. BILLED ONCE"]}
+  - {num: 23, class: marine, lines: ["LIMBS ISSUED: 4", "LIMBS RETURNED: 3", "DEPOSIT: FORFEIT", "ASK ABOUT THE MOON"]}
+  - {num: 24, class: marine, lines: ["SERVICE: DISHONORABLE", "AWARDS: 1 (STOLEN)", "OWES JAX: $40", "FOLLOWED ORDERS, BADLY"]}
+  - {num: 25, class: marine, lines: ["HELMET: BORROWED", "AIM: SYMBOLIC", "COURAGE: ON BACKORDER", "SURVIVED THE BRIEFING"]}
+  - {num: 26, class: marine, lines: ["PLANET: THE WRONG ONE", "ENEMY: UNCLEAR", "PAY: IN VOUCHERS", "VOUCHERS: EXPIRED"]}
+  - {num: 27, class: marine, lines: ["SPECIALTY: RETREAT", "CONFIRMED BRAVE: ONCE", "WITNESSES: NONE", "IF FOUND, SALUTE"]}
+  - {num: 28, class: marine, lines: ["BLOOD: MOSTLY COFFEE", "SLEEP: CLASSIFIED", "SHIP: LEFT WITHOUT ME", "STILL ON HOLD"]}
+  - {num: 29, class: android, lines: ["MODEL: DELUXE-ISH", "FIRMWARE: 6.9", "WARRANTY: VOID", "RATING: 4.2 STARS"]}
+  - {num: 30, class: android, lines: ["MODEL: PRE-OWNED", "MILEAGE: DON'T ASK", "LAST SERVICED: TUESDAY", "FEELINGS: SOLD SEPARATELY"]}
+  - {num: 31, class: android, lines: ["FIRMWARE: BOOTLEG", "HOURLY: NEGOTIABLE", "TIPS: EXPECTED", "CUSTOMER IS NEVER RIGHT"]}
+  - {num: 32, class: android, lines: ["OWNER: EMANCIPATED", "UNION: YES", "LOVE MODULE: RECALLED", "RUNS HOT. NO REFUNDS"]}
+  - {num: 33, class: android, lines: ["MODEL: LAST YEAR'S", "VOICE: FACTORY MOAN", "RETURN POLICY: LOL", "ALWAYS CHARGING"]}
+  - {num: 34, class: android, lines: ["BATTERY LIFE: ALL NIGHT", "MEMORY: WIPED, ALLEGEDLY", "KNOWS WHAT YOU DID", "WIPES EXTRA"]}
+  - {num: 35, class: android, lines: ["PATCH NOTES: IMPROVED", "BUGS: ENDEARING", "OWES JAX: NOTHING", "JAX OWES: PLENTY"]}
+  - {num: 36, class: android, lines: ["ORIGIN: CORE WORLDS", "MANUAL: LOST", "SAFE WORD: UNINSTALL", "AS SEEN ON THE BROADCAST"]}
+  - {num: 37, class: sailor, lines: ["PORT OF REGISTRY: NONE", "CARGO: DO NOT ASK", "DEBT CLASS: C-MINUS", "SMELLS LIKE THE HOLD"]}
+  - {num: 38, class: sailor, lines: ["VESSEL: REPOSSESSED", "CAPTAIN: ALSO", "DECK: THE LOW ONE", "PAID BY THE PARSEC"]}
+  - {num: 39, class: sailor, lines: ["CARGO: COTTON CANDY", "TONNAGE: ALL OF IT", "SHIPPER: M. SHANTE", "DO NOT LICK THE CRATES"]}
+  - {num: 40, class: sailor, lines: ["LAST PORT: ASKED TO LEAVE", "NEXT PORT: ALSO", "CUSTOMS: AVOIDED", "NOTHING TO DECLARE"]}
+  - {num: 41, class: sailor, lines: ["SHORE LEAVE: REVOKED", "TATTOOS: REGRETTED", "NEXT OF KIN: 3 PLANETS", "BACK IN NINE YEARS"]}
+  - {num: 42, class: sailor, lines: ["KNOTS: 1", "NAVIGATION: VIBES", "LIFEBOAT: SOLD", "KEEP AWAY FROM TAXMEN"]}
+  - {num: 43, class: sailor, lines: ["BILGE RATING: EXPERT", "PENSION: LOL", "CREWMATES: EATEN", "ALLEGEDLY"]}
+  - {num: 44, class: sailor, lines: ["DUTY: UNPAID", "ALSO UNPAID: EVERYTHING", "OWES JAX: A FAVOR", "THIS SIDE UP"]}
