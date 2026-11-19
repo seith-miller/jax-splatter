@@ -4,6 +4,47 @@
 What we stage is in [debut-staging.md](debut-staging.md); this is when each
 piece has to exist.
 
+## What Jax set (2026-11-18) — build what we control
+
+**The show must work with Jax alone on stage.** A guitarist and a
+percussionist are still wanted, but nothing on the critical path waits on
+them: if they arrive, they play on top of a show that is already whole.
+
+The work is the four things we control:
+
+1. **Finished audio tracks** — every number has a performance track.
+2. **Jax well rehearsed** — the set run alone, start to finish.
+3. **A video package** — per-number video plus the broadcast bridges.
+4. **A lighting package** — looks and cues, called by the show video.
+
+This supersedes the cast gate (G1) as a blocker and re-reads G3, G5 and G8
+as solo gates. The 2026-09-26 section below stays as the with-players plan.
+
+### On hand, 2026-11-18 (measured off the files)
+
+| Number | Newest mix | Length | Performance track (no vox) |
+|---|---|---|---|
+| Piss On Me | 2026-11-10 | 4:32 | **yes**, 2026-11-10 |
+| Put Your Pussy On My Face | 2026-08-15 | 1:33 | **yes**, 2026-11-10 |
+| Lust For Life (cover) | 2026-11-17 | 4:50 | no |
+| Tank (cover) | Reaper `mix.wav` | 2:57 | no |
+| Daddy Likes It | 2025-08-02 | 3:48 | no |
+| Where Is Da Club | 2025-08-07 | 3:04 | no |
+| Put It In My | 2025-07-17 | 2:11 | no |
+| Bitch Boy | 2025-07-23 | 1:37 | no |
+| Ricky's Hand (cover) | project only, 2026-11-14 | — | no |
+
+Eight numbers with a mix, **24:32**; two performance tracks, **6:05**.
+Whether a number is in the set is Jax's call — this table is what exists,
+not a set list.
+
+- **Video:** direction only ([../video/](../video/)); no per-number video
+  exists for a Jax Splatter number.
+- **Lights:** no Jax Splatter looks or cues exist. The machinery does:
+  the lighting-console and the video-calls-the-lights pipeline built for
+  the Dildozer shows (14 numbered show videos in `~/Music/dildozer/numbers/`).
+- **Rehearsal:** none on record.
+
 ## What Jax set (2026-09-26)
 
 1. **One hour of music prepped.**
