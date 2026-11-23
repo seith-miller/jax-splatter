@@ -13,7 +13,10 @@ attack**, not acoustic output. So a chart is a **performance map** — what
 you hear, what you play, where you stand, and what the lights do — on one
 page, readable on a dark stage.
 
-## The set
+## The charts
+
+**This lists charts, not the set.** The set list is one document:
+[record-producer-hq/setlist.md](https://github.com/seith-miller/record-producer-hq/blob/main/setlist.md).
 
 | Song | Source | BPM* |
 |---|---|---|
