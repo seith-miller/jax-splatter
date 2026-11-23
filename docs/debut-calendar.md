@@ -20,27 +20,13 @@ The work is the four things we control:
 This supersedes the cast gate (G1) as a blocker and re-reads G3, G5 and G8
 as solo gates. The 2026-09-26 section below stays as the with-players plan.
 
-### On hand, 2026-11-18 (measured off the files)
+### The set list
 
-| Number | Newest mix | Length | Performance track (no vox) |
-|---|---|---|---|
-| Piss On Me | 2026-11-10 | 4:32 | **yes**, 2026-11-10 |
-| Put Your Pussy On My Face | 2026-08-15 | 1:33 | **yes**, 2026-11-10 |
-| Lust For Life (cover) | 2026-11-17 | 4:50 | no |
-| Tank (cover) | Reaper `mix.wav` | 2:57 | no |
-| Daddy Likes It | 2025-08-02 | 3:48 | no |
-| Where Is Da Club | 2025-08-07 | 3:04 | no |
-| Put It In My | 2025-07-17 | 2:11 | no |
-| Bitch Boy | 2025-07-23 | 1:37 | no |
-| Ricky's Hand (cover) | project only, 2026-11-14 | — | no |
+**One document: [record-producer-hq/setlist.md](https://github.com/seith-miller/record-producer-hq/blob/main/setlist.md).** What is in the
+set, the order, lengths and what each number still needs live there and
+nowhere else. This file keeps dates and gates, and no copy of the set.
 
-Eight numbers with a mix, **24:32**; two performance tracks, **6:05**.
-Whether a number is in the set is Jax's call — this table is what exists,
-not a set list.
-
-**The working set list** (from 2026-11-22) is
-[record-producer-hq/setlist.md](https://github.com/seith-miller/record-producer-hq/blob/main/setlist.md)
-— one draft, iterated there. This file does not keep its own copy.
+### The other three, 2026-11-18
 
 - **Video:** direction only ([../video/](../video/)); no per-number video
   exists for a Jax Splatter number.
@@ -60,6 +46,9 @@ dancers still take crate percussion in the crate moment; they don't get
 charts.
 
 ## Where the hour comes from
+
+> **Historical (2026-09-26).** The song table below is the September
+> picture. The current set is [setlist.md](https://github.com/seith-miller/record-producer-hq/blob/main/setlist.md).
 
 Today's material, measured off the newest bounce of each project
 (2026-09-26, `afinfo`):

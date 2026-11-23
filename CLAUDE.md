@@ -80,6 +80,8 @@ andon: poll [STATUS.md](https://github.com/smartsquared/andon) and halt when
 - Brief / design doc: [docs/brief.md](docs/brief.md); ratified decisions in
   [docs/decisions.md](docs/decisions.md).
 - Canonical track library: [songs/crates.md](songs/crates.md).
+- **The set list** is one document, kept outside this repo:
+  [record-producer-hq/setlist.md](https://github.com/seith-miller/record-producer-hq/blob/main/setlist.md). Never keep a second copy here.
 - Repo created 2026-06-11 from template smartsquared/seedling-product.
 
 ## Branch Strategy
