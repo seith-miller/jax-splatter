@@ -38,6 +38,10 @@ Eight numbers with a mix, **24:32**; two performance tracks, **6:05**.
 Whether a number is in the set is Jax's call — this table is what exists,
 not a set list.
 
+**The working set list** (from 2026-11-22) is
+[record-producer-hq/setlist.md](https://github.com/seith-miller/record-producer-hq/blob/main/setlist.md)
+— one draft, iterated there. This file does not keep its own copy.
+
 - **Video:** direction only ([../video/](../video/)); no per-number video
   exists for a Jax Splatter number.
 - **Lights:** no Jax Splatter looks or cues exist. The machinery does:
