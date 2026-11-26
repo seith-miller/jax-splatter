@@ -29,6 +29,11 @@ the network can reach it. Stop it with Ctrl-C.
   is something to count. Data lives in the file; a row is added when an
   object exists.
 
+- **Numbers** — how finished each number is, against the eight things a hired band would need.
+- **Posts** — what's been posted, where, and its numbers at each check-in (a day, three days, a week, the
+  day after the show). A post gets a row once it is live; only numbers actually read off Insights go in
+  (`POSTS` and `READS` in the page).
+
 ## What's on it
 
 **Stripped to essentials (Jax, 2026-09-26):** the next show, and the songs

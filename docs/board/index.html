@@ -167,6 +167,9 @@ li.fact{display:grid; grid-template-columns:1fr auto; gap:12px; align-items:cent
 li.fact .t{font-size:14.5px}
 li.fact .t b{font-weight:500}
 li.fact .len{white-space:nowrap}
+table.reads{border-collapse:collapse; margin-top:6px; font-size:13px}
+table.reads th, table.reads td{padding:2px 8px; border:1px solid var(--edge); text-align:right}
+table.reads th{font-weight:500; color:var(--muted, #999)}
 </style>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Pathway+Gothic+One&family=Inter:wght@400;500&display=swap">
@@ -180,14 +183,15 @@ li.fact .len{white-space:nowrap}
     <button role="tab" id="tab-refs" aria-controls="panel-refs" aria-selected="false">Playlists</button>
     <button role="tab" id="tab-merch" aria-controls="panel-merch" aria-selected="false">Merch</button>
     <button role="tab" id="tab-numbers" aria-controls="panel-numbers" aria-selected="false">Numbers</button>
+    <button role="tab" id="tab-posts" aria-controls="panel-posts" aria-selected="false">Posts</button>
   </nav>
 
   <div class="next" id="panel-next" role="tabpanel" aria-labelledby="tab-next">
     <span class="kicker">Next show</span>
-    <h1 class="event">Dildozer</h1>
-    <p class="date">Sat · Oct 24</p>
+    <h1 class="event">XXXmas</h1>
+    <p class="date">Sat · Dec 19</p>
     <p class="days"><b id="days">—</b> days out</p>
-    <p class="venue">The Green Lantern · 497 W 3rd St, Lexington</p>
+    <p class="venue">The Green Lantern · 497 W 3rd St, Lexington · rhinestone.jpeg presents · Clovers · Healing · Winners · Jax Splatter</p>
   </div>
 
   <div class="songs" id="panel-songs" role="tabpanel" aria-labelledby="tab-songs" hidden>
@@ -284,6 +288,19 @@ li.fact .len{white-space:nowrap}
   </div>
   </div>
 </div>
+
+  <div class="songs" id="panel-posts" role="tabpanel" aria-labelledby="tab-posts" hidden>
+    <div class="ask">
+      <b>What's out</b>
+      What has been posted, where, and how it is doing. A post gets a row once it is live; its numbers are
+      read off Instagram Insights at each check-in (a day, three days, a week, and the day after the show)
+      and only what was actually read goes here.
+    </div>
+    <div class="pool">
+      <h2>Posted</h2>
+      <ul id="posts"></ul>
+    </div>
+  </div>
 
   <div class="songs" id="panel-numbers" role="tabpanel" aria-labelledby="tab-numbers" hidden>
     <div class="ask">
@@ -580,18 +597,18 @@ li.fact .len{white-space:nowrap}
   });
 
   function show(name) {
-    ['next', 'songs', 'refs', 'numbers', 'merch'].forEach(function (t) {
+    ['next', 'songs', 'refs', 'numbers', 'merch', 'posts'].forEach(function (t) {
       document.getElementById('tab-' + t).setAttribute('aria-selected', String(t === name));
       document.getElementById('panel-' + t).hidden = (t !== name);
     });
     try { localStorage.setItem(TABKEY, name); } catch (e) { }
     total();
   }
-  ['next', 'songs', 'refs', 'numbers', 'merch'].forEach(function (t) {
+  ['next', 'songs', 'refs', 'numbers', 'merch', 'posts'].forEach(function (t) {
     document.getElementById('tab-' + t).addEventListener('click', function () { show(t); });
   });
 
-  var p = [2026, 10, 24], n = new Date();
+  var p = [2026, 12, 19], n = new Date();
   var a = Date.UTC(p[0], p[1] - 1, p[2]);
   var b = Date.UTC(n.getFullYear(), n.getMonth(), n.getDate());
   var d = Math.round((a - b) / 86400000);
@@ -680,9 +697,30 @@ li.fact .len{white-space:nowrap}
   document.getElementById('mstretch').innerHTML = STRETCH.map(factRow).join('');
   document.getElementById('mnext').textContent = NEXT;
 
+  /* ---- posts ---- */
+  // [id, date posted, where, what, link or '']
+  var POSTS = [
+    ['xxxmas-snarlemange', '2026-11-26', 'Instagram · Reel + Story',
+     'XXXmas save-the-date video: Snarlemange, Warden of the Hyperchromatic Sludgeway, warns the Green Lantern (1:36). ' +
+     'Tagged the bill and the venue.', '']
+  ];
+  // id -> [[read on, views, reach, likes, comments, shares, saves, follows]] — only numbers actually read
+  var READS = {'xxxmas-snarlemange': []};
+  var COLS = ['views', 'reach', 'likes', 'comments', 'shares', 'saves', 'follows'];
+  document.getElementById('posts').innerHTML = POSTS.map(function (x) {
+    var r = READS[x[0]] || [];
+    var nums = r.length
+      ? '<table class="reads"><tr><th>read</th>' + COLS.map(function (c) { return '<th>' + c + '</th>'; }).join('') + '</tr>' +
+        r.map(function (q) { return '<tr>' + q.map(function (v, i) { return '<td>' + (v === null ? '—' : v) + '</td>'; }).join('') + '</tr>'; }).join('') +
+        '</table>'
+      : '<span class="none">No numbers read yet.</span>';
+    return '<li class="fact"><span class="t"><b>' + x[2] + '</b> <span class="flag">· ' + x[1] + '</span><br>' + x[3] +
+      (x[4] ? ' <a href="' + x[4] + '" target="_blank" rel="noopener">open</a>' : '') + '<br>' + nums + '</span></li>';
+  }).join('');
+
   var saved = 'next';
   try { saved = localStorage.getItem(TABKEY) || 'next'; } catch (e) { }
-  show(['songs', 'refs', 'merch'].indexOf(saved) >= 0 ? saved : 'next');
+  show(['songs', 'refs', 'merch', 'numbers', 'posts'].indexOf(saved) >= 0 ? saved : 'next');
 })();
 </script>
 
