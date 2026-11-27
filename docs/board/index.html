@@ -297,6 +297,12 @@ table.reads th{font-weight:500; color:var(--muted, #999)}
       and only what was actually read goes here.
     </div>
     <div class="pool">
+      <h2>XXXmas campaign</h2>
+      <p><b>Goal: 150 at the door</b>, Sat Dec 19, the Green Lantern (Jax, 2026-11-27). The posts below only say
+      whether we're on track; the door count is the result.</p>
+      <ul id="camp"></ul>
+    </div>
+    <div class="pool">
       <h2>Posted</h2>
       <ul id="posts"></ul>
     </div>
@@ -704,11 +710,11 @@ table.reads th{font-weight:500; color:var(--muted, #999)}
      'XXXmas save-the-date video: Snarlemange, Warden of the Hyperchromatic Sludgeway, warns the Green Lantern (1:36). ' +
      'Tagged the bill and the venue.', 'https://www.instagram.com/reel/DgMRwsjP0Ph/']
   ];
-  // id -> [[read on, views, reach (viewers), likes, comments, shares, saves, follows]] — only numbers actually read
+  // id -> [[read on, views, reach (viewers), share of reach in Lexington, likes, comments, shares, saves, follows]] — only numbers actually read
   var READS = {'xxxmas-snarlemange': [
-    ['2026-11-27 (1 day)', 388, 313, 13, 0, 3, 0, 1]   // 71.8% of views from non-followers; 13 accounts engaged
+    ['2026-11-27 (1 day)', 388, 313, null, 13, 0, 3, 0, 1]   // 71.8% of views from non-followers; 13 accounts engaged
   ]};
-  var COLS = ['views', 'reach', 'likes', 'comments', 'shares', 'saves', 'follows'];
+  var COLS = ['views', 'reach', 'Lexington', 'likes', 'comments', 'shares', 'saves', 'follows'];
   document.getElementById('posts').innerHTML = POSTS.map(function (x) {
     var r = READS[x[0]] || [];
     var nums = r.length
@@ -718,6 +724,12 @@ table.reads th{font-weight:500; color:var(--muted, #999)}
       : '<span class="none">No numbers read yet.</span>';
     return '<li class="fact"><span class="t"><b>' + x[2] + '</b> <span class="flag">· ' + x[1] + '</span><br>' + x[3] +
       (x[4] ? ' <a href="' + x[4] + '" target="_blank" rel="noopener">open</a>' : '') + '<br>' + nums + '</span></li>';
+  }).join('');
+
+  // the result, read once it exists: [what, value or null]
+  var RESULT = [['At the door, Dec 19', null]];
+  document.getElementById('camp').innerHTML = RESULT.map(function (x) {
+    return '<li class="fact"><span class="t"><b>' + x[0] + '</b></span><span class="len">' + (x[1] === null ? '— not yet' : x[1]) + '</span></li>';
   }).join('');
 
   var saved = 'next';
