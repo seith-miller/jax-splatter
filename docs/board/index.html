@@ -702,10 +702,12 @@ table.reads th{font-weight:500; color:var(--muted, #999)}
   var POSTS = [
     ['xxxmas-snarlemange', '2026-11-26', 'Instagram · Reel + Story',
      'XXXmas save-the-date video: Snarlemange, Warden of the Hyperchromatic Sludgeway, warns the Green Lantern (1:36). ' +
-     'Tagged the bill and the venue.', '']
+     'Tagged the bill and the venue.', 'https://www.instagram.com/reel/DgMRwsjP0Ph/']
   ];
-  // id -> [[read on, views, reach, likes, comments, shares, saves, follows]] — only numbers actually read
-  var READS = {'xxxmas-snarlemange': []};
+  // id -> [[read on, views, reach (viewers), likes, comments, shares, saves, follows]] — only numbers actually read
+  var READS = {'xxxmas-snarlemange': [
+    ['2026-11-27 (1 day)', 388, 313, 13, 0, 3, 0, 1]   // 71.8% of views from non-followers; 13 accounts engaged
+  ]};
   var COLS = ['views', 'reach', 'likes', 'comments', 'shares', 'saves', 'follows'];
   document.getElementById('posts').innerHTML = POSTS.map(function (x) {
     var r = READS[x[0]] || [];
